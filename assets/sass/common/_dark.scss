@@ -1,0 +1,33 @@
+/*=============================================================
+  18. Dark Version Styling
+===============================================================*/
+
+.cs_dark {
+  .cs_btn_style_1.cs_primary_bg {
+    color: var(--white-color);
+
+    &:hover {
+      color: var(--dark-white-color);
+    }
+  }
+
+  .cs_btn_style_1.cs_accent_bg {
+    &:hover {
+      color: var(--white-color);
+    }
+  }
+
+  .cs_iconbox_style_1,
+  .cs_category_item_style_4 {
+    img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+        hue-rotate(8deg) brightness(104%) contrast(107%);
+    }
+  }
+  .cs_horizontal_slider.cs_type_1 {
+    img {
+      filter: brightness(0) saturate(100%) invert(21%) sepia(51%)
+        saturate(5243%) hue-rotate(354deg) brightness(89%) contrast(86%);
+    }
+  }
+}

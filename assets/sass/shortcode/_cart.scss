@@ -1,0 +1,368 @@
+/*==============================================================
+  16. Product Carts
+================================================================*/
+
+.cs_cart_product_style_1,
+.cs_cart_product_style_2 {
+  min-width: 600px;
+  padding: 20px 55px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &.cs_checkout {
+    padding: 20px 24px;
+  }
+
+  .cs_custom_checkbox {
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 1px solid var(--secondary-color);
+    transition: all 0.3s ease;
+
+    &::before {
+      content: "\f00c";
+      position: absolute;
+      top: 4px;
+      left: 5px;
+      font-size: 10px;
+      font-weight: 900;
+      line-height: 1em;
+      color: var(--white-color);
+      font-family: "Font Awesome 7 Free";
+    }
+
+    &:has(input:checked) {
+      border-color: var(--primary-color);
+      background-color: var(--primary-color);
+    }
+  }
+
+  .cs_product_thumbnail {
+    width: 130px;
+    flex: none;
+  }
+
+  .cs_product_info {
+    width: min(100%, 348px);
+  }
+
+  .cs_product_title:hover {
+    color: var(--accent-color);
+  }
+
+  .cs_product_desc_list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+
+    li:not(:last-child) {
+      padding-right: 15px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 5px;
+        position: absolute;
+        right: 0;
+        top: 5px;
+        border-radius: 50%;
+        height: 5px;
+        background-color: var(--accent-color);
+      }
+    }
+  }
+
+  .cs_wishlist_btn,
+  .cs_trash_btn {
+    right: 24px;
+    line-height: 1em;
+  }
+
+  .cs_wishlist_btn {
+    top: 20px;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  .cs_trash_btn {
+    bottom: 24px;
+
+    &:hover {
+      color: var(--red-color);
+    }
+  }
+
+  .cs_order_status {
+    line-height: 1em;
+    padding: 4px 10px;
+  }
+
+  .cs_shipping_summery {
+    right: 24px;
+    bottom: 24px;
+  }
+
+  .cs_company_summery {
+    right: 24px;
+    top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    a:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_product_thumbnail {
+      width: 110px;
+    }
+  }
+}
+
+.cs_cart_product_style_2 {
+  min-width: 694px;
+  align-items: flex-start;
+  padding: 20px 24px;
+
+  .cs_action_btns_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+  }
+
+  .cs_btn_style_1 {
+    &:hover {
+      color: var(--white-color);
+    }
+  }
+
+  .deleteButton {
+    color: var(--white-color);
+
+    &:hover {
+      color: var(--dark-white-color);
+    }
+  }
+}
+
+/*=========================================================
+ Product Cart Drawer
+===========================================================*/
+.cs_fullscreen_cart {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1111;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(25, 25, 25, 0.2);
+  transition: all 0.3s ease;
+
+  .cs_cart_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: zoom-out;
+    transition: all 0.3s ease;
+    background-color: var(--primary-color);
+  }
+
+  .cs_cart_wrapper {
+    width: min(100%, 320px);
+    height: 100%;
+    max-height: 1000px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(320px);
+    transition: transform 0.3s cubic-bezier(0.5, 0.1, 0.5, 1);
+  }
+
+  .cs_cart_header {
+    padding: 20px 55px 20px 24px;
+    border-bottom: 1px solid var(--gray-color2);
+  }
+
+  .cs_cart_close_btn {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--red-color);
+    }
+  }
+
+  .cs_cart_products_list {
+    padding: 26px 24px 0;
+    overflow-y: auto;
+
+    li {
+      margin-bottom: 26px;
+      border-bottom: 1px solid var(--gray-color2);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .cs_cart_products_list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cs_cart_product {
+    padding-bottom: 26px;
+    display: flex;
+    gap: 20px;
+
+    .cs_product_thumbnail {
+      width: 70px;
+      flex: none;
+    }
+
+    .cs_product_info {
+      flex: 1;
+    }
+
+    .cs_product_title a {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .cs_product_actions_btns {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .cart_item_remove {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--red-color);
+      background-color: var(--primary-color);
+    }
+  }
+
+  .cs_order_summery {
+    padding: 26px 24px;
+  }
+
+  .cs_links_btns_wrapper {
+    display: flex;
+    gap: 8px;
+    .cs_btn_style_1 {
+      &::before {
+        display: none;
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .cs_btn_style_1:first-child {
+      &:hover {
+        color: var(--white-color);
+        background-color: var(--primary-color);
+      }
+    }
+
+    .cs_btn_style_1:last-child {
+      color: var(--white-color);
+
+      &:hover {
+        color: var(--dark-white-color);
+        background-color: var(--red-color);
+      }
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+
+    .cs_cart_overlay {
+      opacity: 0.2;
+    }
+
+    .cs_cart_wrapper {
+      transform: translateX(0);
+    }
+  }
+}
+
+/*=========================================================
+ Product Cart Table
+===========================================================*/
+.cs_cart_header {
+  .cs_custom_checkbox {
+    input {
+      &:checked {
+        + label {
+          &::before {
+            background-color: var(--primary-color);
+          }
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    > label {
+      &::after {
+        content: "\f00c";
+        top: 8px;
+        left: 6px;
+        font-size: 10px;
+        font-weight: 900;
+        line-height: 1em;
+        color: var(--white-color);
+        font-family: "Font Awesome 7 Free";
+        background-color: transparent;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.cs_cart_item {
+  border: 1px solid var(--gray-color2);
+  overflow-x: auto;
+}

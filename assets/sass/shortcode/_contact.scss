@@ -1,0 +1,26 @@
+/*==============================================================
+  14. Contact
+ ===============================================================*/
+.cs_contact_cotent_wrapper {
+  .cs_contact_heading {
+    margin-bottom: 70px;
+  }
+
+  .cs_iconbox_style_4 {
+    margin-bottom: 55px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width:1199px) {
+    .cs_contact_heading {
+      margin-bottom: 40px;
+    }
+
+    .cs_iconbox_style_4 {
+      margin-bottom: 24px;
+    }
+  }
+}

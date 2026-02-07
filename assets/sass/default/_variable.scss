@@ -1,0 +1,67 @@
+/*==============================================================
+  01. Variables
+================================================================*/
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --primary-color: #191919;
+  --dark-color: #191919; //Dark color in dark mode
+  --dark-white-color: #fff; //White color in dark mode
+  --secondary-color: #6e6e6e;
+  --accent-color: #30a346;
+  --red-color: #ef4b4b;
+  --red-color2: #ff0000;
+  --orange-color: #d52b1e;
+  --blue-color: #3f85fe;
+  --blue-color2: #0040a1;
+  --purple-color: #4e118c;
+  --velvet-color: #82105e;
+  --yellow-color: #e0b400;
+  --gray-color1: #f9f9f9;
+  --gray-color2: #e8e8e8;
+  --gray-color3: #f8f8f8;
+  --gray-color4: #e9ebf2;
+  --gray-color5: #f5f5f5;
+  --gray-color6: #f8f9f5;
+  --gray-color7: #fff5ee;
+  --gray-color8: #eaf1fb;
+  --gray-color9: #9d9d9d;
+  --gray-color10: #f1f7fe;
+  --gray-color11: #ebebed;
+  --gray-color12: #f3f2f2;
+  --gray-color13: #424242;
+  --gray-color14: #f6f6f6;
+  --gray-color15: #fffaeb;
+  --gray-color16: #fffcf4;
+  --gray-color17: #f6fff5;
+  --gray-color18: #edf4fe;
+  --gray-color19: #fbfbf3;
+  --primary-font: "Rubik", sans-serif;
+  --secondary-font: "Rubik", sans-serif;
+}
+
+.cs_dark {
+  --white-color: #191919;
+  --primary-color: #fff;
+  --gray-color1: #222;
+  --gray-color2: #2a2a2a;
+  --gray-color3: #1e1e1e;
+  --gray-color4: #1b1d24;
+  --gray-color5: #1a1a1a;
+  --gray-color6: #1e1f1d;
+  --gray-color7: #2a241f;
+  --gray-color8: #1a2533;
+  --gray-color9: #2b2b2b;
+  --gray-color10: #0e1015;
+  --gray-color11: #232427;
+  --gray-color16: #1c1b16;
+  --gray-color17: #151c16;
+  --gray-color18: #13181e;
+  // .cs_white_color {
+  //   color: #fff;
+  // }
+
+  // .cs_white_bg {
+  //   background-color: #191919;
+  // }
+}

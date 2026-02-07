@@ -1,0 +1,172 @@
+/*==============================================================
+  16. Iconbox
+================================================================*/
+.cs_iconbox_style_1,
+.cs_iconbox_style_2 {
+  display: flex;
+  gap: 20px;
+
+  .cs_iconbox_icon {
+    width: 50px;
+    height: 50px;
+    flex: none;
+    margin-top: 5px;
+  }
+}
+
+.cs_iconbox_style_2 {
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cs_iconbox_style_3 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  .cs_iconbox_badge {
+    width: 24px;
+    height: 24px;
+    padding: 6px;
+    line-height: 1em;
+    top: -20px;
+    right: -20px;
+
+    &:empty {
+      display: none;
+    }
+  }
+}
+
+.cs_iconbox_style_4 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  .cs_iconbox_icon {
+    width: 88px;
+    height: 88px;
+    padding: 15px;
+    flex: none;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s ease;
+
+    img {
+      border-radius: 0;
+    }
+  }
+
+  br {
+    display: block;
+  }
+
+  .cs_iconbox_info {
+    text-wrap: wrap;
+  }
+
+  a:hover {
+    color: var(--accent-color);
+  }
+
+  &:hover {
+    .cs_iconbox_icon {
+      border-color: var(--accent-color);
+
+      img {
+        border-radius: 0;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+
+    .cs_iconbox_icon {
+      width: 70px;
+      height: 70px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.cs_iconbox_style_5 {
+  .cs_iconbox_icon {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+
+    img {
+      border-radius: 0;
+    }
+  }
+}
+
+/*==========================================================
+ Iconbox Container & Wrapper
+============================================================*/
+
+.cs_iconbox_container {
+  width: min(100%, 1430px);
+  margin: 0 auto;
+  display: flex;
+  gap: 30px 45px;
+  //align-items: center;
+  justify-content: center;
+  &.cs_type_1 {
+    width: 100%;
+    gap: 30px 15px;
+    justify-content: space-between;
+    padding: 52px 30px;
+  }
+  &.cs_type_2 {
+    gap: 30px 20px;
+    padding: 40px 40px 35px;
+    justify-content: space-between;
+    .cs_iconbox_style_1 {
+      gap: 9px;
+      padding-left: 55px;
+      border-left: 1px solid var(--gray-color2);
+      &:first-child {
+        padding-left: 0;
+        border-left: 0;
+      }
+    }
+  }
+  @media (max-width: 1399px) {
+    gap: 30px 20px;
+    //flex-wrap: wrap;
+    &.cs_type_1 {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 1199px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 40px;
+    &.cs_type_2 {
+      .cs_iconbox_style_1 {
+        padding-left: 0;
+        border-left: 0;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr) !important;
+    &.cs_type_2 {
+      padding: 40px 20px 35px;
+    }
+  }
+}

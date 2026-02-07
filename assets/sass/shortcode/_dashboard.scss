@@ -1,0 +1,371 @@
+/*==============================================================
+  16. Account Dashboard
+================================================================*/
+
+.cs_dashboard_menu {
+  width: min(100%, 336px);
+  padding: 18px 0 24px;
+  box-shadow: 0 0 10px 0 rgba(140, 140, 140, 0.25);
+
+  .cs_menu_heading {
+    padding: 0 24px;
+  }
+
+  li {
+
+    &.active,
+    &:hover {
+      color: var(--primary-color);
+      background-color: var(--gray-color3);
+    }
+  }
+
+  .cs_badge {
+    width: 20px;
+    height: 20px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 24px;
+  }
+
+  @media (max-width:1199px) {
+    .cs_menu_heading {
+      padding: 0 20px;
+    }
+
+    a {
+      padding: 10px 20px;
+    }
+
+  }
+
+  @media (max-width:991px) {
+    width: 100%;
+  }
+
+}
+
+.cs_user_dashboard,
+.cs_user_orders,
+.cs_user_payments,
+.cs_user_refund,
+.cs_user_address,
+.cs_user_chat {
+  padding-left: 20px;
+
+  @media (max-width:1199px) {
+    padding-left: 0;
+  }
+}
+
+.cs_user_payments,
+.cs_user_address {
+  .cs_shipping_address {
+    width: min(100%, 430px);
+    min-height: 140px;
+    padding: 20px 30px;
+
+    .badge {
+      color: var(--white-color);
+    }
+  }
+
+  .cs_address_change_btns {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    .address_delete_btn {
+      padding-left: 11px;
+      position: relative;
+
+      &::before {
+        content: "|";
+        color: var(--accent-color);
+        line-height: 1em;
+        position: absolute;
+        left: 0;
+        top: 5px;
+      }
+    }
+
+    a:hover,
+    button:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  .cs_btn_style_1.cs_accent_bg {
+    &::before {
+      background-color: var(--primary-color);
+    }
+
+    &:hover {
+      color: var(--white-color);
+    }
+  }
+}
+
+.cs_user_refund {
+  .cs_refund_history_wrapper {
+    min-height: 370px;
+    padding: 30px 24px;
+    border: 1px solid var(--gray-color2);
+  }
+
+  .cs_btn_style_1 {
+    padding: 4px 30px 5px;
+
+    &:hover {
+      color: var(--white-color);
+    }
+  }
+}
+
+.cs_user_style_1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .cs_user_avatar {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/*===========================================================
+  User Chatbox
+=============================================================*/
+.cs_user_chatbox_container {
+  width: 100%;
+  display: flex;
+  box-shadow: 0 0 10px 0 rgba(140, 140, 140, 0.25);
+
+  .cs_user_list_container {
+    width: min(100%, 360px);
+    max-height: 700px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--gray-color2);
+
+    .cs_btn_style_1.cs_accent_bg {
+      &::before {
+        background-color: var(--primary-color);
+      }
+
+      &:hover {
+        color: var(--white-color);
+      }
+    }
+  }
+
+  .cs_user_search {
+    margin-bottom: 13px;
+
+    input {
+      width: 100%;
+      outline: 0;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: transparent;
+      border: 1px solid var(--gray-color2);
+
+      &:focus {
+        border-color: var(--primary-color);
+      }
+    }
+  }
+
+  .cs_user_list {
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+  .cs_avatar_style_1 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 17px 50px 17px 0;
+    border-bottom: 1px solid var(--gray-color2);
+
+    .cs_avatar_icon {
+      width: 50px;
+      height: 50px;
+      flex: none;
+    }
+
+    .cs_status {
+      width: 12px;
+      height: 12px;
+      right: -3px;
+      bottom: 6px;
+      background-color: var(--secondary-color);
+    }
+
+    .cs_avatar_info p {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .cs_active_time,
+    .cs_active_chats {
+      right: 0;
+    }
+
+    .cs_active_time {
+      top: 17px;
+    }
+
+    .cs_active_chats {
+      width: 20px;
+      height: 20px;
+      bottom: 17px;
+
+      &:empty {
+        display: none;
+      }
+    }
+
+    &.active {
+      .cs_status {
+        background-color: var(--accent-color);
+      }
+    }
+  }
+
+  .cs_user_list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cs_chat_area {
+    width: min(100%, 680px);
+  }
+
+  .cs_chat_header {
+    width: 100%;
+    padding: 30px;
+    border-bottom: 1px solid var(--gray-color2);
+
+    .cs_avatar_style_1 {
+      padding: 0;
+      border: 0;
+    }
+  }
+
+  .cs_user_message_history_list {
+    padding: 30px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .cs_user_message_history_list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cs_composer_area {
+    padding: 0px 30px 30px;
+  }
+
+  .cs_user_message_item {
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .cs_user_icon {
+      width: 35px;
+      height: 35px;
+      flex: none;
+    }
+
+    .cs_user_message {
+      width: fit-content;
+      max-width: 455px;
+      margin-bottom: 4px;
+      color: var(--primary-color);
+      padding: 9px 15px;
+      background-color: var(--gray-color2);
+    }
+
+    &.client {
+      flex-direction: row-reverse;
+      text-align: right;
+
+      .cs_user_message {
+        max-width: 446px;
+        color: var(--dark-white-color);
+        background-color: var(--blue-color);
+      }
+    }
+  }
+
+  .cs_message_composer {
+    input {
+      margin: 0;
+      display: block;
+      width: 100%;
+      outline: 0;
+      padding: 16px 140px 16px 20px;
+      resize: none;
+      border-radius: 5px;
+      background-color: transparent;
+      border: 1px solid var(--blue-color);
+    }
+
+    .cs_btn_style_1 {
+      position: absolute;
+      right: 7px;
+      top: 7px;
+    }
+  }
+}
+
+/*===========================================================
+  Bredcumb
+=============================================================*/
+.cs_bredcumb {
+  --bs-breadcrumb-divider: '>';
+
+  .breadcrumb-item {
+    &.active {
+      color: var(--primary-color);
+    }
+
+    a:hover {
+      color: var(--accent-color);
+    }
+  }
+}
+
+/*===========================================================
+ Terms & Conditions
+=============================================================*/
+.cs_articles_wrapper {
+  width: min(100%, 960px);
+
+  .cs_terms_article {
+    margin-bottom: 28px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

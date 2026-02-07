@@ -1,0 +1,923 @@
+/*=============================================================
+  04. General
+===============================================================*/
+
+/*=====================================  
+  Classess for Fonts Size  
+=======================================*/
+.cs_fs_12 {
+  font-size: 12px;
+  line-height: 1.25em;
+}
+
+.cs_fs_14 {
+  font-size: 14px;
+  line-height: 1.1em;
+}
+
+.cs_fs_16 {
+  font-size: 16px;
+  line-height: 1.63em;
+}
+
+.cs_fs_18 {
+  font-size: 18px;
+  line-height: 1.39em;
+}
+
+.cs_fs_25 {
+  font-size: 25px;
+  line-height: 1.28em;
+}
+
+.cs_fs_33 {
+  font-size: 33px;
+  line-height: 1.36em;
+}
+
+.cs_fs_44 {
+  font-size: 44px;
+  line-height: 1.25em;
+}
+
+.cs_fs_59 {
+  font-size: 59px;
+  line-height: 1.2em;
+
+  @media (max-width: 991px) {
+    font-size: 52px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 46px;
+  }
+}
+
+.cs_fs_70 {
+  font-size: 70px;
+  line-height: 1.286em;
+
+  @media (max-width: 1199px) {
+    font-size: 65px;
+  }
+
+  @media (max-width: 991px) {
+  }
+
+  @media (max-width: 575px) {
+  }
+}
+
+.cs_fs_78 {
+  font-size: 78px;
+  line-height: 1.16em;
+
+  @media (max-width: 1199px) {
+    font-size: 65px;
+  }
+
+  @media (max-width: 991px) {
+  }
+
+  @media (max-width: 575px) {
+  }
+}
+
+.cs_fs_100 {
+  font-size: 100px;
+  line-height: 1em;
+
+  @media (max-width: 991px) {
+  }
+
+  @media (max-width: 575px) {
+  }
+}
+
+/*=====================================  
+  Classess for Fonts Weight
+=======================================*/
+.cs_light {
+  font-weight: 300;
+}
+
+.cs_normal {
+  font-weight: 400;
+}
+
+.cs_medium {
+  font-weight: 500;
+}
+
+.cs_semibold {
+  font-weight: 600;
+}
+
+.cs_bold {
+  font-weight: 700;
+}
+
+.cs_extrabold {
+  font-weight: 800;
+}
+
+.cs_black {
+  font-weight: 900;
+}
+
+/*=====================================  
+  Classess for Fonts Color
+=======================================*/
+
+.cs_primary_color {
+  color: var(--primary-color);
+}
+
+.cs_dark_color {
+  color: var(--dark-color);
+}
+
+.cs_accent_color {
+  color: var(--accent-color);
+}
+
+.cs_red_color {
+  color: var(--red-color);
+}
+
+.cs_red_color2 {
+  color: var(--red-color2);
+}
+.cs_orange_color {
+  color: var(--orange-color);
+}
+
+.cs_blue_color {
+  color: var(--blue-color);
+}
+.cs_blue_color2 {
+  color: var(--blue-color2);
+}
+
+.cs_purple_color {
+  color: var(--purple-color);
+}
+
+.cs_velvet_color {
+  color: var(--velvet-color);
+}
+
+.cs_yellow_color {
+  color: var(--yellow-color);
+}
+
+.cs_secondary_color {
+  color: var(--secondary-color);
+}
+
+.cs_white_dark_color {
+  color: var(--dark-white-color);
+}
+
+.cs_white_color {
+  color: #fff;
+}
+
+.cs_gray_color1 {
+  color: var(--gray-color1);
+}
+
+.cs_gray_color2 {
+  color: var(--gray-color2);
+}
+
+.cs_gray_color3 {
+  color: var(--gray-color3);
+}
+
+.cs_gray_color4 {
+  color: var(--gray-color4);
+}
+
+.cs_gray_color5 {
+  color: var(--gray-color5);
+}
+
+.cs_gray_color6 {
+  color: var(--gray-color6);
+}
+
+.cs_gray_color7 {
+  color: var(--gray-color7);
+}
+
+.cs_gray_color8 {
+  color: var(--gray-color8);
+}
+
+.cs_gray_color9 {
+  color: var(--gray-color9);
+}
+.cs_gray_color10 {
+  color: var(--gray-color10);
+}
+.cs_gray_color11 {
+  color: var(--gray-color11);
+}
+.cs_gray_color12 {
+  color: var(--gray-color12);
+}
+.cs_gray_color13 {
+  color: var(--gray-color13);
+}
+.cs_gray_color14 {
+  color: var(--gray-color14);
+}
+.cs_gray_color15 {
+  color: var(--gray-color15);
+}
+.cs_gray_color16 {
+  color: var(--gray-color16);
+}
+.cs_gray_color17 {
+  color: var(--gray-color17);
+}
+.cs_gray_color18 {
+  color: var(--gray-color18);
+}
+
+.cs_black_color {
+  color: var(--black-color);
+}
+
+.cs_accent_filter {
+  filter: brightness(0) saturate(100%) invert(52%) sepia(10%) saturate(3042%)
+    hue-rotate(79deg) brightness(97%) contrast(85%);
+}
+
+.cs_red_filter {
+  filter: brightness(0) saturate(100%) invert(33%) sepia(71%) saturate(1338%)
+    hue-rotate(331deg) brightness(105%) contrast(88%);
+}
+.cs_yellow_filter {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(87%) saturate(1746%)
+    hue-rotate(360deg) brightness(87%) contrast(101%);
+}
+.cs_primary_filter {
+  filter: brightness(0) saturate(100%) invert(9%) sepia(0%) saturate(0%)
+    hue-rotate(185deg) brightness(90%) contrast(96%);
+}
+
+/*=====================================  
+  Classess for Fonts Family 
+=======================================*/
+.cs_primary_font {
+  font-family: var(--primary-font);
+}
+
+.cs_secondary_font {
+  font-family: var(--secondary-font);
+}
+
+/*=============================================  
+  Classess for Background Size & Colors
+===============================================*/
+.cs_accent_bg {
+  background-color: var(--accent-color);
+}
+
+.cs_primary_bg {
+  background-color: var(--primary-color);
+}
+
+.cs_dark_bg {
+  background-color: var(--dark-color);
+}
+
+.cs_dark_white-bg {
+  background-color: var(--dark-white-color);
+}
+
+.cs_secondary_bg {
+  background-color: var(--secondary-color);
+}
+
+.cs_gray_bg1 {
+  background-color: var(--gray-color1);
+}
+
+.cs_gray_bg2 {
+  background-color: var(--gray-color2);
+}
+
+.cs_gray_bg3 {
+  background-color: var(--gray-color3);
+}
+
+.cs_gray_bg4 {
+  background-color: var(--gray-color4);
+}
+
+.cs_gray_bg5 {
+  background-color: var(--gray-color5);
+}
+
+.cs_gray_bg6 {
+  background-color: var(--gray-color6);
+}
+
+.cs_gray_bg7 {
+  background-color: var(--gray-color7);
+}
+
+.cs_gray_bg8 {
+  background-color: var(--gray-color8);
+}
+.cs_gray_bg9 {
+  background-color: var(--gray-color9);
+}
+.cs_gray_bg10 {
+  background-color: var(--gray-color10);
+}
+.cs_gray_bg11 {
+  background-color: var(--gray-color11);
+}
+.cs_gray_bg12 {
+  background-color: var(--gray-color12);
+}
+.cs_gray_bg13 {
+  background-color: var(--gray-color13);
+}
+.cs_gray_bg14 {
+  background-color: var(--gray-color14);
+}
+.cs_gray_bg15 {
+  background-color: var(--gray-color15);
+}
+.cs_gray_bg16 {
+  background-color: var(--gray-color16);
+}
+.cs_gray_bg17 {
+  background-color: var(--gray-color17);
+}
+.cs_gray_bg18 {
+  background-color: var(--gray-color18);
+}
+.cs_gray_bg19 {
+  background-color: var(--gray-color19);
+}
+
+.cs_red_bg {
+  background-color: var(--red-color);
+}
+
+.cs_red_bg2 {
+  background-color: var(--red-color2);
+}
+.cs_orange_bg {
+  background-color: var(--orange-color);
+}
+
+.cs_blue_bg {
+  background-color: var(--blue-color);
+}
+.cs_blue_bg2 {
+  background-color: var(--blue-color2);
+}
+
+.cs_purple_bg {
+  background-color: var(--purple-color);
+}
+
+.cs_velvet_bg {
+  background-color: var(--velvet-color);
+}
+
+.cs_yellow_bg {
+  background-color: var(--yellow-color);
+}
+
+.cs_white_bg {
+  background-color: var(--white-color);
+}
+
+.cs_black_bg {
+  background-color: var(--black-color);
+}
+
+.cs_bg_filed {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cs_bg_fixed {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/*=============================================  
+  Classess for Border Radius
+===============================================*/
+.cs_radius_3 {
+  border-radius: 3px;
+}
+
+.cs_radius_5 {
+  border-radius: 5px;
+}
+
+.cs_radius_8 {
+  border-radius: 8px;
+}
+
+.cs_radius_10 {
+  border-radius: 10px;
+}
+
+.cs_radius_12 {
+  border-radius: 12px;
+}
+
+.cs_radius_16 {
+  border-radius: 16px;
+}
+
+.cs_radius_20 {
+  border-radius: 20px;
+}
+
+.cs_radius_32 {
+  border-radius: 32px;
+}
+
+.cs_radius_50 {
+  border-radius: 50px;
+}
+
+.cs_radius_100 {
+  border-radius: 50%;
+}
+
+/*=============================================  
+  Classess for Utility Components
+===============================================*/
+.cs_mp_0 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cs_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs_center_column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*=======================================================
+ All Buttons
+=========================================================*/
+.cs_btn_style_1 {
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  padding: 10px 30px;
+  position: relative;
+  text-align: center;
+  text-wrap: nowrap;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transform: scale(0);
+    background-color: var(--accent-color);
+    transition: transform 0.4s ease;
+  }
+
+  &.cs_accent_bg,
+  &.cs_blue_bg,
+  &.cs_purple_bg,
+  &.cs_velvet_bg,
+  &.cs_red_bg,
+  &.cs_orange_bg {
+    &::before {
+      background-color: var(--primary-color);
+    }
+
+    &:hover {
+      color: var(--white-color);
+    }
+  }
+
+  &.cs_hover_accent {
+    &::before {
+      background-color: var(--accent-color);
+    }
+  }
+
+  &.cs_hover_blue {
+    &::before {
+      background-color: var(--blue-color);
+    }
+  }
+  &.cs_hover_blue2 {
+    &::before {
+      background-color: var(--blue-color2);
+    }
+  }
+
+  &.cs_hover_purple {
+    &::before {
+      background-color: var(--purple-color);
+    }
+  }
+
+  &.cs_hover_velvet {
+    &::before {
+      background-color: var(--velvet-color);
+    }
+  }
+  &.cs_hover_red {
+    &::before {
+      background-color: var(--red-color);
+    }
+  }
+  &.cs_hover_orange {
+    &::before {
+      background-color: var(--orange-color);
+    }
+  }
+
+  &.cs_hover_primary {
+    &::before {
+      background-color: var(--primary-color);
+    }
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    color: #fff;
+
+    &::before {
+      border-radius: inherit;
+      transform: scale(1);
+    }
+  }
+}
+
+.cs_text_btn_style_1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, currentColor 0, currentColor 100%);
+  transition: background-size 0.4s cubic-bezier(0.49, 0.49, 0.08, 1);
+  background-size: 100% 1px;
+  background-position: 0 calc(100% - 0px);
+
+  &.cs_primary_color {
+    color: var(--primary-color);
+  }
+
+  &.cs_dark_color {
+    color: var(--dark-color);
+  }
+
+  &.cs_white_color {
+    color: #fff;
+  }
+
+  .cs_btn_icon {
+    display: inline-block;
+    width: 20px;
+    overflow: hidden;
+    transform: rotate(-45deg);
+
+    i {
+      text-shadow: -30px 0px 0px currentColor;
+      transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.55, 1);
+    }
+  }
+
+  &:hover {
+    background-position: 100% calc(100% - 0px);
+    background-size: 0 1px;
+
+    .cs_btn_icon i {
+      transform: translateX(30px);
+    }
+  }
+}
+
+.cs_player_btn_style_1 {
+  width: 80px;
+  height: 80px;
+
+  img,
+  > * {
+    border-radius: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: inherit;
+    background-color: var(--dark-white-color);
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &::before {
+    animation: pulseBorder 2s linear infinite;
+  }
+
+  &:hover {
+    color: initial;
+    &::before {
+      animation-play-state: paused;
+    }
+  }
+}
+
+.cs_player_btn_style_2 {
+  width: 70px;
+  height: 70px;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: inherit;
+    border: 2px solid currentColor;
+    transform: translate(-50%, -50%) scale(1);
+    animation: pulseBorder 2s linear infinite;
+  }
+
+  &::before {
+    animation-delay: 1s;
+  }
+
+  &:hover {
+    &::before {
+      animation-play-state: paused;
+    }
+  }
+}
+
+/*=======================================================
+  Section Heading
+=========================================================*/
+.cs_section_heading_style_1 {
+  .cs_horizontal_line {
+    width: 50px;
+    height: 3px;
+    background-color: currentColor;
+  }
+}
+
+.cs_section_heading_style_2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+
+  .cs_section_heading_right {
+    display: flex;
+    gap: 15px 80px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+  }
+}
+.cs_section_heading_style_3 {
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 16px;
+    background-color: var(--gray-color2);
+  }
+  .cs_section_title {
+    padding: 0 18px;
+    background-color: var(--white-color);
+  }
+  &.cs_type_1 {
+    &::before {
+      top: 22px;
+    }
+  }
+}
+.cs_section_heading_style_4 {
+  padding-top: 120px;
+}
+.cs_section_heading_style_5 {
+  .cs_section_title {
+    padding: 0 63px;
+    &::before,
+    &::after {
+      content: "";
+      width: 50px;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      top: 22px;
+      background-color: var(--gray-color9);
+    }
+    &::after {
+      right: 0;
+      left: initial;
+    }
+  }
+}
+/*===============================================
+ Countdown Component
+=================================================*/
+.cs_countdown {
+  display: flex;
+  gap: 20px;
+
+  .cs_timer_wrapper {
+    color: #ff0000;
+  }
+
+  span {
+    display: inline-block;
+    width: 40px;
+    padding: 0 4px;
+    text-align: center;
+    background-color: #ff0000;
+    color: var(--dark-white-color);
+    border-radius: 2px;
+  }
+}
+
+.cs_zoom {
+  overflow: hidden;
+
+  img {
+    transition: transform 0.5s ease;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.cs_pointer {
+  cursor: pointer;
+}
+
+/*=============================================  
+  Bootstrap Classess 
+===============================================*/
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1446px;
+  }
+}
+.container-fluid {
+  padding: 0 20px;
+}
+.cs_gap_y_20 {
+  gap: 20px 0;
+}
+
+.cs_gap_y_24 {
+  gap: 24px 0;
+}
+
+.cs_gap_y_30 {
+  gap: 30px 0;
+}
+
+.cs_gap_y_40 {
+  gap: 40px 0;
+
+  @media (max-width: 991px) {
+    gap: 30px 0;
+  }
+}
+
+.cs_gap_y_50 {
+  gap: 50px 0;
+}
+
+/*===========================================================  
+  Rating Component
+=============================================================*/
+.cs_rating,
+.cs_rating_percentage {
+  overflow: hidden;
+
+  &::before {
+    content: "\f005\f005\f005\f005\f005";
+    font-family: "Font Awesome 7 Free";
+    font-weight: 400;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.cs_rating {
+  max-width: 170px;
+  height: 26px;
+  position: relative;
+  color: var(--accent-color);
+  font-size: 16px;
+  letter-spacing: 14px;
+}
+
+.cs_rating_percentage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+  &::before {
+    font-weight: 900;
+  }
+}
+
+/*===========================================================  
+  Responsive For Common Component & Hide Elements
+=============================================================*/
+
+@media (max-width: 991px) {
+  br {
+    display: none;
+  }
+}
+
+/*===========================================================  
+  All Common Animation
+=============================================================*/
+@keyframes pulseBorder {
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+@keyframes curcularRotation {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spinAnimation {
+  0% {
+    transform: rotateX(-20deg) rotateY(0deg);
+  }
+
+  75% {
+    transform: rotateX(-20deg) rotateY(360deg);
+  }
+
+  100% {
+    transform: rotateX(-20deg) rotateY(360deg);
+  }
+}
+
+@keyframes scrollingAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

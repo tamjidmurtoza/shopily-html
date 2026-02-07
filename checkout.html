@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shopily - Multivendor eCommerce HTML Template">
+    <meta name="author" content="Laralink">
+    <!-- Site Title -->
+    <title>Shopily - Multivendor eCommerce HTML Template</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.webp">
+    <!-- All CSS Files -->
+    <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="assets/css/aos.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/swiper.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/odometer.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/tom-select.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  </head>
+  <body>
+    <!-- Start Hero Section -->
+    <div class="cs_height_150 cs_height_lg_100"></div>
+    <!-- Start Shopping Cart Checkout Section -->
+    <section>
+      <div class="cs_height_44 cs_height_lg_40"></div>
+      <div class="container">
+        <div class="row cs_gap_y_24">
+          <div class="col-lg-8">
+            <div class="row cs_gap_y_24">
+              <div class="col-12">
+                <div class="cs_shipping_address cs_radius_5">
+                  <h3 class="cs_fs_25 cs_medium cs_mb_16">Shipping Address</h3>
+                  <button type="button" class="cs_accent_color" id="addressModalBtn">
+                  <span><i class="fa-solid fa-plus"></i></span>
+                  <span>Add New Address</span>
+                  </button>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="cs_shipping_methods cs_radius_5">
+                  <h3 class="cs_fs_25 cs_medium cs_mb_18">Payment Methods</h3>
+                  <div class="cs_payment_options_wrapper">
+                    <div class="cs_primary_color" id="addCardModalBtn">
+                      <span class="cs_custom_checkbox position-relative">
+                      <input type="radio" name="card" checked>
+                      </span>
+                      <span>
+                        <span>
+                          <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.8333 0H4.16667C3.062 0.00132321 2.00296 0.440735 1.22185 1.22185C0.440735 2.00296 0.00132321 3.062 0 4.16667H20C19.9987 3.062 19.5593 2.00296 18.7782 1.22185C17.997 0.440735 16.938 0.00132321 15.8333 0Z" fill="currentColor"/>
+                            <path d="M0 10.8359C0.00132321 11.9406 0.440735 12.9996 1.22185 13.7808C2.00296 14.5619 3.062 15.0013 4.16667 15.0026H15.8333C16.938 15.0013 17.997 14.5619 18.7782 13.7808C19.5593 12.9996 19.9987 11.9406 20 10.8359V5.83594H0V10.8359ZM5.83333 10.4193C5.83333 10.6665 5.76002 10.9082 5.62267 11.1137C5.48532 11.3193 5.2901 11.4795 5.06169 11.5741C4.83328 11.6687 4.58195 11.6935 4.33947 11.6453C4.09699 11.597 3.87427 11.478 3.69945 11.3032C3.52463 11.1283 3.40558 10.9056 3.35735 10.6631C3.30912 10.4207 3.33387 10.1693 3.42848 9.94092C3.52309 9.71251 3.68331 9.51728 3.88887 9.37993C4.09443 9.24258 4.33611 9.16927 4.58333 9.16927C4.91485 9.16927 5.2328 9.30097 5.46722 9.53539C5.70164 9.76981 5.83333 10.0877 5.83333 10.4193Z" fill="currentColor"/>
+                          </svg>
+                        </span>
+                        <span class="cs_card_number">Add A New Card</span>
+                      </span>
+                    </div>
+                    <div class="cs_primary_color" id="paypalCardModalBtn">
+                      <span class="cs_custom_checkbox position-relative">
+                      <input type="radio" name="card">
+                      </span>
+                      <span>
+                        <span>
+                          <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.78182 0.00390625C8.91494 0.0351562 9.05186 0.0625 9.18498 0.09375C10.7786 0.496094 11.8245 1.88281 11.7941 3.57031C11.7903 3.74609 11.7713 3.92187 11.7561 4.09766C11.6458 4.03906 11.5317 3.98437 11.4252 3.92187C10.9802 3.67578 10.4972 3.57031 9.99891 3.56641C8.7628 3.55859 7.5267 3.5625 6.2906 3.56641C6.11945 3.56641 5.94829 3.57812 5.77714 3.59766C5.44625 3.63672 5.10394 3.93359 5.03928 4.26953C4.90997 4.95703 4.79206 5.64844 4.67416 6.33984C4.52963 7.19531 4.3889 8.05078 4.25198 8.90625C4.22916 9.05859 4.22536 9.21875 4.21014 9.37109C4.1607 9.60937 4.10365 9.84375 4.06561 10.082C3.92489 10.918 3.79177 11.7539 3.65485 12.5898C3.59019 12.9766 3.52173 13.3633 3.45707 13.75C3.43425 13.7773 3.40763 13.8008 3.38861 13.8281C3.23647 14.0391 3.0387 14.1562 2.78387 14.1562C2.09926 14.1562 1.41465 14.1641 0.730036 14.1562C0.254612 14.1523 -0.0648737 13.7617 0.0111942 13.2852C0.205167 12.0547 0.410551 10.8242 0.612131 9.59375C0.851744 8.13281 1.09136 6.67188 1.33097 5.21094C1.57819 3.70312 1.82541 2.19922 2.06883 0.691406C2.12588 0.335937 2.32746 0.125 2.63934 0C4.68557 0.00390625 6.7356 0.00390625 8.78182 0.00390625Z" fill="#002987"/>
+                            <path d="M3.45749 13.7539C3.52595 13.3672 3.59441 12.9805 3.65526 12.5938C3.79218 11.7578 3.9253 10.9219 4.06603 10.0859C4.10787 9.84766 4.16111 9.61328 4.21056 9.375C4.38171 9.04688 4.65936 8.91797 5.01307 8.91016C5.7167 8.90234 6.42033 8.91016 7.12396 8.86719C7.74391 8.82812 8.33344 8.61719 8.88493 8.32812C9.5239 7.99609 10.0792 7.55078 10.5432 6.98438C11.0224 6.39453 11.38 5.73438 11.5815 4.99609C11.6576 4.71875 11.707 4.42969 11.7679 4.14844C12.3993 4.60547 12.8214 5.22656 12.9393 6.00781C13.1828 7.60156 12.6579 8.94922 11.5587 10.0742C10.9235 10.7188 10.1553 11.125 9.28429 11.3008C8.86591 11.3828 8.42852 11.4102 8.00254 11.3984C7.37118 11.3828 6.87674 11.7656 6.77024 12.5195C6.62952 13.5039 6.45836 14.4805 6.28721 15.4609C6.22636 15.8125 5.97914 16.0039 5.62922 16.0039C5.04731 16.0039 4.46158 16.0039 3.87966 16.0039C3.42706 16.0039 3.1418 15.6289 3.22548 15.1641C3.31296 14.6953 3.38142 14.2227 3.45749 13.7539Z" fill="#0084CB"/>
+                            <path d="M11.7712 4.14514C11.7104 4.42639 11.6609 4.71545 11.5848 4.99279C11.3833 5.73498 11.0257 6.39123 10.5465 6.98107C10.0863 7.54748 9.52721 7.99279 8.88824 8.32482C8.33294 8.61389 7.74722 8.82482 7.12727 8.86389C6.42744 8.90685 5.72001 8.89514 5.01638 8.90686C4.66647 8.91076 4.38882 9.04357 4.21387 9.3717C4.22908 9.21545 4.22908 9.0592 4.2557 8.90686C4.39263 8.05139 4.53335 7.19592 4.67788 6.34045C4.79579 5.64904 4.90989 4.95764 5.04301 4.27014C5.10766 3.9342 5.44997 3.63732 5.78087 3.59826C5.95202 3.57873 6.12317 3.56701 6.29432 3.56701C7.53043 3.5631 8.76653 3.5592 10.0026 3.56701C10.5009 3.57092 10.9839 3.67639 11.4289 3.92248C11.5392 3.98498 11.6495 4.03967 11.7598 4.09826C11.7636 4.10998 11.7674 4.1256 11.7712 4.14514Z" fill="#00186A"/>
+                          </svg>
+                        </span>
+                        <span>Paypal</span>
+                      </span>
+                    </div>
+                    <div class="d-flex  align-items-center gap-2 cs_primary_color" id="cashOnDelivery">
+                      <span class="cs_custom_checkbox position-relative">
+                      <input type="radio" name="card">
+                      </span>
+                      <span>
+                      <span><i class="fa-solid fa-dollar-sign"></i></span>
+                      <span>Cash On Delivery</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cs_height_44 cs_height_lg_30"></div>
+            <div class="cs_cart_area">
+              <h3 class="cs_fs_25 cs_medium cs_mb_34 cs_mb_lg_20">Your Items</h3>
+              <div class="row cs_gap_y_24">
+                <div class="col-12">
+                  <div class="cs_cart_item cs_radius_5">
+                    <div class="cs_cart_product_style_2 position-relative">
+                      <a href="product-details.html" aria-label="View product details" class="cs_product_thumbnail">
+                      <img src="assets/img/main/product-img-1.webp" alt="Product image">
+                      </a>
+                      <div class="cs_product_info">
+                        <h3 class="cs_product_title cs_fs_16 cs_normal mb-0">
+                          <a href="product-details.html" aria-label="View product details">Coffee Maker with Black and Stainless Steel</a>
+                        </h3>
+                        <ul class="cs_product_desc_list cs_mb_8 cs_fs_12">
+                          <li>
+                            <span>Capacity :</span>
+                            <span>10 Liter</span>
+                          </li>
+                          <li>
+                            <span>Color :</span>
+                            <span>Black</span>
+                          </li>
+                        </ul>
+                        <div class="cs_product_price cs_fs_18 cs_medium cs_primary_color cs_mb_11">$205.99</div>
+                        <div class="cs_quantity_controls">
+                          <button type="button" class="cs_quantity_button cs_decreament cs_center cs_radius_5 cs_primary_color">−</button>
+                          <input type="number" class="cs_quantity_input cs_center cs_primary_color" name="productQty" value="1" min="1">
+                          <button type="button" class="cs_quantity_button cs_increament cs_center cs_radius_5 cs_primary_color">+</button>
+                        </div>
+                      </div>
+                      <div class="cs_shipping_summery text-end position-absolute">
+                        <h3 class="cs_fs_14 cs_medium cs_mb_5">Shipping Cost : 0.00</h3>
+                        <p class="cs_fs_14 mb-0">Estimated delivery between Jan 1 - Jan 10</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="cs_cart_item cs_radius_5">
+                    <div class="cs_cart_product_style_2 position-relative">
+                      <a href="product-details.html" aria-label="View product details" class="cs_product_thumbnail">
+                      <img src="assets/img/main/product-img-4.webp" alt="Product image">
+                      </a>
+                      <div class="cs_product_info">
+                        <h3 class="cs_product_title cs_fs_16 cs_normal mb-0">
+                          <a href="product-details.html" aria-label="View product details">Razer Basilisk Ultimate Wireless Gaming Mouse</a>
+                        </h3>
+                        <ul class="cs_product_desc_list cs_mb_8 cs_fs_12">
+                          <li>
+                            <span>Color :</span>
+                            <span>Black</span>
+                          </li>
+                        </ul>
+                        <div class="cs_product_price cs_fs_18 cs_medium cs_primary_color cs_mb_11">$205.99</div>
+                        <div class="cs_quantity_controls">
+                          <button type="button" class="cs_quantity_button cs_decreament cs_center cs_radius_5 cs_primary_color">−</button>
+                          <input type="number" class="cs_quantity_input cs_center cs_primary_color" name="productQty" value="1" min="1">
+                          <button type="button" class="cs_quantity_button cs_increament cs_center cs_radius_5 cs_primary_color">+</button>
+                        </div>
+                      </div>
+                      <div class="cs_shipping_summery text-end position-absolute">
+                        <h3 class="cs_fs_14 cs_medium cs_mb_5">Shipping Cost : 5.00</h3>
+                        <p class="cs_fs_14 mb-0">Estimated delivery between Jan 1 - Jan 10</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="cs_order_summery_wrapper">
+              <div class="cs_order_summery cs_gray_bg3 cs_radius_5">
+                <h3 class="cs_fs_25 cs_medium cs_mb_17">Order Summary</h3>
+                <ul class="cs_order_summery_list">
+                  <li>
+                    <span>Items</span>
+                    <span class="cs_medium cs_primary_color text-end">2</span>
+                  </li>
+                  <li>
+                    <span>Subtotal</span>
+                    <span class="cs_medium cs_primary_color text-end">$462.38</span>
+                  </li>
+                  <li>
+                    <span>Coupon Code</span>
+                    <div class="text-end position-relative">
+                      <button type="button" class="cs_medium cs_primary_color" id="couponCodeToggler">
+                      <span>Enter Code Here</span>
+                      <span><i class="fa-solid fa-caret-down"></i></span>
+                      </button>
+                      <form action="#" class="cs_coupon_code_container position-absolute">
+                        <input id="couponCode" value="" placeholder="Coupon Code">
+                        <button type="submit" class="cs_btn_style_1 cs_primary_bg cs_radius_5 cs_fs_14 cs_white_color w-100"><span>Apply</span></button>
+                      </form>
+                    </div>
+                  </li>
+                  <li>
+                    <span>Shipping Fee</span>
+                    <span class="cs_medium cs_primary_color text-end">$5.00</span>
+                  </li>
+                </ul>
+                <hr class="cs_mb_18 mt-0">
+                <div class="cs_order_total d-flex justify-content-between g-3 cs_mb_23">
+                  <span class="cs_fs_25 cs_medium cs_primary_color">Total</span>
+                  <span class="cs_fs_25 cs_medium cs_primary_color">$467.38</span>
+                </div>
+                <a href="order-success.html" aria-label="Goto checkout page" class="cs_btn_style_1 cs_accent_bg cs_white_color cs_mb_20 w-100"><span>Place Order</span></a>
+                <p class="cs_text_with_link cs_fs_12 text-center mb-0">Upon clicking 'Place Order', I confirm I have read and <br> acknowledged all <a href="#" aria-label="Terms & Policy link">terms and policies.</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cs_height_100 cs_height_lg_60"></div>
+    </section>
+    <!-- End Shopping Cart Checkout Section -->
+    <!-- Start Newsletter Section -->
+    <section class="cs_newsletter_style_1 cs_dark_bg cs_bg_filed" data-src="assets/img/main/newsletter-bg-1.webp">
+      <div class="cs_height_100 cs_height_lg_60"></div>
+      <div class="container">
+        <div class="cs_newsletter_content">
+          <div class="cs_newsletter_heading">
+            <h2 class="cs_newsletter_title cs_fs_33 cs_medium cs_white_color mb-0">Subscribe to Our Newsletter</h2>
+          </div>
+          <form action="#" class="cs_newsletter_form">
+            <input type="email" name="email" class="cs_form_field cs_radius_5" placeholder="Enter your email address..." autocomplete="email" required>
+            <button type="submit" class="cs_btn_style_1 cs_accent_bg cs_white_color cs_radius_5"><span>SUBSCRIBE</span></button>
+          </form>
+        </div>
+      </div>
+      <div class="cs_height_100 cs_height_lg_60"></div>
+    </section>
+    <!-- End Newsletter Section -->
+    <!-- Start Footer Section -->
+    <footer class="cs_footer_style_1 cs_dark_bg">
+      <div class="container">
+        <div class="cs_footer_main">
+          <div class="row cs_gap_y_24">
+            <div class="col-lg-3 col-md-6">
+              <div class="cs_footer_widget">
+                <h3 class="cs_widget_title cs_fs_18 cs_medium cs_white_color cs_mb_23">GET TO KNOW US</h3>
+                <ul class="cs_footer_menu cs_white_color cs_mp_0">
+                  <li><a href="about-us.html" aria-label="View about us page">About Us</a></li>
+                  <li><a href="blog.html" aria-label="View blog page">Blog</a></li>
+                  <li><a href="reviews.html" aria-label="View reviews page">Reviews</a></li>
+                  <li><a href="seller-home.html" aria-label="View seller home pahe">Warehouse</a></li>
+                  <li><a href="contact-us.html" aria-label="View contact us page">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="cs_footer_widget">
+                <h3 class="cs_widget_title cs_fs_18 cs_medium cs_white_color cs_mb_23">SUPPORT CENTER</h3>
+                <ul class="cs_footer_menu cs_white_color cs_mp_0">
+                  <li><a href="orders.html" aria-label="Track order link">Track Orders</a></li>
+                  <li><a href="terms-condition.html" aria-label="View return policy">Return Policy</a></li>
+                  <li><a href="refund.html" aria-label="View refund process page">Refund Process</a></li>
+                  <li><a href="faq.html" aria-label="Visit faq page">Faq’s</a></li>
+                  <li><a href="chat-box.html" aria-label="View live chat page">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="cs_footer_widget">
+                <h3 class="cs_widget_title cs_fs_18 cs_medium cs_white_color cs_mb_23">EARN WITH US</h3>
+                <ul class="cs_footer_menu cs_white_color cs_mp_0">
+                  <li>
+                    <a href="account-dashboard.html" aria-label="View dashboard page">Become A Seller</a>
+                  </li>
+                  <li>
+                    <a href="account-dashboard.html" aria-label="View dashboard page">Sell On Shopily</a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="View affiliate program">Affiliate Program</a>
+                  </li>
+                  <li>
+                    <a href="account-dashboard.html" aria-label="Visit dashboard page">Sell Digital Product</a>
+                  </li>
+                  <li>
+                    <a href="account-dashboard.html" aria-label="View dashboard page">Become A Vendor</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="cs_footer_widget">
+                <h3 class="cs_widget_title cs_fs_18 cs_medium cs_white_color cs_mb_23">CONTACT INFORMATION</h3>
+                <div class="cs_contact cs_white_color cs_mb_25">
+                  <p>Call:<a href="tel:2441450774">(244) 1450 774</a></p>
+                  <p>Mon-Fri 08:00-18:00</p>
+                </div>
+                <div class="cs_socials_contact cs_mb_34">
+                  <h3 class="cs_fs_18 cs_medium cs_white_color mb-0">FOLLOW US :</h3>
+                  <div class="cs_social_btns_style_1 cs_white_color">
+                    <a href="#" aria-label="Social link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Social link"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Social link"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Social link"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="cs_paymeny_logo">
+                  <img src="assets/img/main/payment-logo.svg" alt="Payment logo">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cs_footer_bottom">
+        <div class="container">
+          <div class="cs_bottom_content">
+            <div class="cs_copyright_text cs_fs_14 cs_medium">Copyright &copy; <span class="cs_getting_year"></span> Shopily. All Rights Reserved.</div>
+            <ul class="cs_privacy_links cs_fs_14 cs_mp_0">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Condition</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+    <!-- Start New Address Modal -->
+    <section class="cs_address_modal" id="addressModal">
+      <div class="cs_address_modal_overlay closeAddressModal"></div>
+      <div class="cs_modal_content_wrapper cs_white_bg cs_radius_5 position-relative z-1">
+        <button type="button" class="cs_close_address_modal closeAddressModal position-absolute">
+        <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="cs_address_form_wrapper">
+          <div class="cs_modal_heading cs_mb_34 text-center">
+            <h2 class="cs_fs_25 cs_medium mb-0">Add new address</h2>
+          </div>
+          <form action="#" class="cs_address_form row cs_gap_y_20">
+            <div class="col-sm-12">
+              <div class="cs_input_wrapper">
+                <label for="country">Country / Region *</label>
+                <select class="tom_select" id="country" required>
+                  <option value="" disabled>Select your country</option>
+                  <option value="usa">United States</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="canada">Canada</option>
+                  <option value="sustralia">Australia</option>
+                  <option value="germany">Germany</option>
+                  <option value="singapore" selected>Singapore</option>
+                  <option value="uae">United Arab Emirates</option>
+                  <option value="bangladesh">Bangladesh</option>
+                  <option value="french">France</option>
+                  <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="cs_input_wrapper">
+                <label for="fullName">Full Name *</label>
+                <input type="text" name="fullName" class="cs_form_field cs_radius_5" id="fullName" placeholder="Write your name" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="cs_input_wrapper">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" pattern="^\+?[0-9\s\-]{7,15}$"  name="phone" class="cs_form_field cs_radius_5" id="phone" placeholder="Enter your phone number" required>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="cs_input_wrapper">
+                <label for="address">Address *</label>
+                <input type="text" name="address" class="cs_form_field cs_radius_5" id="address" placeholder="House number/Street" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="cs_input_wrapper">
+                <input type="text" name="apartment" class="cs_form_field cs_radius_5" placeholder="Apartment/Suite etc">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="cs_input_wrapper">
+                <input type="number" name="zipCode" class="cs_form_field cs_radius_5" placeholder="Zip Code/Postal">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="cs_input_wrapper">
+                <input type="text" name="city" class="cs_form_field cs_radius_5" placeholder="City">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="cs_input_wrapper">
+                <input type="text" name="state" class="cs_form_field cs_radius_5" placeholder="State">
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="cs_custom_checkbox">
+                <input type="checkbox" name="dsaddress" id="dsAddress">
+                <label for="dsAddress">Set as default shipping address</label>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <button type="submit" class="cs_btn_style_1 cs_accent_bg cs_white_color cs_radius_5 w-100"><span>Confirm</span></button>
+            </div>
+            <div class="col-sm-6">
+              <button type="button" class="cs_btn_style_1 cs_primary_bg cs_white_color cs_radius_5 w-100"><span>Cancel</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- End New Address Modal -->
+    <!-- Start New Card Modal -->
+    <section class="cs_card_modal" id="cardModal">
+      <div class="cs_address_modal_overlay closeCardModal"></div>
+      <div class="cs_modal_content_wrapper cs_white_bg cs_radius_5 position-relative z-1">
+        <button type="button" class="cs_close_address_modal closeCardModal position-absolute">
+        <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="cs_address_form_wrapper">
+          <div class="cs_modal_heading cs_mb_39 text-center">
+            <h2 class="cs_fs_25 cs_medium mb-0">Add a new card</h2>
+          </div>
+          <div class="cs_card_logo cs_gray_bg3 cs_radius_5 cs_mb_50 cs_mb_lg_30">
+            <img src="assets/img/main/payment-logo-2.svg" alt="Paymen cards logo">
+          </div>
+          <form action="#" class="cs_address_form row cs_gap_y_20">
+            <div class="col-sm-6">
+              <div class="cs_input_wrapper">
+                <input type="number" name="cardNumber" class="cs_form_field cs_radius_5" placeholder="Card number" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="cs_input_wrapper">
+                <input type="text" name="chName" class="cs_form_field cs_radius_5" placeholder="Cardholder name" required>
+              </div>
+            </div>
+            <div class="col-sm-3 col-6">
+              <div class="cs_input_wrapper cs_month position-relative">
+                <input type="number" name="month" max="12" class="cs_form_field cs_radius_5" placeholder="MM" required>
+              </div>
+            </div>
+            <div class="col-sm-3 col-6">
+              <div class="cs_input_wrapper cs_year position-relative">
+                <input type="text" name="year" maxlength="4" class="cs_form_field cs_radius_5" placeholder="YY" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="cs_input_wrapper">
+                <input type="text" name="cvv" class="cs_form_field cs_radius_5" placeholder="CVV" required>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <button type="submit" class="cs_btn_style_1 cs_accent_bg cs_white_color cs_radius_5 w-100"><span>Save & Confirm</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- End New Card Modal -->
+    <!-- Start Scroll Top Button -->
+    <!-- End Scroll Top Button -->
+    <script src="assets/js/aos.min.js" defer></script>
+    <script src="assets/js/lenis.min.js" defer></script>
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/swiper.min.js" defer></script>
+    <script src="assets/js/odometer.min.js" defer></script>
+    <script src="assets/js/zoomPlus.min.js" defer></script>
+    <script src="assets/js/tom-select.min.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

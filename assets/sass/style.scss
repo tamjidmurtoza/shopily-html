@@ -1,0 +1,51 @@
+/*--------------------------------------------------------------
+>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+01. Color Variable
+02. Typography
+03. Spacing
+04. General
+05. Headers
+06. Footer
+07. preloader
+08. Slider
+08. FAQ
+10. Hero
+11. Cards
+12. CTA
+13. Category
+14. Contact
+15. Discount Banner
+16. Iconbox
+17. Post
+18. Products
+19. Product Details
+--------------------------------------------------------------*/
+
+@import 'default/variable';
+@import 'default/typhography';
+@import 'common/spacing';
+@import 'common/general';
+@import 'common/header';
+@import 'common/footer';
+@import 'common/preloader';
+@import 'common/slider';
+@import 'common/video-modal';
+@import 'shortcode/faq';
+@import 'shortcode/hero';
+@import 'shortcode/cards';
+@import 'shortcode/cart';
+@import 'shortcode/cta';
+@import 'shortcode/category';
+@import 'shortcode/contact';
+@import 'shortcode/discount';
+@import 'shortcode/dashboard';
+@import 'shortcode/iconbox';
+@import 'shortcode/newsletter';
+@import 'shortcode/order-shipping';
+@import 'shortcode/post';
+@import 'shortcode/products';
+@import 'shortcode/productDetails';
+@import 'shortcode/tabs';
+@import 'shortcode/testimonial';
+@import 'common/dark';

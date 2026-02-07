@@ -1,0 +1,214 @@
+/*==============================================================
+ 06. All Footer
+================================================================*/
+.cs_footer_style_1 {
+  .cs_footer_main {
+    padding: 80px 0 60px;
+  }
+
+  .cs_footer_menu {
+    li {
+      margin-bottom: 7px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      display: inline-flex;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(
+        90deg,
+        currentColor 0,
+        currentColor 100%
+      );
+      transition: background-size 0.4s cubic-bezier(0.49, 0.49, 0.08, 1);
+      background-position: 100% calc(100% - 0px);
+      background-size: 0 1px;
+
+      &:hover {
+        background-size: 100% 1px;
+        background-position: 0 calc(100% - 0px);
+      }
+    }
+  }
+
+  .cs_contact {
+    p {
+      margin-bottom: 7px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        display: inline-flex;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(
+          90deg,
+          currentColor 0,
+          currentColor 100%
+        );
+        transition: background-size 0.4s cubic-bezier(0.49, 0.49, 0.08, 1);
+        background-position: 100% calc(100% - 0px);
+        background-size: 0 1px;
+        margin-left: 6px;
+
+        &:hover {
+          background-size: 100% 1px;
+          background-position: 0 calc(100% - 0px);
+        }
+      }
+    }
+  }
+
+  .cs_socials_contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .cs_footer_bottom {
+    padding: 24px 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: var(--secondary-color);
+      opacity: 0.25;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .cs_bottom_content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cs_privacy_links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      li:not(:first-child) {
+        padding-left: 10px;
+        border-left: 1px solid currentColor;
+      }
+
+      a:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+  &.cs_type_1 {
+    .cs_footer_main {
+      padding: 74px 80px 80px;
+    }
+    .cs_iconbox_container {
+      padding: 44px 80px;
+      border-bottom: 1px solid var(--gray-color2);
+    }
+    .cs_footer_bottom {
+      padding: 24px 80px;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 1500px) {
+    &.cs_type_1 {
+      .cs_footer_bottom,
+      .cs_iconbox_container,
+      .cs_footer_main {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+/*=====================================================
+ Social Buttons
+=======================================================*/
+.cs_social_btns_style_1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  a {
+    width: 30px;
+    height: 30px;
+    flex: none;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+9. Instagram
+----------------------------------------------------------------*/
+.cs_instagram {
+  width: 100%;
+  display: flex;
+
+  .cs_instagram_item {
+    flex: 1;
+    overflow: hidden;
+    &:hover {
+      .cs_instagram_overlay {
+        opacity: 1;
+      }
+    }
+  }
+  .cs_instagram_thumb {
+    padding-top: 100%;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .cs_instagram_overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(25, 25, 25, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    color: var(--dark-white-color);
+    font-size: 31px;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.4s ease;
+  }
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    .cs_instagram_item {
+      flex: none;
+      width: 33.333333%;
+    }
+  }
+}

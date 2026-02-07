@@ -1,0 +1,232 @@
+/*==============================================================
+  12. CTA Banner
+================================================================*/
+.cs_cta_style_1 {
+  padding: 110px 10% 115px 30px;
+
+  .cs_cta_content {
+    width: min(100%, 450px);
+    margin-left: auto;
+  }
+
+  @media (max-width: 991px) {
+    padding: 45px 15px 50px 20px;
+
+    .cs_cta_content {
+      width: 100%;
+    }
+  }
+}
+
+.cs_cta_style_2 {
+  padding: 117px 120px 120px;
+
+  @media (max-width: 991px) {
+    padding: 45px 15px 50px 20px;
+
+    .cs_cta_content {
+      width: 100%;
+    }
+  }
+}
+
+.cs_cta_style_3 {
+  padding: 58px 20px 70px;
+
+  .cs_btn_style_1 {
+    &:before {
+      background-color: var(--white-color);
+    }
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 40px 20px 50px;
+  }
+}
+
+.cs_cta_style_4,
+.cs_cta_style_5 {
+  padding: 155px 20px 160px;
+
+  .cs_category_btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  @media (max-width: 991px) {
+    padding: 75px 20px 80px;
+  }
+}
+
+.cs_cta_style_5 {
+  padding: 111px 20px 115px;
+}
+
+.cs_cta_style_6 {
+  .cs_cta_thumbnail {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .cs_cta_content {
+    height: 100%;
+    width: min(100%, 520px);
+    padding: 60px 15px 60px 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  @media (max-width: 991px) {
+    .cs_cta_content {
+      width: 100%;
+      padding: 0px 15px 50px 20px;
+    }
+  }
+}
+
+.cs_cta_style_7 {
+  padding: 175px 0 170px;
+
+  .cs_cta_content {
+    width: min(100%, 520px);
+    margin-left: auto;
+  }
+
+  @media (max-width: 991px) {
+    padding: 60px 30px;
+    .cs_cta_content {
+      width: 100%;
+    }
+  }
+  @media (max-width: 575px) {
+    padding: 60px 15px;
+  }
+}
+.cs_cta_style_8 {
+  padding: 108px 15px 108px 120px;
+
+  .cs_cta_content {
+    width: min(100%, 456px);
+  }
+
+  @media (max-width: 991px) {
+    padding: 60px 30px;
+    .cs_cta_content {
+      width: 100%;
+    }
+  }
+  @media (max-width: 575px) {
+    padding: 60px 15px;
+  }
+}
+.cs_cta_style_9 {
+  padding: 117px 15px 123px 120px;
+
+  .cs_cta_content {
+    width: min(100%, 456px);
+  }
+
+  @media (max-width: 991px) {
+    padding: 60px 30px;
+    .cs_cta_content {
+      width: 100%;
+    }
+  }
+  @media (max-width: 575px) {
+    padding: 60px 15px;
+  }
+}
+.cs_cta_style_10 {
+  padding: 65px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  .cs_cta_content {
+    width: min(100%, 456px);
+  }
+  .cs_cta_logo {
+    width: 27%;
+  }
+
+  @media (max-width: 991px) {
+    padding: 60px 20px;
+  }
+  @media (max-width: 767px) {
+    padding: 60px 15px;
+    flex-direction: column-reverse;
+    .cs_cta_logo,
+    .cs_cta_content {
+      width: 100%;
+    }
+  }
+}
+.cs_cta_style_11 {
+  padding: 512px 136px 112px;
+}
+
+/*=============================================  
+  Video Block
+===============================================*/
+.cs_video_block_style_1,
+.cs_video_block_style_3 {
+  min-height: 650px;
+
+  @media (max-width: 1199px) {
+    min-height: 500px;
+  }
+
+  @media (max-width: 991px) {
+    min-height: 400px;
+  }
+
+  @media (max-width: 575px) {
+    min-height: 300px;
+  }
+}
+
+.cs_video_block_style_2 {
+  width: min(100%, 374px);
+  padding: 16px;
+  border-radius: 180px;
+  border: 2px dashed var(--gray-color9);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cs_player_btn_style_2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (max-width: 991px) {
+    width: min(100%, 613px);
+    height: 100%;
+    border-radius: 5px;
+  }
+}
+.cs_video_block_style_3 {
+  min-height: 600px;
+}

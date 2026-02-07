@@ -1,0 +1,124 @@
+/*--------------------------------------------------------------
+  05. All Headers
+----------------------------------------------------------------*/
+
+/*===================================================
+ Side Header Menu
+=====================================================*/
+.cs_side_header {
+  width: min(100%, 280px);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--white-color);
+  border-right: 1px solid var(--gray-color2);
+  transition: all 0.4s ease;
+  .cs_header_wrapper {
+    height: 100%;
+    padding-bottom: 100px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .cs_sidebar_nemu_list {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 10px 10px 10px 15px;
+      margin: 0;
+      display: none;
+      border-bottom: 1px solid var(--gray-color2);
+      a {
+        padding: 12px;
+      }
+    }
+  }
+  .menu-item-has-children {
+    > a {
+      border-bottom: 1px solid var(--gray-color2);
+      position: relative;
+      &::after {
+        content: "\f054";
+        font-size: 10px;
+        font-weight: 900;
+        color: currentColor;
+        font-family: "Font Awesome 7 Free";
+        position: absolute;
+        top: 19px;
+        right: 15px;
+        transition: transform 0.4s ease;
+      }
+    }
+    &.active {
+      > a {
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+  .sidebar_toggler {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: -30px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    transition: all 0.4s ease;
+  }
+  @media (max-width: 1279px) {
+    padding: 40px 0 100px 0;
+    left: -280px;
+    .sidebar_toggler {
+      display: flex;
+      &.active {
+        right: 0;
+      }
+    }
+    &.active {
+      left: 0;
+    }
+  }
+}
+/*===================================================
+ Floating Shopping Cart
+=====================================================*/
+.cs_floating_cart {
+  width: min(100%, 70px);
+  position: fixed;
+  top: min(380px, 50vh);
+  right: 0;
+  z-index: 1000;
+  overflow: hidden;
+  border-radius: 10px 0 0 10px;
+  .cs_cart_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 8px;
+    color: var(--white-color);
+  }
+  .cs_cart_price {
+    padding: 8px;
+  }
+}
