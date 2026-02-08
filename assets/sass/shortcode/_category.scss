@@ -221,6 +221,17 @@
   grid-template-columns: repeat(4, 1fr);
   .cs_category_item {
     width: 100%;
-    padding: 148px 50px;
+    padding: 148px 15px;
+  }
+  @media (max-width: 1399px) {
+    .cs_category_item {
+      padding: 120px 15px;
+    }
+  }
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 575px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

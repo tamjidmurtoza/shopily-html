@@ -311,8 +311,10 @@
   }
   @media (max-width: 991px) {
     position: absolute;
-    right: 30px;
+    left: 50%;
     bottom: 60px;
+    transform: translateX(-50%);
+    z-index: 2;
     .cs_left_arrow,
     .cs_right_arrow {
       position: initial;
@@ -487,6 +489,10 @@
       background-color: var(--orange-color);
     }
   }
+  @media (max-width: 991px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .swiper-pagination.cs_style_9,
 .swiper-pagination.cs_style_10 {
@@ -515,8 +521,9 @@
 .swiper-pagination.cs_style_11 {
   gap: 10px;
   flex-direction: row;
-  top: 89%;
+  top: initial;
   left: 50%;
+  bottom: 80px;
   .swiper-pagination-bullet {
     width: 20px;
     height: 6px;

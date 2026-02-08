@@ -106,7 +106,8 @@
 }
 
 .cs_hero_style_4 {
-  padding: 0px 30px 164px 96px;
+  height: 100%;
+  padding: 107px 30px 164px 96px;
 
   .cs_hero_content {
     width: min(100%, 490px);
@@ -122,6 +123,12 @@
         margin-right: 4px;
         animation: spinAnimation 6s linear infinite;
       }
+    }
+  }
+  @media (max-width: 991px) {
+    padding: 60px 20px 120px;
+    .cs_hero_content {
+      width: 100%;
     }
   }
 }
@@ -194,21 +201,27 @@
   }
 
   .cs_curcular_text {
-    width: 187px;
     top: 10%;
-    left: 77%;
+    right: 0;
     opacity: 0;
-
     img {
       animation: curcularRotation 15s linear infinite;
     }
   }
-
+  @media (min-width: 1366px) {
+    .cs_curcular_text {
+      width: 187px;
+      left: 77%;
+    }
+  }
   @media (max-width: 991px) {
     .cs_hero_thumbnail {
       margin: auto;
     }
-
+    .cs_curcular_text,
+    .cs_hero_shape_1 {
+      display: none;
+    }
     .cs_hero_content {
       width: 100%;
     }
@@ -246,6 +259,8 @@
   }
 
   @media (max-width: 991px) {
+    padding: 80px 0 140px;
+
     .cs_hero_thumbnail {
       margin: auto;
     }
@@ -289,11 +304,15 @@
   }
 }
 .cs_hero_style_9 {
+  height: 100%;
   padding: 430px 0 266px;
   .cs_hero_content {
     width: min(100%, 750px);
     transform: translateY(30px);
     opacity: 0;
+  }
+  @media (max-width: 991px) {
+    padding: 80px 0 140px;
   }
 }
 .cs_hero_style_10 {
@@ -318,6 +337,14 @@
   }
   .cs_hero_thumbnail {
     width: 50vw;
+  }
+  @media (max-width: 991px) {
+    padding: 80px 0 140px;
+    .cs_hero_thumbnail,
+    .cs_hero_content {
+      width: 100%;
+      padding: 0;
+    }
   }
 }
 .cs_hero_style_11 {
@@ -415,7 +442,7 @@
 
   @media (max-width: 991px) {
     min-height: 100%;
-    padding: 60px 0 120px;
+    padding: 60px 0 140px;
     .cs_hero_content {
       width: 100%;
     }
@@ -515,12 +542,18 @@
       top: 12px;
     }
   }
+  @media (max-width: 991px) {
+    padding: 80px 0 50px;
+  }
 }
 .cs_hero_style_17 {
   padding: 200px 0;
 
   .cs_hero_thumbnail {
     border-radius: 0;
+  }
+  @media (max-width: 991px) {
+    padding: 80px 0 140px;
   }
 }
 .cs_hero_style_18 {
@@ -561,8 +594,11 @@
   }
 }
 .cs_hero_style_19 {
+  height: 100%;
   padding: 266px 0;
   .cs_hero_bg {
+    height: 100%;
+    width: 100%;
     position: absolute;
     left: 0;
     top: 0;
@@ -580,7 +616,7 @@
     border-bottom: 1px solid currentColor;
   }
   @media (max-width: 991px) {
-    padding: 80px 0 180px;
+    padding: 80px 0 160px;
   }
 }
 

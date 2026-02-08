@@ -138,6 +138,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @media (max-width: 991px) {
+    padding: 60px 30px;
+    justify-content: flex-start;
+  }
 }
 .cs_card_style_7 {
   width: 100%;
@@ -185,8 +189,20 @@
   }
 }
 .cs_card_style_13 {
+  width: calc(50vw - 12px);
   display: flex;
   padding: 160px 80px;
+  margin-left: calc(-50vw + 102%);
+  &.cs_type_1 {
+    margin-left: initial;
+  }
+  @media (max-width: 991px) {
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+  }
 }
 
 .cs_card_style_14 {
