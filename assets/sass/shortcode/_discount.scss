@@ -102,6 +102,9 @@
   .cs_promo_text {
     width: min(100%, 300px);
   }
+  @media (max-width: 991px) {
+    padding: 80px 20px;
+  }
 }
 .cs_promo_banner_style_9 {
   padding: 50px 30px;

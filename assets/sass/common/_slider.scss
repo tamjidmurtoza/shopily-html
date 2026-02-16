@@ -133,7 +133,6 @@
   .cs_right_arrow {
     right: calc(0px + 6%);
   }
-
   @media (max-width: 991px) {
     padding-bottom: 10px;
     display: flex;
@@ -195,6 +194,7 @@
   .cs_left_arrow,
   .cs_right_arrow {
     box-shadow: none;
+    padding: 0;
   }
 
   .cs_left_arrow {
@@ -204,7 +204,15 @@
   .cs_right_arrow {
     right: calc(0px + 3%);
   }
+  @media (max-width: 1600px) {
+    .cs_left_arrow {
+      left: calc(0px + 0%);
+    }
 
+    .cs_right_arrow {
+      right: calc(0px + 0%);
+    }
+  }
   @media (max-width: 991px) {
     .cs_left_arrow,
     .cs_right_arrow {

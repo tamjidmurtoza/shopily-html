@@ -180,6 +180,9 @@
 }
 .cs_cta_style_11 {
   padding: 512px 136px 112px;
+  @media (max-width: 991px) {
+    padding: 360px 20px 60px;
+  }
 }
 
 /*=============================================  
