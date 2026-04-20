@@ -6,6 +6,9 @@
 //     padding-bottom: 10px  !important;
 //   }
 // }
+.cs_slider.cs_style_3 {
+  padding-bottom: 30px;
+}
 
 .cs_slider.cs_style_2.swiper {
   position: initial !important;
@@ -20,9 +23,11 @@
     url(../img/drag.webp) 16 9,
     ew-resize !important;
 }
+
 .swiper-slide {
   height: auto !important;
 }
+
 .swiper-slide-active {
   .cs_hero_style_1 {
     .cs_hero_thumbnail img {
@@ -49,6 +54,9 @@
   .cs_hero_style_17,
   .cs_hero_style_18,
   .cs_hero_style_19,
+  .cs_hero_style_21,
+  .cs_hero_style_26,
+  .cs_hero_style_27,
   .cs_hero_content_wrapper {
     .cs_hero_content {
       opacity: 1;
@@ -61,6 +69,7 @@
       transform: scale(1);
       transition: all 0.8s ease;
     }
+
     .cs_hero_bg {
       opacity: 1;
       transform: scale(1.05);
@@ -83,6 +92,7 @@
 }
 
 .cs_slider_gap_0 {
+
   .cs_slider_container,
   .swiper-wrapper {
     margin: 0 !important;
@@ -133,6 +143,7 @@
   .cs_right_arrow {
     right: calc(0px + 6%);
   }
+
   @media (max-width: 991px) {
     padding-bottom: 10px;
     display: flex;
@@ -191,6 +202,7 @@
 }
 
 .cs_arrows_style_3 {
+
   .cs_left_arrow,
   .cs_right_arrow {
     box-shadow: none;
@@ -204,6 +216,7 @@
   .cs_right_arrow {
     right: calc(0px + 3%);
   }
+
   @media (max-width: 1600px) {
     .cs_left_arrow {
       left: calc(0px + 0%);
@@ -213,7 +226,9 @@
       right: calc(0px + 0%);
     }
   }
+
   @media (max-width: 991px) {
+
     .cs_left_arrow,
     .cs_right_arrow {
       position: absolute;
@@ -244,6 +259,7 @@
 }
 
 .cs_arrows_style_5 {
+
   .cs_left_arrow,
   .cs_right_arrow {
     &:hover {
@@ -251,13 +267,16 @@
     }
   }
 }
+
 .cs_arrows_style_6 {
+
   .cs_left_arrow,
   .cs_right_arrow {
     top: 35%;
     transform: translateY(-35%);
   }
 }
+
 .cs_arrows_style_7 {
   position: absolute;
   top: 50%;
@@ -267,6 +286,7 @@
   flex-direction: column;
   gap: 10px;
   z-index: 2;
+
   .cs_left_arrow,
   .cs_right_arrow {
     width: 45px;
@@ -275,12 +295,14 @@
     border-radius: 10px;
     border: 1px solid var(--gray-color9);
     transition: all 0.4s ease;
+
     &:hover {
       color: var(--white-color);
       border-color: var(--primary-color);
       background-color: var(--primary-color);
     }
   }
+
   @media (max-width: 991px) {
     position: initial;
     flex-direction: row;
@@ -293,6 +315,7 @@
   display: flex;
   gap: 15px;
   justify-content: flex-end;
+
   .cs_left_arrow,
   .cs_right_arrow {
     width: 45px;
@@ -304,12 +327,14 @@
     border-radius: 10px;
     border: 1px solid var(--white-color);
     z-index: 2;
+
     &:hover {
       color: var(--primary-color);
       border-color: var(--white-color);
       background-color: var(--white-color);
     }
   }
+
   .cs_left_arrow {
     left: calc(13px + 9%);
   }
@@ -317,12 +342,14 @@
   .cs_right_arrow {
     right: calc(13px + 9%);
   }
+
   @media (max-width: 991px) {
     position: absolute;
     left: 50%;
     bottom: 60px;
     transform: translateX(-50%);
     z-index: 2;
+
     .cs_left_arrow,
     .cs_right_arrow {
       position: initial;
@@ -336,6 +363,7 @@
   display: flex;
   align-items: center;
   gap: 13px;
+
   .cs_left_arrow,
   .cs_right_arrow {
     width: 45px;
@@ -345,6 +373,7 @@
     border: 1px solid var(--gray-color2);
     box-shadow: 0 5px 4px 0 rgba(140, 140, 140, 0.25);
     transition: all 0.4s ease;
+
     &:hover {
       color: var(--dark-white-color);
       border-color: var(--accent-color);
@@ -352,6 +381,7 @@
     }
   }
 }
+
 /*=================================================
  Slider Pagination
 ===================================================*/
@@ -365,7 +395,9 @@
 .swiper-pagination.cs_style_8,
 .swiper-pagination.cs_style_9,
 .swiper-pagination.cs_style_10,
-.swiper-pagination.cs_style_11 {
+.swiper-pagination.cs_style_11,
+.swiper-pagination.cs_style_12,
+.swiper-pagination.cs_style_13 {
   width: fit-content;
   height: fit-content;
   position: absolute;
@@ -459,12 +491,14 @@
 .swiper-pagination.cs_style_8 {
   left: initial;
   right: 8%;
+
   .swiper-pagination-bullet {
     &.swiper-pagination-bullet-active {
       opacity: 1;
     }
   }
 }
+
 .swiper-pagination.cs_style_6 {
   .swiper-pagination-bullet {
     opacity: 1;
@@ -473,13 +507,16 @@
       background-color: var(--yellow-color);
     }
   }
+
   @media (max-width: 1399px) {
     right: 1%;
   }
+
   @media (max-width: 991px) {
     top: calc(100% - 12px);
   }
 }
+
 .swiper-pagination.cs_style_7 {
   .swiper-pagination-bullet {
     &.swiper-pagination-bullet-active {
@@ -488,6 +525,7 @@
     }
   }
 }
+
 .swiper-pagination.cs_style_8 {
   .swiper-pagination-bullet {
     background-color: transparent;
@@ -497,11 +535,13 @@
       background-color: var(--orange-color);
     }
   }
+
   @media (max-width: 991px) {
     left: 50%;
     transform: translateX(-50%);
   }
 }
+
 .swiper-pagination.cs_style_9,
 .swiper-pagination.cs_style_10 {
   .swiper-pagination-bullet {
@@ -520,18 +560,21 @@
   top: initial;
   left: 50%;
   transform: translate(-50%, 0);
+
   .swiper-pagination-bullet {
     border: 1px solid var(--red-color);
     opacity: 1;
     margin: 0;
   }
 }
+
 .swiper-pagination.cs_style_11 {
   gap: 10px;
   flex-direction: row;
   top: initial;
   left: 50%;
   bottom: 80px;
+
   .swiper-pagination-bullet {
     width: 20px;
     height: 6px;
@@ -545,6 +588,40 @@
     }
   }
 }
+
+.swiper-pagination.cs_style_12,
+.swiper-pagination.cs_style_13 {
+  left: 50%;
+  top: initial;
+  bottom: 0;
+  gap: 7px;
+  flex-direction: row;
+
+  .swiper-pagination-bullet {
+    background-color: var(--gray-color9);
+  }
+}
+
+.swiper-pagination.cs_style_13 {
+  top: 94%;
+}
+
+/*=======================================================
+ Single Product Slider
+=========================================================*/
+.cs_single_product_nav {
+  .cs_nav_thumbnail {
+    width: 76px;
+    height: 76px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
 /*=======================================================
  Horizontal Slider
 =========================================================*/
@@ -560,6 +637,7 @@
 
 .cs_horizontal_slider {
   overflow: hidden;
+
   .cs_sliding_content {
     display: flex;
     align-items: center;
@@ -579,12 +657,14 @@
       animation-direction: reverse;
     }
   }
+
   &.cs_type_1 {
     .cs_logo_list {
       gap: 100px;
       margin: 0 50px;
     }
   }
+
   &:hover {
     .cs_sliding_content {
       animation-play-state: paused;
@@ -608,6 +688,7 @@
     flex: none;
   }
 }
+
 .cs_announcements {
   gap: 30px;
   margin: 0 15px;

@@ -61,11 +61,9 @@
     font-size: 65px;
   }
 
-  @media (max-width: 991px) {
-  }
+  @media (max-width: 991px) {}
 
-  @media (max-width: 575px) {
-  }
+  @media (max-width: 575px) {}
 }
 
 .cs_fs_78 {
@@ -76,22 +74,18 @@
     font-size: 65px;
   }
 
-  @media (max-width: 991px) {
-  }
+  @media (max-width: 991px) {}
 
-  @media (max-width: 575px) {
-  }
+  @media (max-width: 575px) {}
 }
 
 .cs_fs_100 {
   font-size: 100px;
   line-height: 1em;
 
-  @media (max-width: 991px) {
-  }
+  @media (max-width: 991px) {}
 
-  @media (max-width: 575px) {
-  }
+  @media (max-width: 575px) {}
 }
 
 /*=====================================  
@@ -148,6 +142,7 @@
 .cs_red_color2 {
   color: var(--red-color2);
 }
+
 .cs_orange_color {
   color: var(--orange-color);
 }
@@ -155,6 +150,7 @@
 .cs_blue_color {
   color: var(--blue-color);
 }
+
 .cs_blue_color2 {
   color: var(--blue-color2);
 }
@@ -218,30 +214,39 @@
 .cs_gray_color9 {
   color: var(--gray-color9);
 }
+
 .cs_gray_color10 {
   color: var(--gray-color10);
 }
+
 .cs_gray_color11 {
   color: var(--gray-color11);
 }
+
 .cs_gray_color12 {
   color: var(--gray-color12);
 }
+
 .cs_gray_color13 {
   color: var(--gray-color13);
 }
+
 .cs_gray_color14 {
   color: var(--gray-color14);
 }
+
 .cs_gray_color15 {
   color: var(--gray-color15);
 }
+
 .cs_gray_color16 {
   color: var(--gray-color16);
 }
+
 .cs_gray_color17 {
   color: var(--gray-color17);
 }
+
 .cs_gray_color18 {
   color: var(--gray-color18);
 }
@@ -251,21 +256,19 @@
 }
 
 .cs_accent_filter {
-  filter: brightness(0) saturate(100%) invert(52%) sepia(10%) saturate(3042%)
-    hue-rotate(79deg) brightness(97%) contrast(85%);
+  filter: brightness(0) saturate(100%) invert(52%) sepia(10%) saturate(3042%) hue-rotate(79deg) brightness(97%) contrast(85%);
 }
 
 .cs_red_filter {
-  filter: brightness(0) saturate(100%) invert(33%) sepia(71%) saturate(1338%)
-    hue-rotate(331deg) brightness(105%) contrast(88%);
+  filter: brightness(0) saturate(100%) invert(33%) sepia(71%) saturate(1338%) hue-rotate(331deg) brightness(105%) contrast(88%);
 }
+
 .cs_yellow_filter {
-  filter: brightness(0) saturate(100%) invert(77%) sepia(87%) saturate(1746%)
-    hue-rotate(360deg) brightness(87%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(77%) sepia(87%) saturate(1746%) hue-rotate(360deg) brightness(87%) contrast(101%);
 }
+
 .cs_primary_filter {
-  filter: brightness(0) saturate(100%) invert(9%) sepia(0%) saturate(0%)
-    hue-rotate(185deg) brightness(90%) contrast(96%);
+  filter: brightness(0) saturate(100%) invert(9%) sepia(0%) saturate(0%) hue-rotate(185deg) brightness(90%) contrast(96%);
 }
 
 /*=====================================  
@@ -333,38 +336,57 @@
 .cs_gray_bg8 {
   background-color: var(--gray-color8);
 }
+
 .cs_gray_bg9 {
   background-color: var(--gray-color9);
 }
+
 .cs_gray_bg10 {
   background-color: var(--gray-color10);
 }
+
 .cs_gray_bg11 {
   background-color: var(--gray-color11);
 }
+
 .cs_gray_bg12 {
   background-color: var(--gray-color12);
 }
+
 .cs_gray_bg13 {
   background-color: var(--gray-color13);
 }
+
 .cs_gray_bg14 {
   background-color: var(--gray-color14);
 }
+
 .cs_gray_bg15 {
   background-color: var(--gray-color15);
 }
+
 .cs_gray_bg16 {
   background-color: var(--gray-color16);
 }
+
 .cs_gray_bg17 {
   background-color: var(--gray-color17);
 }
+
 .cs_gray_bg18 {
   background-color: var(--gray-color18);
 }
+
 .cs_gray_bg19 {
   background-color: var(--gray-color19);
+}
+
+.cs_gray_bg20 {
+  background-color: var(--gray-color20);
+}
+
+.cs_gray_bg21 {
+  background-color: var(--gray-color21);
 }
 
 .cs_red_bg {
@@ -374,6 +396,7 @@
 .cs_red_bg2 {
   background-color: var(--red-color2);
 }
+
 .cs_orange_bg {
   background-color: var(--orange-color);
 }
@@ -381,6 +404,7 @@
 .cs_blue_bg {
   background-color: var(--blue-color);
 }
+
 .cs_blue_bg2 {
   background-color: var(--blue-color2);
 }
@@ -395,6 +419,10 @@
 
 .cs_yellow_bg {
   background-color: var(--yellow-color);
+}
+
+.cs_yellow_bg2 {
+  background-color: var(--yellow-color2);
 }
 
 .cs_white_bg {
@@ -534,6 +562,7 @@
       background-color: var(--blue-color);
     }
   }
+
   &.cs_hover_blue2 {
     &::before {
       background-color: var(--blue-color2);
@@ -551,11 +580,13 @@
       background-color: var(--velvet-color);
     }
   }
+
   &.cs_hover_red {
     &::before {
       background-color: var(--red-color);
     }
   }
+
   &.cs_hover_orange {
     &::before {
       background-color: var(--orange-color);
@@ -568,7 +599,7 @@
     }
   }
 
-  > * {
+  >* {
     position: relative;
     z-index: 1;
   }
@@ -632,7 +663,7 @@
   height: 80px;
 
   img,
-  > * {
+  >* {
     border-radius: 0;
     position: relative;
     z-index: 1;
@@ -657,6 +688,7 @@
 
   &:hover {
     color: initial;
+
     &::before {
       animation-play-state: paused;
     }
@@ -718,6 +750,7 @@
     flex-direction: column;
   }
 }
+
 .cs_section_heading_style_3 {
   &::before {
     content: "";
@@ -728,22 +761,27 @@
     top: 16px;
     background-color: var(--gray-color2);
   }
+
   .cs_section_title {
     padding: 0 18px;
     background-color: var(--white-color);
   }
+
   &.cs_type_1 {
     &::before {
       top: 22px;
     }
   }
 }
+
 .cs_section_heading_style_4 {
   padding-top: 120px;
 }
+
 .cs_section_heading_style_5 {
   .cs_section_title {
     padding: 0 63px;
+
     &::before,
     &::after {
       content: "";
@@ -754,12 +792,14 @@
       top: 22px;
       background-color: var(--gray-color9);
     }
+
     &::after {
       right: 0;
       left: initial;
     }
   }
 }
+
 /*===============================================
  Countdown Component
 =================================================*/
@@ -808,9 +848,11 @@
     max-width: 1446px;
   }
 }
+
 .container-fluid {
   padding: 0 20px;
 }
+
 .cs_gap_y_20 {
   gap: 20px 0;
 }
