@@ -131,6 +131,10 @@
   color: var(--dark-color);
 }
 
+.cs_dark_color2 {
+  color: var(--dark-color2);
+}
+
 .cs_accent_color {
   color: var(--accent-color);
 }
@@ -282,6 +286,10 @@
   font-family: var(--secondary-font);
 }
 
+.cs_perfume_font {
+  font-family: var(--perfume-font);
+}
+
 /*=============================================  
   Classess for Background Size & Colors
 ===============================================*/
@@ -389,6 +397,22 @@
   background-color: var(--gray-color21);
 }
 
+.cs_gray_bg22 {
+  background-color: var(--gray-color22);
+}
+
+.cs_gray_bg23 {
+  background-color: var(--gray-color23);
+}
+
+.cs_gray_bg24 {
+  background-color: var(--gray-color24);
+}
+
+.cs_gray_bg25 {
+  background-color: var(--gray-color25);
+}
+
 .cs_red_bg {
   background-color: var(--red-color);
 }
@@ -431,6 +455,10 @@
 
 .cs_black_bg {
   background-color: var(--black-color);
+}
+
+.cs_green_bg {
+  background-color: var(--green-color);
 }
 
 .cs_bg_filed {
@@ -921,6 +949,33 @@
 @media (max-width: 991px) {
   br {
     display: none;
+  }
+}
+
+/*===========================================================  
+  Why Choose Us
+=============================================================*/
+.cs_why_choose_item {
+  display: flex;
+  gap: 25px;
+  align-items: start;
+
+  .cs_icon {
+    background: #f3f3f3;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+}
+
+.cs_layer_img_box_style_2 {
+  .cs_layer_img_2 {
+    img {
+      border: 12px solid var(--white-color);
+    }
   }
 }
 

@@ -55,6 +55,7 @@
   .cs_hero_style_18,
   .cs_hero_style_19,
   .cs_hero_style_21,
+  .cs_hero_style_25,
   .cs_hero_style_26,
   .cs_hero_style_27,
   .cs_hero_content_wrapper {
@@ -89,6 +90,14 @@
     transform: translateY(0);
     transition: all 0.6s ease;
   }
+
+  .cs_hero_style_22 {
+    .cs_hero_content {
+      clip-path: inset(0 0 0 0);
+      transition: all 1s ease;
+    }
+  }
+
 }
 
 .cs_slider_gap_0 {
@@ -101,6 +110,17 @@
   .swiper-slide {
     margin-right: 0 !important;
   }
+}
+
+.cs_pottery_slide .cs_slider_container {
+  overflow: hidden;
+  background-color: var(--gray-color13);
+  padding: 1px;
+  border-radius: 5px;
+}
+
+.cs_restaurant_slider {
+  width: min(100%, 1456px);
 }
 
 /*=================================================
@@ -379,6 +399,36 @@
       border-color: var(--accent-color);
       background-color: var(--accent-color);
     }
+  }
+}
+
+.cs_arrows_style_10 {
+
+  .cs_left_arrow,
+  .cs_right_arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    box-shadow: none;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--primary-color);
+    }
+  }
+
+  .cs_left_arrow {
+    left: 0;
+  }
+
+  .cs_right_arrow {
+    right: 0;
   }
 }
 

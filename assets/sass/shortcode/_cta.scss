@@ -200,9 +200,44 @@
   }
 }
 
+.cs_cta_style_12 {
+  padding: 200px 0;
+}
+
 .cs_cta_style_13 {
   padding: 185px 0;
 }
+
+.cs_cta_14 {
+  padding: 100px 0 130px;
+}
+
+.cs_layer_img_box,
+.cs_layer_img_box_style_2 {
+  padding-right: 26%;
+  padding-bottom: 20%;
+  position: relative;
+
+  .cs_layer_img_2 {
+    position: absolute;
+    right: 0;
+    padding-left: 30%;
+    bottom: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.cs_layer_img_box_style_2 {
+  .cs_layer_img_2 {
+    img {
+      border: 12px solid var(--white-color);
+    }
+  }
+}
+
 
 /*=============================================  
   Video Block
