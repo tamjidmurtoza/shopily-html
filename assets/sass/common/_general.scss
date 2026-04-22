@@ -28,6 +28,10 @@
 .cs_fs_25 {
   font-size: 25px;
   line-height: 1.28em;
+
+  @media (max-width:420px) {
+    font-size: 20px;
+  }
 }
 
 .cs_fs_33 {
@@ -51,6 +55,10 @@
   @media (max-width: 575px) {
     font-size: 46px;
   }
+
+  @media (max-width:420px) {
+    font-size: 30px;
+  }
 }
 
 .cs_fs_70 {
@@ -64,6 +72,10 @@
   @media (max-width: 991px) {}
 
   @media (max-width: 575px) {}
+
+  @media (max-width:420px) {
+    font-size: 30px;
+  }
 }
 
 .cs_fs_78 {
@@ -77,6 +89,10 @@
   @media (max-width: 991px) {}
 
   @media (max-width: 575px) {}
+
+  @media (max-width:420px) {
+    font-size: 30px;
+  }
 }
 
 .cs_fs_100 {
@@ -86,6 +102,10 @@
   @media (max-width: 991px) {}
 
   @media (max-width: 575px) {}
+
+  @media (max-width:420px) {
+    font-size: 30px;
+  }
 }
 
 /*=====================================  
@@ -288,6 +308,10 @@
 
 .cs_perfume_font {
   font-family: var(--perfume-font);
+}
+
+.cs_sunglass_font {
+  font-family: var(--sunglass-font);
 }
 
 /*=============================================  
@@ -627,6 +651,18 @@
     }
   }
 
+  &.cs_hover_dark {
+    color: #fff;
+
+    &::before {
+      background-color: var(--dark-color);
+    }
+
+    &:hover {
+      color: var(--dark-white-color);
+    }
+  }
+
   >* {
     position: relative;
     z-index: 1;
@@ -828,6 +864,32 @@
   }
 }
 
+.section-title-decorated {
+  position: relative;
+  display: inline-block;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 50px;
+    background-color: var(--gray-color9);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    left: 100%;
+    margin-left: 19px;
+  }
+
+  &::before {
+    right: 100%;
+    margin-right: 19px;
+  }
+}
+
 /*===============================================
  Countdown Component
 =================================================*/
@@ -1016,5 +1078,12 @@
 
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes upDown {
+
+  50% {
+    transform: rotate(5deg);
   }
 }

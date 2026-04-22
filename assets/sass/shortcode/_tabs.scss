@@ -64,21 +64,28 @@
   justify-content: center;
   align-items: center;
   gap: 24px;
+  overflow-x: auto;
 
   li {
-    border: 1px solid var(--gray-color13);
-    color: var(--primary-color);
 
     &.active {
-      color: var(--white-color);
-      background-color: var(--primary-color);
+      a {
+        color: var(--white-color);
+        background-color: var(--primary-color);
+      }
     }
 
     a {
-      display: inline-block;
+      display: block;
       padding: 10px 20px;
       text-wrap: nowrap;
+      color: var(--primary-color);
+      border: 1px solid var(--gray-color13);
     }
+  }
+
+  @media (max-width:1199px) {
+    gap: 15px;
   }
 }
 

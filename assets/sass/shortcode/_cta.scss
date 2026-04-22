@@ -202,10 +202,22 @@
 
 .cs_cta_style_12 {
   padding: 200px 0;
+
+  .cs_cta_subtitle {
+    color: #E8E8E8;
+  }
 }
 
 .cs_cta_style_13 {
   padding: 185px 0;
+
+  .cs_cta_subtitle {
+    color: #E8E8E8;
+  }
+
+  @media (max-width:991px) {
+    padding: 60px 0;
+  }
 }
 
 .cs_cta_14 {
