@@ -1,10 +1,6 @@
-/*--------------------------------------------------------------
+/*=========================================================
   05. All Headers
-----------------------------------------------------------------*/
-
-/*===================================================
- Side Header Menu
-=====================================================*/
+===========================================================*/
 .cs_side_header {
   width: min(100%, 280px);
   height: 100%;
@@ -15,6 +11,7 @@
   background-color: var(--white-color);
   border-right: 1px solid var(--gray-color2);
   transition: all 0.4s ease;
+
   .cs_header_wrapper {
     height: 100%;
     padding-bottom: 100px;
@@ -26,31 +23,37 @@
       display: none;
     }
   }
+
   .cs_sidebar_nemu_list {
     a {
       display: flex;
       align-items: center;
       gap: 12px;
       padding: 14px 20px;
+
       &:hover {
         color: var(--accent-color);
       }
     }
+
     ul {
       list-style: none;
       padding: 10px 10px 10px 15px;
       margin: 0;
       display: none;
       border-bottom: 1px solid var(--gray-color2);
+
       a {
         padding: 12px;
       }
     }
   }
+
   .menu-item-has-children {
-    > a {
+    >a {
       border-bottom: 1px solid var(--gray-color2);
       position: relative;
+
       &::after {
         content: "\f054";
         font-size: 10px;
@@ -63,14 +66,16 @@
         transition: transform 0.4s ease;
       }
     }
+
     &.active {
-      > a {
+      >a {
         &::after {
           transform: rotate(90deg);
         }
       }
     }
   }
+
   .sidebar_toggler {
     width: 30px;
     height: 30px;
@@ -85,20 +90,25 @@
     background-color: var(--primary-color);
     transition: all 0.4s ease;
   }
+
   @media (max-width: 1279px) {
     padding: 40px 0 100px 0;
     left: -280px;
+
     .sidebar_toggler {
       display: flex;
+
       &.active {
         right: 0;
       }
     }
+
     &.active {
       left: 0;
     }
   }
 }
+
 /*===================================================
  Floating Shopping Cart
 =====================================================*/
@@ -110,6 +120,7 @@
   z-index: 1000;
   overflow: hidden;
   border-radius: 10px 0 0 10px;
+
   .cs_cart_info {
     display: flex;
     flex-direction: column;
@@ -118,6 +129,7 @@
     padding: 8px;
     color: var(--white-color);
   }
+
   .cs_cart_price {
     padding: 8px;
   }

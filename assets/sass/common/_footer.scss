@@ -1,6 +1,6 @@
-/*==============================================================
+/*=====================================================
  06. All Footer
-================================================================*/
+=======================================================*/
 .cs_footer_style_1 {
   .cs_footer_main {
     padding: 80px 0 60px;
@@ -18,11 +18,9 @@
     a {
       display: inline-flex;
       background-repeat: no-repeat;
-      background-image: linear-gradient(
-        90deg,
-        currentColor 0,
-        currentColor 100%
-      );
+      background-image: linear-gradient(90deg,
+          currentColor 0,
+          currentColor 100%);
       transition: background-size 0.4s cubic-bezier(0.49, 0.49, 0.08, 1);
       background-position: 100% calc(100% - 0px);
       background-size: 0 1px;
@@ -45,11 +43,9 @@
       a {
         display: inline-flex;
         background-repeat: no-repeat;
-        background-image: linear-gradient(
-          90deg,
-          currentColor 0,
-          currentColor 100%
-        );
+        background-image: linear-gradient(90deg,
+            currentColor 0,
+            currentColor 100%);
         transition: background-size 0.4s cubic-bezier(0.49, 0.49, 0.08, 1);
         background-position: 100% calc(100% - 0px);
         background-size: 0 1px;
@@ -108,23 +104,29 @@
       }
     }
   }
+
   &.cs_type_1 {
     .cs_footer_main {
       padding: 74px 80px 80px;
     }
+
     .cs_iconbox_container {
       padding: 44px 80px;
       border-bottom: 1px solid var(--gray-color2);
     }
+
     .cs_footer_bottom {
       padding: 24px 80px;
+
       &::before {
         display: none;
       }
     }
   }
+
   @media (max-width: 1500px) {
     &.cs_type_1 {
+
       .cs_footer_bottom,
       .cs_iconbox_container,
       .cs_footer_main {
@@ -170,15 +172,18 @@
   .cs_instagram_item {
     flex: 1;
     overflow: hidden;
+
     &:hover {
       .cs_instagram_overlay {
         opacity: 1;
       }
     }
   }
+
   .cs_instagram_thumb {
     padding-top: 100%;
     position: relative;
+
     img {
       position: absolute;
       top: 0;
@@ -188,6 +193,7 @@
       object-fit: cover;
     }
   }
+
   .cs_instagram_overlay {
     width: 100%;
     height: 100%;
@@ -204,8 +210,10 @@
     z-index: 2;
     transition: all 0.4s ease;
   }
+
   @media (max-width: 767px) {
     flex-wrap: wrap;
+
     .cs_instagram_item {
       flex: none;
       width: 33.333333%;

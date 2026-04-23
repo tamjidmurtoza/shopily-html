@@ -1,6 +1,6 @@
-/*==============================================================
+/*=======================================================
   11. Single Product
-================================================================*/
+=========================================================*/
 .cs_product_details {
   padding-bottom: 24px;
   border-bottom: 1px solid var(--gray-color2);
@@ -162,8 +162,7 @@
     }
   }
 
-  @media (max-width: 1199px) {
-  }
+  @media (max-width: 1199px) {}
 }
 
 .cs_product_shipping_info {
@@ -223,6 +222,7 @@
           background-color: var(--blue-color);
         }
       }
+
       &.cs_hover_blue2 {
         &::before {
           background-color: var(--blue-color2);
@@ -240,18 +240,20 @@
           background-color: var(--velvet-color);
         }
       }
+
       &.cs_hover_red {
         &::before {
           background-color: var(--red-color);
         }
       }
+
       &.cs_hover_orange {
         &::before {
           background-color: var(--orange-color);
         }
       }
 
-      > * {
+      >* {
         position: relative;
         z-index: 1;
       }
@@ -276,6 +278,7 @@
   }
 
   @media (max-width: 1199px) {
+
     .cs_shipping_to,
     .cs_shipping_time,
     .cs_shipping_qty,
@@ -387,14 +390,17 @@
       margin-bottom: 7px;
     }
   }
+
   #description {
     p {
       margin-bottom: 18px;
+
       &:last-child {
         margin-bottom: 0;
       }
     }
   }
+
   #loadMoreReview {
     color: var(--white-color);
 
@@ -463,11 +469,13 @@
       letter-spacing: 4px;
     }
   }
+
   @media (max-width: 991px) {
     li {
       margin-top: 30px;
       padding-bottom: 20px;
     }
+
     .cs_client_review {
       .cs_client_review_header {
         margin-bottom: 20px;

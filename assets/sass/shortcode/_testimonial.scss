@@ -1,6 +1,6 @@
-/*==============================================================
+/*=================================================
  11. Testimonials
-================================================================*/
+===================================================*/
 .cs_testimonial_style_1 {
   padding: 0 40px;
   transform: translateY(30px);
@@ -28,47 +28,60 @@
     font-size: 14px;
     letter-spacing: 3px;
   }
+
+  @media (max-width: 991px) {
+    padding: 0 15px;
+  }
 }
+
 .cs_testimonial_style_2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   .cs_textimonial_content {
     padding: 60px 50px 35px;
     margin-top: -33px;
     z-index: 0;
   }
+
   blockquote {
     font-size: 18px;
     font-style: normal;
     margin-bottom: 23px;
   }
+
   .cs_avatar_icon {
     width: 60px;
     height: 60px;
     z-index: 1;
   }
+
   .cs_rating {
     width: 91px;
     font-size: 14px;
     letter-spacing: 3px;
   }
+
   @media (max-width: 1399px) {
     .cs_textimonial_content {
       padding: 60px 30px 35px;
     }
   }
+
   @media (max-width: 1199px) {
     .cs_textimonial_content {
       padding: 60px 20px 35px;
     }
   }
+
   @media (max-width: 575px) {
     .cs_textimonial_content {
       padding: 50px 15px 30px;
     }
   }
 }
+
 .cs_testimonial_slider {
   .swiper-slide:nth-child(3n + 1) {
     .cs_testimonial_style_2 {
@@ -77,6 +90,7 @@
       }
     }
   }
+
   .swiper-slide:nth-child(3n + 2) {
     .cs_testimonial_style_2 {
       .cs_textimonial_content {
@@ -84,6 +98,7 @@
       }
     }
   }
+
   .swiper-slide:nth-child(3n + 3) {
     .cs_testimonial_style_2 {
       .cs_textimonial_content {

@@ -531,11 +531,7 @@
 
     .cs_btn_style_1 {
       &::before {
-        background-color: var(--white-color);
-      }
-
-      &:hover {
-        color: var(--red-color);
+        background-color: var(--orange-color);
       }
     }
   }
@@ -716,19 +712,21 @@
     width: min(100%, 940px);
   }
 
+
   .cs_hero_img {
     position: absolute;
+    z-index: 2;
 
     &:first-child {
       border-radius: 0 200px 0 0;
-      top: 100px;
-      left: 130px;
+      top: 120px;
+      left: 7%;
     }
 
     &:last-child {
       border-radius: 200px 0 0 0;
-      right: 130px;
-      bottom: 130px;
+      right: 7%;
+      bottom: 110px;
     }
   }
 
@@ -767,6 +765,86 @@
     top: -20px;
     animation: curcularRotation 15s linear infinite;
   }
+
+  @media (max-width:1600px) {
+    .cs_hero_img {
+
+      &:first-child {
+        left: 3%;
+      }
+
+      &:last-child {
+        right: 3%;
+      }
+    }
+  }
+
+  @media (max-width:1399px) {
+    .cs_hero_content {
+      width: min(100%, 856px);
+    }
+
+    .cs_hero_img {
+
+      &:first-child {
+        left: 1%;
+      }
+
+      &:last-child {
+        right: 1%;
+      }
+    }
+  }
+
+  @media (max-width:1199px) {
+    .cs_hero_img_wrapper {
+      width: min(100%, 650px);
+      margin: 0 auto 30px;
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cs_hero_img {
+      position: initial;
+
+      img {
+        width: 100%;
+      }
+
+      &:first-child {
+        left: initial;
+        top: initial;
+        order: 2;
+        border-radius: 0px 100px 0 0;
+      }
+
+      &:last-child {
+        right: initial;
+        order: 1;
+        border-radius: 100px 0 0 0;
+      }
+    }
+
+    .cs_hero_content {
+      width: 100%;
+    }
+  }
+
+  @media (max-width:991px) {
+    padding: 60px 0 70px;
+
+    .cs_hero_img {
+
+      &:first-child {
+        border-radius: 0px 40px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 40px 0 0 0;
+      }
+    }
+  }
 }
 
 .cs_hero_style_21 {
@@ -794,26 +872,26 @@
     }
   }
 
-  @media (max-width:1399px) {
+  @media (max-width: 1399px) {
     .cs_hero_content {
       padding: 40px 30px 50px;
     }
   }
 
-  @media (max-width:1199px) {
+  @media (max-width: 1199px) {
     .cs_hero_content {
       padding: 40px 20px 50px;
     }
   }
 
-  @media (max-width:991px) {
+  @media (max-width: 991px) {
     .cs_hero_content {
       width: 100%;
       padding: 30px 20px 50px;
     }
   }
 
-  @media (max-width:575px) {
+  @media (max-width: 575px) {
     .cs_hero_content {
       padding: 30px 15px 50px;
     }
@@ -935,7 +1013,7 @@
     }
   }
 
-  @media (max-width:991px) {
+  @media (max-width: 991px) {
     padding: 30px 0;
   }
 }
@@ -952,6 +1030,14 @@
   .cs_hero_subtitle {
     &::before {
       display: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 60px 0;
+
+    .cs_hero_content {
+      width: 100%;
     }
   }
 }
@@ -980,6 +1066,21 @@
     gap: 30px;
     padding: 140px 30px;
   }
+
+  @media (max-width: 1199px) {
+    padding: 60px 30px;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+    padding: 60px 30px;
+
+    .cs_hero_thumbnail,
+    .cs_hero_content {
+      width: 100%;
+    }
+
+  }
 }
 
 .cs_hero_style_27 {
@@ -987,7 +1088,8 @@
 
   .cs_hero_thumbnail {
     border-radius: 0;
-    width: 34vw;
+    width: min(100%, 658px);
+    margin: 0 auto;
 
     img {
       width: 100%;
@@ -1021,13 +1123,18 @@
   .cs_underline {
     border-bottom: 3px solid var(--accent-color);
   }
+
+  @media (max-width:991px) {
+    padding: 60px 0 80px;
+  }
 }
 
 .cs_hero_style_28 {
-  padding: 60px 0 300px;
+  padding: 0 0 300px;
   background-color: #f3f3f3;
 
   .cs_hero_content {
+    padding-top: 60px;
     width: min(100%, 700px);
 
     .cs_arrow_icon {
@@ -1078,8 +1185,13 @@
     }
   }
 
-  @media (max-width:991px) {
-    padding: 0 0 80px;
+  @media (max-width: 991px) {
+    padding: 0 0 60px;
+
+    .cs_hero_content {
+      padding-top: 0;
+      width: 100%;
+    }
   }
 }
 
@@ -1096,6 +1208,7 @@
   }
 
   .cs_delivery {
+    width: 200px;
     display: flex;
     align-items: center;
     gap: 11px;
@@ -1105,8 +1218,12 @@
     background: var(--white, #fff);
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
     bottom: 90px;
-    left: 180px;
+    left: 30px;
     animation: scrollingAnimation 6s ease infinite alternate;
+
+    .cs_icon {
+      flex: none;
+    }
   }
 
   .cs_hero_thumbnail {
@@ -1150,12 +1267,14 @@
 
     .cs_delivery {
       bottom: 130px;
-      left: 250px;
+      left: 30px;
     }
   }
 }
 
 .cs_hero_banner {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1164,6 +1283,16 @@
 
   a:hover {
     color: var(--accent-color);
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 30px 20px;
+
+    .cs_hero_banner_thumbnail {
+      margin: 0 auto;
+    }
   }
 }
 

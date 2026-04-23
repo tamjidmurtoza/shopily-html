@@ -24,7 +24,7 @@
 /*==============================================================
   01. Variables
 ================================================================*/
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Rufina:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Rufina:wght@400;700&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --white-color: #fff;
   --black-color: #000;
@@ -67,10 +67,12 @@
   --gray-color21: #f6f3ee;
   --gray-color22: #f5f1e6;
   --gray-color24: #FBFBFB;
+  --gray-color25: #E6E8D6;
   --primary-font: "Rubik", sans-serif;
   --secondary-font: "Rubik", sans-serif;
   --perfume-font: "Cormorant Garamond", sans-serif;
   --sunglass-font: "Rufina", sans-serif;
+  --flower-font: "Unna", sans-serif;
 }
 
 .cs_dark {
@@ -87,6 +89,7 @@
   --gray-color9: #2b2b2b;
   --gray-color10: #0e1015;
   --gray-color11: #232427;
+  --gray-color14: #1e1f1d;
   --gray-color16: #1c1b16;
   --gray-color17: #151c16;
   --gray-color18: #13181e;
@@ -1441,10 +1444,20 @@ label {
   font-size: 33px;
   line-height: 1.36em;
 }
+@media (max-width: 420px) {
+  .cs_fs_33 {
+    font-size: 28px;
+  }
+}
 
 .cs_fs_44 {
   font-size: 44px;
   line-height: 1.25em;
+}
+@media (max-width: 420px) {
+  .cs_fs_44 {
+    font-size: 30px;
+  }
 }
 
 .cs_fs_59 {
@@ -1486,14 +1499,29 @@ label {
   font-size: 78px;
   line-height: 1.16em;
 }
+@media (max-width: 1399px) {
+  .cs_fs_78 {
+    font-size: 72px;
+  }
+}
 @media (max-width: 1199px) {
   .cs_fs_78 {
     font-size: 65px;
   }
 }
+@media (max-width: 991px) {
+  .cs_fs_78 {
+    font-size: 56px;
+  }
+}
+@media (max-width: 575px) {
+  .cs_fs_78 {
+    font-size: 52px;
+  }
+}
 @media (max-width: 420px) {
   .cs_fs_78 {
-    font-size: 30px;
+    font-size: 36px;
   }
 }
 
@@ -1503,7 +1531,7 @@ label {
 }
 @media (max-width: 420px) {
   .cs_fs_100 {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 
@@ -1704,12 +1732,42 @@ label {
   font-family: var(--secondary-font);
 }
 
-.cs_perfume_font {
+.cs_perfume h1,
+.cs_perfume h2,
+.cs_perfume h3,
+.cs_perfume h4,
+.cs_perfume h5,
+.cs_perfume h6,
+.cs_perfume .cs_perfume_font {
   font-family: var(--perfume-font);
 }
+.cs_perfume .cs_secondary_font {
+  font-family: var(--secondary-font);
+}
 
-.cs_sunglass_font {
+.cs_sunglass h1,
+.cs_sunglass h2,
+.cs_sunglass h3,
+.cs_sunglass h4,
+.cs_sunglass h5,
+.cs_sunglass h6,
+.cs_sunglass .cs_sunglass_font {
   font-family: var(--sunglass-font);
+}
+.cs_sunglass .cs_secondary_font {
+  font-family: var(--secondary-font);
+}
+
+.cs_flower h1,
+.cs_flower h2,
+.cs_flower h3,
+.cs_flower h4,
+.cs_flower h5,
+.cs_flower h6 {
+  font-family: var(--flower-font);
+}
+.cs_flower .cs_secondary_font {
+  font-family: var(--secondary-font);
 }
 
 /*=============================================  
@@ -2336,12 +2394,18 @@ label {
   align-items: start;
 }
 .cs_why_choose_item .cs_icon {
+  flex: none;
   background: #f3f3f3;
   padding: 15px;
   border-radius: 15px;
 }
 .cs_why_choose_item:not(:last-child) {
   margin-bottom: 35px;
+}
+@media (max-width: 991px) {
+  .cs_why_choose_item {
+    gap: 15px;
+  }
 }
 
 .cs_layer_img_box_style_2 .cs_layer_img_2 img {
@@ -2386,12 +2450,9 @@ label {
     transform: rotate(5deg);
   }
 }
-/*--------------------------------------------------------------
+/*=========================================================
   05. All Headers
-----------------------------------------------------------------*/
-/*===================================================
- Side Header Menu
-=====================================================*/
+===========================================================*/
 .cs_side_header {
   width: min(100%, 280px);
   height: 100%;
@@ -2504,9 +2565,9 @@ label {
   padding: 8px;
 }
 
-/*==============================================================
+/*=====================================================
  06. All Footer
-================================================================*/
+=======================================================*/
 .cs_footer_style_1 .cs_footer_main {
   padding: 80px 0 60px;
 }
@@ -2687,9 +2748,9 @@ label {
 /*===========================================================  
   07. Preloade
 =============================================================*/
-/*===============================================================
+/*========================================================
   08. Slider
-=================================================================*/
+==========================================================*/
 .cs_slider.cs_style_3 {
   padding-bottom: 30px;
 }
@@ -3436,9 +3497,9 @@ label {
   top: 94%;
 }
 
-/*=======================================================
+/*========================================
  Single Product Slider
-=========================================================*/
+==========================================*/
 .cs_single_product_nav .cs_nav_thumbnail {
   width: 76px;
   height: 76px;
@@ -3450,9 +3511,9 @@ label {
      object-fit: cover;
 }
 
-/*=======================================================
+/*====================================
  Horizontal Slider
-=========================================================*/
+======================================*/
 .cs_horizontal_slider_wrapper .cs_horizontal_slider {
   margin-bottom: 80px;
 }
@@ -3485,10 +3546,16 @@ label {
 .cs_horizontal_slider:hover .cs_sliding_content {
   animation-play-state: paused;
 }
+@media (max-width: 767px) {
+  .cs_horizontal_slider.cs_type_1 .cs_logo_list {
+    gap: 60px;
+    margin: 0 30px;
+  }
+}
 
-/*=======================================================
+/*=====================================
  Partners Logo
-=========================================================*/
+=======================================*/
 .cs_logo_list,
 .cs_announcements {
   min-width: 100%;
@@ -3501,6 +3568,13 @@ label {
 .cs_logo_list .cs_logo,
 .cs_announcements .cs_logo {
   flex: none;
+}
+@media (max-width: 767px) {
+  .cs_logo_list,
+  .cs_announcements {
+    gap: 60px;
+    margin: 0 30px;
+  }
 }
 
 .cs_announcements {
@@ -4146,10 +4220,7 @@ label {
   transform: translateY(20px);
 }
 .cs_hero_style_15 .cs_hero_content .cs_btn_style_1::before {
-  background-color: var(--white-color);
-}
-.cs_hero_style_15 .cs_hero_content .cs_btn_style_1:hover {
-  color: var(--red-color);
+  background-color: var(--orange-color);
 }
 .cs_hero_style_15 .cs_slide_img {
   width: 60vw;
@@ -4315,16 +4386,17 @@ label {
 }
 .cs_hero_style_20 .cs_hero_img {
   position: absolute;
+  z-index: 2;
 }
 .cs_hero_style_20 .cs_hero_img:first-child {
   border-radius: 0 200px 0 0;
-  top: 100px;
-  left: 130px;
+  top: 120px;
+  left: 7%;
 }
 .cs_hero_style_20 .cs_hero_img:last-child {
   border-radius: 200px 0 0 0;
-  right: 130px;
-  bottom: 130px;
+  right: 7%;
+  bottom: 110px;
 }
 .cs_hero_style_20 .cs_product_area {
   width: min(100%, 780px);
@@ -4355,6 +4427,64 @@ label {
   right: -40px;
   top: -20px;
   animation: curcularRotation 15s linear infinite;
+}
+@media (max-width: 1600px) {
+  .cs_hero_style_20 .cs_hero_img:first-child {
+    left: 3%;
+  }
+  .cs_hero_style_20 .cs_hero_img:last-child {
+    right: 3%;
+  }
+}
+@media (max-width: 1399px) {
+  .cs_hero_style_20 .cs_hero_content {
+    width: min(100%, 856px);
+  }
+  .cs_hero_style_20 .cs_hero_img:first-child {
+    left: 1%;
+  }
+  .cs_hero_style_20 .cs_hero_img:last-child {
+    right: 1%;
+  }
+}
+@media (max-width: 1199px) {
+  .cs_hero_style_20 .cs_hero_img_wrapper {
+    width: min(100%, 650px);
+    margin: 0 auto 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cs_hero_style_20 .cs_hero_img {
+    position: initial;
+  }
+  .cs_hero_style_20 .cs_hero_img img {
+    width: 100%;
+  }
+  .cs_hero_style_20 .cs_hero_img:first-child {
+    left: initial;
+    top: initial;
+    order: 2;
+    border-radius: 0px 100px 0 0;
+  }
+  .cs_hero_style_20 .cs_hero_img:last-child {
+    right: initial;
+    order: 1;
+    border-radius: 100px 0 0 0;
+  }
+  .cs_hero_style_20 .cs_hero_content {
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .cs_hero_style_20 {
+    padding: 60px 0 70px;
+  }
+  .cs_hero_style_20 .cs_hero_img:first-child {
+    border-radius: 0px 40px 0 0;
+  }
+  .cs_hero_style_20 .cs_hero_img:last-child {
+    border-radius: 40px 0 0 0;
+  }
 }
 
 .cs_hero_style_21 .cs_hero_content {
@@ -4504,6 +4634,14 @@ label {
 .cs_hero_style_25 .cs_hero_subtitle::before {
   display: none;
 }
+@media (max-width: 991px) {
+  .cs_hero_style_25 {
+    padding: 60px 0;
+  }
+  .cs_hero_style_25 .cs_hero_content {
+    width: 100%;
+  }
+}
 
 .cs_hero_style_26 {
   display: flex;
@@ -4529,13 +4667,29 @@ label {
     padding: 140px 30px;
   }
 }
+@media (max-width: 1199px) {
+  .cs_hero_style_26 {
+    padding: 60px 30px;
+  }
+}
+@media (max-width: 767px) {
+  .cs_hero_style_26 {
+    flex-direction: column-reverse;
+    padding: 60px 30px;
+  }
+  .cs_hero_style_26 .cs_hero_thumbnail,
+  .cs_hero_style_26 .cs_hero_content {
+    width: 100%;
+  }
+}
 
 .cs_hero_style_27 {
   padding: 60px 0;
 }
 .cs_hero_style_27 .cs_hero_thumbnail {
   border-radius: 0;
-  width: 34vw;
+  width: min(100%, 658px);
+  margin: 0 auto;
 }
 .cs_hero_style_27 .cs_hero_thumbnail img {
   width: 100%;
@@ -4563,12 +4717,18 @@ label {
 .cs_hero_style_27 .cs_underline {
   border-bottom: 3px solid var(--accent-color);
 }
+@media (max-width: 991px) {
+  .cs_hero_style_27 {
+    padding: 60px 0 80px;
+  }
+}
 
 .cs_hero_style_28 {
-  padding: 60px 0 300px;
+  padding: 0 0 300px;
   background-color: #f3f3f3;
 }
 .cs_hero_style_28 .cs_hero_content {
+  padding-top: 60px;
   width: min(100%, 700px);
 }
 .cs_hero_style_28 .cs_hero_content .cs_arrow_icon {
@@ -4609,7 +4769,11 @@ label {
 }
 @media (max-width: 991px) {
   .cs_hero_style_28 {
-    padding: 0 0 80px;
+    padding: 0 0 60px;
+  }
+  .cs_hero_style_28 .cs_hero_content {
+    padding-top: 0;
+    width: 100%;
   }
 }
 
@@ -4624,6 +4788,7 @@ label {
   left: -134px;
 }
 .cs_hero_style_29 .cs_delivery {
+  width: 200px;
   display: flex;
   align-items: center;
   gap: 11px;
@@ -4634,8 +4799,11 @@ label {
   background: var(--white, #fff);
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   bottom: 90px;
-  left: 180px;
+  left: 30px;
   animation: scrollingAnimation 6s ease infinite alternate;
+}
+.cs_hero_style_29 .cs_delivery .cs_icon {
+  flex: none;
 }
 .cs_hero_style_29 .cs_hero_thumbnail {
   width: 36vw;
@@ -4672,11 +4840,13 @@ label {
   }
   .cs_hero_style_29 .cs_delivery {
     bottom: 130px;
-    left: 250px;
+    left: 30px;
   }
 }
 
 .cs_hero_banner {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4685,6 +4855,16 @@ label {
 }
 .cs_hero_banner a:hover {
   color: var(--accent-color);
+}
+@media (max-width: 767px) {
+  .cs_hero_banner {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 30px 20px;
+  }
+  .cs_hero_banner .cs_hero_banner_thumbnail {
+    margin: 0 auto;
+  }
 }
 
 /*==============================================================
@@ -4914,11 +5094,11 @@ label {
 
 .cs_card_style_11 {
   padding: 50px 60px 60px;
-  width: min(576px, 50%);
+  width: min(576px, 100%);
   margin-left: auto;
 }
 .cs_card_style_11 .cs_btn_style_1 {
-  border: 1px solid var(--dark-color);
+  border: 1px solid var(--primary-color);
 }
 .cs_card_style_11 .cs_btn_style_1::before {
   display: none;
@@ -4926,6 +5106,19 @@ label {
 .cs_card_style_11 .cs_btn_style_1:hover {
   border-color: var(--orange-color);
   background-color: var(--orange-color);
+}
+.cs_card_style_11 .cs_shape1 {
+  position: absolute;
+  right: 30px;
+  bottom: 24px;
+}
+@media (max-width: 991px) {
+  .cs_card_style_11 {
+    padding: 50px 15px 60px;
+  }
+  .cs_card_style_11 .cs_shape1 {
+    transform: scale(0.8);
+  }
 }
 
 .cs_card_style_12 .cs_card_info {
@@ -4993,9 +5186,9 @@ label {
   margin: auto;
 }
 
-/*==============================================================
+/*==================================================
   16. Product Carts
-================================================================*/
+====================================================*/
 .cs_cart_product_style_1,
 .cs_cart_product_style_2 {
   min-width: 600px;
@@ -5314,9 +5507,9 @@ label {
   overflow-x: auto;
 }
 
-/*==============================================================
+/*======================================================
   12. CTA Banner
-================================================================*/
+========================================================*/
 .cs_cta_style_1 {
   padding: 110px 10% 115px 30px;
 }
@@ -5336,12 +5529,54 @@ label {
 .cs_cta_style_2 {
   padding: 117px 120px 120px;
 }
+.cs_cta_style_2 .cs_cta_content {
+  width: min(50%, 460px);
+}
+.cs_cta_style_2 .cs_curcular_text {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-55%, -50%);
+  z-index: 0;
+}
+.cs_cta_style_2 .cs_curcular_text > img {
+  flex: none;
+  animation: curcularRotation 10s linear infinite;
+}
+.cs_cta_style_2 .cs_curcular_text .cs_player_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cs_cta_style_2 .cs_cta_title {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1399px) {
+  .cs_cta_style_2 {
+    padding: 117px 50px 120px;
+  }
+}
+@media (max-width: 1199px) {
+  .cs_cta_style_2 {
+    padding: 117px 50px 120px;
+  }
+  .cs_cta_style_2 .cs_curcular_text {
+    left: 60%;
+  }
+}
 @media (max-width: 991px) {
   .cs_cta_style_2 {
-    padding: 45px 15px 50px 20px;
+    padding: 45px 15px 50px;
   }
   .cs_cta_style_2 .cs_cta_content {
     width: 100%;
+  }
+  .cs_cta_style_2 .cs_curcular_text {
+    position: initial;
+    transform: translate(0);
+    margin-bottom: 20px;
   }
 }
 
@@ -5514,14 +5749,19 @@ label {
   padding: 200px 0;
 }
 .cs_cta_style_12 .cs_cta_subtitle {
-  color: #E8E8E8;
+  color: #e8e8e8;
+}
+@media (max-width: 991px) {
+  .cs_cta_style_12 {
+    padding: 60px 0;
+  }
 }
 
 .cs_cta_style_13 {
   padding: 185px 0;
 }
 .cs_cta_style_13 .cs_cta_subtitle {
-  color: #E8E8E8;
+  color: #e8e8e8;
 }
 @media (max-width: 991px) {
   .cs_cta_style_13 {
@@ -5611,9 +5851,9 @@ label {
   min-height: 600px;
 }
 
-/*==============================================================
+/*====================================================
   13. Category Section
-================================================================*/
+======================================================*/
 .cs_category_item {
   width: min(100%, 216px);
 }
@@ -5751,9 +5991,9 @@ label {
   background-color: #fef4ea;
 }
 
-/*=========================================================
+/*===============================================
  Category List
-===========================================================*/
+=================================================*/
 .cs_category_list_style_1 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -5767,6 +6007,7 @@ label {
 @media (max-width: 767px) {
   .cs_category_list_style_1 {
     grid-template-columns: repeat(3, 1fr);
+    gap: 24px 20px;
   }
 }
 @media (max-width: 575px) {
@@ -5878,9 +6119,9 @@ label {
   gap: 24px;
 }
 
-/*==============================================================
+/*=====================================================
   14. Contact
- ===============================================================*/
+ ======================================================*/
 .cs_contact_cotent_wrapper .cs_contact_heading {
   margin-bottom: 70px;
 }
@@ -6104,9 +6345,9 @@ label {
     transform: rotate(-20deg);
   }
 }
-/*========================================================
+/*==============================================
  Coupon Card With Discount Button
-==========================================================*/
+================================================*/
 .cs_coupon_card_style_1 {
   padding: 35px 50px 40px;
   overflow: hidden;
@@ -6166,9 +6407,9 @@ label {
   background: var(--accent-color);
 }
 
-/*==============================================================
+/*======================================================
   16. Account Dashboard
-================================================================*/
+========================================================*/
 .cs_dashboard_menu {
   width: min(100%, 336px);
   padding: 18px 0 24px;
@@ -6291,9 +6532,9 @@ label {
   height: 80px;
 }
 
-/*===========================================================
+/*=================================================
   User Chatbox
-=============================================================*/
+===================================================*/
 .cs_user_chatbox_container {
   width: 100%;
   display: flex;
@@ -6455,11 +6696,11 @@ label {
   top: 7px;
 }
 
-/*===========================================================
+/*===============================================
   Bredcumb
-=============================================================*/
+=================================================*/
 .cs_bredcumb {
-  --bs-breadcrumb-divider: '>';
+  --bs-breadcrumb-divider: ">";
 }
 .cs_bredcumb .breadcrumb-item.active {
   color: var(--primary-color);
@@ -6468,9 +6709,9 @@ label {
   color: var(--accent-color);
 }
 
-/*===========================================================
+/*===============================================
  Terms & Conditions
-=============================================================*/
+=================================================*/
 .cs_articles_wrapper {
   width: min(100%, 960px);
 }
@@ -6481,9 +6722,9 @@ label {
   margin-bottom: 0;
 }
 
-/*==============================================================
+/*===================================================
   16. Iconbox
-================================================================*/
+=====================================================*/
 .cs_iconbox_style_1,
 .cs_iconbox_style_2 {
   display: flex;
@@ -6721,12 +6962,9 @@ label {
   border: 2px solid var(--primary-color);
 }
 
-/*=========================================================
+/*==================================================
  17. Product Order & Shipping
-===========================================================*/
-/*=========================================================
- Product Order Info & Summery
-===========================================================*/
+====================================================*/
 .cs_order_summery_wrapper {
   display: flex;
   flex-direction: column;
@@ -7206,9 +7444,9 @@ label {
   color: var(--dark-white-color);
 }
 
-/*==============================================================
+/*===================================================
  17. Posts and Post Details
-================================================================*/
+=====================================================*/
 .cs_post_style_1 .cs_post_thumbnail {
   display: block;
 }
@@ -8551,6 +8789,7 @@ label {
 .cs_product_style_34,
 .cs_product_style_37 {
   width: min(100%, 336px);
+  margin: 0 auto;
 }
 
 .cs_product_style_7 {
@@ -9097,6 +9336,16 @@ label {
   gap: 10px;
 }
 
+.cs_product_style_27 .cs_product_info .addToCartButton {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+.cs_product_style_27:hover .cs_product_info .addToCartButton {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .cs_product_style_25,
 .cs_product_style_34,
 .cs_product_style_35 {
@@ -9477,8 +9726,9 @@ label {
 
 .cs_product_style_36 {
   width: min(100%, 336px);
-  align-items: center;
+  text-align: center;
   height: 100%;
+  padding: 24px 15px;
 }
 .cs_product_style_36 .cs_action_btns_wrapper {
   width: min(100%, 266px);
@@ -9527,6 +9777,11 @@ label {
 }
 .cs_product_style_37 .cs_action_btns_wrapper {
   display: none;
+}
+@media (max-width: 991px) {
+  .cs_product_style_37 {
+    padding: 24px 15px;
+  }
 }
 
 .cs_product_style_6 .cs_product_thumbnail,
@@ -9658,15 +9913,24 @@ label {
   }
 }
 @media (max-width: 991px) {
+  .cs_products_grid_style_2 {
+    row-gap: 24px !important;
+  }
   .cs_products_grid_style_2.cs_type_1 {
     grid-template-columns: repeat(2, 1fr);
   }
-  .cs_products_grid_style_2.cs_type_11 {
+  .cs_products_grid_style_2.cs_type_10, .cs_products_grid_style_2.cs_type_11 {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 1px !important;
   }
 }
 @media (max-width: 767px) {
+  .cs_products_grid_style_2 .cs_product_style_27 {
+    width: min(100%, 320px);
+    margin: 0 auto;
+  }
   .cs_products_grid_style_2.cs_type_3 {
+    gap: 24px;
     grid-template-columns: repeat(1, 1fr);
   }
   .cs_products_grid_style_2.cs_type_10 {
@@ -10152,6 +10416,10 @@ label {
 .cs_products_list_style_1 .cs_product_style_27 .cs_product_info .cs_product_title {
   text-align: left !important;
 }
+.cs_products_list_style_1 .cs_product_style_27 .cs_product_info .addToCartButton {
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
 .cs_products_list_style_1 .cs_product_style_28 .cs_product_thumbnail {
   width: min(100%, 554px);
 }
@@ -10252,8 +10520,16 @@ label {
   .cs_products_list_style_1.cs_type_8 {
     grid-template-columns: repeat(1, 1fr);
   }
+  .cs_products_list_style_1.cs_type_10 {
+    gap: 1px !important;
+  }
 }
 @media (max-width: 767px) {
+  .cs_products_list_style_1.cs_type_10 {
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto;
+  }
   .cs_products_list_style_1 .cs_product_style_2,
   .cs_products_list_style_1 .cs_product_style_6,
   .cs_products_list_style_1 .cs_product_style_9,
@@ -10266,15 +10542,18 @@ label {
   .cs_products_list_style_1 .cs_product_style_23,
   .cs_products_list_style_1 .cs_product_style_24,
   .cs_products_list_style_1 .cs_product_style_26,
+  .cs_products_list_style_1 .cs_product_style_27,
   .cs_products_list_style_1 .cs_product_style_28,
   .cs_products_list_style_1 .cs_product_style_29,
   .cs_products_list_style_1 .cs_product_style_33,
   .cs_products_list_style_1 .cs_product_style_34,
   .cs_products_list_style_1 .cs_product_style_35,
   .cs_products_list_style_1 .cs_product_style_37 {
-    width: 100%;
+    width: min(100%, 320px);
     flex-direction: column;
     align-items: flex-start;
+    padding-bottom: 20px;
+    margin: 0 auto;
   }
   .cs_products_list_style_1 .cs_product_style_2 .cs_product_info,
   .cs_products_list_style_1 .cs_product_style_2 .cs_product_thumbnail,
@@ -10300,6 +10579,8 @@ label {
   .cs_products_list_style_1 .cs_product_style_24 .cs_product_thumbnail,
   .cs_products_list_style_1 .cs_product_style_26 .cs_product_info,
   .cs_products_list_style_1 .cs_product_style_26 .cs_product_thumbnail,
+  .cs_products_list_style_1 .cs_product_style_27 .cs_product_info,
+  .cs_products_list_style_1 .cs_product_style_27 .cs_product_thumbnail,
   .cs_products_list_style_1 .cs_product_style_28 .cs_product_info,
   .cs_products_list_style_1 .cs_product_style_28 .cs_product_thumbnail,
   .cs_products_list_style_1 .cs_product_style_29 .cs_product_info,
@@ -10326,6 +10607,7 @@ label {
   .cs_products_list_style_1 .cs_product_style_23 .cs_action_btns_wrapper,
   .cs_products_list_style_1 .cs_product_style_24 .cs_action_btns_wrapper,
   .cs_products_list_style_1 .cs_product_style_26 .cs_action_btns_wrapper,
+  .cs_products_list_style_1 .cs_product_style_27 .cs_action_btns_wrapper,
   .cs_products_list_style_1 .cs_product_style_28 .cs_action_btns_wrapper,
   .cs_products_list_style_1 .cs_product_style_29 .cs_action_btns_wrapper,
   .cs_products_list_style_1 .cs_product_style_33 .cs_action_btns_wrapper,
@@ -10801,9 +11083,9 @@ input[type=number] {
   transform: rotate(180deg);
 }
 
-/*==============================================================
+/*=======================================================
   11. Single Product
-================================================================*/
+=========================================================*/
 .cs_product_details {
   padding-bottom: 24px;
   border-bottom: 1px solid var(--gray-color2);
@@ -11383,9 +11665,9 @@ input[type=number] {
   width: 100%;
   padding-left: 20px;
 }
-/*==============================================================
+/*=================================================
  11. Testimonials
-================================================================*/
+===================================================*/
 .cs_testimonial_style_1 {
   padding: 0 40px;
   transform: translateY(30px);
@@ -11409,6 +11691,11 @@ input[type=number] {
   width: 91px;
   font-size: 14px;
   letter-spacing: 3px;
+}
+@media (max-width: 991px) {
+  .cs_testimonial_style_1 {
+    padding: 0 15px;
+  }
 }
 
 .cs_testimonial_style_2 {
@@ -11462,9 +11749,9 @@ input[type=number] {
   background-color: #fffaeb;
 }
 
-/*=============================================================
+/*===================================================
   18. Dark Version Styling
-===============================================================*/
+=====================================================*/
 .cs_dark .cs_btn_style_1.cs_primary_bg {
   color: var(--white-color);
 }
@@ -11473,6 +11760,13 @@ input[type=number] {
 }
 .cs_dark .cs_btn_style_1.cs_accent_bg:hover {
   color: var(--white-color);
+}
+.cs_dark .addToCartButton img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(21%) hue-rotate(158deg) brightness(80%) contrast(80%);
+}
+.cs_dark .addToCartButton:hover img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7486%) hue-rotate(78deg) brightness(116%) contrast(101%);
+  transition: filter 0.3s ease;
 }
 .cs_dark .cs_iconbox_style_1 img,
 .cs_dark .cs_category_item_style_4 img {

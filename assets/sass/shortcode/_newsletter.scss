@@ -60,21 +60,25 @@
     flex-direction: column;
     gap: 0;
   }
+
   @media (max-width: 991px) {
     padding: 60px 20px;
   }
 }
+
 .cs_newsletter_style_3 {
   .cs_newsletter_content {
     flex-direction: column;
     align-items: center;
     gap: 45px;
   }
+
   .cs_newsletter_form {
     .cs_form_field {
       border: 2px solid var(--primary-color);
     }
   }
+
   .cs_btn_style_1 {
     border: 2px solid var(--primary-color);
   }

@@ -1,6 +1,6 @@
-/*==============================================================
+/*===================================================
   16. Iconbox
-================================================================*/
+=====================================================*/
 .cs_iconbox_style_1,
 .cs_iconbox_style_2 {
   display: flex;
@@ -121,28 +121,34 @@
   gap: 30px 45px;
   //align-items: center;
   justify-content: center;
+
   &.cs_type_1 {
     width: 100%;
     gap: 30px 15px;
     justify-content: space-between;
     padding: 52px 30px;
   }
+
   &.cs_type_2 {
     gap: 30px 20px;
     padding: 40px 40px 35px;
     justify-content: space-between;
+
     .cs_iconbox_style_1 {
       gap: 9px;
       padding-left: 55px;
       border-left: 1px solid var(--gray-color2);
+
       &:first-child {
         padding-left: 0;
         border-left: 0;
       }
     }
   }
+
   @media (max-width: 1399px) {
     gap: 30px 20px;
+
     //flex-wrap: wrap;
     &.cs_type_1 {
       padding: 40px 20px;
@@ -155,6 +161,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 40px;
+
     &.cs_type_2 {
       .cs_iconbox_style_1 {
         padding-left: 0;
@@ -165,6 +172,7 @@
 
   @media (max-width: 767px) {
     grid-template-columns: repeat(1, 1fr) !important;
+
     &.cs_type_2 {
       padding: 40px 20px 35px;
     }

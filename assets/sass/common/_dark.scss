@@ -1,6 +1,6 @@
-/*=============================================================
+/*===================================================
   18. Dark Version Styling
-===============================================================*/
+=====================================================*/
 
 .cs_dark {
   .cs_btn_style_1.cs_primary_bg {
@@ -17,17 +17,29 @@
     }
   }
 
+  .addToCartButton {
+    img {
+      filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(21%) hue-rotate(158deg) brightness(80%) contrast(80%);
+    }
+
+    &:hover {
+      img {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7486%) hue-rotate(78deg) brightness(116%) contrast(101%);
+        transition: filter 0.3s ease;
+      }
+    }
+  }
+
   .cs_iconbox_style_1,
   .cs_category_item_style_4 {
     img {
-      filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
-        hue-rotate(8deg) brightness(104%) contrast(107%);
+      filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(8deg) brightness(104%) contrast(107%);
     }
   }
+
   .cs_horizontal_slider.cs_type_1 {
     img {
-      filter: brightness(0) saturate(100%) invert(21%) sepia(51%)
-        saturate(5243%) hue-rotate(354deg) brightness(89%) contrast(86%);
+      filter: brightness(0) saturate(100%) invert(21%) sepia(51%) saturate(5243%) hue-rotate(354deg) brightness(89%) contrast(86%);
     }
   }
 }

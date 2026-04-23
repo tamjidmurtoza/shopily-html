@@ -29,7 +29,7 @@
   font-size: 25px;
   line-height: 1.28em;
 
-  @media (max-width:420px) {
+  @media (max-width: 420px) {
     font-size: 20px;
   }
 }
@@ -37,11 +37,19 @@
 .cs_fs_33 {
   font-size: 33px;
   line-height: 1.36em;
+
+  @media (max-width: 420px) {
+    font-size: 28px;
+  }
 }
 
 .cs_fs_44 {
   font-size: 44px;
   line-height: 1.25em;
+
+  @media (max-width: 420px) {
+    font-size: 30px;
+  }
 }
 
 .cs_fs_59 {
@@ -56,7 +64,7 @@
     font-size: 46px;
   }
 
-  @media (max-width:420px) {
+  @media (max-width: 420px) {
     font-size: 30px;
   }
 }
@@ -73,7 +81,7 @@
 
   @media (max-width: 575px) {}
 
-  @media (max-width:420px) {
+  @media (max-width: 420px) {
     font-size: 30px;
   }
 }
@@ -82,16 +90,24 @@
   font-size: 78px;
   line-height: 1.16em;
 
+  @media (max-width: 1399px) {
+    font-size: 72px;
+  }
+
   @media (max-width: 1199px) {
     font-size: 65px;
   }
 
-  @media (max-width: 991px) {}
+  @media (max-width: 991px) {
+    font-size: 56px;
+  }
 
-  @media (max-width: 575px) {}
+  @media (max-width: 575px) {
+    font-size: 52px;
+  }
 
-  @media (max-width:420px) {
-    font-size: 30px;
+  @media (max-width: 420px) {
+    font-size: 36px;
   }
 }
 
@@ -103,8 +119,8 @@
 
   @media (max-width: 575px) {}
 
-  @media (max-width:420px) {
-    font-size: 30px;
+  @media (max-width: 420px) {
+    font-size: 40px;
   }
 }
 
@@ -306,12 +322,54 @@
   font-family: var(--secondary-font);
 }
 
-.cs_perfume_font {
-  font-family: var(--perfume-font);
+.cs_perfume {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .cs_perfume_font {
+    font-family: var(--perfume-font);
+  }
+
+  .cs_secondary_font {
+    font-family: var(--secondary-font);
+  }
 }
 
-.cs_sunglass_font {
-  font-family: var(--sunglass-font);
+.cs_sunglass {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .cs_sunglass_font {
+    font-family: var(--sunglass-font);
+  }
+
+  .cs_secondary_font {
+    font-family: var(--secondary-font);
+  }
+}
+
+.cs_flower {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--flower-font);
+  }
+
+  .cs_secondary_font {
+    font-family: var(--secondary-font);
+  }
 }
 
 /*=============================================  
@@ -1023,6 +1081,7 @@
   align-items: start;
 
   .cs_icon {
+    flex: none;
     background: #f3f3f3;
     padding: 15px;
     border-radius: 15px;
@@ -1030,6 +1089,10 @@
 
   &:not(:last-child) {
     margin-bottom: 35px;
+  }
+
+  @media (max-width:991px) {
+    gap: 15px;
   }
 }
 
@@ -1082,7 +1145,6 @@
 }
 
 @keyframes upDown {
-
   50% {
     transform: rotate(5deg);
   }

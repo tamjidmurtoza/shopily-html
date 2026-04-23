@@ -1,9 +1,6 @@
-/*=========================================================
+/*==================================================
  17. Product Order & Shipping
-===========================================================*/
-/*=========================================================
- Product Order Info & Summery
-===========================================================*/
+====================================================*/
 .cs_order_summery_wrapper {
   display: flex;
   flex-direction: column;
@@ -152,7 +149,7 @@
     gap: 30px;
   }
 
-  @media (max-width:991px) {
+  @media (max-width: 991px) {
     .cs_table_header {
       padding: 15px 15px 18px;
     }
@@ -162,13 +159,13 @@
     }
   }
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     .cs_table_content {
       grid-template-columns: repeat(2, auto);
     }
   }
 
-  @media (max-width:413px) {
+  @media (max-width: 413px) {
     .cs_table_content {
       grid-template-columns: repeat(1, auto);
     }
@@ -247,7 +244,6 @@
       align-items: center;
       gap: 5px;
     }
-
   }
 
   .cs_custom_checkbox {
@@ -546,10 +542,6 @@
     }
   }
 
-  // .cs_btn_style_1::before {
-  //   display: none;
-  // }
-
   .cs_btn_style_1.cs_accent_bg {
     ::before {
       background-color: var(--primary-color);
@@ -557,7 +549,6 @@
 
     &:hover {
       color: var(--white-color);
-      //background-color: var(--primary-color);
     }
   }
 
@@ -566,7 +557,6 @@
 
     &:hover {
       color: var(--dark-white-color);
-      //background-color: var(--accent-color);
     }
   }
 }

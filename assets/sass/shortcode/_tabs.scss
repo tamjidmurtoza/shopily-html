@@ -34,7 +34,6 @@
 }
 
 .cs_tab_links.cs_style_2 {
-
   li {
     border-radius: 5px;
     margin-bottom: 5px;
@@ -67,7 +66,6 @@
   overflow-x: auto;
 
   li {
-
     &.active {
       a {
         color: var(--white-color);
@@ -84,7 +82,7 @@
     }
   }
 
-  @media (max-width:1199px) {
+  @media (max-width: 1199px) {
     gap: 15px;
   }
 }
@@ -118,7 +116,6 @@
  Tab Content Styling
 ======================================================*/
 .cs_tabs {
-
   .cs_tab_body {
     position: relative;
   }
