@@ -424,6 +424,23 @@
   .cs_right_arrow {
     right: 0;
   }
+
+  @media (max-width:991px) {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    .cs_left_arrow,
+    .cs_right_arrow {
+      position: initial;
+      top: initial;
+      transform: translateY(0);
+      left: initial;
+      right: initial;
+    }
+  }
 }
 
 /*=================================================
@@ -687,6 +704,10 @@
     align-items: center;
     flex: none;
     animation: scrollingAnimation 60s linear infinite;
+
+    &.sliding_left {
+      animation-direction: reverse;
+    }
   }
 
   .cs_slider_inner {
@@ -706,6 +727,12 @@
     .cs_logo_list {
       gap: 100px;
       margin: 0 50px;
+    }
+  }
+
+  &.cs_type_2 {
+    .cs_sliding_content {
+      animation-direction: normal;
     }
   }
 

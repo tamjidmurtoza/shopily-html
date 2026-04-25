@@ -339,6 +339,23 @@
   }
 }
 
+.cs_restaurant {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .cs_restaurant_font {
+    font-family: var(--restaurant-font);
+  }
+
+  .cs_secondary_font {
+    font-family: var(--secondary-font);
+  }
+}
+
 .cs_sunglass {
 
   h1,

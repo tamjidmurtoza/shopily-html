@@ -1593,6 +1593,20 @@
   gap: 24px 15px;
 }
 
+.cs_products_grid_style_6 {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width:767px) {
+    grid-template-columns: repeat(1, 1fr);
+
+    .cs_product_style_32 {
+      width: 100%;
+    }
+  }
+}
+
 .cs_products_list_style_1 {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -1981,6 +1995,7 @@
     .cs_product_style_27,
     .cs_product_style_28,
     .cs_product_style_29,
+    .cs_product_style_31,
     .cs_product_style_33,
     .cs_product_style_34,
     .cs_product_style_35,
