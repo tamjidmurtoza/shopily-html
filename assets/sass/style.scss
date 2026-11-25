@@ -27,6 +27,38 @@
 @import 'common/spacing';
 @import 'common/general';
 @import 'common/header';
+@import 'headers/main';
+@import 'headers/artwork';
+@import 'headers/autopart';
+@import 'headers/bicycle';
+@import 'headers/bookstore';
+@import 'headers/cosmetics';
+@import 'headers/electronics';
+@import 'headers/fashion';
+@import 'headers/flower';
+@import 'headers/footware';
+@import 'headers/furniture';
+@import 'headers/gaming';
+@import 'headers/gardening';
+@import 'headers/grocery1';
+@import 'headers/grocery2';
+@import 'headers/grocery3';
+@import 'headers/jewelry';
+@import 'headers/lingerie';
+@import 'headers/liquor';
+@import 'headers/marketplace1';
+@import 'headers/marketplace2';
+@import 'headers/music';
+@import 'headers/organic-food-1';
+@import 'headers/organic-food-2';
+@import 'headers/perfume';
+@import 'headers/petfood';
+@import 'headers/pharmacy';
+@import 'headers/pottery';
+@import 'headers/restaurant';
+@import 'headers/showpiece';
+@import 'headers/sunglass';
+@import 'headers/watch';
 @import 'common/footer';
 @import 'common/preloader';
 @import 'common/slider';
@@ -49,3 +81,22 @@
 @import 'shortcode/tabs';
 @import 'shortcode/testimonial';
 @import 'common/dark';
+@import 'common/rtl';
+
+/*--------------------------------------------------------------
+  Dashboard (Admin & Seller panel) - scoped to .cs_dashboard_body
+--------------------------------------------------------------*/
+@import 'dashboard/variables';
+@import 'dashboard/layout';
+@import 'dashboard/components';
+@import 'dashboard/home';
+@import 'dashboard/products';
+@import 'dashboard/orders';
+@import 'dashboard/customers-sellers';
+@import 'dashboard/support';
+@import 'dashboard/wallet';
+@import 'dashboard/cms';
+@import 'dashboard/staff-settings';
+@import 'dashboard/pos';
+@import 'dashboard/coupons';
+@import 'dashboard/rtl';

@@ -1,0 +1,213 @@
+/*---------------------------------------------------------
+  perfume header
+  Figma: PERFUME > HOME > header (3178:1352),
+  PRODUCT DETAILS / PRODUCT GRID header (3241:530 / 3255:2587)
+-----------------------------------------------------------*/
+.cs_header_perfume {
+  .cs_top_header {
+    color: #191919;
+
+    .cs_top_header_in {
+      min-height: 41px;
+    }
+  }
+
+  .cs_main_header {
+    border-top: 1px solid var(--gray-color2);
+    border-bottom: 1px solid var(--gray-color2);
+  }
+
+  .cs_main_header_in {
+    position: relative;
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+  }
+
+  .cs_site_branding {
+    width: 202px;
+    gap: 18px;
+    font-family: var(--perfume-font);
+    font-size: 33px;
+    line-height: 45px;
+    font-weight: 700;
+  }
+
+  .cs_nav {
+    font-family: var(--perfume-font);
+
+    .cs_nav_list {
+      >li>a {
+        padding: 31px 0;
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 600;
+      }
+
+      >.menu-item-has-children>a {
+        font-weight: 500;
+      }
+
+      ul a {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .cs_header_actions {
+    margin-left: auto;
+    padding-left: 30px;
+    gap: 25px;
+
+    >.cs_header_dropdown_wrap {
+      display: flex;
+      margin-left: 5px;
+    }
+  }
+
+  .cs_header_search {
+    width: 430px;
+    border: 1px solid #9d9d9d;
+    border-radius: 50px;
+    background-color: var(--white-color);
+
+    .cs_header_search_input {
+      height: 48px;
+      padding: 10px 56px 10px 16px;
+      font-family: var(--perfume-font);
+      font-size: 20px;
+      line-height: 26px;
+      background-color: transparent;
+
+      &::placeholder {
+        color: var(--primary-color);
+      }
+    }
+
+    .cs_header_search_btn {
+      width: 56px;
+      border-radius: 0 50px 50px 0;
+    }
+  }
+
+  .cs_header_cart {
+    padding-top: 0;
+
+    .cs_header_cart_count {
+      background-color: #ef4b4b;
+    }
+  }
+
+  /* Home: the hero background runs behind the whole header */
+  &.cs_header_hero_bg {
+    background-color: #fefff1;
+  }
+}
+
+.cs_dark .cs_header_perfume {
+  .cs_top_header {
+    color: #fff;
+  }
+
+  &.cs_header_hero_bg {
+    background-color: var(--white-color);
+  }
+}
+
+@media (max-width: 1399px) {
+  .cs_header_perfume {
+    .cs_site_branding {
+      width: auto;
+      margin-right: 40px;
+    }
+
+    .cs_nav .cs_nav_list {
+      column-gap: 30px;
+    }
+
+    .cs_header_search {
+      width: 260px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_header_perfume {
+    .cs_main_header_in {
+      min-height: 80px;
+    }
+
+    .cs_nav {
+      order: 3;
+      margin-left: 25px;
+    }
+
+    .cs_header_search {
+      width: 320px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_header_perfume {
+    .cs_top_header_text {
+      display: none;
+    }
+
+    .cs_top_header .cs_top_header_in {
+      justify-content: center;
+      padding: 8px 0;
+    }
+
+    .cs_main_header_in {
+      flex-wrap: wrap;
+      padding: 15px 0;
+      row-gap: 15px;
+    }
+
+    .cs_site_branding {
+      margin-right: 0;
+    }
+
+    .cs_header_actions {
+      display: contents;
+    }
+
+    .cs_header_actions>.cs_header_dropdown_wrap {
+      order: 2;
+      margin-left: auto;
+    }
+
+    .cs_header_cart {
+      order: 3;
+      margin-left: 25px;
+    }
+
+    .cs_nav {
+      order: 4;
+    }
+
+    .cs_header_search {
+      order: 5;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_header_perfume {
+    .cs_top_header_list>li:not(:last-child) {
+      padding-right: 12px;
+      margin-right: 12px;
+    }
+
+    .cs_top_header_list>li:first-child {
+      display: none;
+    }
+
+    .cs_account_dropdown {
+      right: -50px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "shopily-html",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shopily - Multivendor eCommerce Website HTML Template",
+  "author": "Laralink",
+  "scripts": {
+    "build:css": "sass --style=expanded --no-source-map assets/sass/style.scss assets/css/style.raw.css && postcss assets/css/style.raw.css --use autoprefixer --map -o assets/css/style.css && node -e \"require('fs').rmSync('assets/css/style.raw.css')\"",
+    "build:min": "sass --style=compressed --no-source-map assets/sass/style.scss assets/css/style.min.raw.css && postcss assets/css/style.min.raw.css --use autoprefixer --no-map -o assets/css/style.min.css && node -e \"require('fs').rmSync('assets/css/style.min.raw.css')\"",
+    "build": "npm run build:css && npm run build:min",
+    "watch": "sass --watch --style=expanded assets/sass/style.scss assets/css/style.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.20",
+    "postcss": "8.4.49",
+    "postcss-cli": "11.0.0",
+    "sass": "1.83.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

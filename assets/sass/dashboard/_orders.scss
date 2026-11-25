@@ -1,0 +1,376 @@
+/*==============================================================
+  05. orders pages
+================================================================*/
+
+/* ---------- Order list: filters ---------- */
+.cs_dash_order_filters {
+  .cs_dash_search {
+    margin-bottom: 0;
+  }
+
+  .cs_dash_select {
+    width: 261px;
+    height: 45px;
+    padding: 9px 40px 9px 10px;
+    color: var(--dash-text);
+    background-position: right 12px center;
+    cursor: pointer;
+
+    &.cs_date {
+      width: 168px;
+    }
+  }
+
+  .cs_dash_btn {
+    min-width: 79px;
+  }
+}
+
+.cs_dash_order_table {
+  margin-bottom: 0;
+
+  td {
+    white-space: nowrap;
+  }
+
+  .cs_dash_table_actions {
+    display: flex;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: 1px solid var(--dash-border);
+  }
+
+  tr.cs_hidden {
+    display: none;
+  }
+}
+
+.cs_dash_table_empty {
+  padding: 30px 18px 0;
+  margin: 0;
+  text-align: center;
+  color: var(--dash-text);
+}
+
+/* ---------- Order details ---------- */
+.cs_dash_order_status_form {
+  .cs_dash_select {
+    width: 261px;
+    height: 45px;
+    padding: 9px 40px 9px 10px;
+    color: var(--dash-text);
+    background-position: right 12px center;
+    cursor: pointer;
+  }
+}
+
+.cs_dash_order_info_row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 47px;
+}
+
+.cs_dash_order_info {
+  flex: 0 1 532px;
+  min-width: 0;
+  padding: 17px 23px 16px;
+  border: 1px solid var(--dash-border);
+  border-radius: var(--dash-radius);
+
+  h3 {
+    margin: 0 0 16px;
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: 500;
+    color: var(--dash-heading);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dash-text);
+    word-break: break-word;
+  }
+
+  li > span:first-child {
+    color: var(--dash-heading);
+  }
+
+  .cs_dash_badge {
+    min-width: 0;
+    padding: 0 10px;
+  }
+}
+
+.cs_dash_invoice_wrap {
+  margin-top: 50px;
+  border: 1px solid var(--dash-border);
+  border-radius: var(--dash-radius);
+  overflow-x: auto;
+}
+
+.cs_dash_invoice_table {
+  width: 100%;
+  min-width: 900px;
+  margin-bottom: 0;
+  border-collapse: collapse;
+
+  th {
+    padding: 17px 24px 18px;
+    border-bottom: 1px solid var(--dash-border);
+    background-color: var(--dash-soft-bg);
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: var(--dash-heading);
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 28px 24px 25px;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dash-text);
+    vertical-align: top;
+    white-space: nowrap;
+  }
+
+  tbody tr + tr td {
+    border-top: 1px solid var(--dash-border);
+  }
+
+  .cs_serial {
+    width: 124px;
+    vertical-align: middle;
+  }
+
+  .cs_item {
+    width: 140px;
+    vertical-align: middle;
+  }
+
+  td.cs_item {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .cs_price {
+    width: 167px;
+    padding-left: 0;
+  }
+
+  .cs_qty {
+    width: 125px;
+    padding-left: 0;
+  }
+
+  .cs_total {
+    width: 100px;
+    padding-left: 0;
+  }
+
+  .text-end {
+    text-align: right;
+  }
+
+  td.cs_title {
+    min-width: 280px;
+    padding-top: 24px;
+    white-space: normal;
+  }
+}
+
+.cs_dash_invoice_img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.cs_dash_invoice_title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--dash-heading);
+}
+
+.cs_dash_invoice_meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--dash-text);
+
+  .cs_dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--dash-green);
+  }
+}
+
+.cs_dash_order_summary {
+  width: 416px;
+  max-width: 100%;
+  margin-left: auto;
+  padding-top: 17px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 24px;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dash-text);
+
+    + li {
+      margin-top: 11px;
+    }
+
+    &.cs_heading {
+      color: var(--dash-heading);
+    }
+  }
+}
+
+.cs_dash_order_grand {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 19px;
+  padding: 19px 24px 0;
+  border-top: 1px solid var(--dash-border);
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+  color: var(--dash-heading);
+}
+
+.cs_dash_invoice_actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 45px;
+  padding: 0 24px 2px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--dash-text);
+
+  span {
+    margin-right: 1px;
+  }
+
+  a,
+  button {
+    display: inline-flex;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    line-height: 0;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1199px) {
+  .cs_dash_order_filters {
+    .cs_dash_select,
+    .cs_dash_select.cs_date {
+      width: 200px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_dash_order_info_row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cs_dash_order_info {
+    flex-basis: auto;
+  }
+
+  .cs_dash_invoice_wrap {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_dash_order_filters {
+    > *,
+    .cs_dash_select,
+    .cs_dash_select.cs_date {
+      width: 100%;
+    }
+  }
+
+  .cs_dash_order_status_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    .cs_dash_select {
+      width: 100%;
+    }
+  }
+
+  .cs_dash_order_info {
+    padding: 15px;
+
+    h3 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  .cs_dash_order_summary {
+    width: 100%;
+
+    ul {
+      padding: 0 5px;
+    }
+  }
+
+  .cs_dash_order_grand {
+    padding: 19px 5px 0;
+  }
+
+  .cs_dash_invoice_actions {
+    margin-top: 30px;
+    padding: 0 5px;
+  }
+}

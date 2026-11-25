@@ -1,0 +1,440 @@
+/*==============================================================
+  Dashboard RTL (right-to-left) support
+  ----------------------------------------------------------------
+  Active when the page has <html lang="ar" dir="rtl">. Dashboard
+  pages also load style.css, so the shared fixes in
+  common/_rtl.scss (Bootstrap utilities, arrow icons, LTR phone
+  numbers) apply here too.
+
+  Rules are scoped to :where([dir='rtl']) so each override keeps
+  the specificity of the LTR rule it mirrors; keep this partial the
+  last import in dashboard.scss. When you add a left/right value in
+  a dashboard partial, add its mirror here under the same selector.
+================================================================*/
+
+
+/* ---------- Sidebar ---------- */
+:where([dir='rtl']) .cs_dash_sidebar {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_dash_logo_icon .cs_dash_logo_bag {
+  right: 11px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_dash_nav_link {
+  text-align: right;
+}
+:where([dir='rtl']) .cs_dash_nav_link .cs_dash_nav_caret {
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+/* ---------- Main area ---------- */
+:where([dir='rtl']) .cs_dash_main {
+  margin-right: var(--dash-sidebar-width);
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_dash_profile_btn {
+  text-align: right;
+}
+:where([dir='rtl']) .cs_dash_profile_info .cs_dash_profile_role {
+  text-align: left;
+}
+:where([dir='rtl']) .cs_dash_profile_dropdown {
+  left: -30px;
+  right: auto;
+}
+@media (min-width: 1400px) {
+  :where([dir='rtl']) .cs_dashboard_body.cs_sidebar_collapsed .cs_dash_sidebar {
+    transform: translateX(100%);
+  }
+  :where([dir='rtl']) .cs_dashboard_body.cs_sidebar_collapsed .cs_dash_main {
+    margin-right: 0;
+  }
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_dash_sidebar {
+    transform: translateX(100%);
+  }
+  :where([dir='rtl']) .cs_dash_main {
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  :where([dir='rtl']) .cs_dash_profile_dropdown {
+    left: -15px;
+    right: auto;
+  }
+}
+
+/* ---------- Table ---------- */
+:where([dir='rtl']) .cs_dash_table th {
+  text-align: right;
+}
+:where([dir='rtl']) .cs_dash_table .text-end {
+  text-align: left;
+}
+
+/* ---------- Forms ---------- */
+:where([dir='rtl']) .cs_dash_select {
+  padding-left: 45px;
+  padding-right: 0;
+  background-position: left 20px center;
+}
+:where([dir='rtl']) .cs_dash_switch span::before {
+  right: 3px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_dash_switch input:checked + span::before {
+  transform: translateX(-20px);
+}
+
+/* ---------- Modal ---------- */
+:where([dir='rtl']) .cs_dash_modal_close {
+  left: 20px;
+  right: auto;
+}
+
+/* ---------- Stat cards ---------- */
+:where([dir='rtl']) .cs_dash_stat_card {
+  padding: 24px 31px 24px 30px;
+}
+:where([dir='rtl']) .cs_dash_stat_graph {
+  left: 30px;
+  right: auto;
+}
+
+/* ---------- Top products ---------- */
+:where([dir='rtl']) .cs_dash_top_products p span {
+  padding-right: 8px;
+  padding-left: 0;
+  border-right: 1px solid var(--dash-text);
+  border-left: none;
+}
+
+/* ---------- Form modals (category / attribute) ---------- */
+:where([dir='rtl']) .cs_dash_prd_value_field {
+  margin-left: -44px;
+  margin-right: 0;
+}
+@media (max-width: 767px) {
+  :where([dir='rtl']) .cs_dash_prd_value_field {
+    margin-left: 0;
+  }
+}
+
+/* ---------- Order list: filters ---------- */
+:where([dir='rtl']) .cs_dash_order_filters .cs_dash_select {
+  padding: 9px 10px 9px 40px;
+  background-position: left 12px center;
+}
+
+/* ---------- Order details ---------- */
+:where([dir='rtl']) .cs_dash_order_status_form .cs_dash_select {
+  padding: 9px 10px 9px 40px;
+  background-position: left 12px center;
+}
+:where([dir='rtl']) .cs_dash_invoice_table th {
+  text-align: right;
+}
+:where([dir='rtl']) .cs_dash_invoice_table .cs_price {
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_dash_invoice_table .cs_qty {
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_dash_invoice_table .cs_total {
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_dash_invoice_table .text-end {
+  text-align: left;
+}
+:where([dir='rtl']) .cs_dash_order_summary {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_dash_invoice_actions span {
+  margin-left: 1px;
+  margin-right: 0;
+}
+
+/* ---------- List card (customers, sellers, payouts, commissions) ---------- */
+:where([dir='rtl']) .cs_dash_people_filter .cs_dash_select {
+  padding: 9px 10px 9px 45px;
+}
+:where([dir='rtl']) .cs_dash_switch.cs_dash_switch_sm span::before {
+  right: 3px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_dash_switch.cs_dash_switch_sm input:checked + span::before {
+  transform: translateX(-20px);
+}
+
+/* ---------- Full-height list card (ticket / review / refund) ---------- */
+:where([dir='rtl']) .cs_dash_list_card .cs_dash_select {
+  padding: 9px 10px 9px 45px;
+}
+
+/* ---------- Ticket reply ---------- */
+:where([dir='rtl']) .cs_dash_ticket_details .cs_dash_select {
+  padding: 9px 10px 9px 45px;
+}
+:where([dir='rtl']) .cs_dash_thread_avatar .cs_andrew {
+  right: -27px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_dash_thread_avatar .cs_mika {
+  right: -33px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_dash_thread_body {
+  padding-right: 73px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_dash_thread_meta {
+  left: 30px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_dash_more > button img {
+  transform: rotate(-90deg);
+}
+:where([dir='rtl']) .cs_dash_more ul {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_dash_more ul button {
+  text-align: right;
+}
+:where([dir='rtl']) .cs_dash_editor_group button + button {
+  margin-right: -1px;
+  margin-left: 0;
+}
+
+/* ---------- Chat ---------- */
+:where([dir='rtl']) .cs_dash_chat_contacts {
+  border-left: 1px solid var(--dash-border);
+  border-right: none;
+}
+:where([dir='rtl']) .cs_dash_chat_contact {
+  text-align: right;
+}
+:where([dir='rtl']) .cs_dash_chat_avatar .cs_dash_chat_status {
+  left: -2px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_dash_chat_contact_info time {
+  text-align: left;
+}
+:where([dir='rtl']) .cs_dash_chat_msg.cs_me p {
+  text-align: left;
+}
+:where([dir='rtl']) .cs_dash_chat_form {
+  padding: 6px 27px 6px 7px;
+}
+
+/* ---------- Product review ---------- */
+:where([dir='rtl']) .cs_dash_switch.cs_dash_switch_sm span::before {
+  left: 25px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_dash_switch.cs_dash_switch_sm input:checked + span::before {
+  transform: translateX(-22px);
+}
+:where([dir='rtl']) .cs_dash_review_modal .cs_dash_modal_close,
+:where([dir='rtl']) .cs_dash_refund_modal .cs_dash_modal_close {
+  left: 20px;
+  right: auto;
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_dash_chat_contacts {
+    border-left: 0;
+    border-right: none;
+  }
+}
+@media (max-width: 767px) {
+  :where([dir='rtl']) .cs_dash_thread_head {
+    padding-left: 80px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_dash_thread_meta {
+    left: 15px;
+    right: auto;
+  }
+  :where([dir='rtl']) .cs_dash_thread_body {
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_dash_chat_form {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+}
+
+/* ---------- Overview cards ---------- */
+:where([dir='rtl']) .cs_dash_wallet_stats .cs_dash_stat_card {
+  padding: 30px 31px 30px 90px;
+}
+:where([dir='rtl']) .cs_dash_wallet_stat_icon {
+  left: 30px;
+  right: auto;
+}
+
+/* ---------- List toolbar (Bulk action / Apply / filters / search / create) ---------- */
+:where([dir='rtl']) .cs_dash_cms_toolbar .cs_dash_select {
+  padding: 9px 10px 9px 40px;
+  background-position: left 16px center;
+}
+:where([dir='rtl']) .cs_dash_cms_toolbar_right {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* ---------- Table tweaks ---------- */
+:where([dir='rtl']) .cs_dash_cms_table .cs_dash_cms_check_cell {
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_dash_cms_table .cs_dash_switch span::before {
+  right: 4px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_dash_cms_table .cs_dash_switch input:checked + span::before {
+  transform: translateX(-20px);
+}
+
+/* ---------- Forms ---------- */
+:where([dir='rtl']) .cs_dash_cms_form .cs_dash_select,
+:where([dir='rtl']) .cs_dash_blog_form .cs_dash_select {
+  padding-left: 45px;
+  padding-right: 0;
+}
+
+/* ---------- Blog post form ---------- */
+:where([dir='rtl']) .cs_dash_cms_tags li {
+  padding: 2px 10px 2px 6px;
+}
+:where([dir='rtl']) .cs_dash_cms_editor_group button + button {
+  border-right: 1px solid var(--dash-border);
+  border-left: none;
+}
+:where([dir='rtl']) .cs_dash_cms_editor_body ul,
+:where([dir='rtl']) .cs_dash_cms_editor_body ol {
+  padding-right: 20px;
+  padding-left: 0;
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_dash_cms_toolbar_right {
+    margin-right: 0;
+  }
+}
+
+/* ---------- Search / bulk action ---------- */
+:where([dir='rtl']) .cs_dash_set_bulk .cs_dash_select {
+  padding: 9px 10px 9px 45px;
+}
+
+/* ---------- Tables ---------- */
+:where([dir='rtl']) .cs_dash_table .cs_dash_set_check_cell {
+  padding-left: 0;
+}
+
+/* ---------- Checkbox ---------- */
+:where([dir='rtl']) .cs_dash_set_checkbox .cs_dash_set_checkbox_box::after {
+  right: 6px;
+  left: auto;
+  border-width: 0 0 2px 2px;
+  transform: rotate(-45deg);
+}
+:where([dir='rtl']) .cs_dash_set_checkbox input:indeterminate + .cs_dash_set_checkbox_box::after {
+  right: 4px;
+  left: auto;
+}
+
+/* ---------- Permissions ---------- */
+:where([dir='rtl']) .cs_dash_set_perm_list .cs_dash_set_checkbox {
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+/* ---------- Confirm modal ---------- */
+:where([dir='rtl']) .cs_dash_set_confirm_box .cs_dash_card_title {
+  padding-left: 30px;
+  padding-right: 0;
+}
+@media (min-width: 1400px) {
+  :where([dir='rtl']) .cs_dashboard_body.cs_dash_pos_page.cs_sidebar_collapsed .cs_dash_main {
+    margin-right: var(--dash-rail-width);
+    margin-left: 0;
+  }
+}
+
+/* ---------- Layout ---------- */
+:where([dir='rtl']) .cs_dash_pos_select > img {
+  right: 10px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_dash_pos_select .cs_dash_select {
+  padding: 9px 33px 9px 40px;
+  background-position: left 12px center;
+}
+:where([dir='rtl']) .cs_dash_pos_select.cs_full .cs_dash_select {
+  padding-right: 10px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_dash_pos_product {
+  text-align: right;
+}
+
+/* ---------- Cart ---------- */
+:where([dir='rtl']) .cs_dash_table.cs_dash_pos_cart .cs_no {
+  padding-left: 10px;
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_dash_table.cs_dash_pos_cart .cs_item {
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_dash_table.cs_dash_pos_cart .cs_qty {
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_dash_table.cs_dash_pos_cart .cs_price {
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_dash_qty button.cs_plus::after {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+/* ---------- Totals ---------- */
+:where([dir='rtl']) .cs_dash_pos_totals {
+  padding-left: 18px;
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_dash_pos_totals .cs_label {
+  text-align: left;
+}
+:where([dir='rtl']) .cs_dash_pos_totals .cs_value {
+  text-align: left;
+}
+:where([dir='rtl']) .cs_dash_pos_payable {
+  margin: 12px 0 10px -18px !important;
+  padding: 18px 0 21px 18px;
+}
+:where([dir='rtl']) .cs_dash_pos_payment legend {
+  float: right;
+}
+@media (max-width: 767px) {
+  :where([dir='rtl']) .cs_dash_pos_totals,
+  :where([dir='rtl']) .cs_dash_pos_payable {
+    padding-left: 0;
+  }
+  :where([dir='rtl']) .cs_dash_pos_payable {
+    margin-left: 0 !important;
+    padding-left: 0;
+  }
+}
+
+/*==============================================================
+05. coupons pages
+================================================================*/
+:where([dir='rtl']) .cs_dash_coupon_modal .cs_dash_modal_close {
+  left: 15px;
+  right: auto;
+}

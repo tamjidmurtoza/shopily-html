@@ -366,3 +366,15 @@
     }
   }
 }
+/* ---------- Chat box: list above the conversation on small screens ---------- */
+@media (max-width: 767px) {
+  .cs_user_chatbox_container {
+    flex-direction: column;
+
+    .cs_user_list_container,
+    .cs_chat_area {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+}

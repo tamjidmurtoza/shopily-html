@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shopily - Multivendor eCommerce Website HTML Template">
+    <meta name="author" content="Laralink">
+    <!-- Site Title -->
+    <title>Shopily - Admin Dashboard</title>
+    <link rel="icon" href="../assets/img/favicon.webp">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+
+  <body class="cs_dashboard_body">
+    <!-- Start Sidebar -->
+    <aside class="cs_dash_sidebar" id="dashSidebar">
+      <div class="cs_dash_sidebar_header">
+        <a href="index.html" class="cs_dash_logo" aria-label="Shopily admin dashboard">
+          <span class="cs_dash_logo_icon">
+            <img src="../assets/img/dashboard/logo-circle-admin.svg" alt="" class="cs_dash_logo_circle">
+            <img src="../assets/img/dashboard/logo-bag.png" alt="" class="cs_dash_logo_bag">
+          </span>
+          <span>Shopily</span>
+        </a>
+        <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="cs_dash_nav" aria-label="Admin navigation">
+        <ul>
+          <li>
+            <a href="index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-home.svg" alt="" class="cs_dash_nav_icon">
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-box-open.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="add-product.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New Product</a></li>
+              <li><a href="products.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Product</a></li>
+              <li><a href="categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Category</a></li>
+              <li><a href="attributes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Attribute</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pos.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-pos.svg" alt="" class="cs_dash_nav_icon">
+              <span>POS Manager</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-cart.svg" alt="" class="cs_dash_nav_icon">
+              <span>Orders</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="orders.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="customers.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-users.svg" alt="" class="cs_dash_nav_icon">
+              <span>Customers</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-shop.svg" alt="" class="cs_dash_nav_icon">
+              <span>Sellers</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="sellers.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller List</a></li>
+              <li><a href="seller-commission.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller Commission</a></li>
+              <li><a href="commission-history.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Commission History</a></li>
+              <li><a href="seller-payout.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller Payout</a></li>
+              <li><a href="payout-request.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Payout Request</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="support-tickets.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-headset.svg" alt="" class="cs_dash_nav_icon">
+              <span>Support</span>
+            </a>
+          </li>
+          <li>
+            <a href="chat.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-messages.svg" alt="" class="cs_dash_nav_icon">
+              <span>Message</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-refund.svg" alt="" class="cs_dash_nav_icon">
+              <span>Refund</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="refund-request.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Refund Request</a></li>
+              <li><a href="refund-approval.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Refund Approval</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="reviews.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-review.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product Review</span>
+            </a>
+          </li>
+          <li>
+            <a href="wallet.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Wallet</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-palette.svg" alt="" class="cs_dash_nav_icon">
+              <span>Appearance</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="themes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Themes</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pages.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-file.svg" alt="" class="cs_dash_nav_icon">
+              <span>Pages</span>
+            </a>
+          </li>
+          <li>
+            <a href="testimonials.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-star.svg" alt="" class="cs_dash_nav_icon">
+              <span>Testimonial</span>
+            </a>
+          </li>
+          <li>
+            <a href="subscribers.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-subscription.svg" alt="" class="cs_dash_nav_icon">
+              <span>Subscriber</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-blog.svg" alt="" class="cs_dash_nav_icon">
+              <span>Blog post</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="blog.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Blogs</a></li>
+              <li><a href="add-blog.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New</a></li>
+              <li><a href="blog-categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Categories</a></li>
+            </ul>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-id-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Staffs</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="staffs.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Staff List</a></li>
+              <li><a href="roles.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Role &amp; Permission</a></li>
+            </ul>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-settings.svg" alt="" class="cs_dash_nav_icon">
+              <span>Settings</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="email-settings.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Email Setting</a></li>
+              <li><a href="payment-methods.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Payment Method</a></li>
+              <li><a href="profile.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Profile</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-sign-out.svg" alt="" class="cs_dash_nav_icon">
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="cs_dash_overlay"></div>
+    <!-- End Sidebar -->
+
+    <main class="cs_dash_main">
+      <!-- Start Top Bar -->
+      <header class="cs_dash_topbar">
+        <div class="cs_dash_topbar_left">
+          <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <h1 class="cs_dash_page_title">Dashboard</h1>
+        </div>
+        <div class="cs_dash_topbar_right">
+          <div class="cs_dash_topbar_icons">
+            <button type="button" class="cs_dash_lang" aria-label="Change language">
+              <img src="../assets/img/dashboard/icon-lang.svg" alt="">
+            </button>
+            <button type="button" class="cs_dash_mode_toggle" aria-label="Toggle dark mode">
+              <img src="../assets/img/dashboard/icon-dark.svg" alt="">
+            </button>
+            <a href="chat.html" class="cs_dash_notification" aria-label="Notifications, 11 unread">
+              <img src="../assets/img/dashboard/icon-bell.svg" alt="">
+              <span class="cs_dash_notification_count">11</span>
+            </a>
+          </div>
+          <div class="cs_dash_profile">
+            <button type="button" class="cs_dash_profile_btn" aria-expanded="false" aria-haspopup="true">
+              <img src="../assets/img/dashboard/avatar.png" alt="Andrew Karla">
+              <span class="cs_dash_profile_info">
+                <span>
+                  <span class="cs_dash_profile_name">Andrew Karla</span>
+                  <span class="cs_dash_profile_role">Super Admin</span>
+                </span>
+                <img src="../assets/img/dashboard/icon-caret-down.svg" alt="">
+              </span>
+            </button>
+            <ul class="cs_dash_profile_dropdown">
+              <li><a href="profile.html">Edit Profile</a></li>
+              <li><a href="../index.html">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- End Top Bar -->
+
+      <!-- Start Overview Cards -->
+      <div class="cs_dash_stats">
+        <div class="cs_dash_stat_card cs_style_1">
+          <span class="cs_dash_stat_title">Todays Order</span>
+          <span class="cs_dash_stat_value">200</span>
+          <span class="cs_dash_stat_meta"><img src="../assets/img/dashboard/arrow-up-1.svg" alt="">24% Compared to last week</span>
+          <img src="../assets/img/dashboard/graph-up-1.svg" alt="" class="cs_dash_stat_graph">
+        </div>
+        <div class="cs_dash_stat_card cs_style_2">
+          <span class="cs_dash_stat_title">Todays Revenue</span>
+          <span class="cs_dash_stat_value">$1,100</span>
+          <span class="cs_dash_stat_meta"><img src="../assets/img/dashboard/arrow-up-2.svg" alt="">20% Compared to last week</span>
+          <img src="../assets/img/dashboard/graph-down-1.svg" alt="" class="cs_dash_stat_graph">
+        </div>
+        <div class="cs_dash_stat_card cs_style_3">
+          <span class="cs_dash_stat_title">Todays sells</span>
+          <span class="cs_dash_stat_value">$2,248</span>
+          <span class="cs_dash_stat_meta"><img src="../assets/img/dashboard/arrow-up-3.svg" alt="" class="cs_down">10% Compared to last week</span>
+          <img src="../assets/img/dashboard/graph-down-2.svg" alt="" class="cs_dash_stat_graph">
+        </div>
+        <div class="cs_dash_stat_card cs_style_4">
+          <span class="cs_dash_stat_title">Total Revenue</span>
+          <span class="cs_dash_stat_value">$50,000</span>
+          <span class="cs_dash_stat_meta"><img src="../assets/img/dashboard/arrow-up-4.svg" alt="">24% Compared to last year</span>
+          <img src="../assets/img/dashboard/graph-up-2.svg" alt="" class="cs_dash_stat_graph">
+        </div>
+      </div>
+      <!-- End Overview Cards -->
+
+      <!-- Start Revenue + Activity -->
+      <div class="cs_dash_row cs_chart_row">
+        <div class="cs_dash_card cs_dash_chart_card">
+          <div class="cs_dash_card_header">
+            <h2 class="cs_dash_card_title">Revenue Status</h2>
+            <div class="cs_dash_pill_tabs" role="group" aria-label="Revenue period">
+              <button type="button" aria-pressed="false">Yearly</button>
+              <button type="button" aria-pressed="false">Monthly</button>
+              <button type="button" aria-pressed="false">Weekly</button>
+              <button type="button" class="active" aria-pressed="true">Today</button>
+            </div>
+          </div>
+          <div class="cs_dash_chart_box">
+            <canvas id="revenueChart" aria-label="Revenue status bar chart" role="img"></canvas>
+          </div>
+        </div>
+        <div class="cs_dash_card cs_dash_pie_card">
+          <h2 class="cs_dash_card_title">Activity Overview</h2>
+          <div class="cs_dash_pie_box">
+            <img src="../assets/img/dashboard/icon-pie-chart.svg" alt="" class="cs_dash_pie_icon">
+            <canvas id="activityChart" aria-label="Activity overview chart" role="img"></canvas>
+          </div>
+          <ul class="cs_dash_legend">
+            <li><span class="cs_legend_blue"></span>Ordered</li>
+            <li><span class="cs_legend_green"></span>Delivered</li>
+            <li><span class="cs_legend_mint"></span>Pending</li>
+            <li><span class="cs_legend_red"></span>Canceled</li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Revenue + Activity -->
+
+      <!-- Start Selling + Earning -->
+      <div class="cs_dash_row cs_chart_row">
+        <div class="cs_dash_card cs_dash_chart_card">
+          <div class="cs_dash_card_header">
+            <h2 class="cs_dash_card_title">Sellers Joining Status</h2>
+            <div class="cs_dash_pill_tabs" role="group" aria-label="Sellers joining period">
+              <button type="button" aria-pressed="false">Yearly</button>
+              <button type="button" aria-pressed="false">Monthly</button>
+              <button type="button" aria-pressed="false">Weekly</button>
+              <button type="button" class="active" aria-pressed="true">Today</button>
+            </div>
+          </div>
+          <div class="cs_dash_chart_box">
+            <canvas id="sellingChart" data-label="Sellers" aria-label="Sellers joining status line chart" role="img"></canvas>
+          </div>
+        </div>
+        <div class="cs_dash_card cs_dash_pie_card">
+          <h2 class="cs_dash_card_title">Total Overview</h2>
+          <div class="cs_dash_pie_box">
+            <canvas id="overviewChart" data-labels="Seller,Customer,Product" aria-label="Total overview chart" role="img"></canvas>
+          </div>
+          <ul class="cs_dash_legend">
+            <li><span class="cs_legend_blue"></span>Seller</li>
+            <li><span class="cs_legend_green"></span>Customer</li>
+            <li><span class="cs_legend_mint"></span>Product</li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Selling + Earning -->
+
+      <!-- Start Top Products + Recent Order -->
+      <div class="cs_dash_row cs_bottom_row">
+        <div class="cs_dash_card cs_dash_top_products">
+          <h2 class="cs_dash_card_title">Top Products</h2>
+          <ul>
+            <li>
+              <img src="../assets/img/dashboard/product-1.png" alt="Black T Shirt">
+              <div class="cs_dash_top_info">
+                <h3>Black T Shirts for men...</h3>
+                <p>Price : $70 <span>120 Sales</span></p>
+              </div>
+            </li>
+            <li>
+              <img src="../assets/img/dashboard/product-2.png" alt="Girls hand bag">
+              <div class="cs_dash_top_info">
+                <h3>Exclusive girls hand bag...</h3>
+                <p>Price : $120 <span>70 Sales</span></p>
+              </div>
+            </li>
+            <li>
+              <img src="../assets/img/dashboard/product-3.png" alt="iPhone 14">
+              <div class="cs_dash_top_info">
+                <h3>I phone 14 2023 edition...</h3>
+                <p>Price : $990 <span>30 Sales</span></p>
+              </div>
+            </li>
+            <li>
+              <img src="../assets/img/dashboard/product-4.png" alt="Sony headphone">
+              <div class="cs_dash_top_info">
+                <h3>Sony bass headphone...</h3>
+                <p>Price : $70 <span>22 Sales</span></p>
+              </div>
+            </li>
+            <li>
+              <img src="../assets/img/dashboard/product-5.png" alt="Men sneakers">
+              <div class="cs_dash_top_info">
+                <h3>Men awesome snickers...</h3>
+                <p>Price : $210 <span>14 Sales</span></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="cs_dash_card cs_dash_recent_orders">
+          <div class="cs_dash_card_header">
+            <h2 class="cs_dash_card_title">Recent Order</h2>
+            <a href="orders.html" class="cs_dash_btn cs_outline cs_sm">See All Orders</a>
+          </div>
+          <div class="cs_dash_table_wrap">
+            <table class="cs_dash_table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Date</th>
+                  <th>Customer</th>
+                  <th>Amount</th>
+                  <th>Payment Method</th>
+                  <th>Status</th>
+                  <th class="text-end">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#0010111</td>
+                  <td>11 Jan 2024</td>
+                  <td>Andrew Karla</td>
+                  <td>$500.00</td>
+                  <td>Card</td>
+                  <td><span class="cs_dash_badge cs_green">Paid</span></td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><a href="order-details.html" aria-label="View order #0010111"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a></div></td>
+                </tr>
+                <tr>
+                  <td>#0010112</td>
+                  <td>11 Jan 2024</td>
+                  <td>Seraphina Moonstone</td>
+                  <td>$250.00</td>
+                  <td>Card</td>
+                  <td><span class="cs_dash_badge cs_green">Paid</span></td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><a href="order-details.html" aria-label="View order #0010112"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a></div></td>
+                </tr>
+                <tr>
+                  <td>#0010113</td>
+                  <td>11 Jan 2024</td>
+                  <td>Orion Thunderheart</td>
+                  <td>$320.00</td>
+                  <td>COD</td>
+                  <td><span class="cs_dash_badge cs_red">Unpaid</span></td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><a href="order-details.html" aria-label="View order #0010113"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a></div></td>
+                </tr>
+                <tr>
+                  <td>#0010114</td>
+                  <td>11 Jan 2024</td>
+                  <td>Isabella Frostfire</td>
+                  <td>$4500.00</td>
+                  <td>Card</td>
+                  <td><span class="cs_dash_badge cs_green">Paid</span></td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><a href="order-details.html" aria-label="View order #0010114"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a></div></td>
+                </tr>
+                <tr>
+                  <td>#0010115</td>
+                  <td>11 Jan 2024</td>
+                  <td>Luna Starlight</td>
+                  <td>$110.00</td>
+                  <td>Card</td>
+                  <td><span class="cs_dash_badge cs_red">Unpaid</span></td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><a href="order-details.html" aria-label="View order #0010115"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a></div></td>
+                </tr>
+                <tr>
+                  <td>#0010116</td>
+                  <td>11 Jan 2024</td>
+                  <td>Dante Emberwind</td>
+                  <td>$100.00</td>
+                  <td>Card</td>
+                  <td><span class="cs_dash_badge cs_green">Paid</span></td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><a href="order-details.html" aria-label="View order #0010116"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- End Top Products + Recent Order -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/chart.min.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shopily - Multivendor eCommerce Website HTML Template">
+    <meta name="author" content="Laralink">
+    <!-- Site Title -->
+    <title>Shopily - Profile</title>
+    <link rel="icon" href="../assets/img/favicon.webp">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+
+  <body class="cs_dashboard_body">
+    <!-- Start Sidebar -->
+    <aside class="cs_dash_sidebar" id="dashSidebar">
+      <div class="cs_dash_sidebar_header">
+        <a href="index.html" class="cs_dash_logo" aria-label="Shopily admin dashboard">
+          <span class="cs_dash_logo_icon">
+            <img src="../assets/img/dashboard/logo-circle-admin.svg" alt="" class="cs_dash_logo_circle">
+            <img src="../assets/img/dashboard/logo-bag.png" alt="" class="cs_dash_logo_bag">
+          </span>
+          <span>Shopily</span>
+        </a>
+        <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="cs_dash_nav" aria-label="Admin navigation">
+        <ul>
+          <li>
+            <a href="index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-home.svg" alt="" class="cs_dash_nav_icon">
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-box-open.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="add-product.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New Product</a></li>
+              <li><a href="products.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Product</a></li>
+              <li><a href="categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Category</a></li>
+              <li><a href="attributes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Attribute</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pos.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-pos.svg" alt="" class="cs_dash_nav_icon">
+              <span>POS Manager</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-cart.svg" alt="" class="cs_dash_nav_icon">
+              <span>Orders</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="orders.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="customers.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-users.svg" alt="" class="cs_dash_nav_icon">
+              <span>Customers</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-shop.svg" alt="" class="cs_dash_nav_icon">
+              <span>Sellers</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="sellers.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller List</a></li>
+              <li><a href="seller-commission.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller Commission</a></li>
+              <li><a href="commission-history.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Commission History</a></li>
+              <li><a href="seller-payout.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller Payout</a></li>
+              <li><a href="payout-request.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Payout Request</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="support-tickets.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-headset.svg" alt="" class="cs_dash_nav_icon">
+              <span>Support</span>
+            </a>
+          </li>
+          <li>
+            <a href="chat.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-messages.svg" alt="" class="cs_dash_nav_icon">
+              <span>Message</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-refund.svg" alt="" class="cs_dash_nav_icon">
+              <span>Refund</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="refund-request.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Refund Request</a></li>
+              <li><a href="refund-approval.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Refund Approval</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="reviews.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-review.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product Review</span>
+            </a>
+          </li>
+          <li>
+            <a href="wallet.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Wallet</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-palette.svg" alt="" class="cs_dash_nav_icon">
+              <span>Appearance</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="themes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Themes</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pages.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-file.svg" alt="" class="cs_dash_nav_icon">
+              <span>Pages</span>
+            </a>
+          </li>
+          <li>
+            <a href="testimonials.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-star.svg" alt="" class="cs_dash_nav_icon">
+              <span>Testimonial</span>
+            </a>
+          </li>
+          <li>
+            <a href="subscribers.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-subscription.svg" alt="" class="cs_dash_nav_icon">
+              <span>Subscriber</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-blog.svg" alt="" class="cs_dash_nav_icon">
+              <span>Blog post</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="blog.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Blogs</a></li>
+              <li><a href="add-blog.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New</a></li>
+              <li><a href="blog-categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Categories</a></li>
+            </ul>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-id-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Staffs</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="staffs.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Staff List</a></li>
+              <li><a href="roles.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Role &amp; Permission</a></li>
+            </ul>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-settings.svg" alt="" class="cs_dash_nav_icon">
+              <span>Settings</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="email-settings.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Email Setting</a></li>
+              <li><a href="payment-methods.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Payment Method</a></li>
+              <li><a href="profile.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Profile</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-sign-out.svg" alt="" class="cs_dash_nav_icon">
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="cs_dash_overlay"></div>
+    <!-- End Sidebar -->
+
+    <main class="cs_dash_main">
+      <!-- Start Top Bar -->
+      <header class="cs_dash_topbar">
+        <div class="cs_dash_topbar_left">
+          <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <h1 class="cs_dash_page_title">Seller Profile</h1>
+        </div>
+        <div class="cs_dash_topbar_right">
+          <div class="cs_dash_topbar_icons">
+            <button type="button" class="cs_dash_lang" aria-label="Change language">
+              <img src="../assets/img/dashboard/icon-lang.svg" alt="">
+            </button>
+            <button type="button" class="cs_dash_mode_toggle" aria-label="Toggle dark mode">
+              <img src="../assets/img/dashboard/icon-dark.svg" alt="">
+            </button>
+            <a href="chat.html" class="cs_dash_notification" aria-label="Notifications, 11 unread">
+              <img src="../assets/img/dashboard/icon-bell.svg" alt="">
+              <span class="cs_dash_notification_count">11</span>
+            </a>
+          </div>
+          <div class="cs_dash_profile">
+            <button type="button" class="cs_dash_profile_btn" aria-expanded="false" aria-haspopup="true">
+              <img src="../assets/img/dashboard/avatar.png" alt="Andrew Karla">
+              <span class="cs_dash_profile_info">
+                <span>
+                  <span class="cs_dash_profile_name">Andrew Karla</span>
+                  <span class="cs_dash_profile_role">Super Admin</span>
+                </span>
+                <img src="../assets/img/dashboard/icon-caret-down.svg" alt="">
+              </span>
+            </button>
+            <ul class="cs_dash_profile_dropdown">
+              <li><a href="profile.html">Edit Profile</a></li>
+              <li><a href="../index.html">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- End Top Bar -->
+
+      <!-- Start Seller Details -->
+      <div class="cs_dash_card cs_dash_set_card cs_dash_set_profile_card">
+        <h2 class="cs_dash_card_title cs_normal cs_dash_set_title">Seller Details</h2>
+        <div class="cs_dash_set_tabs" role="tablist" aria-label="Profile sections">
+          <button type="button" class="cs_dash_set_tab active" role="tab" id="tabBasic" aria-controls="panelBasic" aria-selected="true">Basic Info</button>
+          <button type="button" class="cs_dash_set_tab" role="tab" id="tabAddress" aria-controls="panelAddress" aria-selected="false" tabindex="-1">Address</button>
+          <button type="button" class="cs_dash_set_tab" role="tab" id="tabPayment" aria-controls="panelPayment" aria-selected="false" tabindex="-1">Payment Method</button>
+          <button type="button" class="cs_dash_set_tab" role="tab" id="tabPassword" aria-controls="panelPassword" aria-selected="false" tabindex="-1">Change Password</button>
+        </div>
+
+        <!-- Basic Info -->
+        <form class="cs_dash_set_panel active" id="panelBasic" role="tabpanel" aria-labelledby="tabBasic" action="#">
+          <div class="cs_dash_set_profile_grid">
+            <div class="cs_dash_set_profile_fields">
+              <div class="cs_dash_form_group">
+                <label class="cs_dash_label cs_dash_set_label" for="sellerName">Sellers Name</label>
+                <input type="text" id="sellerName" class="cs_dash_input" value="Andrew Karla" autocomplete="name">
+              </div>
+              <div class="cs_dash_form_group">
+                <label class="cs_dash_label cs_dash_set_label" for="storeName">Store Name</label>
+                <input type="text" id="storeName" class="cs_dash_input" value="Comfee Store" autocomplete="organization">
+              </div>
+              <div class="cs_dash_form_group">
+                <label class="cs_dash_label cs_dash_set_label" for="businessSlogan">Business Slogan</label>
+                <input type="text" id="businessSlogan" class="cs_dash_input" value="Gadget &amp; Gear Soloution">
+              </div>
+              <div class="cs_dash_form_group">
+                <label class="cs_dash_label cs_dash_set_label" for="sellerEmail">Email</label>
+                <input type="email" id="sellerEmail" class="cs_dash_input" value="comfeestore@gmail.com" autocomplete="email">
+              </div>
+              <div class="cs_dash_form_group">
+                <label class="cs_dash_label cs_dash_set_label" for="sellerPhone">Phone</label>
+                <input type="tel" id="sellerPhone" class="cs_dash_input" value="01212898741" autocomplete="tel">
+              </div>
+              <button type="submit" class="cs_dash_btn cs_green cs_dash_set_submit">Save</button>
+            </div>
+            <div class="cs_dash_set_profile_media">
+              <div class="cs_dash_form_group">
+                <span class="cs_dash_label cs_dash_set_label" id="storeLogoLabel">Upload Logo</span>
+                <div class="cs_dash_set_upload_row">
+                  <div class="cs_dash_set_upload" data-upload>
+                    <img src="" alt="Store logo preview" class="cs_dash_set_upload_img" hidden>
+                    <label class="cs_dash_set_upload_add" for="storeLogo">
+                      <span class="cs_dash_set_upload_icon" aria-hidden="true">+</span>
+                      <span class="visually-hidden">Choose store logo</span>
+                    </label>
+                    <input type="file" id="storeLogo" accept="image/*" class="visually-hidden" aria-labelledby="storeLogoLabel">
+                    <button type="button" class="cs_dash_set_upload_remove" aria-label="Remove logo">
+                      <img src="../assets/img/dashboard/icon-delete.svg" alt="">
+                    </button>
+                  </div>
+                  <p class="cs_dash_set_upload_hint">Recommended image size is 200x200</p>
+                </div>
+              </div>
+              <div class="cs_dash_form_group mb-0">
+                <span class="cs_dash_label cs_dash_set_label" id="storeBannerLabel">Upload Banner</span>
+                <div class="cs_dash_set_upload cs_dash_set_upload_banner" data-upload>
+                  <img src="" alt="Store banner preview" class="cs_dash_set_upload_img" hidden>
+                  <label class="cs_dash_set_upload_add" for="storeBanner">
+                    <span class="cs_dash_set_upload_icon" aria-hidden="true">+</span>
+                    <span class="visually-hidden">Choose store banner</span>
+                  </label>
+                  <input type="file" id="storeBanner" accept="image/*" class="visually-hidden" aria-labelledby="storeBannerLabel">
+                  <button type="button" class="cs_dash_set_upload_remove" aria-label="Remove banner">
+                    <img src="../assets/img/dashboard/icon-delete.svg" alt="">
+                  </button>
+                </div>
+                <p class="cs_dash_set_upload_hint text-center">Recommended image size is 1600x400</p>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <!-- Address -->
+        <form class="cs_dash_set_panel" id="panelAddress" role="tabpanel" aria-labelledby="tabAddress" action="#" hidden>
+          <div class="cs_dash_set_profile_fields">
+            <div class="cs_dash_form_group">
+              <label class="cs_dash_label cs_dash_set_label" for="addrStreet">Street Address</label>
+              <input type="text" id="addrStreet" class="cs_dash_input" value="2972 Westheimer Rd" autocomplete="street-address">
+            </div>
+            <div class="row gx-4">
+              <div class="col-sm-6 cs_dash_form_group">
+                <label class="cs_dash_label cs_dash_set_label" for="addrCity">City</label>
+                <input type="text" id="addrCity" class="cs_dash_input" value="Santa Ana" autocomplete="address-level2">
+              </div>
+              <div class="col-sm-6 cs_dash_form_group">
+                <label class="cs_dash_label cs_dash_set_label" for="addrState">State</label>
+                <input type="text" id="addrState" class="cs_dash_input" value="Illinois" autocomplete="address-level1">
+              </div>
+              <div class="col-sm-6 cs_dash_form_group">
+                <label class="cs_dash_label cs_dash_set_label" for="addrZip">Zip Code</label>
+                <input type="text" id="addrZip" class="cs_dash_input" value="85486" autocomplete="postal-code">
+              </div>
+              <div class="col-sm-6 cs_dash_form_group">
+                <label class="cs_dash_label cs_dash_set_label" for="addrCountry">Country</label>
+                <select id="addrCountry" class="cs_dash_select" autocomplete="country-name">
+                  <option selected>United States</option>
+                  <option>United Kingdom</option>
+                  <option>Canada</option>
+                  <option>Australia</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="cs_dash_btn cs_green cs_dash_set_submit">Save</button>
+          </div>
+        </form>
+
+        <!-- Payment Method -->
+        <form class="cs_dash_set_panel" id="panelPayment" role="tabpanel" aria-labelledby="tabPayment" action="#" hidden>
+          <div class="cs_dash_set_profile_fields">
+            <div class="cs_dash_form_group">
+              <label class="cs_dash_label cs_dash_set_label" for="payMethod">Payout Method</label>
+              <select id="payMethod" class="cs_dash_select">
+                <option selected>Bank Transfer</option>
+                <option>Paypal</option>
+              </select>
+            </div>
+            <div class="cs_dash_form_group">
+              <label class="cs_dash_label cs_dash_set_label" for="payBank">Bank Name</label>
+              <input type="text" id="payBank" class="cs_dash_input" value="City Bank">
+            </div>
+            <div class="cs_dash_form_group">
+              <label class="cs_dash_label cs_dash_set_label" for="payHolder">Account Holder Name</label>
+              <input type="text" id="payHolder" class="cs_dash_input" value="Andrew Karla">
+            </div>
+            <div class="cs_dash_form_group">
+              <label class="cs_dash_label cs_dash_set_label" for="payAccount">Account Number</label>
+              <input type="text" id="payAccount" class="cs_dash_input" value="0123 4567 8910" inputmode="numeric">
+            </div>
+            <button type="submit" class="cs_dash_btn cs_green cs_dash_set_submit">Save</button>
+          </div>
+        </form>
+
+        <!-- Change Password -->
+        <form class="cs_dash_set_panel" id="panelPassword" role="tabpanel" aria-labelledby="tabPassword" action="#" hidden>
+          <div class="cs_dash_set_profile_fields">
+            <div class="cs_dash_form_group">
+              <label class="cs_dash_label cs_dash_set_label" for="pwCurrent">Current Password</label>
+              <input type="password" id="pwCurrent" class="cs_dash_input" autocomplete="current-password">
+            </div>
+            <div class="cs_dash_form_group">
+              <label class="cs_dash_label cs_dash_set_label" for="pwNew">New Password</label>
+              <input type="password" id="pwNew" class="cs_dash_input" autocomplete="new-password">
+            </div>
+            <div class="cs_dash_form_group">
+              <label class="cs_dash_label cs_dash_set_label" for="pwConfirm">Confirm Password</label>
+              <input type="password" id="pwConfirm" class="cs_dash_input" autocomplete="new-password">
+            </div>
+            <button type="submit" class="cs_dash_btn cs_green cs_dash_set_submit">Update Password</button>
+          </div>
+        </form>
+      </div>
+      <!-- End Seller Details -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/dashboard-settings.js"></script>
+  </body>
+</html>

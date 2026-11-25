@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shopily - Multivendor eCommerce Website HTML Template">
+    <meta name="author" content="Laralink">
+    <!-- Site Title -->
+    <title>Shopily - Seller Details</title>
+    <link rel="icon" href="../assets/img/favicon.webp">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+
+  <body class="cs_dashboard_body" data-dash-active="sellers.html">
+    <!-- Start Sidebar -->
+    <aside class="cs_dash_sidebar" id="dashSidebar">
+      <div class="cs_dash_sidebar_header">
+        <a href="index.html" class="cs_dash_logo" aria-label="Shopily admin dashboard">
+          <span class="cs_dash_logo_icon">
+            <img src="../assets/img/dashboard/logo-circle-admin.svg" alt="" class="cs_dash_logo_circle">
+            <img src="../assets/img/dashboard/logo-bag.png" alt="" class="cs_dash_logo_bag">
+          </span>
+          <span>Shopily</span>
+        </a>
+        <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="cs_dash_nav" aria-label="Admin navigation">
+        <ul>
+          <li>
+            <a href="index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-home.svg" alt="" class="cs_dash_nav_icon">
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-box-open.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="add-product.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New Product</a></li>
+              <li><a href="products.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Product</a></li>
+              <li><a href="categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Category</a></li>
+              <li><a href="attributes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Attribute</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pos.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-pos.svg" alt="" class="cs_dash_nav_icon">
+              <span>POS Manager</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-cart.svg" alt="" class="cs_dash_nav_icon">
+              <span>Orders</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="orders.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="customers.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-users.svg" alt="" class="cs_dash_nav_icon">
+              <span>Customers</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-shop.svg" alt="" class="cs_dash_nav_icon">
+              <span>Sellers</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="sellers.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller List</a></li>
+              <li><a href="seller-commission.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller Commission</a></li>
+              <li><a href="commission-history.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Commission History</a></li>
+              <li><a href="seller-payout.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller Payout</a></li>
+              <li><a href="payout-request.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Payout Request</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="support-tickets.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-headset.svg" alt="" class="cs_dash_nav_icon">
+              <span>Support</span>
+            </a>
+          </li>
+          <li>
+            <a href="chat.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-messages.svg" alt="" class="cs_dash_nav_icon">
+              <span>Message</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-refund.svg" alt="" class="cs_dash_nav_icon">
+              <span>Refund</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="refund-request.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Refund Request</a></li>
+              <li><a href="refund-approval.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Refund Approval</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="reviews.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-review.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product Review</span>
+            </a>
+          </li>
+          <li>
+            <a href="wallet.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Wallet</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-palette.svg" alt="" class="cs_dash_nav_icon">
+              <span>Appearance</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="themes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Themes</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pages.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-file.svg" alt="" class="cs_dash_nav_icon">
+              <span>Pages</span>
+            </a>
+          </li>
+          <li>
+            <a href="testimonials.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-star.svg" alt="" class="cs_dash_nav_icon">
+              <span>Testimonial</span>
+            </a>
+          </li>
+          <li>
+            <a href="subscribers.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-subscription.svg" alt="" class="cs_dash_nav_icon">
+              <span>Subscriber</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-blog.svg" alt="" class="cs_dash_nav_icon">
+              <span>Blog post</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="blog.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Blogs</a></li>
+              <li><a href="add-blog.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New</a></li>
+              <li><a href="blog-categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Categories</a></li>
+            </ul>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-id-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Staffs</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="staffs.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Staff List</a></li>
+              <li><a href="roles.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Role &amp; Permission</a></li>
+            </ul>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-settings.svg" alt="" class="cs_dash_nav_icon">
+              <span>Settings</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="email-settings.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Email Setting</a></li>
+              <li><a href="payment-methods.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Payment Method</a></li>
+              <li><a href="profile.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Profile</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-sign-out.svg" alt="" class="cs_dash_nav_icon">
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="cs_dash_overlay"></div>
+    <!-- End Sidebar -->
+
+    <main class="cs_dash_main">
+      <!-- Start Top Bar -->
+      <header class="cs_dash_topbar">
+        <div class="cs_dash_topbar_left">
+          <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <h1 class="cs_dash_page_title">All Seller</h1>
+        </div>
+        <div class="cs_dash_topbar_right">
+          <div class="cs_dash_topbar_icons">
+            <button type="button" class="cs_dash_lang" aria-label="Change language">
+              <img src="../assets/img/dashboard/icon-lang.svg" alt="">
+            </button>
+            <button type="button" class="cs_dash_mode_toggle" aria-label="Toggle dark mode">
+              <img src="../assets/img/dashboard/icon-dark.svg" alt="">
+            </button>
+            <a href="chat.html" class="cs_dash_notification" aria-label="Notifications, 11 unread">
+              <img src="../assets/img/dashboard/icon-bell.svg" alt="">
+              <span class="cs_dash_notification_count">11</span>
+            </a>
+          </div>
+          <div class="cs_dash_profile">
+            <button type="button" class="cs_dash_profile_btn" aria-expanded="false" aria-haspopup="true">
+              <img src="../assets/img/dashboard/avatar.png" alt="Andrew Karla">
+              <span class="cs_dash_profile_info">
+                <span>
+                  <span class="cs_dash_profile_name">Andrew Karla</span>
+                  <span class="cs_dash_profile_role">Super Admin</span>
+                </span>
+                <img src="../assets/img/dashboard/icon-caret-down.svg" alt="">
+              </span>
+            </button>
+            <ul class="cs_dash_profile_dropdown">
+              <li><a href="profile.html">Edit Profile</a></li>
+              <li><a href="../index.html">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- End Top Bar -->
+
+      <!-- Start Seller List -->
+      <section class="cs_dash_card cs_dash_people_card">
+          <div class="cs_dash_card_header">
+            <h2 class="cs_dash_card_title cs_normal">Seller List</h2>
+            <div class="cs_dash_card_actions">
+              <label class="cs_dash_people_filter">
+                <span class="visually-hidden">Filter by approval</span>
+                <select class="cs_dash_select">
+                  <option value="">Filter By Approval</option>
+                  <option value="approved">Approved</option>
+                  <option value="pending">Not Approved</option>
+                </select>
+              </label>
+              <label class="cs_dash_search">
+                <img src="../assets/img/dashboard/icon-search.svg" alt="">
+                <span class="visually-hidden">Search</span>
+                <input type="search" placeholder="Search with email or name...">
+              </label>
+              <button type="button" class="cs_dash_btn cs_blue">
+                <img src="../assets/img/dashboard/people/icon-export.svg" alt="" class="cs_dash_export_icon">
+                Export Data
+              </button>
+            </div>
+          </div>
+          <div class="cs_dash_table_wrap">
+            <table class="cs_dash_table cs_dash_people_table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Name</th>
+                  <th>Store Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Approval</th>
+                  <th>Due Seller Payment</th>
+                  <th class="text-end">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>Samantha Bennett</td>
+                  <td>Comfee Store</td>
+                  <td>comfeestore@gmail.com</td>
+                  <td>88440 2231544</td>
+                  <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" checked aria-label="Approve Comfee Store"><span></span></label></td>
+                  <td>$1010.00</td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><button type="button" aria-label="Ban Comfee Store"><img src="../assets/img/dashboard/people/icon-ban.svg" alt="" class="cs_dash_icon_dark"></button><a href="seller-details.html" aria-label="View Comfee Store"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a><button type="button" aria-label="Delete Comfee Store"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>Adrian Reynolds</td>
+                  <td>Giga Tech</td>
+                  <td>gigatech@gmail.com</td>
+                  <td>88440 8850144</td>
+                  <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" checked aria-label="Approve Giga Tech"><span></span></label></td>
+                  <td>$450.00</td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><button type="button" aria-label="Ban Giga Tech"><img src="../assets/img/dashboard/people/icon-ban.svg" alt="" class="cs_dash_icon_dark"></button><a href="seller-details.html" aria-label="View Giga Tech"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a><button type="button" aria-label="Delete Giga Tech"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td>Maya Thompson</td>
+                  <td>Photopy Shop</td>
+                  <td>photopyshop@gmail.com</td>
+                  <td>88440 8870001</td>
+                  <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" aria-label="Approve Photopy Shop"><span></span></label></td>
+                  <td>$0.00</td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><button type="button" aria-label="Ban Photopy Shop"><img src="../assets/img/dashboard/people/icon-ban.svg" alt="" class="cs_dash_icon_dark"></button><a href="seller-details.html" aria-label="View Photopy Shop"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a><button type="button" aria-label="Delete Photopy Shop"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr>
+                  <td>04</td>
+                  <td>Jordan Carter</td>
+                  <td>Electrogram</td>
+                  <td>electrogram@gmail.com</td>
+                  <td>88220 2231242</td>
+                  <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" checked aria-label="Approve Electrogram"><span></span></label></td>
+                  <td>$9400.00</td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><button type="button" aria-label="Ban Electrogram"><img src="../assets/img/dashboard/people/icon-ban.svg" alt="" class="cs_dash_icon_dark"></button><a href="seller-details.html" aria-label="View Electrogram"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a><button type="button" aria-label="Delete Electrogram"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Olivia Rodriguez</td>
+                  <td>Holino Apps</td>
+                  <td>holinoapps@gmail.com</td>
+                  <td>88740 2231550</td>
+                  <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" checked aria-label="Approve Holino Apps"><span></span></label></td>
+                  <td>$70.00</td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><button type="button" aria-label="Ban Holino Apps"><img src="../assets/img/dashboard/people/icon-ban.svg" alt="" class="cs_dash_icon_dark"></button><a href="seller-details.html" aria-label="View Holino Apps"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a><button type="button" aria-label="Delete Holino Apps"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr>
+                  <td>06</td>
+                  <td>Liam Walker</td>
+                  <td>Gadget Pop</td>
+                  <td>gadgetpop@gmail.com</td>
+                  <td>88440 2231222</td>
+                  <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" checked aria-label="Approve Gadget Pop"><span></span></label></td>
+                  <td>$0.00</td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><button type="button" aria-label="Ban Gadget Pop"><img src="../assets/img/dashboard/people/icon-ban.svg" alt="" class="cs_dash_icon_dark"></button><a href="seller-details.html" aria-label="View Gadget Pop"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a><button type="button" aria-label="Delete Gadget Pop"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr>
+                  <td>07</td>
+                  <td>Emily Foster</td>
+                  <td>Quantum Quarters</td>
+                  <td>quantumquarters@gmail.com</td>
+                  <td>88440 2210003</td>
+                  <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" checked aria-label="Approve Quantum Quarters"><span></span></label></td>
+                  <td>$787.00</td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><button type="button" aria-label="Ban Quantum Quarters"><img src="../assets/img/dashboard/people/icon-ban.svg" alt="" class="cs_dash_icon_dark"></button><a href="seller-details.html" aria-label="View Quantum Quarters"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a><button type="button" aria-label="Delete Quantum Quarters"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr>
+                  <td>08</td>
+                  <td>Ethan Morgan</td>
+                  <td>Starlight Bazaar</td>
+                  <td>starlightbazaar@gmail.com</td>
+                  <td>88440 2231242</td>
+                  <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" checked aria-label="Approve Starlight Bazaar"><span></span></label></td>
+                  <td>$598.00</td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><button type="button" aria-label="Ban Starlight Bazaar"><img src="../assets/img/dashboard/people/icon-ban.svg" alt="" class="cs_dash_icon_dark"></button><a href="seller-details.html" aria-label="View Starlight Bazaar"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a><button type="button" aria-label="Delete Starlight Bazaar"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr>
+                  <td>09</td>
+                  <td>Ava Mitchell</td>
+                  <td>Mystic Mirage</td>
+                  <td>mysticmirage@gmail.com</td>
+                  <td>88440 2231242</td>
+                  <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" checked aria-label="Approve Mystic Mirage"><span></span></label></td>
+                  <td>$500.00</td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><button type="button" aria-label="Ban Mystic Mirage"><img src="../assets/img/dashboard/people/icon-ban.svg" alt="" class="cs_dash_icon_dark"></button><a href="seller-details.html" aria-label="View Mystic Mirage"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a><button type="button" aria-label="Delete Mystic Mirage"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Jackson Hayes</td>
+                  <td>Beauty &amp; You</td>
+                  <td>beautyyou@gmail.com</td>
+                  <td>88770 2231874</td>
+                  <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" checked aria-label="Approve Beauty &amp; You"><span></span></label></td>
+                  <td>$830.00</td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><button type="button" aria-label="Ban Beauty &amp; You"><img src="../assets/img/dashboard/people/icon-ban.svg" alt="" class="cs_dash_icon_dark"></button><a href="seller-details.html" aria-label="View Beauty &amp; You"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a><button type="button" aria-label="Delete Beauty &amp; You"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>Isabella Turner</td>
+                  <td>S Boutique</td>
+                  <td>sboutique@gmail.com</td>
+                  <td>88440 2231222</td>
+                  <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" checked aria-label="Approve S Boutique"><span></span></label></td>
+                  <td>$100.00</td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><button type="button" aria-label="Ban S Boutique"><img src="../assets/img/dashboard/people/icon-ban.svg" alt="" class="cs_dash_icon_dark"></button><a href="seller-details.html" aria-label="View S Boutique"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a><button type="button" aria-label="Delete S Boutique"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Caleb Peterson</td>
+                  <td>Organika</td>
+                  <td>organika@gmail.com</td>
+                  <td>88440 6454123</td>
+                  <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" checked aria-label="Approve Organika"><span></span></label></td>
+                  <td>$633.00</td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><button type="button" aria-label="Ban Organika"><img src="../assets/img/dashboard/people/icon-ban.svg" alt="" class="cs_dash_icon_dark"></button><a href="seller-details.html" aria-label="View Organika"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a><button type="button" aria-label="Delete Organika"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>Scarlett King</td>
+                  <td>Style Life</td>
+                  <td>stylelife@gmail.com</td>
+                  <td>88440 2231242</td>
+                  <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" checked aria-label="Approve Style Life"><span></span></label></td>
+                  <td>$0.00</td>
+                  <td class="text-end"><div class="cs_dash_table_actions"><button type="button" aria-label="Ban Style Life"><img src="../assets/img/dashboard/people/icon-ban.svg" alt="" class="cs_dash_icon_dark"></button><a href="seller-details.html" aria-label="View Style Life"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></a><button type="button" aria-label="Delete Style Life"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cs_dash_table_footer">
+            <p class="mb-0">Showing <strong>1-15</strong> from <strong>200</strong> Data</p>
+            <nav class="cs_dash_pagination" aria-label="Pagination">
+              <a href="#" aria-label="Previous page"><img src="../assets/img/dashboard/icon-caret-left.svg" alt="" class="cs_dash_icon_dark"></a>
+              <ul>
+                <li><a href="#" class="active" aria-current="page">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+              </ul>
+              <a href="#" aria-label="Next page"><img src="../assets/img/dashboard/icon-caret-right.svg" alt="" class="cs_dash_icon_dark"></a>
+            </nav>
+          </div>
+      </section>
+      <!-- End Seller List -->
+    </main>
+
+    <!-- Start Seller Details Modal -->
+    <div class="cs_dash_modal cs_dash_people_modal active" id="sellerDetailsModal" role="dialog" aria-modal="true" aria-labelledby="sellerDetailsTitle">
+      <div class="cs_dash_modal_box">
+        <a href="sellers.html" class="cs_dash_modal_close" aria-label="Close and go back to seller list"><img src="../assets/img/dashboard/people/icon-close.svg" alt="" class="cs_dash_icon_dark"></a>
+        <h2 class="cs_dash_people_modal_title" id="sellerDetailsTitle">Seller Details</h2>
+        <div class="cs_dash_store_head">
+          <span class="cs_dash_store_logo"><img src="../assets/img/dashboard/people/shop.png" alt="Comfee Store logo"></span>
+          <span class="cs_dash_store_name">Comfee Store</span>
+        </div>
+            <ul class="cs_dash_info_list">
+              <li><span>Seller Name :</span> Samantha Bennett</li>
+              <li><span>Address :</span> 411 Fraggle, Adam Park, IL 60605, Singapore</li>
+              <li><span>Bank Name :</span> Trinity Bank UK</li>
+              <li><span>Bank Account Name :</span> Comfee Store</li>
+              <li><span>Bank Account Number :</span> 02202144447</li>
+              <li><span>Bank Routing Number :</span> 4548888874</li>
+              <li><span>Total Sold Amount :</span> $130.00</li>
+              <li><span>Wallet Balance :</span> $130.00</li>
+              <li><span>Total Products :</span> 50</li>
+            </ul>
+        <div class="cs_dash_people_modal_links">
+          <a href="seller-commission-history.html" class="cs_dash_btn cs_outline cs_sm">Commission History</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Seller Details Modal -->
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+  </body>
+</html>

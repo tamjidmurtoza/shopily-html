@@ -1,0 +1,125 @@
+/*==============================================================
+  05. coupons pages
+================================================================*/
+.cs_dash_coupon_card {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 185px);
+  padding: 25px 22px 30px;
+
+  .cs_dash_card_header {
+    margin-bottom: 30px;
+  }
+
+  .cs_dash_table_wrap {
+    flex: 1;
+  }
+
+  .cs_dash_table_footer {
+    margin-top: auto;
+  }
+}
+
+.cs_dash_coupon_table {
+  min-width: 760px;
+
+  th {
+    padding-bottom: 26px;
+  }
+
+  td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 55px;
+  }
+}
+
+.cs_dash_coupon_status {
+  font-size: 14px;
+
+  &.cs_active {
+    color: var(--dash-green);
+  }
+
+  &.cs_inactive {
+    color: var(--dash-red);
+  }
+}
+
+.cs_dash_coupon_delete img {
+  width: 20px;
+}
+
+/* Add / update modal */
+.cs_dash_coupon_modal {
+  max-width: 800px;
+  padding: 50px 30px 50px;
+
+  .cs_dash_modal_close {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.cs_dash_coupon_modal_title {
+  margin: 0 0 30px;
+  font-size: 25px;
+  line-height: 32px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--dash-heading);
+}
+
+.cs_dash_coupon_form {
+  max-width: 500px;
+  margin: 0 auto;
+
+  .cs_dash_form_group {
+    margin-bottom: 25px;
+  }
+
+  .cs_dash_input,
+  .cs_dash_select {
+    height: 45px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size: 14px;
+    color: var(--dash-text);
+  }
+}
+
+.cs_dash_coupon_label {
+  display: block;
+  margin-bottom: 12px !important;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--dash-text);
+}
+
+.cs_dash_coupon_submit {
+  margin-top: 6px;
+  min-width: 141px;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .cs_dash_coupon_card {
+    min-height: 0;
+    padding: 20px 15px;
+  }
+
+  .cs_dash_coupon_modal {
+    padding: 45px 15px 30px;
+  }
+
+  .cs_dash_coupon_modal_title {
+    font-size: 21px;
+  }
+}

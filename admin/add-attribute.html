@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shopily - Multivendor eCommerce Website HTML Template">
+    <meta name="author" content="Laralink">
+    <!-- Site Title -->
+    <title>Shopily - Admin - Add New Attribute</title>
+    <link rel="icon" href="../assets/img/favicon.webp">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+
+  <body class="cs_dashboard_body cs_dash_modal_open" data-dash-active="attributes.html">
+    <!-- Start Sidebar -->
+    <aside class="cs_dash_sidebar" id="dashSidebar">
+      <div class="cs_dash_sidebar_header">
+        <a href="index.html" class="cs_dash_logo" aria-label="Shopily admin dashboard">
+          <span class="cs_dash_logo_icon">
+            <img src="../assets/img/dashboard/logo-circle-admin.svg" alt="" class="cs_dash_logo_circle">
+            <img src="../assets/img/dashboard/logo-bag.png" alt="" class="cs_dash_logo_bag">
+          </span>
+          <span>Shopily</span>
+        </a>
+        <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="cs_dash_nav" aria-label="Admin navigation">
+        <ul>
+          <li>
+            <a href="index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-home.svg" alt="" class="cs_dash_nav_icon">
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-box-open.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="add-product.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New Product</a></li>
+              <li><a href="products.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Product</a></li>
+              <li><a href="categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Category</a></li>
+              <li><a href="attributes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Attribute</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pos.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-pos.svg" alt="" class="cs_dash_nav_icon">
+              <span>POS Manager</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-cart.svg" alt="" class="cs_dash_nav_icon">
+              <span>Orders</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="orders.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="customers.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-users.svg" alt="" class="cs_dash_nav_icon">
+              <span>Customers</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-shop.svg" alt="" class="cs_dash_nav_icon">
+              <span>Sellers</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="sellers.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller List</a></li>
+              <li><a href="seller-commission.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller Commission</a></li>
+              <li><a href="commission-history.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Commission History</a></li>
+              <li><a href="seller-payout.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller Payout</a></li>
+              <li><a href="payout-request.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Payout Request</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="support-tickets.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-headset.svg" alt="" class="cs_dash_nav_icon">
+              <span>Support</span>
+            </a>
+          </li>
+          <li>
+            <a href="chat.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-messages.svg" alt="" class="cs_dash_nav_icon">
+              <span>Message</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-refund.svg" alt="" class="cs_dash_nav_icon">
+              <span>Refund</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="refund-request.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Refund Request</a></li>
+              <li><a href="refund-approval.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Refund Approval</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="reviews.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-review.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product Review</span>
+            </a>
+          </li>
+          <li>
+            <a href="wallet.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Wallet</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-palette.svg" alt="" class="cs_dash_nav_icon">
+              <span>Appearance</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="themes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Themes</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pages.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-file.svg" alt="" class="cs_dash_nav_icon">
+              <span>Pages</span>
+            </a>
+          </li>
+          <li>
+            <a href="testimonials.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-star.svg" alt="" class="cs_dash_nav_icon">
+              <span>Testimonial</span>
+            </a>
+          </li>
+          <li>
+            <a href="subscribers.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-subscription.svg" alt="" class="cs_dash_nav_icon">
+              <span>Subscriber</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-blog.svg" alt="" class="cs_dash_nav_icon">
+              <span>Blog post</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="blog.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Blogs</a></li>
+              <li><a href="add-blog.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New</a></li>
+              <li><a href="blog-categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Categories</a></li>
+            </ul>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-id-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Staffs</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="staffs.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Staff List</a></li>
+              <li><a href="roles.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Role &amp; Permission</a></li>
+            </ul>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-settings.svg" alt="" class="cs_dash_nav_icon">
+              <span>Settings</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="email-settings.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Email Setting</a></li>
+              <li><a href="payment-methods.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Payment Method</a></li>
+              <li><a href="profile.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Profile</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-sign-out.svg" alt="" class="cs_dash_nav_icon">
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="cs_dash_overlay"></div>
+    <!-- End Sidebar -->
+
+    <main class="cs_dash_main">
+      <!-- Start Top Bar -->
+      <header class="cs_dash_topbar">
+        <div class="cs_dash_topbar_left">
+          <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <h1 class="cs_dash_page_title">Attributes</h1>
+        </div>
+        <div class="cs_dash_topbar_right">
+          <div class="cs_dash_topbar_icons">
+            <button type="button" class="cs_dash_lang" aria-label="Change language">
+              <img src="../assets/img/dashboard/icon-lang.svg" alt="">
+            </button>
+            <button type="button" class="cs_dash_mode_toggle" aria-label="Toggle dark mode">
+              <img src="../assets/img/dashboard/icon-dark.svg" alt="">
+            </button>
+            <a href="chat.html" class="cs_dash_notification" aria-label="Notifications, 11 unread">
+              <img src="../assets/img/dashboard/icon-bell.svg" alt="">
+              <span class="cs_dash_notification_count">11</span>
+            </a>
+          </div>
+          <div class="cs_dash_profile">
+            <button type="button" class="cs_dash_profile_btn" aria-expanded="false" aria-haspopup="true">
+              <img src="../assets/img/dashboard/avatar.png" alt="Andrew Karla">
+              <span class="cs_dash_profile_info">
+                <span>
+                  <span class="cs_dash_profile_name">Andrew Karla</span>
+                  <span class="cs_dash_profile_role">Super Admin</span>
+                </span>
+                <img src="../assets/img/dashboard/icon-caret-down.svg" alt="">
+              </span>
+            </button>
+            <ul class="cs_dash_profile_dropdown">
+              <li><a href="profile.html">Edit Profile</a></li>
+              <li><a href="../index.html">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- End Top Bar -->
+
+      <!-- Start Attribute List -->
+      <section class="cs_dash_card cs_dash_prd_card cs_dash_prd_fill" aria-labelledby="attributeListTitle">
+        <div class="cs_dash_card_header">
+          <h2 class="cs_dash_card_title cs_normal" id="attributeListTitle">All Attributes</h2>
+          <div class="cs_dash_card_actions">
+            <label class="cs_dash_search">
+              <img src="../assets/img/dashboard/icon-search.svg" alt="">
+              <input type="search" placeholder="Search category..." aria-label="Search attributes">
+            </label>
+            <a href="add-attribute.html" class="cs_dash_btn cs_blue" data-modal-open="#addAttributeModal"><img src="../assets/img/dashboard/icon-plus-circle.svg" alt="">Add New Attribute</a>
+          </div>
+        </div>
+        <div class="cs_dash_table_wrap">
+          <table class="cs_dash_table cs_dash_attribute_table">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Values</th>
+                <th scope="col" class="text-end">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>Color</td>
+                <td>Black, White, Blue, Red, Yellow</td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="edit-attribute.html" data-modal-open="#editAttributeModal" aria-label="Edit Color"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete Color"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Size</td>
+                <td>S, M, L, XL, XXL</td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="edit-attribute.html" data-modal-open="#editAttributeModal" aria-label="Edit Size"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete Size"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>Weight</td>
+                <td>250gm, 500gm, 1kg</td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="edit-attribute.html" data-modal-open="#editAttributeModal" aria-label="Edit Weight"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete Weight"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td>Capacity</td>
+                <td>10L, 15L, 20L</td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="edit-attribute.html" data-modal-open="#editAttributeModal" aria-label="Edit Capacity"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete Capacity"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- End Attribute List -->
+    </main>
+
+    <!-- Start Add Attribute Modal -->
+    <div class="cs_dash_modal active" id="addAttributeModal" role="dialog" aria-modal="true" aria-labelledby="addAttributeTitle">
+      <div class="cs_dash_modal_box cs_dash_prd_modal">
+        <button type="button" class="cs_dash_modal_close" data-modal-close aria-label="Close">&times;</button>
+        <h2 class="cs_dash_prd_modal_title" id="addAttributeTitle">Add New Attributes</h2>
+        <form class="cs_dash_prd_form_sm" action="attributes.html">
+          <div class="cs_dash_form_group">
+            <label class="cs_dash_label cs_dash_prd_label" for="addAttributeName">Attribute Name *</label>
+            <input type="text" id="addAttributeName" name="name" class="cs_dash_input" required>
+          </div>
+          <div class="cs_dash_prd_value_list" id="addAttributeValues">
+            <div class="cs_dash_form_group cs_dash_prd_value_row">
+              <label class="cs_dash_label cs_dash_prd_label" for="addAttributeValue1">Value *</label>
+              <div class="cs_dash_prd_value_field">
+                <input type="text" id="addAttributeValue1" name="values[]" class="cs_dash_input" required>
+                <button type="button" class="cs_dash_prd_value_remove" data-remove-value aria-label="Remove value"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+          <div class="cs_dash_prd_modal_actions">
+            <button type="button" class="cs_dash_btn cs_prd_dark cs_prd_w190" data-add-value>Add Value</button>
+            <button type="submit" class="cs_dash_btn cs_green cs_prd_w190">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- End Add Attribute Modal -->
+
+    <!-- Start Update Attribute Modal -->
+    <div class="cs_dash_modal" id="editAttributeModal" role="dialog" aria-modal="true" aria-labelledby="editAttributeTitle">
+      <div class="cs_dash_modal_box cs_dash_prd_modal">
+        <button type="button" class="cs_dash_modal_close" data-modal-close aria-label="Close">&times;</button>
+        <h2 class="cs_dash_prd_modal_title" id="editAttributeTitle">Update Attributes</h2>
+        <form class="cs_dash_prd_form_sm" action="attributes.html">
+          <div class="cs_dash_form_group">
+            <label class="cs_dash_label cs_dash_prd_label" for="editAttributeName">Attribute Name *</label>
+            <input type="text" id="editAttributeName" name="name" class="cs_dash_input" required value="Size">
+          </div>
+          <div class="cs_dash_prd_value_list" id="editAttributeValues">
+            <div class="cs_dash_form_group cs_dash_prd_value_row">
+              <label class="cs_dash_label cs_dash_prd_label" for="editAttributeValue1">Value *</label>
+              <div class="cs_dash_prd_value_field">
+                <input type="text" id="editAttributeValue1" name="values[]" class="cs_dash_input" required value="S">
+                <button type="button" class="cs_dash_prd_value_remove" data-remove-value aria-label="Remove value"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+              </div>
+            </div>
+            <div class="cs_dash_form_group cs_dash_prd_value_row">
+              <label class="cs_dash_label cs_dash_prd_label" for="editAttributeValue2">Value *</label>
+              <div class="cs_dash_prd_value_field">
+                <input type="text" id="editAttributeValue2" name="values[]" class="cs_dash_input" required value="M">
+                <button type="button" class="cs_dash_prd_value_remove" data-remove-value aria-label="Remove value"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+              </div>
+            </div>
+            <div class="cs_dash_form_group cs_dash_prd_value_row">
+              <label class="cs_dash_label cs_dash_prd_label" for="editAttributeValue3">Value *</label>
+              <div class="cs_dash_prd_value_field">
+                <input type="text" id="editAttributeValue3" name="values[]" class="cs_dash_input" required value="L">
+                <button type="button" class="cs_dash_prd_value_remove" data-remove-value aria-label="Remove value"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+              </div>
+            </div>
+            <div class="cs_dash_form_group cs_dash_prd_value_row">
+              <label class="cs_dash_label cs_dash_prd_label" for="editAttributeValue4">Value *</label>
+              <div class="cs_dash_prd_value_field">
+                <input type="text" id="editAttributeValue4" name="values[]" class="cs_dash_input" required value="XL">
+                <button type="button" class="cs_dash_prd_value_remove" data-remove-value aria-label="Remove value"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+              </div>
+            </div>
+            <div class="cs_dash_form_group cs_dash_prd_value_row">
+              <label class="cs_dash_label cs_dash_prd_label" for="editAttributeValue5">Value *</label>
+              <div class="cs_dash_prd_value_field">
+                <input type="text" id="editAttributeValue5" name="values[]" class="cs_dash_input" required value="XXL">
+                <button type="button" class="cs_dash_prd_value_remove" data-remove-value aria-label="Remove value"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+          <div class="cs_dash_prd_modal_actions">
+            <button type="button" class="cs_dash_btn cs_prd_dark cs_prd_w190" data-add-value>Add Value</button>
+            <button type="submit" class="cs_dash_btn cs_green cs_prd_w190">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- End Update Attribute Modal -->
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/dashboard-products.js"></script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
  02. Typography
 ----------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Rufina:wght@400;700&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Libre+Franklin:wght@700&family=Montserrat+Alternates:wght@700&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Rufina:wght@400;700&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
   &.cs_dark {
@@ -134,6 +134,16 @@ button {
   background-color: transparent;
   transition: all 0.3s ease;
   cursor: pointer;
+}
+
+// Keyboard focus ring (mouse clicks don't show it).
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 a:hover {

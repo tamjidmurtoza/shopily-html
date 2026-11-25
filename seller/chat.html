@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shopily - Multivendor eCommerce Website HTML Template">
+    <meta name="author" content="Laralink">
+    <!-- Site Title -->
+    <title>Shopily - Seller Customer Chat</title>
+    <link rel="icon" href="../assets/img/favicon.webp">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+
+  <body class="cs_dashboard_body">
+    <!-- Start Sidebar -->
+    <aside class="cs_dash_sidebar" id="dashSidebar">
+      <div class="cs_dash_sidebar_header">
+        <a href="index.html" class="cs_dash_logo" aria-label="Shopily seller dashboard">
+          <span class="cs_dash_logo_icon">
+            <img src="../assets/img/dashboard/logo-circle.svg" alt="" class="cs_dash_logo_circle">
+            <img src="../assets/img/dashboard/logo-bag.png" alt="" class="cs_dash_logo_bag">
+          </span>
+          <span>Shopily</span>
+        </a>
+        <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="cs_dash_nav" aria-label="Seller navigation">
+        <ul>
+          <li>
+            <a href="index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-home.svg" alt="" class="cs_dash_nav_icon">
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-box-open.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="add-product.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New Product</a></li>
+              <li><a href="products.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Product</a></li>
+              <li><a href="categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Category</a></li>
+              <li><a href="attributes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Attribute</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pos.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-pos.svg" alt="" class="cs_dash_nav_icon">
+              <span>POS Manager</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-cart.svg" alt="" class="cs_dash_nav_icon">
+              <span>Orders</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="orders.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="commission-history.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-shop.svg" alt="" class="cs_dash_nav_icon">
+              <span>Commission</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-headset.svg" alt="" class="cs_dash_nav_icon">
+              <span>Support</span>
+            </a>
+          </li>
+          <li>
+            <a href="chat.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-messages.svg" alt="" class="cs_dash_nav_icon">
+              <span>Message</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-refund.svg" alt="" class="cs_dash_nav_icon">
+              <span>Refund</span>
+            </a>
+          </li>
+          <li>
+            <a href="wallet.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Wallet</span>
+            </a>
+          </li>
+          <li>
+            <a href="coupons.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-badge-percent.svg" alt="" class="cs_dash_nav_icon">
+              <span>Coupon</span>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-settings.svg" alt="" class="cs_dash_nav_icon">
+              <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="../index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-sign-out.svg" alt="" class="cs_dash_nav_icon">
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="cs_dash_overlay"></div>
+    <!-- End Sidebar -->
+
+    <main class="cs_dash_main">
+      <!-- Start Top Bar -->
+      <header class="cs_dash_topbar">
+        <div class="cs_dash_topbar_left">
+          <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <h1 class="cs_dash_page_title">Seller Customer Chat</h1>
+        </div>
+        <div class="cs_dash_topbar_right">
+          <div class="cs_dash_topbar_icons">
+            <button type="button" class="cs_dash_lang" aria-label="Change language">
+              <img src="../assets/img/dashboard/icon-lang.svg" alt="">
+            </button>
+            <button type="button" class="cs_dash_mode_toggle" aria-label="Toggle dark mode">
+              <img src="../assets/img/dashboard/icon-dark.svg" alt="">
+            </button>
+            <a href="chat.html" class="cs_dash_notification" aria-label="Notifications, 11 unread">
+              <img src="../assets/img/dashboard/icon-bell.svg" alt="">
+              <span class="cs_dash_notification_count">11</span>
+            </a>
+          </div>
+          <div class="cs_dash_profile">
+            <button type="button" class="cs_dash_profile_btn" aria-expanded="false" aria-haspopup="true">
+              <img src="../assets/img/dashboard/avatar.png" alt="Andrew Karla">
+              <span class="cs_dash_profile_info">
+                <span>
+                  <span class="cs_dash_profile_name">Andrew Karla</span>
+                  <span class="cs_dash_profile_role">Seller</span>
+                </span>
+                <img src="../assets/img/dashboard/icon-caret-down.svg" alt="">
+              </span>
+            </button>
+            <ul class="cs_dash_profile_dropdown">
+              <li><a href="profile.html">Edit Profile</a></li>
+              <li><a href="../index.html">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- End Top Bar -->
+
+      <!-- Start Chat -->
+      <section class="cs_dash_card cs_dash_chat" aria-label="Customer chat">
+        <div class="cs_dash_chat_contacts">
+          <label class="cs_dash_search" for="chatSearch">
+            <input type="search" id="chatSearch" placeholder="Search by name">
+          </label>
+          <ul>
+            <li>
+              <button type="button" class="cs_dash_chat_contact active" data-name="Bob Marlyn" data-img="../assets/img/dashboard/support/chat-user-1.jpg" data-online="true">
+                <span class="cs_dash_chat_avatar"><img src="../assets/img/dashboard/support/chat-user-1.jpg" alt=""><img src="../assets/img/dashboard/support/status-online.svg" alt="Online" class="cs_dash_chat_status"></span>
+                <span class="cs_dash_chat_contact_info">
+                  <strong>Bob Marlyn</strong>
+                  <time>1 hour</time>
+                  <span>At vero eos et accusamus et..</span>
+                  <span class="cs_dash_chat_unread" aria-label="3 unread">3</span>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs_dash_chat_contact" data-name="Juena Bone" data-img="../assets/img/dashboard/support/chat-user-2.jpg" data-online="true">
+                <span class="cs_dash_chat_avatar"><img src="../assets/img/dashboard/support/chat-user-2.jpg" alt=""><img src="../assets/img/dashboard/support/status-online.svg" alt="Online" class="cs_dash_chat_status"></span>
+                <span class="cs_dash_chat_contact_info">
+                  <strong>Juena Bone</strong>
+                  <time>4 hours</time>
+                  <span>At vero eos et accusamus et..</span>
+                  <span class="cs_dash_chat_unread" aria-label="3 unread">3</span>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs_dash_chat_contact" data-name="Marlin gabril" data-img="../assets/img/dashboard/support/chat-user-3.jpg" data-online="false">
+                <span class="cs_dash_chat_avatar"><img src="../assets/img/dashboard/support/chat-user-3.jpg" alt=""><img src="../assets/img/dashboard/support/status-offline.svg" alt="Offline" class="cs_dash_chat_status"></span>
+                <span class="cs_dash_chat_contact_info">
+                  <strong>Marlin gabril</strong>
+                  <time>1 day</time>
+                  <span>At vero eos et accusamus et..</span>
+                  
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs_dash_chat_contact" data-name="Alex Cooper" data-img="../assets/img/dashboard/support/chat-user-4.jpg" data-online="true">
+                <span class="cs_dash_chat_avatar"><img src="../assets/img/dashboard/support/chat-user-4.jpg" alt=""><img src="../assets/img/dashboard/support/status-online.svg" alt="Online" class="cs_dash_chat_status"></span>
+                <span class="cs_dash_chat_contact_info">
+                  <strong>Alex Cooper</strong>
+                  <time>20 minutes</time>
+                  <span>At vero eos et accusamus et..</span>
+                  <span class="cs_dash_chat_unread" aria-label="2 unread">2</span>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs_dash_chat_contact" data-name="Marlin gabril" data-img="../assets/img/dashboard/support/chat-user-1.jpg" data-online="true">
+                <span class="cs_dash_chat_avatar"><img src="../assets/img/dashboard/support/chat-user-1.jpg" alt=""><img src="../assets/img/dashboard/support/status-online.svg" alt="Online" class="cs_dash_chat_status"></span>
+                <span class="cs_dash_chat_contact_info">
+                  <strong>Marlin gabril</strong>
+                  <time>2 hours</time>
+                  <span>At vero eos et accusamus et..</span>
+                  
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs_dash_chat_contact" data-name="Alex Cooper" data-img="../assets/img/dashboard/support/chat-user-5.jpg" data-online="false">
+                <span class="cs_dash_chat_avatar"><img src="../assets/img/dashboard/support/chat-user-5.jpg" alt=""><img src="../assets/img/dashboard/support/status-offline.svg" alt="Offline" class="cs_dash_chat_status"></span>
+                <span class="cs_dash_chat_contact_info">
+                  <strong>Alex Cooper</strong>
+                  <time>2 weeks</time>
+                  <span>At vero eos et accusamus et..</span>
+                  
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs_dash_chat_contact" data-name="Kumera Boser" data-img="../assets/img/dashboard/support/chat-user-3.jpg" data-online="true">
+                <span class="cs_dash_chat_avatar"><img src="../assets/img/dashboard/support/chat-user-3.jpg" alt=""><img src="../assets/img/dashboard/support/status-online.svg" alt="Online" class="cs_dash_chat_status"></span>
+                <span class="cs_dash_chat_contact_info">
+                  <strong>Kumera Boser</strong>
+                  <time>1 hour</time>
+                  <span>At vero eos et accusamus et..</span>
+                  <span class="cs_dash_chat_unread" aria-label="3 unread">3</span>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs_dash_chat_contact" data-name="Marza Lamagna" data-img="../assets/img/dashboard/support/chat-user-1.jpg" data-online="false">
+                <span class="cs_dash_chat_avatar"><img src="../assets/img/dashboard/support/chat-user-1.jpg" alt=""><img src="../assets/img/dashboard/support/status-offline.svg" alt="Offline" class="cs_dash_chat_status"></span>
+                <span class="cs_dash_chat_contact_info">
+                  <strong>Marza Lamagna</strong>
+                  <time>5 hours</time>
+                  <span>At vero eos et accusamus et..</span>
+                  
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs_dash_chat_contact" data-name="Alex Cooper" data-img="../assets/img/dashboard/support/chat-user-5.jpg" data-online="false">
+                <span class="cs_dash_chat_avatar"><img src="../assets/img/dashboard/support/chat-user-5.jpg" alt=""><img src="../assets/img/dashboard/support/status-offline.svg" alt="Offline" class="cs_dash_chat_status"></span>
+                <span class="cs_dash_chat_contact_info">
+                  <strong>Alex Cooper</strong>
+                  <time>2 weeks</time>
+                  <span>At vero eos et accusamus et..</span>
+                  
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs_dash_chat_contact" data-name="Alex Cooper" data-img="../assets/img/dashboard/support/chat-user-5.jpg" data-online="false">
+                <span class="cs_dash_chat_avatar"><img src="../assets/img/dashboard/support/chat-user-5.jpg" alt=""><img src="../assets/img/dashboard/support/status-offline.svg" alt="Offline" class="cs_dash_chat_status"></span>
+                <span class="cs_dash_chat_contact_info">
+                  <strong>Alex Cooper</strong>
+                  <time>2 weeks</time>
+                  <span>At vero eos et accusamus et..</span>
+                  
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs_dash_chat_contact" data-name="Alex Cooper" data-img="../assets/img/dashboard/support/chat-user-5.jpg" data-online="false">
+                <span class="cs_dash_chat_avatar"><img src="../assets/img/dashboard/support/chat-user-5.jpg" alt=""><img src="../assets/img/dashboard/support/status-offline.svg" alt="Offline" class="cs_dash_chat_status"></span>
+                <span class="cs_dash_chat_contact_info">
+                  <strong>Alex Cooper</strong>
+                  <time>2 weeks</time>
+                  <span>At vero eos et accusamus et..</span>
+                  
+                </span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="cs_dash_chat_main">
+          <div class="cs_dash_chat_header">
+            <span class="cs_dash_chat_avatar"><img src="../assets/img/dashboard/support/chat-user-1.jpg" alt="" class="cs_dash_chat_header_img"><img src="../assets/img/dashboard/support/status-online.svg" alt="Online" class="cs_dash_chat_status"></span>
+            <div>
+              <h2 class="cs_dash_chat_header_name">Bob Marlyn</h2>
+              <p class="cs_dash_chat_header_status">Online</p>
+            </div>
+          </div>
+          <div class="cs_dash_chat_messages" aria-live="polite">
+            <div class="cs_dash_chat_msg">
+              <span class="cs_dash_chat_msg_avatar"><img src="../assets/img/dashboard/support/chat-user-1.jpg" alt=""></span>
+              <div class="cs_dash_chat_bubble"><p>Hello there!</p><time>09:10 AM</time></div>
+            </div>
+            <div class="cs_dash_chat_msg cs_me">
+              <span class="cs_dash_chat_msg_avatar"><img src="../assets/img/dashboard/support/chat-shop.png" alt="" class="cs_dash_chat_shop"></span>
+              <div class="cs_dash_chat_bubble"><p>Hi, How can i help you?</p><time>09:10 AM</time></div>
+            </div>
+            <div class="cs_dash_chat_msg">
+              <span class="cs_dash_chat_msg_avatar"><img src="../assets/img/dashboard/support/chat-user-1.jpg" alt=""></span>
+              <div class="cs_dash_chat_bubble"><p>Yesterday I ordered two products. May i know when it will come to my address?</p><time>09:10 AM</time></div>
+            </div>
+            <div class="cs_dash_chat_msg cs_me">
+              <span class="cs_dash_chat_msg_avatar"><img src="../assets/img/dashboard/support/chat-shop.png" alt="" class="cs_dash_chat_shop"></span>
+              <div class="cs_dash_chat_bubble"><p>May I know your order ID please? Basically our product's delivery time is approximately within 2-3 days.</p><time>09:10 AM</time></div>
+            </div>
+          </div>
+          <form class="cs_dash_chat_form" action="#">
+            <label class="visually-hidden" for="chatMessage">Message</label>
+            <input type="text" id="chatMessage" placeholder="Write your text here..." autocomplete="off">
+            <button type="submit" class="cs_dash_btn cs_blue">Send</button>
+          </form>
+        </div>
+      </section>
+      <!-- End Chat -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/dashboard-support.js"></script>
+  </body>
+</html>

@@ -1,0 +1,353 @@
+/*---------------------------------------------------------
+  marketplace1 header
+  Figma: MARKETPLACE1 > hero > header (top bar / midle bar / nav)
+  + hidden "drop down" frame (search category list & mega menu).
+  The same design is used by marketplace2 (see _marketplace2.scss), hence the mixin.
+-----------------------------------------------------------*/
+@mixin cs-marketplace-header($header) {
+  #{$header} {
+    .cs_top_header {
+      color: #fff;
+      background-color: #191919;
+    }
+
+    .cs_top_header_list>li:not(:last-child) {
+      padding-right: 25px;
+      margin-right: 25px;
+    }
+
+    /* Logo, search, actions */
+    .cs_main_header_in {
+      display: flex;
+      align-items: center;
+      min-height: 97px;
+      padding: 10px 0;
+    }
+
+    .cs_site_branding {
+      gap: 15px;
+      min-width: 203px;
+      font-family: "Montserrat Alternates", var(--primary-font);
+      font-size: 33px;
+      line-height: 45px;
+      font-weight: 700;
+
+      .cs_logo_icon {
+        width: 37.0471px;
+        height: 42.0593px;
+      }
+    }
+
+    .cs_header_search {
+      flex: 0 1 870px;
+      min-width: 0;
+      margin-left: 70px;
+      border: 1px solid #424242;
+      border-radius: 50px;
+      background-color: var(--gray-color5);
+
+      .cs_header_search_input {
+        height: 48px;
+        padding: 11px 16px 11px 53px;
+        border-radius: 50px;
+
+        &::placeholder {
+          color: var(--secondary-color);
+        }
+      }
+
+      .cs_header_search_btn {
+        left: 0;
+        right: auto;
+        width: 53px;
+        padding-left: 21px;
+        justify-content: flex-start;
+        border-radius: 50px 0 0 50px;
+
+        img {
+          width: 20.384px;
+          height: 21px;
+        }
+      }
+    }
+
+    .cs_search_category {
+      flex-shrink: 0;
+      align-self: stretch;
+      display: flex;
+
+      .cs_search_category_btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        height: 100%;
+        padding: 0 22px 0 21px;
+        border-left: 1px solid #9d9d9d;
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--secondary-color);
+        white-space: nowrap;
+        cursor: pointer;
+      }
+
+      .cs_header_dropdown {
+        top: calc(100% + 7px);
+        left: 0;
+        right: auto;
+        width: 310px;
+        padding: 9px 0;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 100%;
+          width: 100%;
+          height: 7px;
+        }
+      }
+    }
+
+    .cs_search_category_list a {
+      display: block;
+      padding: 0 21px;
+      font-size: 13px;
+      line-height: 34px;
+
+      &:hover {
+        background-color: rgba(232, 232, 232, 0.5);
+      }
+    }
+
+    .cs_header_actions {
+      margin-left: auto;
+      padding-left: 30px;
+      gap: 26px;
+    }
+
+    .cs_header_signin_btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 15px;
+      border-radius: 20px;
+      font-size: 16px;
+      line-height: 26px;
+      color: #fff;
+      background-color: #ef4b4b;
+      white-space: nowrap;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+
+    .cs_header_wishlist {
+      display: inline-flex;
+
+      img {
+        width: 20.0081px;
+        height: 18.6592px;
+      }
+    }
+
+    .cs_header_cart {
+      margin-left: 1px;
+    }
+
+    .cs_account_dropdown {
+      top: calc(100% + 24px);
+      right: auto;
+      left: 50%;
+      transform: translate(-50%, 10px);
+
+      &::before {
+        height: 24px;
+      }
+    }
+
+    .cs_header_dropdown_wrap:hover>.cs_account_dropdown,
+    .cs_header_dropdown_wrap.active>.cs_account_dropdown {
+      transform: translate(-50%, 0);
+    }
+
+    /* Nav row */
+    .cs_header_nav {
+      border-top: 1px solid var(--gray-color2);
+    }
+
+    .cs_header_nav_in {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 39px;
+      min-height: 63px;
+    }
+
+    .cs_nav .cs_nav_list {
+      column-gap: 39px;
+    }
+
+    .cs_mega_btn {
+      display: flex;
+      cursor: pointer;
+    }
+
+    .cs_mega_dropdown>.cs_header_dropdown {
+      top: calc(100% + 18px);
+      padding: 20px 10px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 100%;
+        width: 100%;
+        height: 18px;
+      }
+    }
+
+    .cs_mega_menu {
+      display: grid;
+      grid-template-columns: repeat(3, 215px);
+      row-gap: 30px;
+      width: 653px;
+
+      a {
+        display: inline-block;
+        padding: 0 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        line-height: 34px;
+        color: var(--secondary-color);
+
+        &:hover {
+          color: var(--primary-color);
+          background-color: #f3f3f3;
+        }
+      }
+
+      .cs_mega_title {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .cs_dark #{$header} {
+    .cs_header_search {
+      border-color: var(--gray-color2);
+    }
+
+    .cs_search_category .cs_search_category_btn {
+      border-left-color: var(--gray-color2);
+    }
+
+    .cs_search_category_list a:hover,
+    .cs_mega_menu a:hover {
+      background-color: var(--gray-color2);
+    }
+  }
+
+  @media (max-width: 1399px) {
+    #{$header} {
+      .cs_site_branding {
+        min-width: 0;
+      }
+
+      .cs_header_search {
+        flex: 1 1 auto;
+        margin-left: 40px;
+      }
+
+      .cs_header_nav_in {
+        gap: 16px;
+      }
+
+      .cs_nav .cs_nav_list {
+        column-gap: 16px;
+      }
+
+      .cs_nav .cs_nav_list>li>a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 1199px) {
+    #{$header} .cs_header_nav_in {
+      justify-content: space-between;
+      min-height: 60px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    #{$header} {
+      .cs_top_header_text {
+        display: none;
+      }
+
+      .cs_top_header .cs_top_header_in {
+        justify-content: center;
+        padding: 8px 0;
+      }
+
+      .cs_main_header_in {
+        flex-wrap: wrap;
+        padding: 20px 0;
+        row-gap: 20px;
+      }
+
+      .cs_header_search {
+        order: 3;
+        flex: 0 0 100%;
+        margin-left: 0;
+      }
+
+      .cs_mega_menu {
+        grid-template-columns: repeat(2, minmax(0, 215px));
+        width: auto;
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    #{$header} {
+      .cs_top_header_list>li:not(:last-child) {
+        padding-right: 12px;
+        margin-right: 12px;
+      }
+
+      .cs_top_header_list>li:first-child {
+        display: none;
+      }
+
+      .cs_site_branding {
+        font-size: 28px;
+        gap: 10px;
+      }
+
+      .cs_header_actions {
+        gap: 18px;
+        padding-left: 15px;
+      }
+
+      .cs_search_category {
+        display: none;
+      }
+
+      .cs_mega_dropdown>.cs_header_dropdown {
+        width: calc(100vw - 24px);
+      }
+
+      .cs_mega_menu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@include cs-marketplace-header(".cs_header_marketplace1");

@@ -1,0 +1,471 @@
+/*==============================================================
+  05. staff settings pages
+  (staffs, add/edit staff, roles, create role, email settings,
+  payment methods, admin + seller profile)
+================================================================*/
+
+/* ---------- Full height cards ---------- */
+.cs_dash_staff_card,
+.cs_dash_set_card {
+  min-height: calc(100vh - 185px);
+}
+
+.cs_dash_staff_card {
+  display: flex;
+  flex-direction: column;
+
+  > .cs_dash_card_header {
+    margin-bottom: 45px;
+  }
+
+  .cs_dash_table_wrap {
+    flex: 1;
+  }
+}
+
+.cs_dash_role_details,
+.cs_dash_role_details + .cs_dash_set_card {
+  min-height: 0;
+}
+
+.cs_dash_role_details {
+  margin-bottom: var(--dash-gap);
+}
+
+.cs_dash_set_title {
+  margin-bottom: 30px;
+}
+
+/* ---------- Search / bulk action ---------- */
+.cs_dash_search.cs_dash_set_search_lg {
+  width: 380px;
+}
+
+.cs_dash_set_bulk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .cs_dash_select {
+    width: 260px;
+    height: 45px;
+    padding: 9px 45px 9px 10px;
+    color: var(--dash-text);
+  }
+
+  .cs_dash_btn {
+    padding: 0 20px;
+  }
+}
+
+/* ---------- Tables ---------- */
+.cs_dash_staff_table {
+  th:first-child,
+  td:first-child {
+    width: 75px;
+  }
+
+  td:last-child {
+    width: 150px;
+  }
+}
+
+.cs_dash_role_table {
+  th:nth-child(2) {
+    width: 18%;
+  }
+
+  th:nth-child(3) {
+    width: 50%;
+  }
+}
+
+.cs_dash_table .cs_dash_set_check_cell {
+  width: 58px;
+  padding-right: 0;
+  line-height: 0;
+}
+
+/* ---------- Checkbox ---------- */
+.cs_dash_set_checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--dash-heading);
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+
+  .cs_dash_set_checkbox_box {
+    position: relative;
+    flex: none;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid var(--dash-text);
+    border-radius: 3px;
+    background-color: var(--dash-input-bg);
+    transition: all 0.2s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      opacity: 0;
+    }
+  }
+
+  input:checked + .cs_dash_set_checkbox_box,
+  input:indeterminate + .cs_dash_set_checkbox_box {
+    border-color: var(--dash-green);
+    background-color: var(--dash-green);
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  input:indeterminate + .cs_dash_set_checkbox_box::after {
+    left: 4px;
+    top: 7px;
+    width: 9px;
+    height: 0;
+    border-width: 0 0 2px;
+    transform: none;
+  }
+
+  input:focus-visible + .cs_dash_set_checkbox_box {
+    outline: 2px solid var(--dash-blue);
+    outline-offset: 2px;
+  }
+}
+
+/* ---------- Form layout ---------- */
+.cs_dash_label.cs_dash_set_label {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 16.6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--dash-text);
+}
+
+.cs_dash_set_card {
+  .cs_dash_form_group {
+    margin-bottom: 27px;
+  }
+
+  .cs_dash_input,
+  .cs_dash_select {
+    height: 45px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+}
+
+.cs_dash_set_narrow {
+  max-width: 485px;
+}
+
+.cs_dash_set_wide {
+  max-width: 967px;
+}
+
+.cs_dash_set_submit {
+  min-width: 150px;
+  margin-top: 5px;
+}
+
+/* ---------- Image upload ---------- */
+.cs_dash_set_upload_row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px 50px;
+}
+
+.cs_dash_set_upload {
+  position: relative;
+  flex: none;
+  width: 145px;
+  height: 145px;
+  overflow: hidden;
+  border-radius: var(--dash-radius);
+  background-color: var(--dash-border);
+
+  &.cs_dash_set_upload_banner {
+    width: 100%;
+    height: 260px;
+  }
+}
+
+.cs_dash_set_upload_img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs_dash_set_upload_add {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  cursor: pointer;
+}
+
+.cs_dash_set_upload_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--dash-card-bg);
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--dash-heading);
+  transition: transform 0.3s ease;
+
+  .cs_dash_set_upload_add:hover & {
+    transform: scale(1.1);
+  }
+}
+
+.cs_dash_set_upload_remove {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #efefef;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+
+  img {
+    width: 14px;
+    height: 16px;
+  }
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.cs_dash_set_upload.cs_has_image {
+  .cs_dash_set_upload_icon {
+    display: none;
+  }
+
+  .cs_dash_set_upload_remove {
+    display: flex;
+  }
+}
+
+.cs_dash_set_upload_hint {
+  margin: 0;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--dash-text);
+
+  &.text-center {
+    margin-top: 25px;
+  }
+}
+
+/* ---------- Permissions ---------- */
+.cs_dash_set_perm_group {
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.cs_dash_set_perm_title {
+  float: none;
+  width: 100%;
+  margin: 0;
+  padding: 0 18px 15px;
+  border-bottom: 1px solid var(--dash-border);
+  font-size: 14px;
+  line-height: 16.6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--dash-text);
+}
+
+.cs_dash_set_perm_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 0;
+  padding-top: 18px;
+
+  .cs_dash_set_checkbox {
+    min-width: 119px;
+    padding-right: 20px;
+  }
+}
+
+/* ---------- Profile tabs ---------- */
+.cs_dash_set_profile_card .cs_dash_set_title {
+  margin-bottom: 25px;
+}
+
+.cs_dash_set_tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+  margin-bottom: 35px;
+}
+
+.cs_dash_set_tab {
+  height: 37px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: var(--dash-radius);
+  background: transparent;
+  font-size: 14px;
+  line-height: 16.6px;
+  color: var(--dash-text);
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--dash-heading);
+  }
+
+  &.active {
+    background-color: var(--dash-border);
+    color: var(--dash-heading);
+  }
+}
+
+.cs_dash_set_panel[hidden] {
+  display: none;
+}
+
+.cs_dash_set_profile_grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.cs_dash_set_panel > .cs_dash_set_profile_fields {
+  max-width: 713px;
+}
+
+/* ---------- Confirm modal ---------- */
+.cs_dash_set_confirm_box {
+  max-width: 440px;
+
+  .cs_dash_card_title {
+    padding-right: 30px;
+  }
+
+  .cs_dash_card_actions {
+    justify-content: flex-end;
+  }
+}
+
+.cs_dash_set_confirm_text {
+  margin: 15px 0 25px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--dash-text);
+}
+
+/* ---------- Dark mode ---------- */
+.cs_dashboard_body.cs_dark {
+  .cs_dash_set_upload_remove {
+    background-color: var(--dash-card-bg);
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1199px) {
+  .cs_dash_set_profile_grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cs_dash_set_panel > .cs_dash_set_profile_fields,
+  .cs_dash_set_profile_grid .cs_dash_set_profile_fields {
+    max-width: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_dash_staff_card,
+  .cs_dash_set_card {
+    min-height: 0;
+  }
+
+  .cs_dash_search.cs_dash_set_search_lg {
+    width: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_dash_set_bulk {
+    width: 100%;
+
+    .cs_dash_select {
+      flex: 1;
+      width: auto;
+      min-width: 0;
+    }
+  }
+
+  .cs_dash_card_actions .cs_dash_search.cs_dash_set_search_lg {
+    width: 100%;
+  }
+
+  .cs_dash_set_upload.cs_dash_set_upload_banner {
+    height: 160px;
+  }
+
+  .cs_dash_set_upload_row {
+    gap: 15px 25px;
+  }
+
+  .cs_dash_set_perm_title {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cs_dash_set_perm_list .cs_dash_set_checkbox {
+    min-width: 50%;
+  }
+
+  .cs_dash_set_title {
+    margin-bottom: 20px;
+  }
+}
+
+.cs_dash_table .cs_dash_set_check_cell .cs_dash_set_checkbox {
+  vertical-align: middle;
+}

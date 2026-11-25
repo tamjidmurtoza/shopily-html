@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shopily - Multivendor eCommerce Website HTML Template">
+    <meta name="author" content="Laralink">
+    <!-- Site Title -->
+    <title>Shopily - Seller Order Details</title>
+    <link rel="icon" href="../assets/img/favicon.webp">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+
+  <body class="cs_dashboard_body" data-dash-active="orders.html">
+    <!-- Start Sidebar -->
+    <aside class="cs_dash_sidebar" id="dashSidebar">
+      <div class="cs_dash_sidebar_header">
+        <a href="index.html" class="cs_dash_logo" aria-label="Shopily seller dashboard">
+          <span class="cs_dash_logo_icon">
+            <img src="../assets/img/dashboard/logo-circle.svg" alt="" class="cs_dash_logo_circle">
+            <img src="../assets/img/dashboard/logo-bag.png" alt="" class="cs_dash_logo_bag">
+          </span>
+          <span>Shopily</span>
+        </a>
+        <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="cs_dash_nav" aria-label="Seller navigation">
+        <ul>
+          <li>
+            <a href="index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-home.svg" alt="" class="cs_dash_nav_icon">
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-box-open.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="add-product.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New Product</a></li>
+              <li><a href="products.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Product</a></li>
+              <li><a href="categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Category</a></li>
+              <li><a href="attributes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Attribute</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pos.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-pos.svg" alt="" class="cs_dash_nav_icon">
+              <span>POS Manager</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-cart.svg" alt="" class="cs_dash_nav_icon">
+              <span>Orders</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="orders.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="commission-history.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-shop.svg" alt="" class="cs_dash_nav_icon">
+              <span>Commission</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-headset.svg" alt="" class="cs_dash_nav_icon">
+              <span>Support</span>
+            </a>
+          </li>
+          <li>
+            <a href="chat.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-messages.svg" alt="" class="cs_dash_nav_icon">
+              <span>Message</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-refund.svg" alt="" class="cs_dash_nav_icon">
+              <span>Refund</span>
+            </a>
+          </li>
+          <li>
+            <a href="wallet.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Wallet</span>
+            </a>
+          </li>
+          <li>
+            <a href="coupons.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-badge-percent.svg" alt="" class="cs_dash_nav_icon">
+              <span>Coupon</span>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-settings.svg" alt="" class="cs_dash_nav_icon">
+              <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="../index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-sign-out.svg" alt="" class="cs_dash_nav_icon">
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="cs_dash_overlay"></div>
+    <!-- End Sidebar -->
+
+    <main class="cs_dash_main">
+      <!-- Start Top Bar -->
+      <header class="cs_dash_topbar">
+        <div class="cs_dash_topbar_left">
+          <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <h1 class="cs_dash_page_title">Orders Details</h1>
+        </div>
+        <div class="cs_dash_topbar_right">
+          <div class="cs_dash_topbar_icons">
+            <button type="button" class="cs_dash_lang" aria-label="Change language">
+              <img src="../assets/img/dashboard/icon-lang.svg" alt="">
+            </button>
+            <button type="button" class="cs_dash_mode_toggle" aria-label="Toggle dark mode">
+              <img src="../assets/img/dashboard/icon-dark.svg" alt="">
+            </button>
+            <a href="chat.html" class="cs_dash_notification" aria-label="Notifications, 11 unread">
+              <img src="../assets/img/dashboard/icon-bell.svg" alt="">
+              <span class="cs_dash_notification_count">11</span>
+            </a>
+          </div>
+          <div class="cs_dash_profile">
+            <button type="button" class="cs_dash_profile_btn" aria-expanded="false" aria-haspopup="true">
+              <img src="../assets/img/dashboard/avatar.png" alt="Andrew Karla">
+              <span class="cs_dash_profile_info">
+                <span>
+                  <span class="cs_dash_profile_name">Andrew Karla</span>
+                  <span class="cs_dash_profile_role">Seller</span>
+                </span>
+                <img src="../assets/img/dashboard/icon-caret-down.svg" alt="">
+              </span>
+            </button>
+            <ul class="cs_dash_profile_dropdown">
+              <li><a href="profile.html">Edit Profile</a></li>
+              <li><a href="../index.html">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- End Top Bar -->
+
+      <!-- Start Order Details -->
+      <section class="cs_dash_card" aria-labelledby="orderDetailsTitle">
+        <div class="cs_dash_card_header mb-0">
+          <h2 class="cs_dash_card_title cs_normal" id="orderDetailsTitle">Customer &amp; Order Information</h2>
+          <form class="cs_dash_card_actions cs_dash_order_status_form" aria-label="Update order status">
+            <label class="visually-hidden" for="orderPaymentStatus">Payment status</label>
+            <select class="cs_dash_select" id="orderPaymentStatus" name="payment_status">
+              <option value="paid" selected>Paid</option>
+              <option value="unpaid">Unpaid</option>
+            </select>
+            <label class="visually-hidden" for="orderDeliveryStatus">Delivery status</label>
+            <select class="cs_dash_select" id="orderDeliveryStatus" name="delivery_status">
+              <option value="pending">Pending</option>
+              <option value="on-the-way">On The Way</option>
+              <option value="delivered" selected>Delivered</option>
+            </select>
+          </form>
+        </div>
+
+        <div class="cs_dash_order_info_row">
+          <div class="cs_dash_order_info">
+            <h3>Customer Information</h3>
+            <ul>
+              <li><span>Name :</span> Honey Miramontes</li>
+              <li><span>Mobile :</span> <a href="tel:+558032124488" class="text-reset">+55 803 212 4488</a></li>
+              <li><span>Email :</span> <a href="mailto:andrewkarla@gmail.com" class="text-reset">andrewkarla@gmail.com</a></li>
+              <li><span>Address :</span> 411 Fraggle, Adam Park, IL 60605, Singapore</li>
+            </ul>
+          </div>
+          <div class="cs_dash_order_info">
+            <h3>Order Information</h3>
+            <ul>
+              <li><span>Order ID :</span> #00012124</li>
+              <li><span>Order Date :</span> 11 Jan 2024</li>
+              <li><span>Order Status :</span> <span class="cs_dash_badge cs_green">Delivered</span></li>
+              <li><span>Payment Method :</span> Paypal</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs_dash_invoice_wrap">
+          <table class="cs_dash_invoice_table">
+            <thead>
+              <tr>
+                <th class="cs_serial">Serial</th>
+                <th class="cs_item">Item</th>
+                <th>Title &amp; Description</th>
+                <th class="cs_price">Price</th>
+                <th class="cs_qty">Qty</th>
+                <th class="text-end cs_total">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cs_serial">01</td>
+                <td class="cs_item"><img src="../assets/img/dashboard/products/rice-cooker.webp" alt="Comfee rice cooker" class="cs_dash_invoice_img"></td>
+                <td class="cs_title">
+                  <h4 class="cs_dash_invoice_title">Brand new comfee Rice Cooker 10 cup Large Capacity</h4>
+                  <div class="cs_dash_invoice_meta">
+                    <span>Capacity : 10 Liter</span>
+                    <span class="cs_dot" aria-hidden="true"></span>
+                    <span>Color : Black</span>
+                  </div>
+                </td>
+                <td class="cs_price">$500.00</td>
+                <td class="cs_qty">01</td>
+                <td class="text-end cs_total">$500.00</td>
+              </tr>
+              <tr>
+                <td class="cs_serial">02</td>
+                <td class="cs_item"><img src="../assets/img/dashboard/orders/gaming-mouse.webp" alt="Razer gaming mouse" class="cs_dash_invoice_img"></td>
+                <td class="cs_title">
+                  <h4 class="cs_dash_invoice_title">Razer Basilisk Ultimate Wireless Gaming Mouse</h4>
+                  <div class="cs_dash_invoice_meta">
+                    <span>Color : Black</span>
+                  </div>
+                </td>
+                <td class="cs_price">$500.00</td>
+                <td class="cs_qty">01</td>
+                <td class="text-end cs_total">$500.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cs_dash_order_summary">
+          <ul>
+            <li class="cs_heading"><span>Subtotal</span><span>$1000.00</span></li>
+            <li><span>Shipping Fee</span><span>+$5.00</span></li>
+            <li><span>Coupon</span><span>-$0.00</span></li>
+          </ul>
+          <div class="cs_dash_order_grand"><span>Grand total</span><span>$1005.00</span></div>
+          <div class="cs_dash_invoice_actions">
+            <span>Print or Download Invoice :</span>
+            <button type="button" class="cs_dash_print_invoice" aria-label="Print invoice"><img src="../assets/img/dashboard/orders/icon-print.svg" alt=""></button>
+            <a href="#" download aria-label="Download invoice"><img src="../assets/img/dashboard/orders/icon-file-download.svg" alt=""></a>
+          </div>
+        </div>
+      </section>
+      <!-- End Order Details -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/dashboard-orders.js"></script>
+  </body>
+</html>

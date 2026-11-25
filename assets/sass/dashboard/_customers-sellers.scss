@@ -1,0 +1,301 @@
+/*==============================================================
+  05. customers sellers pages
+================================================================*/
+
+/* ---------- List card (customers, sellers, payouts, commissions) ---------- */
+.cs_dash_people_card {
+  display: flex;
+  flex-direction: column;
+  // fills the viewport like the Figma frames: main padding + top bar + gap
+  min-height: calc(100vh - 185px);
+
+  .cs_dash_card_header {
+    margin-bottom: 30px;
+  }
+
+  .cs_dash_search {
+    width: 380px;
+  }
+
+  .cs_dash_table_wrap {
+    margin-bottom: 0;
+  }
+
+  .cs_dash_table_footer {
+    margin-top: auto;
+  }
+
+  // global `label { margin-bottom: 8px }` from style.css offsets label wrappers
+  .cs_dash_card_actions > label,
+  .cs_dash_switch {
+    margin-bottom: 0;
+  }
+
+  .cs_dash_switch {
+    display: block;
+  }
+}
+
+.cs_dash_export_icon {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.cs_dash_people_filter {
+  display: block;
+  width: 260px;
+  max-width: 100%;
+
+  .cs_dash_select {
+    height: 45px;
+    padding: 9px 45px 9px 10px;
+    color: var(--dash-text);
+    cursor: pointer;
+  }
+}
+
+.cs_dash_people_table {
+  min-width: 1100px;
+
+  td {
+    white-space: nowrap;
+  }
+
+  // block-level flex so the inline line-box strut doesn't grow the row (66px rows as in Figma)
+  .cs_dash_table_actions {
+    display: flex;
+    gap: 25px;
+  }
+}
+
+.cs_dash_switch.cs_dash_switch_sm {
+  width: 40px;
+  height: 20px;
+
+  span::before {
+    top: 3px;
+    left: 3px;
+    width: 14px;
+    height: 14px;
+  }
+
+  input:checked + span::before {
+    transform: translateX(20px);
+  }
+}
+
+.cs_dash_truncate {
+  display: inline-block;
+  max-width: 205px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* ---------- Seller commission settings form ---------- */
+.cs_dash_commission_form {
+  width: 500px;
+  max-width: 100%;
+}
+
+.cs_dash_label.cs_dash_label_caps {
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--dash-heading);
+}
+
+.cs_dash_commission_form,
+.cs_dash_pay_form {
+  .cs_dash_input,
+  .cs_dash_select {
+    height: 45px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+}
+
+.cs_dash_people_submit {
+  min-width: 150px;
+}
+
+/* ---------- Detail / payout popups ---------- */
+.cs_dash_people_modal {
+  align-items: flex-start;
+  overflow-y: auto;
+
+  .cs_dash_modal_box {
+    max-width: 800px;
+    max-height: none;
+    margin: 28px auto;
+    padding: 50px 100px;
+    overflow: visible;
+  }
+
+  .cs_dash_modal_close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .cs_dash_message_box {
+    margin-top: 236px;
+  }
+}
+
+.cs_dash_people_modal_title {
+  margin: 0 0 43px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--dash-heading);
+}
+
+.cs_dash_info_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--dash-border);
+  border-radius: var(--dash-radius);
+
+  li {
+    padding: 17px 23px;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dash-text);
+    word-break: break-word;
+
+    + li {
+      border-top: 1px solid var(--dash-border);
+    }
+  }
+
+  span {
+    color: var(--dash-heading);
+  }
+
+  em {
+    font-style: normal;
+  }
+
+  + .cs_dash_pay_form {
+    margin-top: 25px;
+  }
+}
+
+.cs_dash_store_head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin: -15px 0 45px;
+}
+
+.cs_dash_store_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--dash-border);
+
+  img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+  }
+}
+
+.cs_dash_store_name {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--dash-green);
+}
+
+.cs_dash_people_modal_links {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.cs_dash_people_btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+
+  .cs_dash_btn {
+    min-width: 189px;
+  }
+}
+
+.cs_dash_request_message {
+  margin: 0;
+  padding: 15px 25px;
+  border: 1px solid var(--dash-border);
+  border-radius: var(--dash-radius);
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--dash-text);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+  .cs_dash_people_modal .cs_dash_modal_box {
+    padding: 50px 40px;
+  }
+
+  .cs_dash_people_modal .cs_dash_message_box {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_dash_people_card {
+    min-height: 0;
+
+    .cs_dash_search,
+    .cs_dash_people_filter {
+      width: 100%;
+    }
+
+    .cs_dash_card_actions .cs_dash_btn {
+      width: 100%;
+    }
+  }
+
+  .cs_dash_people_modal .cs_dash_modal_box {
+    margin: 0 auto;
+    padding: 45px 15px 25px;
+  }
+
+  .cs_dash_people_modal_title {
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+
+  .cs_dash_info_list li {
+    padding: 12px 15px;
+  }
+
+  .cs_dash_people_btns .cs_dash_btn {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+/* Placeholder-like select values (Figma shows them in gray) */
+.cs_dash_commission_form .cs_dash_select,
+.cs_dash_pay_form .cs_dash_select {
+  color: var(--dash-text);
+}

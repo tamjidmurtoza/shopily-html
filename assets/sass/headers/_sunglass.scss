@@ -1,0 +1,230 @@
+/*---------------------------------------------------------
+  sunglass header
+  Figma: SUNGLASS > hero > header (3408:430)
+-----------------------------------------------------------*/
+.cs_header_sunglass {
+  /* Top bar */
+  .cs_top_header {
+    .cs_top_header_in {
+      min-height: 42px;
+    }
+  }
+
+  .cs_top_header_list>li:not(:last-child)::after {
+    background-color: var(--gray-color2);
+  }
+
+  /* Menu bar */
+  .cs_main_header {
+    border-top: 1px solid var(--gray-color2);
+    border-bottom: 1px solid var(--gray-color2);
+  }
+
+  .cs_main_header_in {
+    position: relative;
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+  }
+
+  .cs_site_branding {
+    width: 182px;
+    font-family: var(--sunglass-font);
+    font-size: 33px;
+    line-height: 45px;
+    font-weight: 700;
+  }
+
+  .cs_nav .cs_nav_list {
+    column-gap: 40px;
+
+    >li>a {
+      font-family: var(--sunglass-font);
+      font-size: 16px;
+      line-height: 26px;
+      color: var(--primary-color);
+
+      &:hover {
+        color: #ef4b4b;
+      }
+    }
+
+    ul a {
+      font-family: var(--sunglass-font);
+
+      &:hover {
+        color: #ef4b4b;
+      }
+    }
+  }
+
+  .cs_header_right {
+    flex: 0 1 auto;
+    min-width: 0;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .cs_header_search {
+    flex: 0 1 430px;
+    width: 430px;
+    min-width: 0;
+    height: 50px;
+    border: 1px solid var(--gray-color9);
+    border-radius: 50px;
+
+    .cs_header_search_input {
+      height: 48px;
+      padding: 11px 60px 11px 16px;
+      font-family: var(--sunglass-font);
+      font-size: 16px;
+      line-height: 26px;
+      background-color: transparent;
+
+      &::placeholder {
+        color: var(--secondary-color);
+      }
+    }
+
+    .cs_header_search_btn {
+      width: 54px;
+      padding-right: 16px;
+      border-radius: 0 50px 50px 0;
+    }
+  }
+
+  .cs_header_actions {
+    flex-shrink: 0;
+    gap: 25px;
+    margin-left: 30px;
+  }
+
+  .cs_header_account_btn {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .cs_header_cart .cs_header_cart_count {
+    background-color: #ef4b4b;
+  }
+}
+
+/* Home: header sits on the hero background */
+.cs_header_sunglass.cs_header_sunglass_home {
+  background-color: #f3faff;
+}
+
+.cs_dark .cs_header_sunglass {
+  &.cs_header_sunglass_home {
+    background-color: var(--white-color);
+  }
+
+  .cs_header_search {
+    border-color: #6e6e6e;
+  }
+}
+
+@media (max-width: 1399px) {
+  .cs_header_sunglass {
+    .cs_site_branding {
+      width: auto;
+      margin-right: 40px;
+    }
+
+    .cs_nav .cs_nav_list {
+      column-gap: 30px;
+    }
+
+    .cs_header_right {
+      padding-left: 30px;
+    }
+
+    .cs_header_search {
+      width: auto;
+      flex: 1 1 340px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_header_sunglass {
+    .cs_main_header_in {
+      min-height: 80px;
+    }
+
+    .cs_nav {
+      order: 3;
+      margin-left: 25px;
+    }
+
+    .cs_header_right {
+      flex: 1 1 auto;
+      justify-content: flex-end;
+    }
+
+    .cs_header_search {
+      flex: 0 1 430px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_header_sunglass {
+    .cs_top_header_text {
+      display: none;
+    }
+
+    .cs_top_header .cs_top_header_in {
+      justify-content: center;
+      padding: 8px 0;
+    }
+
+    .cs_main_header_in {
+      flex-wrap: wrap;
+      padding: 15px 0;
+      row-gap: 15px;
+    }
+
+    .cs_site_branding {
+      margin-right: 0;
+    }
+
+    .cs_header_right {
+      display: contents;
+    }
+
+    .cs_header_actions {
+      margin-left: auto;
+    }
+
+    .cs_header_search {
+      order: 4;
+      flex: 0 0 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_header_sunglass {
+    .cs_top_header_list>li:not(:last-child) {
+      padding-right: 12px;
+      margin-right: 12px;
+    }
+
+    .cs_top_header_list>li:first-child {
+      display: none;
+    }
+
+    .cs_site_branding {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .cs_header_sunglass .cs_nav .cs_nav_list>li>a {
+    padding: 31px 0;
+  }
+}

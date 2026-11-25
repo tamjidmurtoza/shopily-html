@@ -1,0 +1,194 @@
+/*---------------------------------------------------------
+  artwork header
+  Figma: ARTWORK > hero > top bar (3468:478) + nav (3470:2363)
+-----------------------------------------------------------*/
+.cs_header_artwork {
+  /* Top bar (logo + search + utilities) */
+  .cs_top_header {
+    color: #fff;
+    background-color: #191919;
+
+    .cs_top_header_in {
+      min-height: 90px;
+      gap: 0;
+      justify-content: flex-start;
+    }
+  }
+
+  .cs_site_branding {
+    width: 128px;
+    font-family: "Libre Franklin", var(--primary-font);
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .cs_header_search {
+    flex: 0 1 655px;
+    min-width: 0;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #fff;
+
+    .cs_header_search_btn {
+      left: 0;
+      right: auto;
+      width: 48px;
+      padding-left: 14px;
+      justify-content: flex-start;
+      border-radius: 50px 0 0 50px;
+    }
+
+    .cs_header_search_input {
+      padding: 12px 20px 12px 47px;
+      font-size: 16px;
+      line-height: 26px;
+      color: #191919;
+
+      &::placeholder {
+        color: #989898;
+      }
+    }
+  }
+
+  .cs_top_header_list {
+    margin-left: auto;
+    padding-left: 30px;
+    flex-wrap: nowrap;
+  }
+
+  .cs_header_actions {
+    gap: 26px;
+    padding-left: 3px;
+  }
+
+  .cs_header_account_btn {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .cs_header_cart .cs_header_cart_count {
+    color: #191919;
+    background-color: #fff;
+  }
+
+  /* Nav bar */
+  .cs_header_nav {
+    border-bottom: 1px solid var(--gray-color2);
+  }
+
+  .cs_header_nav_in {
+    position: relative;
+    min-height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cs_nav .cs_nav_list {
+    column-gap: 39px;
+
+    >li>a {
+      font-size: 16px;
+      line-height: 26px;
+      color: var(--primary-color);
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+}
+
+.cs_dark .cs_header_artwork {
+  .cs_top_header {
+    background-color: #222;
+  }
+
+  .cs_header_search {
+    background-color: #191919;
+
+    .cs_header_search_input {
+      color: #fff;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .cs_header_artwork .cs_nav .cs_nav_list>li>a {
+    padding: 18px 0;
+  }
+}
+
+@media (max-width: 1399px) {
+  .cs_header_artwork {
+    .cs_site_branding {
+      width: auto;
+      margin-right: 30px;
+    }
+
+    .cs_header_search {
+      flex: 1 1 auto;
+    }
+
+    .cs_top_header_list>li:not(:last-child) {
+      padding-right: 18px;
+      margin-right: 18px;
+    }
+
+    .cs_nav .cs_nav_list {
+      column-gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_header_artwork {
+    .cs_top_header .cs_top_header_in {
+      flex-wrap: wrap;
+      padding: 16px 0;
+      row-gap: 16px;
+      min-height: 0;
+    }
+
+    .cs_header_search {
+      order: 3;
+      flex: 0 0 100%;
+    }
+
+    .cs_header_nav_in {
+      justify-content: flex-end;
+      min-height: 60px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_header_artwork {
+    .cs_top_header_list {
+      order: 2;
+      width: 100%;
+      margin-left: 0;
+      padding-left: 0;
+      justify-content: space-between;
+
+      >li:not(:last-child) {
+        padding-right: 0;
+        margin-right: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      >li:first-child {
+        display: none;
+      }
+    }
+
+    .cs_site_branding {
+      margin-right: 0;
+    }
+  }
+}

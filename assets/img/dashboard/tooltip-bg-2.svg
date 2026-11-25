@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="180" height="124" viewBox="0 0 180 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="bg" filter="url(#filter0_d_0_18)">
+<rect id="rectangle" x="20" y="20" width="140" height="72" rx="15" fill="white"/>
+<path id="Polygon" d="M90.3661 103.5C89.9812 104.167 89.0189 104.167 88.634 103.5L82.1388 92.25C81.7539 91.5833 82.2351 90.75 83.0049 90.75H95.9952C96.765 90.75 97.2462 91.5833 96.8613 92.25L90.3661 103.5Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d_0_18" x="0" y="0" width="180" height="125" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.0745098 0 0 0 0 0.772549 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_18"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_18" result="shape"/>
+</filter>
+</defs>
+</svg>

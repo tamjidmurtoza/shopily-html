@@ -1,0 +1,875 @@
+/*==============================================================
+  05. support pages
+  Support tickets, ticket reply, seller/customer chat,
+  product reviews, refund request / approval
+================================================================*/
+
+/* ---------- Full-height list card (ticket / review / refund) ---------- */
+.cs_dash_list_card {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 185px);
+
+  .cs_dash_table_wrap {
+    flex: 1;
+  }
+
+  .cs_dash_table_footer {
+    margin-top: auto;
+  }
+
+  .cs_dash_card_header {
+    margin-bottom: 46px;
+  }
+
+  .cs_dash_select {
+    width: 261px;
+    height: 45px;
+    padding: 9px 45px 9px 10px;
+    color: var(--dash-text);
+  }
+
+  .cs_dash_search {
+    width: 380px;
+  }
+
+  .cs_dash_table td {
+    white-space: nowrap;
+  }
+
+  .cs_dash_badge {
+    min-width: 106px;
+  }
+}
+
+.cs_dash_table_empty td {
+  text-align: center;
+  color: var(--dash-text);
+}
+
+.cs_dash_list_card .cs_dash_table_actions,
+.cs_dash_list_card .cs_dash_switch,
+.cs_dash_list_card .cs_dash_stars {
+  vertical-align: middle;
+}
+
+/* ---------- Ticket reply ---------- */
+.cs_dash_ticket_grid {
+  display: grid;
+  grid-template-columns: 476px minmax(0, 1fr);
+  gap: var(--dash-gap);
+  align-items: start;
+}
+
+.cs_dash_ticket_details {
+  padding: 0;
+
+  .cs_dash_card_title {
+    padding: 24px 30px 23px;
+    font-weight: 400;
+    border-bottom: 1px solid var(--dash-border);
+  }
+
+  dl {
+    margin: 0;
+    padding: 22px 30px 26px;
+  }
+
+  .cs_dash_ticket_row {
+    display: grid;
+    grid-template-columns: 187px minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+    padding: 7.5px 0;
+  }
+
+  dt {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dash-heading);
+  }
+
+  dd {
+    margin: 0;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dash-text);
+    word-break: break-word;
+  }
+
+  .cs_dash_select {
+    height: 45px;
+    padding: 9px 45px 9px 10px;
+    color: var(--dash-text);
+  }
+}
+
+.cs_dash_thread {
+  padding: 0;
+}
+
+.cs_dash_thread_item {
+  position: relative;
+  padding: 30px 30px 37px;
+  border-bottom: 1px solid var(--dash-border);
+}
+
+.cs_dash_thread_head {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 20px;
+
+  h3 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    color: var(--dash-heading);
+  }
+
+  span {
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--dash-text);
+  }
+}
+
+/* avatar crops follow the Figma image masks */
+.cs_dash_thread_avatar {
+  position: relative;
+  flex: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cs_andrew {
+    top: -15px;
+    left: -27px;
+    width: 169px;
+    height: 113px;
+  }
+
+  .cs_mika {
+    top: -4px;
+    left: -33px;
+    width: 116px;
+    height: 77px;
+  }
+}
+
+.cs_dash_thread_body {
+  max-width: 706px;
+  padding-left: 73px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--dash-heading);
+
+  p {
+    margin: 0 0 26px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.cs_dash_thread_meta {
+  position: absolute;
+  top: 38px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--dash-text);
+}
+
+.cs_dash_more {
+  position: relative;
+
+  > button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    img {
+      width: 3.57px;
+      height: 15px;
+      transform: rotate(90deg);
+    }
+  }
+
+  ul {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 5;
+    width: 130px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid var(--dash-border);
+    border-radius: var(--dash-radius);
+    background-color: var(--dash-card-bg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+  }
+
+  &.active ul {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  ul button {
+    display: block;
+    width: 100%;
+    padding: 7.5px 15px;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dash-heading);
+
+    &:hover {
+      background-color: var(--dash-soft-bg);
+    }
+  }
+}
+
+.cs_dash_reply_form {
+  padding: 40px 30px 30px;
+
+  .cs_dash_btn {
+    width: 150px;
+    margin-top: 30px;
+  }
+}
+
+.cs_dash_editor {
+  border: 1px solid var(--dash-border);
+  border-radius: var(--dash-radius);
+  overflow: hidden;
+}
+
+.cs_dash_editor_toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  padding: 10px 11px 11px;
+  background-color: rgba(232, 232, 232, 0.5);
+
+  .cs_dark & {
+    background-color: var(--dash-soft-bg);
+  }
+}
+
+.cs_dash_editor_group {
+  display: flex;
+
+  button {
+    display: inline-flex;
+    width: 37px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    + button {
+      margin-left: -1px;
+    }
+
+    img {
+      width: 37px;
+      height: 30px;
+    }
+  }
+}
+
+.cs_dash_editor_area {
+  min-height: 214px;
+  padding: 15px 20px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--dash-heading);
+  background-color: var(--dash-input-bg);
+  outline: 0;
+
+  &:empty::before {
+    content: attr(data-placeholder);
+    color: var(--dash-text);
+  }
+}
+
+/* ---------- Chat ---------- */
+.cs_dash_chat {
+  display: grid;
+  grid-template-columns: 395px minmax(0, 1fr);
+  min-height: 1030px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.cs_dash_chat_contacts {
+  padding: 30px 30px 8px;
+  border-right: 1px solid var(--dash-border);
+
+  .cs_dash_search {
+    width: 100%;
+    padding: 10px 16px;
+    margin-bottom: 13px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li:not(:last-child) {
+    border-bottom: 1px solid var(--dash-border);
+  }
+}
+
+.cs_dash_chat_contact {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  height: 84px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &.active {
+    background-color: var(--dash-soft-bg);
+  }
+}
+
+.cs_dash_chat_avatar {
+  position: relative;
+  flex: none;
+  width: 50px;
+  height: 50px;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 15%;
+  }
+
+  .cs_dash_chat_status {
+    position: absolute;
+    right: -2px;
+    bottom: 6px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.cs_dash_chat_contact_info {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  row-gap: 8px;
+  column-gap: 10px;
+  flex: 1;
+  min-width: 0;
+
+  strong {
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+    color: var(--dash-heading);
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  time {
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--dash-text);
+    opacity: 0.7;
+    text-align: right;
+  }
+
+  span {
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--dash-text);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .cs_dash_chat_unread {
+    justify-self: end;
+    min-width: 20px;
+    height: 20px;
+    padding: 2px 5px;
+    border-radius: var(--dash-radius);
+    background-color: var(--dash-red);
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.cs_dash_chat_main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cs_dash_chat_header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 30px 30px 31px;
+  border-bottom: 1px solid var(--dash-border);
+
+  h2 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    color: var(--dash-heading);
+  }
+
+  p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--dash-text);
+  }
+}
+
+.cs_dash_chat_messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 30px 40px;
+  overflow-y: auto;
+}
+
+.cs_dash_chat_msg {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  max-width: 530px;
+
+  .cs_dash_chat_msg_avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--dash-border);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    img.cs_dash_chat_shop {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+
+  .cs_dash_chat_bubble {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  p {
+    margin: 0;
+    padding: 9px 16px;
+    border-radius: var(--dash-radius);
+    background-color: #efefef;
+    font-size: 16px;
+    line-height: 26px;
+    color: #191919;
+  }
+
+  time {
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--dash-text);
+  }
+
+  &.cs_me {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+
+    .cs_dash_chat_bubble {
+      align-items: flex-end;
+    }
+
+    p {
+      background-color: var(--dash-blue);
+      color: #fff;
+      text-align: right;
+    }
+
+    time {
+      opacity: 0.7;
+    }
+  }
+}
+
+.cs_dark .cs_dash_chat_msg:not(.cs_me) p {
+  background-color: var(--dash-soft-bg);
+  color: var(--dash-heading);
+}
+
+.cs_dash_chat_form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 30px 30px;
+  padding: 6px 7px 6px 27px;
+  border: 1px solid var(--dash-blue);
+  border-radius: var(--dash-radius);
+  background-color: var(--dash-input-bg);
+
+  input {
+    flex: 1;
+    min-width: 0;
+    height: 46px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dash-heading);
+
+    &::placeholder {
+      color: var(--dash-text);
+    }
+  }
+
+  .cs_dash_btn {
+    width: 113px;
+    height: 46px;
+  }
+}
+
+/* ---------- Product review ---------- */
+.cs_dash_review_table {
+  td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .cs_dash_table_img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+}
+
+.cs_dash_stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cs_off {
+    filter: grayscale(1);
+    opacity: 0.12;
+  }
+}
+
+.cs_dash_switch.cs_dash_switch_sm {
+  width: 40px;
+  height: 18px;
+
+  span::before {
+    top: 3px;
+    left: auto;
+    right: 25px;
+    width: 12px;
+    height: 12px;
+  }
+
+  input:checked + span::before {
+    transform: translateX(22px);
+  }
+
+  input:not(:checked) + span {
+    background-color: var(--dash-border);
+  }
+}
+
+.cs_dash_review_modal,
+.cs_dash_refund_modal {
+  .cs_dash_modal_box {
+    max-width: 800px;
+    padding: 50px 100px;
+  }
+
+  .cs_dash_modal_close {
+    top: 20px;
+    right: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  h2 {
+    margin: 0 0 43px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--dash-heading);
+  }
+}
+
+.cs_dash_review_box {
+  padding: 18px 24px 25px;
+  border: 1px solid var(--dash-border);
+  border-radius: var(--dash-radius);
+  text-align: center;
+
+  p {
+    margin: 0 0 17px;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dash-text);
+  }
+}
+
+/* ---------- Refund approval ---------- */
+.cs_dash_refund_modal {
+  .cs_dash_modal_box {
+    padding: 30px 100px 50px;
+  }
+
+  h2 {
+    margin-bottom: 36px;
+  }
+}
+
+.cs_dash_refund_box {
+  border: 1px solid var(--dash-border);
+  border-radius: var(--dash-radius);
+
+  > div {
+    padding: 15px 23px;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dash-text);
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--dash-border);
+    }
+  }
+
+  strong {
+    font-weight: 400;
+    color: var(--dash-heading);
+  }
+
+  .cs_dash_refund_status {
+    color: var(--dash-green);
+  }
+
+  .cs_dash_refund_actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+    padding: 23px;
+
+    .cs_dash_btn {
+      width: 190px;
+    }
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1599px) {
+  .cs_dash_ticket_grid {
+    grid-template-columns: 400px minmax(0, 1fr);
+  }
+
+  .cs_dash_ticket_details .cs_dash_ticket_row {
+    grid-template-columns: 150px minmax(0, 1fr);
+  }
+
+  .cs_dash_chat {
+    grid-template-columns: 340px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_dash_ticket_grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cs_dash_chat {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+  }
+
+  .cs_dash_chat_contacts {
+    border-right: 0;
+    border-bottom: 1px solid var(--dash-border);
+
+    ul {
+      max-height: 340px;
+      overflow-y: auto;
+    }
+  }
+
+  .cs_dash_chat_messages {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_dash_list_card {
+    min-height: 0;
+
+    .cs_dash_card_header {
+      margin-bottom: 25px;
+    }
+
+    .cs_dash_select,
+    .cs_dash_search {
+      width: 100%;
+    }
+  }
+
+  .cs_dash_ticket_details {
+    .cs_dash_card_title {
+      padding: 20px 15px;
+    }
+
+    dl {
+      padding: 15px;
+    }
+
+    .cs_dash_ticket_row {
+      grid-template-columns: 130px minmax(0, 1fr);
+    }
+  }
+
+  .cs_dash_thread_item {
+    padding: 20px 15px 25px;
+  }
+
+  .cs_dash_thread_head {
+    padding-right: 80px;
+  }
+
+  .cs_dash_thread_meta {
+    top: 28px;
+    right: 15px;
+    gap: 10px;
+  }
+
+  .cs_dash_thread_body {
+    padding-left: 0;
+  }
+
+  .cs_dash_reply_form {
+    padding: 25px 15px 20px;
+  }
+
+  .cs_dash_chat_contacts {
+    padding: 20px 15px 5px;
+  }
+
+  .cs_dash_chat_header {
+    padding: 20px 15px;
+  }
+
+  .cs_dash_chat_messages {
+    padding: 20px 15px 30px;
+    gap: 20px;
+  }
+
+  .cs_dash_chat_msg {
+    gap: 10px;
+  }
+
+  .cs_dash_chat_form {
+    margin: 0 15px 15px;
+    padding-left: 15px;
+
+    .cs_dash_btn {
+      width: auto;
+    }
+  }
+
+  .cs_dash_review_modal,
+  .cs_dash_refund_modal {
+    .cs_dash_modal_box {
+      padding: 45px 15px 25px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
+  }
+
+  .cs_dash_refund_box {
+    > div {
+      padding: 12px 15px;
+    }
+
+    .cs_dash_refund_actions .cs_dash_btn {
+      width: 100%;
+    }
+  }
+}
+
+.cs_dash_table_actions img.cs_dash_delete_icon {
+  width: 20px;
+  height: 24px;
+}

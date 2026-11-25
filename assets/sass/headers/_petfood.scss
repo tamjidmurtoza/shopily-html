@@ -1,0 +1,272 @@
+/*---------------------------------------------------------
+  petfood header
+  Figma: PET FOOD > header (1519:455) over the hero (top bar 1519:454),
+  PRODUCT DETAILS (1568:1643) / SHOP GRID (1580:3741) > header with its own background
+-----------------------------------------------------------*/
+.cs_header_petfood {
+  color: #fff;
+  background-color: #82105e;
+
+  .cs_top_header {
+    background-color: #680c4b;
+
+    .cs_top_header_in {
+      min-height: 42px;
+    }
+  }
+
+  .cs_top_header_list>li:not(:last-child)::after {
+    background-color: #6e6e6e;
+  }
+
+  .cs_main_header {
+    position: relative;
+    padding: 20px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.05;
+      background: url(../img/header/petfood/pattern.png) no-repeat center / cover;
+      pointer-events: none;
+    }
+
+    >.container {
+      position: relative;
+    }
+  }
+
+  .cs_main_header_in {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+  }
+
+  .cs_site_branding {
+    height: 50px;
+    gap: 10px;
+    font-size: 25px;
+    line-height: normal;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .cs_logo_icon {
+    position: relative;
+    width: 40px;
+    height: 50px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .cs_logo_part {
+    position: absolute;
+    display: block;
+    max-width: none;
+
+    >img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &_1 {
+      inset: 0 -0.01% 48.52% 66.72%;
+    }
+
+    &_2 {
+      inset: 0 66.72% 48.52% -0.01%;
+    }
+
+    &_3 {
+      inset: 19.76% 2.13% 0 2.07%;
+    }
+
+    &_4 {
+      inset: 20.32% 16.34% 0 16.3%;
+    }
+
+    &_5 {
+      inset: 70.81% 38.34% 17.72% 38.61%;
+    }
+
+    &_6 {
+      inset: 48.66% 27.36% 38.96% 27.36%;
+    }
+
+    &_7 {
+      inset: 72.15% 49.05% 23% 41.22%;
+    }
+
+    &_8 {
+      inset: 82.77% 25.11% 12.56% 25.38%;
+
+      >img {
+        position: absolute;
+        top: -51.43%;
+        left: -6.06%;
+        width: 112.12%;
+        height: 202.85%;
+        max-height: none;
+        max-width: none;
+      }
+    }
+  }
+
+  .cs_nav {
+    margin-left: 36px;
+
+    .cs_nav_list {
+      >li>a {
+        color: #fff;
+
+        &:hover {
+          color: #fff;
+          opacity: 0.8;
+        }
+      }
+
+      .menu-item-has-children>a::after {
+        background-image: url(../img/header/category-arrow.svg);
+      }
+    }
+  }
+
+  .cs_header_search {
+    flex: 0 1 430px;
+    min-width: 0;
+    margin-left: auto;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    background-color: transparent;
+
+    .cs_header_search_input {
+      height: 48px;
+      padding: 11px 56px 11px 14px;
+      color: #fff;
+      background-color: transparent;
+    }
+
+    .cs_header_search_btn {
+      width: 52px;
+    }
+  }
+
+  .cs_header_actions {
+    flex-shrink: 0;
+    margin-left: 48px;
+    gap: 25px;
+  }
+
+  .cs_header_account_btn {
+    height: 20px;
+  }
+
+  .cs_header_cart {
+    padding-top: 0;
+    color: #fff;
+  }
+
+  .cs_menu_toggle {
+    color: #fff;
+  }
+}
+
+/* Home: transparent header over the hero (hero bg shows through) */
+@media (min-width: 992px) {
+  .cs_header_petfood.cs_header_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+
+    .cs_main_header::before {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1399px) {
+  .cs_header_petfood {
+    .cs_nav {
+      flex-shrink: 0;
+      margin-left: 30px;
+
+      .cs_nav_list {
+        column-gap: 24px;
+      }
+    }
+
+    .cs_header_search {
+      flex: 1 1 0;
+      margin-left: 30px;
+    }
+
+    .cs_header_actions {
+      margin-left: 30px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_header_petfood {
+    .cs_nav {
+      order: 10;
+      margin-left: 24px;
+
+      .cs_nav_list>li>a,
+      .cs_nav_list>li>a:hover {
+        color: var(--primary-color);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_header_petfood {
+    .cs_top_header_text {
+      display: none;
+    }
+
+    .cs_top_header .cs_top_header_in {
+      justify-content: center;
+      padding: 8px 0;
+    }
+
+    .cs_main_header_in {
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
+
+    .cs_header_actions {
+      margin-left: auto;
+    }
+
+    .cs_header_search {
+      order: 20;
+      flex: 0 0 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_header_petfood {
+    .cs_top_header_list>li:not(:last-child) {
+      padding-right: 12px;
+      margin-right: 12px;
+    }
+
+    .cs_top_header_list>li:first-child {
+      display: none;
+    }
+
+    .cs_account_dropdown {
+      right: -50px;
+    }
+  }
+}

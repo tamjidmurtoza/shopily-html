@@ -1,0 +1,3644 @@
+/*==============================================================
+  RTL (right-to-left) support
+  ----------------------------------------------------------------
+  Turn it on per page in the markup:
+
+      <html lang="ar" dir="rtl">
+
+  Every rule below is scoped to :where([dir='rtl']). :where() adds
+  no specificity, so each override has exactly the specificity of
+  the LTR rule it mirrors and wins only because this partial is
+  imported last. Keep it the last import in style.scss.
+
+  When you add or change a left/right value elsewhere (left, right,
+  margin-*, padding-*, border-*, border-*-radius, text-align, float,
+  translateX, rotate, box-shadow x-offset, background-position),
+  add the mirrored value here under the same selector.
+
+  Sections:
+  01. Bootstrap utilities used by the template
+  02. Icons & content that must not / must flip
+  03. Animations
+  04. Mirrored layout rules (same order as style.scss)
+================================================================*/
+
+/*--------------------------------------------------------------
+  01. Bootstrap utilities used by the template
+----------------------------------------------------------------*/
+:where([dir='rtl']) {
+  .text-end {
+    text-align: left !important;
+  }
+
+  .text-start {
+    text-align: right !important;
+  }
+
+  .ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .ms-0 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .ms-2 {
+    margin-left: 0 !important;
+    margin-right: 0.5rem !important;
+  }
+
+  .start-0 {
+    left: auto !important;
+    right: 0 !important;
+  }
+
+  @media (min-width: 992px) {
+    .offset-lg-1 {
+      margin-left: 0;
+      margin-right: 8.33333333%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .offset-xl-1 {
+      margin-left: 0;
+      margin-right: 8.33333333%;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .offset-xxl-1 {
+      margin-left: 0;
+      margin-right: 8.33333333%;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+  02. Icons & content
+----------------------------------------------------------------*/
+:where([dir='rtl']) {
+  /* Arrows that mean "forward" / "back" point the other way.
+     `scale` is used (not transform) so it stacks with any rotate or
+     translate the icon already has. */
+  .fa-arrow-right,
+  .fa-arrow-left,
+  .fa-chevron-right,
+  .fa-chevron-left,
+  .fa-angle-right,
+  .fa-angle-left,
+  .cs_left_arrow > svg,
+  .cs_right_arrow > svg,
+  .cs_left_arrow > img,
+  .cs_right_arrow > img,
+  .cs_left_arrow > i,
+  .cs_right_arrow > i,
+  .cs_rtl_flip,
+  img[src*='caret-left'],
+  img[src*='caret-right'],
+  img[src*='arrow-left'],
+  img[src*='arrow-right'] {
+    scale: -1 1;
+  }
+
+  /* Phone numbers, emails and numeric inputs stay left-to-right */
+  a[href^='tel:'],
+  a[href^='mailto:'],
+  input[type='email'],
+  input[type='tel'],
+  input[type='number'] {
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+}
+
+/*--------------------------------------------------------------
+  03. Animations
+----------------------------------------------------------------*/
+@keyframes scrollingAnimationRtl {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+:where([dir='rtl']) {
+  .cs_header_grocery1 .cs_marquee_group,
+  .cs_horizontal_slider .cs_sliding_content,
+  .cs_hero_style_29 .cs_delivery {
+    animation-name: scrollingAnimationRtl;
+  }
+}
+
+/*--------------------------------------------------------------
+  04. Mirrored layout rules
+----------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+02. Typography
+----------------------------------------------------------------*/
+:where([dir='rtl']) body.has_sidebar {
+  padding-right: 280px;
+  padding-left: 0;
+}
+@media (max-width: 1279px) {
+  :where([dir='rtl']) body.has_sidebar {
+    padding-right: 0;
+  }
+}
+:where([dir='rtl']) ul {
+  padding-right: 20px;
+  padding-left: 0;
+}
+:where([dir='rtl']) ol {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+/*=======================================================
+All Buttons
+=========================================================*/
+:where([dir='rtl']) .cs_btn_style_1::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_text_btn_style_1 .cs_btn_icon {
+  transform: rotate(45deg);
+}
+:where([dir='rtl']) .cs_text_btn_style_1:hover {
+  background-position: 0% calc(100% - 0px);
+}
+:where([dir='rtl']) .cs_text_btn_style_1:hover .cs_btn_icon i {
+  transform: translateX(-30px);
+}
+
+/*=======================================================
+Section Heading
+=========================================================*/
+:where([dir='rtl']) .cs_section_heading_style_3::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_section_heading_style_5 .cs_section_title::before,
+:where([dir='rtl']) .cs_section_heading_style_5 .cs_section_title::after {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_section_heading_style_5 .cs_section_title::after {
+  left: 0;
+  right: initial;
+}
+:where([dir='rtl']) .section-title-decorated::after {
+  right: 100%;
+  left: auto;
+  margin-right: 19px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .section-title-decorated::before {
+  left: 100%;
+  right: auto;
+  margin-left: 19px;
+  margin-right: 0;
+}
+
+/*===========================================================
+Rating Component
+=============================================================*/
+:where([dir='rtl']) .cs_rating::before,
+:where([dir='rtl']) .cs_rating_percentage::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_rating_percentage {
+  right: 0;
+  left: auto;
+}
+
+/*---------------------------------------------------------
+Shared site header building blocks
+Each category adds its own look in sass/headers/_<category>.scss
+through a modifier class on .cs_site_header (e.g. .cs_header_main)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_top_header_list > li:not(:last-child) {
+  margin-left: 24px;
+  margin-right: 0;
+  padding-left: 24px;
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_top_header_list > li:not(:last-child)::after {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_header_dropdown {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_header_dropdown.cs_dropdown_left {
+  left: auto;
+  right: 0;
+}
+:where([dir='rtl']) .cs_top_header .cs_header_dropdown::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_search .cs_header_search_input {
+  padding: 12px 16px 12px 70px;
+}
+:where([dir='rtl']) .cs_header_search .cs_header_search_btn {
+  left: 0;
+  right: auto;
+  border-radius: 5px 0 0 5px;
+}
+:where([dir='rtl']) .cs_header_cart .cs_header_cart_count {
+  right: 14px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_account_dropdown {
+  left: -63px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_account_dropdown::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_category_dropdown .cs_category_btn .cs_category_btn_arrow {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_category_dropdown .cs_header_dropdown {
+  left: auto;
+  right: 0;
+}
+:where([dir='rtl']) .cs_category_dropdown .cs_category_list a {
+  padding-left: 20px;
+  padding-right: 16px;
+}
+:where([dir='rtl']) .cs_category_dropdown .cs_category_list .cs_category_item_arrow {
+  margin-right: auto;
+  margin-left: 0;
+  transform: rotate(90deg);
+}
+:where([dir='rtl']) .cs_nav .cs_nav_list ul {
+  right: -20px;
+  left: auto;
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_nav .cs_menu_toggle span,
+  :where([dir='rtl']) .cs_nav .cs_menu_toggle span::before,
+  :where([dir='rtl']) .cs_nav .cs_menu_toggle span::after {
+    right: 0;
+    left: auto;
+  }
+  :where([dir='rtl']) .cs_nav .cs_menu_toggle.active span::before {
+    transform: rotate(-45deg);
+  }
+  :where([dir='rtl']) .cs_nav .cs_menu_toggle.active span::after {
+    transform: rotate(45deg);
+  }
+  :where([dir='rtl']) .cs_nav .cs_nav_list_wrap {
+    right: 0;
+    left: auto;
+  }
+  :where([dir='rtl']) .cs_nav .cs_nav_list ul {
+    padding: 0 15px 10px 0;
+  }
+  :where([dir='rtl']) .cs_nav .cs_menu_dropdown_toggle {
+    left: 0;
+    right: auto;
+  }
+  :where([dir='rtl']) .cs_nav .cs_menu_dropdown_toggle span {
+    margin: -1px -5px 0 0;
+  }
+  :where([dir='rtl']) .cs_nav .cs_menu_dropdown_toggle span::before {
+    right: 0;
+    left: auto;
+    transform: rotate(-90deg);
+  }
+}
+:where([dir='rtl']) .cs_side_header {
+  right: 0;
+  left: auto;
+  border-left: 1px solid var(--gray-color2);
+  border-right: none;
+}
+:where([dir='rtl']) .cs_side_header .cs_sidebar_nemu_list ul {
+  padding: 10px 15px 10px 10px;
+}
+:where([dir='rtl']) .cs_side_header .menu-item-has-children > a::after {
+  left: 15px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_side_header .menu-item-has-children.active > a::after {
+  transform: rotate(-90deg);
+}
+:where([dir='rtl']) .cs_side_header .sidebar_toggler {
+  left: -30px;
+  right: auto;
+}
+@media (max-width: 1279px) {
+  :where([dir='rtl']) .cs_side_header {
+    right: -280px;
+    left: auto;
+  }
+  :where([dir='rtl']) .cs_side_header .sidebar_toggler.active {
+    left: 0;
+    right: auto;
+  }
+  :where([dir='rtl']) .cs_side_header.active {
+    right: 0;
+    left: auto;
+  }
+}
+
+/*===================================================
+Floating Shopping Cart
+=====================================================*/
+:where([dir='rtl']) .cs_floating_cart {
+  left: 0;
+  right: auto;
+  border-radius: 0 10px 10px 0;
+}
+
+/*---------------------------------------------------------
+Main header (root pages & default demo)
+Figma: HOME > hero > top bar / search bar / nav
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_main .cs_header_contact {
+  margin-right: 37px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_main .cs_header_actions {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 30px;
+  padding-left: 0;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_main .cs_site_branding {
+    margin-left: 40px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_main .cs_site_branding {
+    margin-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_main .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_main .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+artwork header
+Figma: ARTWORK > hero > top bar (3468:478) + nav (3470:2363)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_artwork .cs_header_search .cs_header_search_btn {
+  left: auto;
+  right: 0;
+  padding-right: 14px;
+  padding-left: 0;
+  border-radius: 0 50px 50px 0;
+}
+:where([dir='rtl']) .cs_header_artwork .cs_header_search .cs_header_search_input {
+  padding: 12px 47px 12px 20px;
+}
+:where([dir='rtl']) .cs_header_artwork .cs_top_header_list {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 30px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_header_artwork .cs_header_actions {
+  padding-right: 3px;
+  padding-left: 0;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_artwork .cs_site_branding {
+    margin-left: 30px;
+    margin-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_artwork .cs_top_header_list > li:not(:last-child) {
+    margin-left: 18px;
+    margin-right: 0;
+    padding-left: 18px;
+    padding-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_artwork .cs_top_header_list {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_artwork .cs_top_header_list > li:not(:last-child) {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_artwork .cs_site_branding {
+    margin-left: 0;
+  }
+}
+
+/*---------------------------------------------------------
+autopart header
+Figma: AUTOPART HOME > header > top bar (1955:289) / search bar (1955:311) / nav (1955:357)
+All categories open state: "Expand menu" (1988:879)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_autopart .cs_site_branding {
+  margin-left: 64px;
+  margin-right: 15px;
+}
+:where([dir='rtl']) .cs_header_autopart .cs_header_contact {
+  margin-right: 37px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_autopart .cs_header_actions {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 30px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_header_autopart .cs_category_dropdown .cs_category_btn_arrow {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_autopart .cs_category_dropdown .cs_header_dropdown {
+  border-left: 1px solid var(--gray-color2);
+  border-right: none;
+}
+:where([dir='rtl']) .cs_header_autopart .cs_category_dropdown .cs_category_submenu {
+  right: 100%;
+  left: auto;
+  box-shadow: -10px 0px 10px 0px rgba(140, 140, 140, 0.15);
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_autopart .cs_site_branding {
+    margin-left: 40px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_autopart .cs_site_branding {
+    margin-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_autopart .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_autopart .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+bicycle header
+Figma: BICYCLE > HOME > header (2689:346)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_bicycle .cs_header_actions .cs_header_dropdown::before {
+  right: 0;
+  left: auto;
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_header_bicycle .cs_header_actions {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_bicycle .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_bicycle .cs_header_search_dropdown {
+    left: -90px;
+    right: auto;
+  }
+  :where([dir='rtl']) .cs_header_bicycle .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+bookstore header
+Figma: BOOK STORE > hero > header (2555:1028)
+Inner pages (shop / product details) add a bottom border (cs_header_bordered)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_bookstore .cs_header_search .cs_header_search_input {
+  padding: 11px 16px 11px 56px;
+}
+:where([dir='rtl']) .cs_header_bookstore .cs_header_search .cs_header_search_btn {
+  border-radius: 50px 0 0 50px;
+}
+:where([dir='rtl']) .cs_header_bookstore .cs_account_dropdown {
+  left: -45px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_header_bookstore .cs_header_cat_menu .cs_header_dropdown::before {
+  right: 0;
+  left: auto;
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_bookstore .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_bookstore .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+cosmetics header
+Figma: COSMETICS > hero > header (1468:4039) – no top bar,
+30px white space above the search row, purple nav bar
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_cosmetics .cs_header_contact {
+  margin-right: 40px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_cosmetics .cs_header_actions {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 30px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_header_cosmetics .cs_mode_toggle {
+  margin-left: 3px;
+  margin-right: 0;
+}
+:where([dir='rtl']) .cs_header_cosmetics .cs_header_cart_icon {
+  padding-left: 12px;
+  padding-right: 0;
+}
+@media (min-width: 1400px) {
+  :where([dir='rtl']) .cs_header_cosmetics .cs_header_nav_in {
+    padding-left: 47px;
+    padding-right: 0;
+  }
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_cosmetics .cs_site_branding {
+    margin-left: 40px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_cosmetics .cs_site_branding {
+    margin-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_cosmetics .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+electronics header
+Figma: ELECTRONICS > hero > top bar (3629:1372) / search bar (3629:1394) / nav (3629:1424)
+All categories open state: "Expand option" (3706:476)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_electronics .cs_header_search .cs_header_search_input {
+  padding-right: 15px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_header_electronics .cs_header_search .cs_header_search_btn {
+  border-radius: 30px 0 0 30px;
+}
+:where([dir='rtl']) .cs_header_electronics .cs_header_contact {
+  margin-right: 37px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_electronics .cs_header_actions {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 30px;
+  padding-left: 0;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_electronics .cs_site_branding {
+    margin-left: 40px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_electronics .cs_site_branding {
+    margin-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_electronics .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_electronics .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+fashion header
+Figma: FASHION > header (544:1684), PRODUCT DETAILS / SHOP GRID > header
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_fashion .cs_nav {
+  margin-right: 38px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_fashion .cs_header_search {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_fashion .cs_header_search .cs_header_search_input {
+  padding: 12px 15px 12px 56px;
+}
+:where([dir='rtl']) .cs_header_fashion .cs_header_actions {
+  margin-right: 48px;
+  margin-left: 0;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_fashion .cs_nav {
+    margin-right: 30px;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_fashion .cs_header_search {
+    margin-right: 30px;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_fashion .cs_header_actions {
+    margin-right: 30px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_header_fashion .cs_nav {
+    margin-right: 24px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_fashion .cs_header_actions {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_fashion .cs_header_search {
+    margin-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_fashion .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_fashion .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+flower header
+Figma: FLOWER > hero > header (3708:737)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_flower .cs_site_branding {
+  margin-left: 35px;
+  margin-right: 0;
+}
+:where([dir='rtl']) .cs_header_flower .cs_header_right {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_flower .cs_header_search .cs_header_search_input {
+  padding: 11px 16px 11px 60px;
+}
+:where([dir='rtl']) .cs_header_flower .cs_header_search .cs_header_search_btn {
+  padding-left: 16px;
+  padding-right: 0;
+  border-radius: 50px 0 0 50px;
+}
+:where([dir='rtl']) .cs_header_flower .cs_header_actions {
+  margin-right: 30px;
+  margin-left: 0;
+}
+@media (max-width: 1599px) {
+  :where([dir='rtl']) .cs_header_flower .cs_header_right {
+    padding-right: 30px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_flower .cs_site_branding {
+    margin-left: 30px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_header_flower .cs_nav {
+    margin-right: 25px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_flower .cs_site_branding {
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_flower .cs_header_actions {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_flower .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+}
+
+/*---------------------------------------------------------
+footware header
+Figma: FOOTWARE > header (2455:5386) = top bar (2455:5387) + menu (2455:5409)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_footware .cs_nav {
+  margin-right: 60px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_footware .cs_header_search {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_footware .cs_header_search .cs_header_search_input {
+  padding: 12px 15px 12px 56px;
+}
+:where([dir='rtl']) .cs_header_footware .cs_header_search .cs_header_search_btn {
+  border-radius: 50px 0 0 50px;
+}
+:where([dir='rtl']) .cs_header_footware .cs_header_actions {
+  margin-right: 30px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_footware .cs_account_dropdown {
+  left: -40px;
+  right: auto;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_footware .cs_nav {
+    margin-left: 30px;
+    margin-right: 40px;
+  }
+  :where([dir='rtl']) .cs_header_footware .cs_header_actions {
+    margin-right: 24px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_header_footware .cs_site_branding {
+    margin-left: 24px;
+    margin-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_footware .cs_nav {
+    margin-left: 0;
+    margin-right: 25px;
+  }
+}
+@media (max-width: 767px) {
+  :where([dir='rtl']) .cs_header_footware .cs_header_actions {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_footware .cs_header_search {
+    margin-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_footware .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_footware .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+furniture header
+Figma: FURNITURE > hero > header (544:228), Expand menu (323:2350)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_furniture .cs_furniture_logo .cs_furniture_logo_1 {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_furniture .cs_furniture_logo .cs_furniture_logo_2 {
+  right: 31px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_furniture .cs_furniture_logo .cs_furniture_logo_3 {
+  right: 36.5px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_furniture .cs_furniture_logo .cs_furniture_logo_4 {
+  right: 42.5px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_furniture .cs_header_contact {
+  margin-right: 37px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_furniture .cs_header_actions {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 30px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_header_furniture .cs_category_submenu {
+  right: 100%;
+  left: auto;
+  border-right: 1px solid var(--gray-color2);
+  border-left: none;
+  box-shadow: -5px 0px 10px 0px rgba(140, 140, 140, 0.15);
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_furniture .cs_site_branding {
+    margin-left: 40px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_furniture .cs_site_branding {
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_furniture .cs_header_cart_icon {
+    padding-left: 12px;
+    padding-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_furniture .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_furniture .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+gaming header
+Figma: GAMING > top bar (1747:2381) + nav (1747:2345) over the hero,
+GAMING DARK > top bar (1931:1552) + nav (1931:1508) (same, "Light Mode" toggle),
+PRODUCT DETAILS (1793:1604) / SHOP GRID (1818:830) > hero banner (205px) with the same bars
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_gaming .cs_nav {
+  margin-right: 38px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_gaming .cs_header_search {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_gaming .cs_header_search .cs_header_search_input {
+  padding: 11px 14px 11px 56px;
+}
+:where([dir='rtl']) .cs_header_gaming .cs_header_search .cs_header_search_btn {
+  border-radius: 50px 0 0 50px;
+}
+:where([dir='rtl']) .cs_header_gaming .cs_header_actions {
+  margin-right: 25px;
+  margin-left: 0;
+}
+@media (min-width: 992px) {
+  :where([dir='rtl']) .cs_header_gaming.cs_header_overlay {
+    right: 0;
+    left: auto;
+  }
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_gaming .cs_nav {
+    margin-right: 30px;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_gaming .cs_header_search {
+    margin-right: 30px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_header_gaming .cs_nav {
+    margin-right: 24px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_gaming .cs_header_actions {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_gaming .cs_header_search {
+    margin-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_gaming .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_gaming .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+gardening header
+Figma: GARDENING > hero > header (1601:1629)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_gardening .cs_gardening_logo .cs_gardening_logo_1 {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_gardening .cs_gardening_logo .cs_gardening_logo_2 {
+  right: 48.53px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_gardening .cs_gardening_logo .cs_gardening_logo_3 {
+  right: 47.72px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_gardening .cs_header_contact {
+  margin-right: 37px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_gardening .cs_header_actions {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 30px;
+  padding-left: 0;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_gardening .cs_site_branding {
+    margin-left: 40px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_gardening .cs_site_branding {
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_gardening .cs_header_cart_icon {
+    padding-left: 12px;
+    padding-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_gardening .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_gardening .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+grocery1 header
+Figma: GROSERY1 > hero > horizontal scroll text / search bar area / nav
+(home: "all categories active" = panel always open; inner pages: closed)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_grocery1 .cs_marquee_group {
+  padding-left: 8px;
+  padding-right: 20px;
+}
+:where([dir='rtl']) .cs_header_grocery1 .cs_logo_icon .cs_logo_part_1 {
+  right: 2.762px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_grocery1 .cs_logo_icon .cs_logo_part_2 {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_grocery1 .cs_logo_icon .cs_logo_part_3 {
+  right: 9.5px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_grocery1 .cs_header_search {
+  margin-right: 81px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_grocery1 .cs_header_search .cs_header_search_input {
+  padding-right: 15px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_header_grocery1 .cs_header_contact {
+  margin-right: 37px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_grocery1 .cs_header_actions {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 30px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_header_grocery1 .cs_mode_toggle {
+  margin-left: 33px;
+  margin-right: 0;
+}
+:where([dir='rtl']) .cs_header_grocery1 .cs_header_account_btn {
+  margin-left: 30px;
+  margin-right: 0;
+}
+:where([dir='rtl']) .cs_header_grocery1 .cs_account_dropdown {
+  left: -120px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_header_grocery1 .cs_category_list a {
+  padding-right: 17px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_header_grocery1 .cs_category_submenu {
+  right: 100%;
+  left: auto;
+  border-right: 0;
+  border-left: none;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_grocery1 .cs_header_search {
+    margin-right: 40px;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_grocery1 .cs_header_contact {
+    margin-right: 30px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_grocery1 .cs_header_search {
+    margin-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_grocery1 .cs_mode_toggle {
+    margin-left: 24px;
+    margin-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_grocery1 .cs_header_account_btn {
+    margin-left: 24px;
+    margin-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_grocery1 .cs_account_dropdown {
+    left: -60px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+grocery2 header
+Figma: GROSERY2 > hero > top (80px green bar above the fixed left sidebar)
+The same design is used by grocery3 (see _grocery3.scss), hence the mixin.
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_grocery2 .cs_logo_icon .cs_logo_part_1 {
+  right: 2.762px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_grocery2 .cs_logo_icon .cs_logo_part_2 {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_grocery2 .cs_logo_icon .cs_logo_part_3 {
+  right: 9.5px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_grocery2 .cs_header_search {
+  margin: 0 37px 0 39px;
+}
+:where([dir='rtl']) .cs_header_grocery2 .cs_header_search .cs_header_search_input {
+  padding: 12px 21px 12px 140px;
+}
+:where([dir='rtl']) .cs_header_grocery2 .cs_header_search .cs_header_search_btn {
+  left: 5px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_header_grocery2 .cs_top_header_list > li:not(:last-child) {
+  margin-left: 25px;
+  margin-right: 0;
+  padding-left: 25px;
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_header_grocery2 .cs_header_dropdown::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_grocery2 .cs_account_dropdown {
+  left: -20px;
+  right: auto;
+}
+@media (min-width: 1280px) {
+  :where([dir='rtl']) .cs_header_grocery2 {
+    margin-right: -280px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_grocery2 .cs_top_header_list {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_grocery2 .cs_top_header_list > li:not(:last-child) {
+    margin-left: 16px;
+    margin-right: 0;
+    padding-left: 16px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_grocery2 .cs_header_search .cs_header_search_input {
+    padding-left: 60px;
+    padding-right: 0;
+  }
+}
+
+/*---------------------------------------------------------
+grocery3 header
+Figma: GROSERY3 > hero > top — identical to the grocery2 header,
+so it reuses the mixin defined in _grocery2.scss.
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_grocery3 .cs_logo_icon .cs_logo_part_1 {
+  right: 2.762px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_grocery3 .cs_logo_icon .cs_logo_part_2 {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_grocery3 .cs_logo_icon .cs_logo_part_3 {
+  right: 9.5px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_grocery3 .cs_header_search {
+  margin: 0 37px 0 39px;
+}
+:where([dir='rtl']) .cs_header_grocery3 .cs_header_search .cs_header_search_input {
+  padding: 12px 21px 12px 140px;
+}
+:where([dir='rtl']) .cs_header_grocery3 .cs_header_search .cs_header_search_btn {
+  left: 5px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_header_grocery3 .cs_top_header_list > li:not(:last-child) {
+  margin-left: 25px;
+  margin-right: 0;
+  padding-left: 25px;
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_header_grocery3 .cs_header_dropdown::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_grocery3 .cs_account_dropdown {
+  left: -20px;
+  right: auto;
+}
+@media (min-width: 1280px) {
+  :where([dir='rtl']) .cs_header_grocery3 {
+    margin-right: -280px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_grocery3 .cs_top_header_list {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_grocery3 .cs_top_header_list > li:not(:last-child) {
+    margin-left: 16px;
+    margin-right: 0;
+    padding-left: 16px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_grocery3 .cs_header_search .cs_header_search_input {
+    padding-left: 60px;
+    padding-right: 0;
+  }
+}
+
+/*---------------------------------------------------------
+jewelry header
+Figma: JEWELRY > header (1873:2406), PRODUCT DETAILS (1899:1811) / SHOP GRID (1911:3718) > header
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_jewelry .cs_nav {
+  margin-right: 40px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_jewelry .cs_header_search {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_jewelry .cs_header_search .cs_header_search_input {
+  padding: 12px 15px 12px 56px;
+}
+:where([dir='rtl']) .cs_header_jewelry .cs_header_search .cs_header_search_btn {
+  border-radius: 50px 0 0 50px;
+}
+:where([dir='rtl']) .cs_header_jewelry .cs_header_actions {
+  margin-right: 30px;
+  margin-left: 0;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_jewelry .cs_nav {
+    margin-right: 30px;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_jewelry .cs_header_search {
+    margin-right: 30px;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_jewelry .cs_header_actions {
+    margin-right: 30px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_header_jewelry .cs_nav {
+    margin-right: 24px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_jewelry .cs_header_actions {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_jewelry .cs_header_search {
+    margin-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_jewelry .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_jewelry .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+lingerie header
+Figma: LINGERIE > HOME > header (2980:362),
+PRODUCT DETAILS / PRODUCT GRID header (3022:376 / 3032:1907)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_lingerie .cs_header_actions .cs_header_dropdown::before {
+  right: 0;
+  left: auto;
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_header_lingerie .cs_header_actions {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_lingerie .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_lingerie .cs_header_search_dropdown {
+    left: -90px;
+    right: auto;
+  }
+  :where([dir='rtl']) .cs_header_lingerie .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+liquor header
+Figma: LIQUOR > top bar (2388:2916) + menu (2391:3039)
+Inner pages (shop / product details) add a bottom border (cs_header_bordered)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_liquor .cs_site_branding_icon .cs_logo_glass_1 {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_liquor .cs_site_branding_icon .cs_logo_glass_2 {
+  right: 46.27%;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_liquor .cs_nav {
+  margin-right: 50px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_liquor .cs_header_search {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_liquor .cs_header_search .cs_header_search_input {
+  padding: 12px 15px 12px 56px;
+}
+:where([dir='rtl']) .cs_header_liquor .cs_header_search .cs_header_search_btn {
+  border-radius: 50px 0 0 50px;
+}
+:where([dir='rtl']) .cs_header_liquor .cs_header_actions {
+  margin-right: 30px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_liquor .cs_account_dropdown {
+  left: -40px;
+  right: auto;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_liquor .cs_header_actions {
+    margin-right: 24px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_header_liquor .cs_site_branding {
+    margin-left: 24px;
+    margin-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_liquor .cs_nav {
+    margin-left: 0;
+    margin-right: 25px;
+  }
+}
+@media (max-width: 767px) {
+  :where([dir='rtl']) .cs_header_liquor .cs_header_actions {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_liquor .cs_header_search {
+    margin-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_liquor .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_liquor .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+marketplace1 header
+Figma: MARKETPLACE1 > hero > header (top bar / midle bar / nav)
++ hidden "drop down" frame (search category list & mega menu).
+The same design is used by marketplace2 (see _marketplace2.scss), hence the mixin.
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_marketplace1 .cs_top_header_list > li:not(:last-child) {
+  margin-left: 25px;
+  margin-right: 0;
+  padding-left: 25px;
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_header_marketplace1 .cs_header_search {
+  margin-right: 70px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_marketplace1 .cs_header_search .cs_header_search_input {
+  padding: 11px 53px 11px 16px;
+}
+:where([dir='rtl']) .cs_header_marketplace1 .cs_header_search .cs_header_search_btn {
+  left: auto;
+  right: 0;
+  padding-right: 21px;
+  padding-left: 0;
+  border-radius: 0 50px 50px 0;
+}
+:where([dir='rtl']) .cs_header_marketplace1 .cs_search_category .cs_search_category_btn {
+  border-right: 1px solid #9d9d9d;
+  border-left: none;
+  padding: 0 21px 0 22px;
+}
+:where([dir='rtl']) .cs_header_marketplace1 .cs_search_category .cs_header_dropdown {
+  left: auto;
+  right: 0;
+}
+:where([dir='rtl']) .cs_header_marketplace1 .cs_search_category .cs_header_dropdown::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_marketplace1 .cs_header_actions {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 30px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_header_marketplace1 .cs_header_cart {
+  margin-right: 1px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_marketplace1 .cs_mega_dropdown > .cs_header_dropdown::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_dark .cs_header_marketplace1 .cs_search_category .cs_search_category_btn {
+  border-right-color: var(--gray-color2);
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_marketplace1 .cs_header_search {
+    margin-right: 40px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_marketplace1 .cs_header_search {
+    margin-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_marketplace1 .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_marketplace1 .cs_header_actions {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+}
+
+/*---------------------------------------------------------
+marketplace2 header
+Figma: MARKETPLACE2 > hero > header — identical to the marketplace1 header,
+so it reuses the mixin defined in _marketplace1.scss.
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_marketplace2 .cs_top_header_list > li:not(:last-child) {
+  margin-left: 25px;
+  margin-right: 0;
+  padding-left: 25px;
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_header_marketplace2 .cs_header_search {
+  margin-right: 70px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_marketplace2 .cs_header_search .cs_header_search_input {
+  padding: 11px 53px 11px 16px;
+}
+:where([dir='rtl']) .cs_header_marketplace2 .cs_header_search .cs_header_search_btn {
+  left: auto;
+  right: 0;
+  padding-right: 21px;
+  padding-left: 0;
+  border-radius: 0 50px 50px 0;
+}
+:where([dir='rtl']) .cs_header_marketplace2 .cs_search_category .cs_search_category_btn {
+  border-right: 1px solid #9d9d9d;
+  border-left: none;
+  padding: 0 21px 0 22px;
+}
+:where([dir='rtl']) .cs_header_marketplace2 .cs_search_category .cs_header_dropdown {
+  left: auto;
+  right: 0;
+}
+:where([dir='rtl']) .cs_header_marketplace2 .cs_search_category .cs_header_dropdown::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_marketplace2 .cs_header_actions {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 30px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_header_marketplace2 .cs_header_cart {
+  margin-right: 1px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_marketplace2 .cs_mega_dropdown > .cs_header_dropdown::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_dark .cs_header_marketplace2 .cs_search_category .cs_search_category_btn {
+  border-right-color: var(--gray-color2);
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_marketplace2 .cs_header_search {
+    margin-right: 40px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_marketplace2 .cs_header_search {
+    margin-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_marketplace2 .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_marketplace2 .cs_header_actions {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+}
+
+/*---------------------------------------------------------
+music header
+Figma: MUSIC > hero > header (2284:2235)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_music .cs_account_dropdown {
+  left: -45px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_header_music .cs_header_search_dropdown {
+  left: 0;
+  right: auto;
+  transform: translateX(-10px);
+}
+:where([dir='rtl']) .cs_header_music .cs_header_search .cs_header_search_btn {
+  left: auto;
+  right: 0;
+  border-radius: 0 5px 5px 0;
+}
+:where([dir='rtl']) .cs_header_music .cs_header_search .cs_header_search_btn::after {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_header_music .cs_header_search .cs_header_search_input {
+  padding: 11px 68px 11px 16px;
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_music .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_music .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+perfume header
+Figma: PERFUME > HOME > header (3178:1352),
+PRODUCT DETAILS / PRODUCT GRID header (3241:530 / 3255:2587)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_perfume .cs_header_actions {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 30px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_header_perfume .cs_header_actions > .cs_header_dropdown_wrap {
+  margin-right: 5px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_perfume .cs_header_search .cs_header_search_input {
+  padding: 10px 16px 10px 56px;
+}
+:where([dir='rtl']) .cs_header_perfume .cs_header_search .cs_header_search_btn {
+  border-radius: 50px 0 0 50px;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_perfume .cs_site_branding {
+    margin-left: 40px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_header_perfume .cs_nav {
+    margin-right: 25px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_perfume .cs_site_branding {
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_perfume .cs_header_actions > .cs_header_dropdown_wrap {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_perfume .cs_header_cart {
+    margin-right: 25px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_perfume .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_perfume .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+petfood header
+Figma: PET FOOD > header (1519:455) over the hero (top bar 1519:454),
+PRODUCT DETAILS (1568:1643) / SHOP GRID (1580:3741) > header with its own background
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_petfood .cs_logo_part_1 {
+  inset: 0 66.72% 48.52% -0.01%;
+}
+:where([dir='rtl']) .cs_header_petfood .cs_logo_part_2 {
+  inset: 0 -0.01% 48.52% 66.72%;
+}
+:where([dir='rtl']) .cs_header_petfood .cs_logo_part_3 {
+  inset: 19.76% 2.07% 0 2.13%;
+}
+:where([dir='rtl']) .cs_header_petfood .cs_logo_part_4 {
+  inset: 20.32% 16.3% 0 16.34%;
+}
+:where([dir='rtl']) .cs_header_petfood .cs_logo_part_5 {
+  inset: 70.81% 38.61% 17.72% 38.34%;
+}
+:where([dir='rtl']) .cs_header_petfood .cs_logo_part_7 {
+  inset: 72.15% 41.22% 23% 49.05%;
+}
+:where([dir='rtl']) .cs_header_petfood .cs_logo_part_8 {
+  inset: 82.77% 25.38% 12.56% 25.11%;
+}
+:where([dir='rtl']) .cs_header_petfood .cs_logo_part_8 > img {
+  right: -6.06%;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_petfood .cs_nav {
+  margin-right: 36px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_petfood .cs_header_search {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_petfood .cs_header_search .cs_header_search_input {
+  padding: 11px 14px 11px 56px;
+}
+:where([dir='rtl']) .cs_header_petfood .cs_header_actions {
+  margin-right: 48px;
+  margin-left: 0;
+}
+@media (min-width: 992px) {
+  :where([dir='rtl']) .cs_header_petfood.cs_header_overlay {
+    right: 0;
+    left: auto;
+  }
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_petfood .cs_nav {
+    margin-right: 30px;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_petfood .cs_header_search {
+    margin-right: 30px;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_petfood .cs_header_actions {
+    margin-right: 30px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_header_petfood .cs_nav {
+    margin-right: 24px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_petfood .cs_header_actions {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_petfood .cs_header_search {
+    margin-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_petfood .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_petfood .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+pharmacy header
+Figma: PHARMACY > hero > header (467:389),
+PRODUCT DETAILS / SHOP GRID header (554:22 / 625:737 – nav with bottom border)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_pharmacy .cs_header_contact {
+  margin-right: 37px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_pharmacy .cs_header_actions {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 30px;
+  padding-left: 0;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_pharmacy .cs_site_branding {
+    margin-left: 40px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_pharmacy .cs_site_branding {
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_pharmacy .cs_header_cart_icon {
+    padding-left: 12px;
+    padding-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_pharmacy .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_pharmacy .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+pottery header
+Figma: POTTERY > hero > top bar (3535:486) / navbar (3535:465)
+Inner pages (PRODUCT DETAILS 3593:536 / PRODUCT GRID 3609:2026): navbar on a #f5f1e6 band
+Index (.cs_header_transparent): navbar floats over the (#f5f1e6) hero slider.
+The beige band / hero stay light in dark mode, so the navbar keeps its light palette;
+dropdown panels follow the theme.
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_pottery.cs_header_transparent .cs_main_header {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_pottery .cs_header_search {
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_pottery .cs_header_search .cs_header_search_input {
+  padding: 12px 16px 12px 60px;
+}
+:where([dir='rtl']) .cs_header_pottery .cs_header_search .cs_header_search_btn {
+  padding-left: 19px;
+  padding-right: 0;
+  border-radius: 50px 0 0 50px;
+}
+:where([dir='rtl']) .cs_header_pottery .cs_header_cart {
+  margin-right: 1px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_pottery .cs_account_dropdown {
+  left: -60px;
+  right: auto;
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_header_pottery .cs_site_branding {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_pottery .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_pottery .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+restaurant header
+Figma: RESTAURANT FOOD > hero > header (3315:416), drop down (3346:1929)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_restaurant .cs_header_search .cs_header_search_btn {
+  left: auto;
+  right: 0;
+  padding-right: 7px;
+  padding-left: 0;
+  border-radius: 0 50px 50px 0;
+}
+:where([dir='rtl']) .cs_header_restaurant .cs_header_search .cs_header_search_input {
+  padding: 11px 53px 11px 16px;
+}
+:where([dir='rtl']) .cs_header_restaurant .cs_search_category_btn {
+  border-right: 1px solid #424242 !important;
+  border-left: none !important;
+  padding: 0 21px 0 22px;
+}
+:where([dir='rtl']) .cs_header_restaurant .cs_search_category_btn img {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_restaurant .cs_search_category_dropdown {
+  left: auto;
+  right: -1px;
+}
+:where([dir='rtl']) .cs_header_restaurant .cs_search_category_dropdown::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_restaurant .cs_header_actions {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 30px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_header_restaurant .cs_food_menu_dropdown {
+  left: auto;
+  right: 0;
+}
+:where([dir='rtl']) .cs_header_restaurant .cs_food_menu_dropdown::before {
+  right: 0;
+  left: auto;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_restaurant .cs_site_branding {
+    margin-left: 40px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_restaurant .cs_site_branding {
+    margin-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_restaurant .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_restaurant .cs_header_actions {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_restaurant .cs_search_category_dropdown {
+    left: -1px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+showpiece header (Figma "MINIMAL SHOWPIECE")
+Figma: hero > top bar (2088:467) / navbar (2088:446) / search (2088:489)
+Side menu: "side menu" (2124:11704) — opened by the menu button
+Inner pages (PRODUCT DETAILS 2111:306 / PRODUCT GRID 2118:7722): solid navbar + bottom line
+Index (.cs_header_transparent): navbar floats over the hero slider
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_showpiece.cs_header_transparent .cs_main_header {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_header_showpiece .cs_header_search .cs_header_search_input {
+  padding: 12px 47px 12px 20px;
+}
+:where([dir='rtl']) .cs_header_showpiece .cs_header_search .cs_header_search_btn {
+  left: auto;
+  right: 0;
+  padding-right: 14px;
+  padding-left: 0;
+  border-radius: 0 50px 50px 0;
+}
+:where([dir='rtl']) .cs_header_showpiece .cs_account_dropdown {
+  left: -60px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_header_showpiece .cs_side_menu {
+  right: 0;
+  left: auto;
+  transform: translateX(100%);
+}
+:where([dir='rtl']) .cs_header_showpiece .cs_side_submenu ul {
+  padding: 8px 15px 0 0;
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_showpiece .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_showpiece .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*---------------------------------------------------------
+sunglass header
+Figma: SUNGLASS > hero > header (3408:430)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_sunglass .cs_header_right {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_header_sunglass .cs_header_search .cs_header_search_input {
+  padding: 11px 16px 11px 60px;
+}
+:where([dir='rtl']) .cs_header_sunglass .cs_header_search .cs_header_search_btn {
+  padding-left: 16px;
+  padding-right: 0;
+  border-radius: 50px 0 0 50px;
+}
+:where([dir='rtl']) .cs_header_sunglass .cs_header_actions {
+  margin-right: 30px;
+  margin-left: 0;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_header_sunglass .cs_site_branding {
+    margin-left: 40px;
+    margin-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_sunglass .cs_header_right {
+    padding-right: 30px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_header_sunglass .cs_nav {
+    margin-right: 25px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_sunglass .cs_site_branding {
+    margin-left: 0;
+  }
+  :where([dir='rtl']) .cs_header_sunglass .cs_header_actions {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_sunglass .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+}
+
+/*---------------------------------------------------------
+watch header
+Figma: WATCHES > HOME > header (2852:6395),
+PRODUCT DETAILS / PRODUCT GRID header (2929:358 / 2948:1455)
+-----------------------------------------------------------*/
+:where([dir='rtl']) .cs_header_watch .cs_header_search .cs_header_search_input {
+  padding: 10px 15.5px 10px 56px;
+}
+:where([dir='rtl']) .cs_header_watch .cs_header_search .cs_header_search_btn {
+  border-radius: 50px 0 0 50px;
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_header_watch .cs_header_actions {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_header_watch .cs_header_actions > .cs_header_dropdown_wrap {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_header_watch .cs_top_header_list > li:not(:last-child) {
+    margin-left: 12px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  :where([dir='rtl']) .cs_header_watch .cs_account_dropdown {
+    left: -50px;
+    right: auto;
+  }
+}
+
+/*=====================================================
+06. All Footer
+=======================================================*/
+:where([dir='rtl']) .cs_footer_style_1 .cs_footer_menu a {
+  background-position: 0% calc(100% - 0px);
+}
+:where([dir='rtl']) .cs_footer_style_1 .cs_contact p a {
+  margin-right: 6px;
+  margin-left: 0;
+  background-position: 0% calc(100% - 0px);
+}
+:where([dir='rtl']) .cs_footer_style_1 .cs_footer_bottom::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_footer_style_1 .cs_footer_bottom .cs_privacy_links li:not(:first-child) {
+  padding-right: 10px;
+  padding-left: 0;
+  border-right: 1px solid currentColor;
+  border-left: none;
+}
+
+/*--------------------------------------------------------------
+9. Instagram
+----------------------------------------------------------------*/
+:where([dir='rtl']) .cs_instagram .cs_instagram_thumb img {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_instagram .cs_instagram_overlay {
+  right: 0;
+  left: auto;
+}
+
+/*========================================================
+08. Slider
+==========================================================*/
+:where([dir='rtl']) .cs_slider_gap_0 .swiper-slide {
+  margin-left: 0 !important;
+}
+
+/*=================================================
+Slider Arrows
+===================================================*/
+:where([dir='rtl']) .cs_arrows_style_1 .cs_left_arrow,
+:where([dir='rtl']) .cs_arrows_style_3 .cs_left_arrow,
+:where([dir='rtl']) .cs_arrows_style_4 .cs_left_arrow,
+:where([dir='rtl']) .cs_arrows_style_6 .cs_left_arrow {
+  right: calc(0px + 6%);
+  left: auto;
+}
+:where([dir='rtl']) .cs_arrows_style_1 .cs_right_arrow,
+:where([dir='rtl']) .cs_arrows_style_3 .cs_right_arrow,
+:where([dir='rtl']) .cs_arrows_style_4 .cs_right_arrow,
+:where([dir='rtl']) .cs_arrows_style_6 .cs_right_arrow {
+  left: calc(0px + 6%);
+  right: auto;
+}
+:where([dir='rtl']) .cs_arrows_style_2 .cs_left_arrow,
+:where([dir='rtl']) .cs_arrows_style_5 .cs_left_arrow {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_arrows_style_2 .cs_right_arrow,
+:where([dir='rtl']) .cs_arrows_style_5 .cs_right_arrow {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_arrows_style_3 .cs_left_arrow {
+  right: calc(0px + 3%);
+  left: auto;
+}
+:where([dir='rtl']) .cs_arrows_style_3 .cs_right_arrow {
+  left: calc(0px + 3%);
+  right: auto;
+}
+@media (max-width: 1600px) {
+  :where([dir='rtl']) .cs_arrows_style_3 .cs_left_arrow {
+    right: calc(0px + 0%);
+    left: auto;
+  }
+  :where([dir='rtl']) .cs_arrows_style_3 .cs_right_arrow {
+    left: calc(0px + 0%);
+    right: auto;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_arrows_style_3 .cs_left_arrow {
+    right: calc(50% - 60px);
+    left: auto;
+  }
+  :where([dir='rtl']) .cs_arrows_style_3 .cs_right_arrow {
+    left: calc(50% - 60px);
+    right: auto;
+  }
+}
+@media (min-width: 1660px) {
+  :where([dir='rtl']) .cs_arrows_style_4 .cs_left_arrow {
+    right: calc(-10% + 30px);
+    left: auto;
+  }
+  :where([dir='rtl']) .cs_arrows_style_4 .cs_right_arrow {
+    left: calc(-10% + 30px);
+    right: auto;
+  }
+}
+:where([dir='rtl']) .cs_arrows_style_7 {
+  left: 5%;
+  right: auto;
+}
+:where([dir='rtl']) .cs_arrows_style_8 .cs_left_arrow {
+  right: calc(13px + 9%);
+  left: auto;
+}
+:where([dir='rtl']) .cs_arrows_style_8 .cs_right_arrow {
+  left: calc(13px + 9%);
+  right: auto;
+}
+:where([dir='rtl']) .cs_arrows_style_10 .cs_left_arrow {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_arrows_style_10 .cs_right_arrow {
+  left: 0;
+  right: auto;
+}
+
+/*=================================================
+Slider Pagination
+===================================================*/
+:where([dir='rtl']) .swiper-pagination.cs_style_1,
+:where([dir='rtl']) .swiper-pagination.cs_style_2,
+:where([dir='rtl']) .swiper-pagination.cs_style_3,
+:where([dir='rtl']) .swiper-pagination.cs_style_4,
+:where([dir='rtl']) .swiper-pagination.cs_style_5,
+:where([dir='rtl']) .swiper-pagination.cs_style_6,
+:where([dir='rtl']) .swiper-pagination.cs_style_7,
+:where([dir='rtl']) .swiper-pagination.cs_style_8,
+:where([dir='rtl']) .swiper-pagination.cs_style_9,
+:where([dir='rtl']) .swiper-pagination.cs_style_10,
+:where([dir='rtl']) .swiper-pagination.cs_style_11,
+:where([dir='rtl']) .swiper-pagination.cs_style_12,
+:where([dir='rtl']) .swiper-pagination.cs_style_13 {
+  right: calc(100% - 55px);
+  left: auto;
+}
+:where([dir='rtl']) .swiper-pagination.cs_style_2 {
+  right: 96px;
+  left: auto;
+}
+:where([dir='rtl']) .swiper-pagination.cs_style_3,
+:where([dir='rtl']) .swiper-pagination.cs_style_4,
+:where([dir='rtl']) .swiper-pagination.cs_style_7,
+:where([dir='rtl']) .swiper-pagination.cs_style_9 {
+  right: initial;
+  left: auto;
+}
+@media (min-width: 1700px) {
+  :where([dir='rtl']) .swiper-pagination.cs_style_3,
+  :where([dir='rtl']) .swiper-pagination.cs_style_4,
+  :where([dir='rtl']) .swiper-pagination.cs_style_7,
+  :where([dir='rtl']) .swiper-pagination.cs_style_9 {
+    left: calc(100vw - 7%);
+    right: auto;
+  }
+}
+:where([dir='rtl']) .swiper-pagination.cs_style_5,
+:where([dir='rtl']) .swiper-pagination.cs_style_6,
+:where([dir='rtl']) .swiper-pagination.cs_style_8 {
+  left: 8%;
+  right: initial;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .swiper-pagination.cs_style_6 {
+    left: 1%;
+    right: auto;
+  }
+}
+
+/*================================================================
+09. Video Modal
+==================================================================*/
+:where([dir='rtl']) .cs_video_popup {
+  right: -100%;
+  left: auto;
+}
+:where([dir='rtl']) .cs_video_popup.active {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_video_popup_container {
+  text-align: right;
+}
+:where([dir='rtl']) .embed-responsive iframe,
+:where([dir='rtl']) .embed-responsive video {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_video_popup_close {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_video_popup_close:before {
+  margin-right: -10px;
+  margin-left: 0;
+  transform: rotate(45deg);
+}
+:where([dir='rtl']) .cs_video_popup_close:after {
+  margin-right: -10px;
+  margin-left: 0;
+  transform: rotate(-45deg);
+}
+:where([dir='rtl']) .cs_video_popup-layer {
+  right: 0;
+  left: auto;
+}
+
+/*==============================================================
+10. Hero Sections
+===============================================================*/
+:where([dir='rtl']) .cs_hero_style_1 {
+  padding: 130px 67px 140px 30px;
+}
+:where([dir='rtl']) .cs_hero_style_1 .cs_hero_thumbnail {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_2,
+:where([dir='rtl']) .cs_hero_style_3 {
+  padding: 180px 120px 184px 15px;
+}
+:where([dir='rtl']) .cs_hero_style_2 .cs_hero_overlay,
+:where([dir='rtl']) .cs_hero_style_3 .cs_hero_overlay {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_3 .cs_hero_content {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_hero_style_3 .cs_hero_subtitle {
+  padding-right: 50px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_hero_style_3 .cs_hero_subtitle::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_4 {
+  padding: 107px 96px 164px 30px;
+}
+:where([dir='rtl']) .cs_hero_style_4.cs_type_1 .cs_hero_subtitle img {
+  margin-left: 4px;
+  margin-right: 0;
+}
+:where([dir='rtl']) .cs_hero_style_5 .cs_hero_shape_1 {
+  right: 32%;
+  left: auto;
+  transform: translateX(32%);
+}
+:where([dir='rtl']) .cs_hero_style_5 .cs_hero_shape_2 {
+  right: 35%;
+  left: auto;
+  transform: translateX(35%);
+}
+:where([dir='rtl']) .cs_hero_style_6 .cs_hero_shape_1 {
+  right: 45%;
+  left: auto;
+  transform: translateX(45%);
+}
+:where([dir='rtl']) .cs_hero_style_6 .cs_curcular_text {
+  left: 0;
+  right: auto;
+}
+@media (min-width: 1366px) {
+  :where([dir='rtl']) .cs_hero_style_6 .cs_curcular_text {
+    right: 77%;
+    left: auto;
+  }
+}
+:where([dir='rtl']) .cs_hero_style_7 .cs_hero_shape_1 {
+  right: 42%;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_7 .cs_hero_shape_2 {
+  right: 62%;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_7 .cs_hero_shape_3 {
+  left: 12%;
+  right: auto;
+}
+:where([dir='rtl']) .cs_hero_style_8 .cs_hero_shape_1 {
+  right: 16%;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_10 .cs_hero_subtitle {
+  padding-right: 50px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_hero_style_10 .cs_hero_subtitle::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_12 .cs_hero_thumbnail {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_hero_style_14 .cs_hero_left {
+  margin-right: calc(102% - 50vw);
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_hero_style_14 .cs_hero_right {
+  margin-right: -15px;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_hero_style_15 .cs_slide_img {
+  margin-right: calc(-47vw + 100%);
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_hero_style_15 .swiper-pagination.cs_style_4 {
+  left: 10%;
+  right: auto;
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_hero_style_15 .cs_slide_img {
+    margin-right: 0;
+  }
+}
+:where([dir='rtl']) .cs_hero_style_16 .cs_hero_title svg,
+:where([dir='rtl']) .cs_hero_style_17 .cs_hero_title svg {
+  left: 8px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_hero_style_16 .cs_hero_subtitle::before,
+:where([dir='rtl']) .cs_hero_style_17 .cs_hero_subtitle::before {
+  right: 114%;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_18 .cs_hero_thumbnail {
+  margin-right: calc(-50vw + 100%);
+  margin-left: 0;
+}
+@media (min-width: 1700px) {
+  :where([dir='rtl']) .cs_hero_style_18 .cs_hero_content {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+:where([dir='rtl']) .cs_hero_style_20 .cs_hero_img:first-child {
+  right: 7%;
+  left: auto;
+  border-radius: 200px 0 0 0;
+}
+:where([dir='rtl']) .cs_hero_style_20 .cs_hero_img:last-child {
+  left: 7%;
+  right: auto;
+  border-radius: 0 200px 0 0;
+}
+:where([dir='rtl']) .cs_hero_style_20 .cs_star {
+  left: -40px;
+  right: auto;
+}
+@media (max-width: 1600px) {
+  :where([dir='rtl']) .cs_hero_style_20 .cs_hero_img:first-child {
+    right: 3%;
+    left: auto;
+  }
+  :where([dir='rtl']) .cs_hero_style_20 .cs_hero_img:last-child {
+    left: 3%;
+    right: auto;
+  }
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_hero_style_20 .cs_hero_img:first-child {
+    right: 1%;
+    left: auto;
+  }
+  :where([dir='rtl']) .cs_hero_style_20 .cs_hero_img:last-child {
+    left: 1%;
+    right: auto;
+  }
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_hero_style_20 .cs_hero_img:first-child {
+    right: initial;
+    left: auto;
+    border-radius: 100px 0px 0 0;
+  }
+  :where([dir='rtl']) .cs_hero_style_20 .cs_hero_img:last-child {
+    left: initial;
+    right: auto;
+    border-radius: 0 100px 0 0;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_hero_style_20 .cs_hero_img:first-child {
+    border-radius: 40px 0px 0 0;
+  }
+  :where([dir='rtl']) .cs_hero_style_20 .cs_hero_img:last-child {
+    border-radius: 0 40px 0 0;
+  }
+}
+:where([dir='rtl']) .cs_hero_style_21 .cs_hero_subtitle {
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_hero_style_22 {
+  padding: 50px 60px 58px 52px;
+}
+:where([dir='rtl']) .cs_hero_style_22 .cs_hero_icon {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_22 .cs_hero_icon img:nth-child(1) {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_22 .cs_hero_icon img:nth-child(2) {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_hero_style_22 .cs_hero_icon img:nth-child(3) {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_22 .cs_hero_icon img:nth-child(4) {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_hero_style_23 .cs_hero_thumbnail .cs_animated_text {
+  left: -60px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_hero_style_23 .cs_icon {
+  right: -44px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_23 .cs_icon img {
+  transform: rotate(5deg);
+}
+:where([dir='rtl']) .cs_hero_style_24 .cs_hero_content {
+  margin-left: 90px;
+  margin-right: auto;
+}
+:where([dir='rtl']) .cs_hero_style_24 .cs_hero_thumbnail img:nth-child(2) {
+  padding-right: 40px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_hero_style_27 .cs_hero_shape_1 {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_28 .cs_hero_content .cs_arrow_icon {
+  right: 141px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_28 .cs_shape {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_28 .cs_leaf_icon img:nth-child(1) {
+  right: 67px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_28 .cs_leaf_icon img:nth-child(2) {
+  left: 38%;
+  right: auto;
+}
+:where([dir='rtl']) .cs_hero_style_28 .cs_leaf_icon img:nth-child(3) {
+  left: 16%;
+  right: auto;
+}
+:where([dir='rtl']) .cs_hero_style_28 .cs_leaf_icon img:nth-child(4) {
+  left: 40%;
+  right: auto;
+}
+:where([dir='rtl']) .cs_hero_style_28 .cs_leaf_icon img:nth-child(5) {
+  left: 16%;
+  right: auto;
+}
+:where([dir='rtl']) .cs_hero_style_29 .cs_hero_icon {
+  right: -134px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_hero_style_29 .cs_delivery {
+  right: 30px;
+  left: auto;
+  padding: 20px 17px 15px 10px;
+}
+@media (max-width: 1399px) {
+  :where([dir='rtl']) .cs_hero_style_29 .cs_delivery {
+    right: 162px;
+    left: auto;
+  }
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_hero_style_29 .cs_hero_icon {
+    right: -37px;
+    left: auto;
+  }
+  :where([dir='rtl']) .cs_hero_style_29 .cs_delivery {
+    right: 30px;
+    left: auto;
+  }
+}
+:where([dir='rtl']) .cs_hero_banner {
+  padding: 50px 35px 50px 28px;
+}
+
+/*==============================================================
+10. Page Header Sections
+===============================================================*/
+:where([dir='rtl']) .cs_page_header_style_3::before {
+  right: 0;
+  left: auto;
+}
+
+/*==============================================================
+11. Cards
+================================================================*/
+:where([dir='rtl']) .cs_card_style_1 .cs_card_info,
+:where([dir='rtl']) .cs_card_style_4 .cs_card_info {
+  right: 26px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_card_style_2 {
+  padding: 28px 26px 28px 15px;
+}
+:where([dir='rtl']) .cs_card_style_3 {
+  padding-left: 25%;
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_card_style_3 .cs_card_text {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_card_style_3 .cs_card_shape {
+  left: 30px;
+  right: auto;
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_card_style_3 {
+    padding-left: 0;
+  }
+}
+:where([dir='rtl']) .cs_card_style_4 .cs_card_info {
+  right: 52px;
+  left: auto;
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_card_style_4 .cs_card_info {
+    right: 0;
+    left: auto;
+  }
+}
+:where([dir='rtl']) .cs_card_style_11 {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_card_style_11 .cs_shape1 {
+  left: 30px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_card_style_13 {
+  margin-right: calc(-50vw + 102%);
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_card_style_13.cs_type_1 {
+  margin-right: initial;
+  margin-left: 0;
+}
+
+/*==================================================
+16. Product Carts
+====================================================*/
+:where([dir='rtl']) .cs_cart_product_style_1 .cs_custom_checkbox,
+:where([dir='rtl']) .cs_cart_product_style_2 .cs_custom_checkbox {
+  right: 24px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_cart_product_style_1 .cs_custom_checkbox::before,
+:where([dir='rtl']) .cs_cart_product_style_2 .cs_custom_checkbox::before {
+  right: 5px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_cart_product_style_1 .cs_product_desc_list li:not(:last-child),
+:where([dir='rtl']) .cs_cart_product_style_2 .cs_product_desc_list li:not(:last-child) {
+  padding-left: 15px;
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_cart_product_style_1 .cs_product_desc_list li:not(:last-child)::after,
+:where([dir='rtl']) .cs_cart_product_style_2 .cs_product_desc_list li:not(:last-child)::after {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_cart_product_style_1 .cs_wishlist_btn,
+:where([dir='rtl']) .cs_cart_product_style_1 .cs_trash_btn,
+:where([dir='rtl']) .cs_cart_product_style_2 .cs_wishlist_btn,
+:where([dir='rtl']) .cs_cart_product_style_2 .cs_trash_btn {
+  left: 24px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_cart_product_style_1 .cs_shipping_summery,
+:where([dir='rtl']) .cs_cart_product_style_2 .cs_shipping_summery {
+  left: 24px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_cart_product_style_1 .cs_company_summery,
+:where([dir='rtl']) .cs_cart_product_style_2 .cs_company_summery {
+  left: 24px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_cart_product_style_2 .cs_action_btns_wrapper {
+  left: 24px;
+  right: auto;
+}
+
+/*=========================================================
+Product Cart Drawer
+===========================================================*/
+:where([dir='rtl']) .cs_fullscreen_cart {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_fullscreen_cart .cs_cart_overlay {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_fullscreen_cart .cs_cart_wrapper {
+  margin-right: auto;
+  margin-left: 0;
+  transform: translateX(-320px);
+}
+:where([dir='rtl']) .cs_fullscreen_cart .cs_cart_header {
+  padding: 20px 24px 20px 55px;
+}
+:where([dir='rtl']) .cs_fullscreen_cart .cs_cart_close_btn {
+  left: 20px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_fullscreen_cart .cart_item_remove {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/*=========================================================
+Product Cart Table
+===========================================================*/
+:where([dir='rtl']) .cs_cart_header .cs_custom_checkbox > label::after {
+  right: 6px;
+  left: auto;
+}
+
+/*======================================================
+12. CTA Banner
+========================================================*/
+:where([dir='rtl']) .cs_cta_style_1 {
+  padding: 110px 30px 115px 10%;
+}
+:where([dir='rtl']) .cs_cta_style_1 .cs_cta_content {
+  margin-right: auto;
+  margin-left: 0;
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_cta_style_1 {
+    padding: 45px 20px 50px 15px;
+  }
+}
+:where([dir='rtl']) .cs_cta_style_2 .cs_curcular_text {
+  right: 55%;
+  left: auto;
+  transform: translate(55%, -50%);
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_cta_style_2 .cs_curcular_text {
+    right: 60%;
+    left: auto;
+  }
+}
+:where([dir='rtl']) .cs_cta_style_6 .cs_cta_content {
+  padding: 60px 0 60px 15px;
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_cta_style_6 .cs_cta_content {
+    padding: 0px 20px 50px 15px;
+  }
+}
+:where([dir='rtl']) .cs_cta_style_7 .cs_cta_content {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_cta_style_8 {
+  padding: 108px 120px 108px 15px;
+}
+:where([dir='rtl']) .cs_cta_style_9 {
+  padding: 117px 120px 123px 15px;
+}
+:where([dir='rtl']) .cs_layer_img_box,
+:where([dir='rtl']) .cs_layer_img_box_style_2 {
+  padding-left: 26%;
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_layer_img_box .cs_layer_img_2,
+:where([dir='rtl']) .cs_layer_img_box_style_2 .cs_layer_img_2 {
+  left: 0;
+  right: auto;
+  padding-right: 30%;
+  padding-left: 0;
+}
+
+/*====================================================
+13. Category Section
+======================================================*/
+:where([dir='rtl']) .cs_category_item .cs_caterory_thumbnail::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_category_item:hover .cs_category_icon {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+:where([dir='rtl']) .cs_category_item_style_3 {
+  padding: 25px 30px 25px 20px;
+}
+
+/*=====================================================
+15. Discount Banner
+=======================================================*/
+:where([dir='rtl']) .cs_promo_banner_style_1 .cs_promo_img,
+:where([dir='rtl']) .cs_promo_banner_style_14 .cs_promo_img {
+  left: 0;
+  right: auto;
+  padding: 15px 53% 0 15px;
+}
+:where([dir='rtl']) .cs_promo_banner_style_2 {
+  padding: 42px 67px 50px 20px;
+}
+:where([dir='rtl']) .cs_promo_banner_style_3 {
+  padding: 42px 60px 50px 20px;
+}
+:where([dir='rtl']) .cs_promo_banner_style_6 .cs_promo_thumbnail {
+  right: 0;
+  left: auto;
+  padding: 30px 55% 30px 30px;
+}
+:where([dir='rtl']) .cs_promo_banner_style_11 .cs_arrow {
+  right: 23%;
+  left: auto;
+}
+:where([dir='rtl']) .cs_promo_banner_style_12 .cs_star1 {
+  right: 15%;
+  left: auto;
+}
+:where([dir='rtl']) .cs_promo_banner_style_12 .cs_star2 {
+  left: 10%;
+  right: auto;
+}
+:where([dir='rtl']) .cs_promo_banner_style_13 .cs_promo_img {
+  right: 0;
+  left: auto;
+  padding-left: 8px;
+  padding-right: 60%;
+}
+:where([dir='rtl']) .cs_promo_banner_style_14:last-child .cs_promo_img {
+  padding-left: 0;
+}
+
+/*==============================================
+Coupon Card With Discount Button
+================================================*/
+:where([dir='rtl']) .cs_coupon_card_style_1 .cs_bubble_1 {
+  right: -38px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_coupon_card_style_1 .cs_bubble_2 {
+  left: -39px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_tooltip {
+  left: 20px;
+  right: auto;
+}
+
+/*======================================================
+16. Account Dashboard
+========================================================*/
+:where([dir='rtl']) .cs_user_dashboard,
+:where([dir='rtl']) .cs_user_orders,
+:where([dir='rtl']) .cs_user_payments,
+:where([dir='rtl']) .cs_user_refund,
+:where([dir='rtl']) .cs_user_address,
+:where([dir='rtl']) .cs_user_chat {
+  padding-right: 20px;
+  padding-left: 0;
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_user_dashboard,
+  :where([dir='rtl']) .cs_user_orders,
+  :where([dir='rtl']) .cs_user_payments,
+  :where([dir='rtl']) .cs_user_refund,
+  :where([dir='rtl']) .cs_user_address,
+  :where([dir='rtl']) .cs_user_chat {
+    padding-right: 0;
+  }
+}
+:where([dir='rtl']) .cs_user_payments .cs_address_change_btns .address_delete_btn,
+:where([dir='rtl']) .cs_user_address .cs_address_change_btns .address_delete_btn {
+  padding-right: 11px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_user_payments .cs_address_change_btns .address_delete_btn::before,
+:where([dir='rtl']) .cs_user_address .cs_address_change_btns .address_delete_btn::before {
+  right: 0;
+  left: auto;
+}
+
+/*=================================================
+User Chatbox
+===================================================*/
+:where([dir='rtl']) .cs_user_chatbox_container .cs_user_list_container {
+  border-left: 1px solid var(--gray-color2);
+  border-right: none;
+}
+:where([dir='rtl']) .cs_user_chatbox_container .cs_avatar_style_1 {
+  padding: 17px 0 17px 50px;
+}
+:where([dir='rtl']) .cs_user_chatbox_container .cs_avatar_style_1 .cs_status {
+  left: -3px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_user_chatbox_container .cs_avatar_style_1 .cs_active_time,
+:where([dir='rtl']) .cs_user_chatbox_container .cs_avatar_style_1 .cs_active_chats {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_user_chatbox_container .cs_user_message_item.client {
+  text-align: left;
+}
+:where([dir='rtl']) .cs_user_chatbox_container .cs_message_composer input {
+  padding: 16px 20px 16px 140px;
+}
+:where([dir='rtl']) .cs_user_chatbox_container .cs_message_composer .cs_btn_style_1 {
+  left: 7px;
+  right: auto;
+}
+
+/*===================================================
+16. Iconbox
+=====================================================*/
+:where([dir='rtl']) .cs_iconbox_style_3 .cs_iconbox_badge {
+  left: -20px;
+  right: auto;
+}
+
+/*==========================================================
+Iconbox Container & Wrapper
+============================================================*/
+:where([dir='rtl']) .cs_iconbox_container.cs_type_2 .cs_iconbox_style_1 {
+  padding-right: 55px;
+  padding-left: 0;
+  border-right: 1px solid var(--gray-color2);
+  border-left: none;
+}
+:where([dir='rtl']) .cs_iconbox_container.cs_type_2 .cs_iconbox_style_1:first-child {
+  padding-right: 0;
+  border-right: 0;
+  border-left: none;
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_iconbox_container.cs_type_2 .cs_iconbox_style_1 {
+    padding-right: 0;
+    border-right: 0;
+    border-left: none;
+  }
+}
+
+/*==================================================
+Newsletter
+====================================================*/
+:where([dir='rtl']) .cs_newsletter_style_2 {
+  padding: 90px 96px 100px 20px;
+}
+
+/*==================================================
+17. Product Order & Shipping
+====================================================*/
+:where([dir='rtl']) .cs_order_summery_wrapper .cs_coupon_code_container {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_order_address .cs_btn_style_1 {
+  left: 24px;
+  right: auto;
+}
+@media (max-width: 767px) {
+  :where([dir='rtl']) .cs_order_address .cs_btn_style_1 {
+    left: initial;
+    right: auto;
+  }
+}
+
+/*=========================================================
+Payment Modal Info & Summery
+===========================================================*/
+:where([dir='rtl']) .cs_shipping_methods .cs_custom_checkbox::after {
+  right: 3px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_shipping_address .cs_change_btn,
+:where([dir='rtl']) .cs_shipping_methods .cs_change_btn {
+  left: 25px;
+  right: auto;
+  text-align: left;
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_shipping_address .cs_change_btn,
+  :where([dir='rtl']) .cs_shipping_methods .cs_change_btn {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+  }
+}
+:where([dir='rtl']) .cs_address_modal,
+:where([dir='rtl']) .cs_card_modal {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_address_modal .cs_address_modal_overlay,
+:where([dir='rtl']) .cs_card_modal .cs_address_modal_overlay {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_address_modal .cs_close_address_modal,
+:where([dir='rtl']) .cs_card_modal .cs_close_address_modal {
+  left: 20px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_address_modal .cs_close_address_modal:hover,
+:where([dir='rtl']) .cs_card_modal .cs_close_address_modal:hover {
+  transform: rotate(-45deg);
+}
+:where([dir='rtl']) .cs_card_modal .cs_year::before {
+  right: -18px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_card_modal .cs_year::after,
+:where([dir='rtl']) .cs_card_modal .cs_month::after {
+  left: 20px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_address_form .cs_custom_checkbox label {
+  padding-right: 26px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_address_form .cs_custom_checkbox label::after {
+  right: 3px;
+  left: auto;
+}
+
+/*===================================================
+17. Posts and Post Details
+=====================================================*/
+:where([dir='rtl']) .cs_post_style_1 .cs_post_meta:not(:first-child) {
+  padding-right: 16px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_post_style_1 .cs_post_meta:not(:first-child)::before {
+  right: 0;
+  left: auto;
+}
+
+/*===============================================================
+Sidebar
+=================================================================*/
+:where([dir='rtl']) .cs_sidebar.cs_style_1 .cs_sidebar_widget .cs_categories li a {
+  background-position: 0% calc(100% - 0px);
+}
+:where([dir='rtl']) .cs_sidebar.cs_style_1 .cs_sidebar_search_form .cs_search_icon {
+  left: 17px;
+  right: auto;
+}
+
+/*===============================================================
+Post Details Page Styling
+=================================================================*/
+:where([dir='rtl']) .cs_post_details .cs_post_meta:not(:first-child) {
+  padding-right: 16px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_post_details .cs_post_meta:not(:first-child)::before {
+  right: 0;
+  left: auto;
+}
+
+/*=============================================================
+18. Products Styling
+===============================================================*/
+:where([dir='rtl']) .cs_product_style_1 .cs_product_info {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_product_style_1 .cs_product_title a {
+  background-position: 0% calc(100% - 0px);
+}
+:where([dir='rtl']) .cs_product_style_2 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_3 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_4 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_5 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_6 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_7 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_8 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_9 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_10 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_11 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_12 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_13 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_14 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_15 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_16 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_17 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_18 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_19 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_20 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_21 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_22 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_23 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_24 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_25 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_26 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_27 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_28 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_29 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_30 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_31 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_32 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_33 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_34 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_35 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_36 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_37 .cs_discount_badge {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_product_style_2 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_3 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_4 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_5 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_6 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_7 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_8 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_9 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_10 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_11 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_12 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_13 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_14 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_15 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_16 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_17 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_18 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_19 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_20 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_21 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_22 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_23 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_24 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_25 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_26 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_27 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_28 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_29 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_30 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_31 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_32 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_33 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_34 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_35 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_36 .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_37 .cs_wishlist_btns {
+  left: 5px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_2 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_3 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_4 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_5 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_6 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_7 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_8 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_9 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_10 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_11 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_12 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_13 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_14 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_15 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_16 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_17 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_18 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_19 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_20 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_21 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_22 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_23 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_24 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_25 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_26 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_27 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_28 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_29 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_30 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_31 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_32 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_33 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_34 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_35 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_36 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_37 .cs_add_to_cart_btn {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_2 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_product_style_6 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_product_style_9 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_product_style_12 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_product_style_13 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_product_style_14 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_product_style_18 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_product_style_21 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_product_style_23 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_product_style_24 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_product_style_30 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_product_style_31 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_product_style_32 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_product_style_36 .cs_action_btns_wrapper {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_product_style_2:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_6:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_9:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_12:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_13:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_14:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_18:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_21:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_23:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_24:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_30:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_31:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_32:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_36:hover .cs_wishlist_btns {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_4 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_17 .cs_discount_badge {
+  left: 0;
+  right: initial;
+}
+:where([dir='rtl']) .cs_product_style_7 {
+  padding: 49px 49px 23px 45px;
+}
+:where([dir='rtl']) .cs_product_style_7 .cs_product_info {
+  padding-right: 48px;
+  padding-left: 0;
+}
+@media (max-width: 1199px) {
+  :where([dir='rtl']) .cs_product_style_7 .cs_product_info {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  :where([dir='rtl']) .cs_product_style_7 .cs_product_info {
+    padding-right: 0;
+  }
+}
+:where([dir='rtl']) .cs_product_style_9 .cs_wishlist_btns {
+  left: 5px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_9:hover .cs_wishlist_btns {
+  left: 15px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_13 .cs_add_to_cart_btn::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_product_style_2 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_9 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_14 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_18 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_21 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_22 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_23 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_25 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_27 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_28 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_30 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_31 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_32 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_34 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_35 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_36 .cs_tooltip,
+:where([dir='rtl']) .cs_product_style_37 .cs_tooltip {
+  left: calc(100% + 9px);
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_2 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_9 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_14 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_18 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_21 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_22 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_23 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_25 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_27 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_28 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_30 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_31 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_32 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_34 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_35 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_36 .cs_tooltip::after,
+:where([dir='rtl']) .cs_product_style_37 .cs_tooltip::after {
+  right: calc(100% - 4px);
+  left: auto;
+  transform: translateY(-50%) rotate(-45deg);
+}
+:where([dir='rtl']) .cs_product_style_21:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_23:hover .cs_wishlist_btns {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_22 .cs_wishlist_btns {
+  left: 10px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_22:hover .cs_wishlist_btns {
+  left: 20px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_22 .cs_action_btns_wrapper {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_product_style_23:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_31:hover .cs_wishlist_btns {
+  left: 10px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_25:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_34:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_35:hover .cs_wishlist_btns {
+  left: 15px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_27:hover .cs_wishlist_btns,
+:where([dir='rtl']) .cs_product_style_33:hover .cs_wishlist_btns {
+  left: 24px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_28:hover .cs_wishlist_btns {
+  left: 15px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_29 .cs_cta_btns {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_product_style_29 .cs_cta_btns .cs_view_btn {
+  border-right: 1px solid var(--gray-color9);
+  border-left: none;
+}
+:where([dir='rtl']) .cs_product_style_29:hover .cs_wishlist_btns {
+  left: 15px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_30 .cs_discount_badge {
+  right: 0;
+  left: auto;
+  border-radius: 5px 0 0 5px;
+}
+:where([dir='rtl']) .cs_product_style_30:hover .cs_wishlist_btns {
+  left: 20px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_31 .cs_discount_badge,
+:where([dir='rtl']) .cs_product_style_32 .cs_discount_badge {
+  right: 10px;
+  left: auto;
+  border-radius: 0 10px 0 0;
+}
+:where([dir='rtl']) .cs_product_style_31 .cs_add_to_cart_btn,
+:where([dir='rtl']) .cs_product_style_32 .cs_add_to_cart_btn {
+  left: 13px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_32 .cs_review_wrapper {
+  left: 13px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_35:hover .cs_wishlist_btns {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_37 .cs_wishlist_btns {
+  left: 10px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_product_style_37:hover .cs_wishlist_btns {
+  left: 0;
+  right: auto;
+}
+
+/*==========================================================
+Products Layouts & Grid
+============================================================*/
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_2 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_6 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_9 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_12 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_13 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_14 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_18 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_21 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_22 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_23 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_24 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_25 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_26 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_27 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_28 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_29 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_30 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_31 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_33 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_34 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_35 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_36 .cs_action_btns_wrapper,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_37 .cs_action_btns_wrapper {
+  margin-right: auto;
+  margin-left: 0;
+}
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_18 .cs_product_info,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_18 .cs_product_thumbnail,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_24 .cs_product_info,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_24 .cs_product_thumbnail,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_31 .cs_product_info,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_31 .cs_product_thumbnail,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_36 .cs_product_info,
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_36 .cs_product_thumbnail {
+  text-align: right !important;
+}
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_26 .cs_product_info {
+  text-align: right !important;
+}
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_26 .cs_action_btns_wrapper {
+  left: 24px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_27 {
+  padding-left: 24px;
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_27 .cs_product_info .cs_product_title {
+  text-align: right !important;
+}
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_28 .cs_product_info {
+  text-align: right !important;
+}
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_30 .cs_discount_badge {
+  right: -20px;
+  left: auto;
+}
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_30 .cs_wishlist_btns {
+  left: -5px;
+  right: auto;
+}
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_30:hover .cs_wishlist_btns {
+  left: 0;
+  right: auto;
+}
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_33 {
+  padding-left: 24px;
+  padding-right: 0;
+}
+:where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_33 .cs_product_title {
+  text-align: right !important;
+}
+@media (max-width: 767px) {
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_2 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_6 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_9 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_12 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_13 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_14 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_18 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_21 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_22 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_23 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_24 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_26 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_27 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_28 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_29 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_31 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_33 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_34 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_35 .cs_action_btns_wrapper,
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_37 .cs_action_btns_wrapper {
+    margin-right: 0;
+  }
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_27 {
+    padding-left: 0;
+  }
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_27 .cs_action_btns_wrapper {
+    margin-right: 0;
+  }
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_33 {
+    padding-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_30 .cs_discount_badge {
+    right: 0;
+    left: auto;
+  }
+  :where([dir='rtl']) .cs_products_list_style_1 .cs_product_style_30:hover .cs_wishlist_btns {
+    left: 15px;
+    right: auto;
+  }
+}
+
+/*=============================================
+Form and input Components Contact Section
+===============================================*/
+:where([dir='rtl']) .cs_custom_checkbox input {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_custom_checkbox > label {
+  padding-right: 32px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_custom_checkbox > label::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_custom_checkbox > label::after {
+  right: 4px;
+  left: auto;
+}
+
+/*=================================================
+Products View
+===================================================*/
+:where([dir='rtl']) .cs_products {
+  padding-right: 20px;
+  padding-left: 0;
+  border-right: 1px solid var(--gray-color2);
+  border-left: none;
+}
+@media (max-width: 991px) {
+  :where([dir='rtl']) .cs_products {
+    border-right: 0;
+    border-left: none;
+  }
+}
+
+/*=========================================================
+Tom Select For Select Element
+===========================================================*/
+:where([dir='rtl']) .tom_select::after {
+  left: 15px;
+  right: auto;
+}
+
+/*=========================================================
+Product Filter Float
+===========================================================*/
+:where([dir='rtl']) .cs_fullscreen_filter {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_fullscreen_filter .cs_product_filter_style_1 {
+  transform: translateX(300px);
+}
+:where([dir='rtl']) .cs_fullscreen_filter .cs_filter_heading {
+  padding: 20px 30px 20px 70px;
+}
+:where([dir='rtl']) .cs_fullscreen_filter .cs_filter_close_btn {
+  left: 30px;
+  right: auto;
+}
+
+/*===========================================================
+Pagination Box
+=============================================================*/
+:where([dir='rtl']) .cs_pagination_box .cs_pagination_arrow_left {
+  margin-left: 15px;
+  margin-right: 0;
+}
+:where([dir='rtl']) .cs_pagination_box .cs_pagination_arrow_right {
+  margin-right: 15px;
+  margin-left: 0;
+}
+
+/*=======================================================
+11. Single Product
+=========================================================*/
+:where([dir='rtl']) .cs_product_details .cs_product_color_list li {
+  padding-right: 25px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_product_details .cs_product_color_list .cs_color_indicator {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_product_shipping_info .cs_action_btns_wrapper .cs_wishlist_btn::before {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_product_meta_info .cs_tab_links a::after {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_product_meta_info .cs_product_features_list {
+  padding-right: 20px;
+  padding-left: 0;
+}
+:where([dir='rtl']) .cs_product_meta_info .cs_size_table th,
+:where([dir='rtl']) .cs_product_meta_info .cs_size_table td {
+  text-align: right;
+}
+
+/*=========================================================
+Review Modal
+==========================================================*/
+:where([dir='rtl']) .cs_fullscreen_review_modal {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_fullscreen_review_modal .cs_review_overlay {
+  right: 0;
+  left: auto;
+}
+:where([dir='rtl']) .cs_fullscreen_review_modal .cs_review_close_btn {
+  left: 20px;
+  right: auto;
+}
+
+/*====================================================
+Tab Content Styling
+======================================================*/
+:where([dir='rtl']) .cs_tabs .cs_articles_wrapper {
+  padding-right: 20px;
+  padding-left: 0;
+}

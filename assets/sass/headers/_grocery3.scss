@@ -1,0 +1,6 @@
+/*---------------------------------------------------------
+  grocery3 header
+  Figma: GROSERY3 > hero > top — identical to the grocery2 header,
+  so it reuses the mixin defined in _grocery2.scss.
+-----------------------------------------------------------*/
+@include cs-grocery-topbar-header(".cs_header_grocery3");

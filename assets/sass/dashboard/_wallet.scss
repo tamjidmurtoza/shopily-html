@@ -1,0 +1,291 @@
+/*==============================================================
+  05. wallet pages
+================================================================*/
+
+/* ---------- Overview cards ---------- */
+.cs_dash_wallet_stats .cs_dash_stat_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 90px 30px 31px;
+}
+
+.cs_dash_wallet_stat_icon {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 40px;
+  height: 38px;
+  object-fit: contain;
+  transform: translateY(-50%);
+}
+
+/* ---------- Layout row ---------- */
+.cs_dash_row.cs_dash_wallet_row {
+  grid-template-columns: minmax(0, 1fr) 356px;
+  align-items: start;
+  margin-bottom: 0;
+
+  &.cs_dash_wallet_full {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- History table card ---------- */
+.cs_dash_wallet_history {
+  .cs_dash_card_header {
+    margin-bottom: 46px;
+  }
+
+  .cs_dash_table th {
+    padding-bottom: 25px;
+  }
+}
+
+.cs_dash_wallet_search {
+  width: 380px;
+  margin: 0;
+}
+
+.cs_dash_wallet_export img {
+  width: 18px;
+  height: 18px;
+}
+
+.cs_dash_wallet_table {
+  min-width: 1000px;
+
+  td:nth-child(1),
+  th:nth-child(1) {
+    width: 75px;
+  }
+
+  td {
+    white-space: nowrap;
+  }
+
+  th:nth-child(2) {
+    width: 270px;
+  }
+
+  th:nth-child(3) {
+    width: 130px;
+  }
+
+  th:nth-child(4) {
+    width: 210px;
+  }
+
+  .cs_dash_badge {
+    min-width: 106px;
+  }
+
+  .cs_dash_table_actions {
+    display: flex;
+    vertical-align: middle;
+  }
+}
+
+/* ---------- Withdraw CTA ---------- */
+.cs_dash_withdraw_cta_card {
+  padding: 20px;
+}
+
+.cs_dash_withdraw_cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+  width: 100%;
+  min-height: 340px;
+  padding: 30px 25px;
+  border: 1px solid var(--dash-border);
+  border-radius: var(--dash-radius);
+  background: transparent;
+  transition: border-color 0.3s ease;
+
+  span {
+    max-width: 265px;
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--dash-heading);
+  }
+
+  img {
+    width: 85px;
+    height: 77px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    border-color: var(--dash-green);
+
+    img {
+      transform: translateY(4px);
+    }
+  }
+}
+
+/* ---------- Modals ---------- */
+.cs_dash_wallet_modal_title {
+  margin: 0 0 30px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--dash-heading);
+}
+
+.cs_dash_withdraw_modal {
+  max-width: 800px;
+  padding: 50px 30px;
+
+  .cs_dash_wallet_modal_title {
+    margin-bottom: 40px;
+  }
+}
+
+.cs_dash_withdraw_form {
+  max-width: 500px;
+  margin: 0 auto;
+
+  .cs_dash_form_group {
+    margin-bottom: 30px;
+  }
+
+  .cs_dash_input,
+  .cs_dash_select {
+    height: 45px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  .cs_dash_textarea {
+    height: 200px;
+    min-height: 120px;
+  }
+}
+
+.cs_dash_wallet_label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 16.6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--dash-text);
+}
+
+.cs_dash_withdraw_submit {
+  width: 271px;
+  max-width: 100%;
+}
+
+.cs_dash_request_modal {
+  max-width: 800px;
+  padding: 40px 30px 50px;
+
+  .cs_dash_wallet_modal_title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.cs_dash_wallet_message {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  border: 1px solid var(--dash-border);
+  border-radius: var(--dash-radius);
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dash-text);
+  }
+
+  .cs_dash_request_status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    color: var(--dash-heading);
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1399px) {
+  .cs_dash_row.cs_dash_wallet_row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cs_dash_withdraw_cta {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_dash_wallet_search {
+    width: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_dash_wallet_stats .cs_dash_stat_card {
+    min-height: 130px;
+  }
+
+  .cs_dash_wallet_history .cs_dash_card_header {
+    margin-bottom: 30px;
+  }
+
+  .cs_dash_wallet_history .cs_dash_card_actions > .cs_dash_btn {
+    flex: 1 1 auto;
+  }
+
+  .cs_dash_withdraw_cta {
+    gap: 25px;
+
+    span {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    img {
+      width: 64px;
+      height: 58px;
+    }
+  }
+
+  .cs_dash_withdraw_modal,
+  .cs_dash_request_modal {
+    padding: 45px 15px 30px;
+  }
+
+  .cs_dash_wallet_modal_title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .cs_dash_withdraw_modal .cs_dash_wallet_modal_title {
+    margin-bottom: 30px;
+  }
+
+  .cs_dash_withdraw_form .cs_dash_form_group {
+    margin-bottom: 20px;
+  }
+
+  .cs_dash_withdraw_submit {
+    width: 100%;
+  }
+
+  .cs_dash_wallet_message {
+    padding: 15px;
+  }
+}

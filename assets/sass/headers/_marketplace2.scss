@@ -1,0 +1,6 @@
+/*---------------------------------------------------------
+  marketplace2 header
+  Figma: MARKETPLACE2 > hero > header — identical to the marketplace1 header,
+  so it reuses the mixin defined in _marketplace1.scss.
+-----------------------------------------------------------*/
+@include cs-marketplace-header(".cs_header_marketplace2");

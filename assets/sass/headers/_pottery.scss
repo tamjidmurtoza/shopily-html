@@ -1,0 +1,221 @@
+/*---------------------------------------------------------
+  pottery header
+  Figma: POTTERY > hero > top bar (3535:486) / navbar (3535:465)
+  Inner pages (PRODUCT DETAILS 3593:536 / PRODUCT GRID 3609:2026): navbar on a #f5f1e6 band
+  Index (.cs_header_transparent): navbar floats over the (#f5f1e6) hero slider.
+  The beige band / hero stay light in dark mode, so the navbar keeps its light palette;
+  dropdown panels follow the theme.
+-----------------------------------------------------------*/
+.cs_header_pottery {
+  .cs_top_header {
+    color: #fff;
+    background-color: #191919;
+  }
+
+  .cs_main_header {
+    color: #191919;
+    background-color: #f5f1e6;
+  }
+
+  &.cs_header_transparent .cs_main_header {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .cs_main_header_in {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 29px 0;
+  }
+
+  .cs_nav {
+    flex: 1 1 0;
+    min-width: 0;
+
+    .cs_nav_list {
+      column-gap: 39px;
+
+      >li>a {
+        color: #191919;
+
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    .cs_menu_toggle {
+      color: #191919;
+    }
+  }
+
+  .cs_site_branding {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #191919;
+  }
+
+  .cs_header_actions {
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: flex-end;
+    gap: 29px;
+  }
+
+  /* Search */
+  .cs_header_search {
+    flex: 0 1 430px;
+    min-width: 0;
+    margin-right: 0;
+    border-radius: 50px;
+    background-color: #fff;
+
+    .cs_header_search_input {
+      padding: 12px 60px 12px 16px;
+      color: #191919;
+    }
+
+    .cs_header_search_btn {
+      border-radius: 0 50px 50px 0;
+      justify-content: flex-end;
+      padding-right: 19px;
+    }
+  }
+
+  .cs_header_account_btn {
+    height: 30px;
+    color: #191919;
+  }
+
+  .cs_header_cart {
+    margin-left: 1px;
+
+    .cs_header_cart_count {
+      color: #fff;
+      background-color: #191919;
+    }
+  }
+
+  .cs_account_dropdown {
+    right: -60px;
+  }
+}
+
+/* Keep the navbar arrows dark on the always-light beige band */
+.cs_dark .cs_header_pottery .cs_nav .cs_nav_list .menu-item-has-children>a::after {
+  filter: none;
+}
+
+@media (max-width: 1399px) {
+  .cs_header_pottery {
+    .cs_nav .cs_nav_list {
+      column-gap: 24px;
+    }
+
+    .cs_header_search {
+      flex-basis: 300px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_header_pottery {
+    .cs_nav {
+      flex: 0 0 auto;
+
+      .cs_nav_list_wrap {
+        color: var(--primary-color);
+      }
+
+      .cs_nav_list>li>a {
+        color: var(--primary-color);
+      }
+    }
+
+    .cs_site_branding {
+      position: static;
+      transform: none;
+      margin-left: 20px;
+      margin-right: auto;
+    }
+
+    .cs_header_actions {
+      flex: 1 1 auto;
+    }
+  }
+
+  .cs_dark .cs_header_pottery .cs_nav .cs_nav_list .menu-item-has-children>a::after {
+    filter: brightness(0) invert(1);
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_header_pottery {
+    /* No room to float over the hero on small screens */
+    &.cs_header_transparent .cs_main_header {
+      position: static;
+      background-color: #f5f1e6;
+    }
+
+    .cs_top_header_text {
+      display: none;
+    }
+
+    .cs_top_header .cs_top_header_in {
+      justify-content: center;
+      padding: 8px 0;
+    }
+
+    .cs_main_header_in {
+      flex-wrap: wrap;
+      padding: 20px 0;
+      row-gap: 20px;
+    }
+
+    .cs_header_actions {
+      display: contents;
+    }
+
+    .cs_header_search {
+      order: 5;
+      flex: 0 0 100%;
+    }
+
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_header_pottery {
+    .cs_top_header_list>li:not(:last-child) {
+      padding-right: 12px;
+      margin-right: 12px;
+    }
+
+    .cs_top_header_list>li:first-child {
+      display: none;
+    }
+
+    .cs_site_branding {
+      font-size: 26px;
+    }
+
+    .cs_main_header_in {
+      column-gap: 20px;
+    }
+
+    .cs_account_dropdown {
+      right: -50px;
+    }
+  }
+}

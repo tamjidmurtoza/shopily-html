@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shopily - Multivendor eCommerce Website HTML Template">
+    <meta name="author" content="Laralink">
+    <!-- Site Title -->
+    <title>Shopily - Product Review</title>
+    <link rel="icon" href="../assets/img/favicon.webp">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+
+  <body class="cs_dashboard_body">
+    <!-- Start Sidebar -->
+    <aside class="cs_dash_sidebar" id="dashSidebar">
+      <div class="cs_dash_sidebar_header">
+        <a href="index.html" class="cs_dash_logo" aria-label="Shopily admin dashboard">
+          <span class="cs_dash_logo_icon">
+            <img src="../assets/img/dashboard/logo-circle-admin.svg" alt="" class="cs_dash_logo_circle">
+            <img src="../assets/img/dashboard/logo-bag.png" alt="" class="cs_dash_logo_bag">
+          </span>
+          <span>Shopily</span>
+        </a>
+        <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="cs_dash_nav" aria-label="Admin navigation">
+        <ul>
+          <li>
+            <a href="index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-home.svg" alt="" class="cs_dash_nav_icon">
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-box-open.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="add-product.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New Product</a></li>
+              <li><a href="products.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Product</a></li>
+              <li><a href="categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Category</a></li>
+              <li><a href="attributes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Attribute</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pos.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-pos.svg" alt="" class="cs_dash_nav_icon">
+              <span>POS Manager</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-cart.svg" alt="" class="cs_dash_nav_icon">
+              <span>Orders</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="orders.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="customers.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-users.svg" alt="" class="cs_dash_nav_icon">
+              <span>Customers</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-shop.svg" alt="" class="cs_dash_nav_icon">
+              <span>Sellers</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="sellers.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller List</a></li>
+              <li><a href="seller-commission.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller Commission</a></li>
+              <li><a href="commission-history.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Commission History</a></li>
+              <li><a href="seller-payout.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Seller Payout</a></li>
+              <li><a href="payout-request.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Payout Request</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="support-tickets.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-headset.svg" alt="" class="cs_dash_nav_icon">
+              <span>Support</span>
+            </a>
+          </li>
+          <li>
+            <a href="chat.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-messages.svg" alt="" class="cs_dash_nav_icon">
+              <span>Message</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-refund.svg" alt="" class="cs_dash_nav_icon">
+              <span>Refund</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="refund-request.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Refund Request</a></li>
+              <li><a href="refund-approval.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Refund Approval</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="reviews.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-review.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product Review</span>
+            </a>
+          </li>
+          <li>
+            <a href="wallet.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Wallet</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-palette.svg" alt="" class="cs_dash_nav_icon">
+              <span>Appearance</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="themes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Themes</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pages.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-file.svg" alt="" class="cs_dash_nav_icon">
+              <span>Pages</span>
+            </a>
+          </li>
+          <li>
+            <a href="testimonials.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-star.svg" alt="" class="cs_dash_nav_icon">
+              <span>Testimonial</span>
+            </a>
+          </li>
+          <li>
+            <a href="subscribers.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-subscription.svg" alt="" class="cs_dash_nav_icon">
+              <span>Subscriber</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-blog.svg" alt="" class="cs_dash_nav_icon">
+              <span>Blog post</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="blog.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Blogs</a></li>
+              <li><a href="add-blog.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New</a></li>
+              <li><a href="blog-categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Categories</a></li>
+            </ul>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-id-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Staffs</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="staffs.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Staff List</a></li>
+              <li><a href="roles.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Role &amp; Permission</a></li>
+            </ul>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-settings.svg" alt="" class="cs_dash_nav_icon">
+              <span>Settings</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="email-settings.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Email Setting</a></li>
+              <li><a href="payment-methods.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Payment Method</a></li>
+              <li><a href="profile.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Profile</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-sign-out.svg" alt="" class="cs_dash_nav_icon">
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="cs_dash_overlay"></div>
+    <!-- End Sidebar -->
+
+    <main class="cs_dash_main">
+      <!-- Start Top Bar -->
+      <header class="cs_dash_topbar">
+        <div class="cs_dash_topbar_left">
+          <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <h1 class="cs_dash_page_title">Product Review</h1>
+        </div>
+        <div class="cs_dash_topbar_right">
+          <div class="cs_dash_topbar_icons">
+            <button type="button" class="cs_dash_lang" aria-label="Change language">
+              <img src="../assets/img/dashboard/icon-lang.svg" alt="">
+            </button>
+            <button type="button" class="cs_dash_mode_toggle" aria-label="Toggle dark mode">
+              <img src="../assets/img/dashboard/icon-dark.svg" alt="">
+            </button>
+            <a href="chat.html" class="cs_dash_notification" aria-label="Notifications, 11 unread">
+              <img src="../assets/img/dashboard/icon-bell.svg" alt="">
+              <span class="cs_dash_notification_count">11</span>
+            </a>
+          </div>
+          <div class="cs_dash_profile">
+            <button type="button" class="cs_dash_profile_btn" aria-expanded="false" aria-haspopup="true">
+              <img src="../assets/img/dashboard/avatar.png" alt="Andrew Karla">
+              <span class="cs_dash_profile_info">
+                <span>
+                  <span class="cs_dash_profile_name">Andrew Karla</span>
+                  <span class="cs_dash_profile_role">Super Admin</span>
+                </span>
+                <img src="../assets/img/dashboard/icon-caret-down.svg" alt="">
+              </span>
+            </button>
+            <ul class="cs_dash_profile_dropdown">
+              <li><a href="profile.html">Edit Profile</a></li>
+              <li><a href="../index.html">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- End Top Bar -->
+
+      <!-- Start Review List -->
+      <section class="cs_dash_card cs_dash_list_card" aria-labelledby="reviews">
+        <div class="cs_dash_card_header">
+          <h2 class="cs_dash_card_title cs_normal" id="reviews">Review List</h2>
+          <div class="cs_dash_card_actions">
+            <label class="visually-hidden" for="reviewsFilter">Filter By Approval</label>
+            <select class="cs_dash_select" id="reviewsFilter" data-table-filter="#reviewsTable">
+              <option value="">Filter By Approval</option>
+              <option value="approved">Approved</option>
+              <option value="non approved">Non Approved</option>
+            </select>
+            <label class="cs_dash_search" for="reviewsSearch">
+              <img src="../assets/img/dashboard/icon-search.svg" alt="" class="cs_dash_icon_dark">
+              <input type="search" id="reviewsSearch" placeholder="Search with product name" data-table-search="#reviewsTable">
+            </label>
+          </div>
+        </div>
+        <div class="cs_dash_table_wrap">
+          <table class="cs_dash_table cs_dash_review_table" id="reviewsTable">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Customer Name</th>
+                <th>Date</th>
+                <th>Rating</th>
+                <th>Approval</th>
+                <th class="text-end">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-status="approved">
+                <td>01</td>
+                <td><img src="../assets/img/dashboard/products/coffee-maker.png" alt="" class="cs_dash_table_img"></td>
+                <td>Coffee Maker with Black and Stainless...</td>
+                <td>Comfee Store</td>
+                <td>11 Jan 2023</td>
+                <td><span class="cs_dash_stars" role="img" aria-label="5 out of 5 stars"><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""></span></td>
+                <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" data-approval checked aria-label="Approve review 01"><span></span></label></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <button type="button" data-modal-open="#reviewModal" aria-label="Read review 01"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></button>
+                    <button type="button" data-row-delete aria-label="Delete review 01"><img src="../assets/img/dashboard/icon-delete.svg" alt="" class="cs_dash_delete_icon"></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="approved">
+                <td>02</td>
+                <td><img src="../assets/img/dashboard/products/rice-cooker.webp" alt="" class="cs_dash_table_img"></td>
+                <td>Brand new comfee Rice Cooker 10 cup...</td>
+                <td>Comfee Store</td>
+                <td>11 Jan 2023</td>
+                <td><span class="cs_dash_stars" role="img" aria-label="5 out of 5 stars"><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""></span></td>
+                <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" data-approval checked aria-label="Approve review 02"><span></span></label></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <button type="button" data-modal-open="#reviewModal" aria-label="Read review 02"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></button>
+                    <button type="button" data-row-delete aria-label="Delete review 02"><img src="../assets/img/dashboard/icon-delete.svg" alt="" class="cs_dash_delete_icon"></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="approved">
+                <td>03</td>
+                <td><img src="../assets/img/dashboard/products/ipad.webp" alt="" class="cs_dash_table_img"></td>
+                <td>Apple iPad Air (5th Generation) with M1...</td>
+                <td>Comfee Store</td>
+                <td>11 Jan 2023</td>
+                <td><span class="cs_dash_stars" role="img" aria-label="5 out of 5 stars"><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""></span></td>
+                <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" data-approval checked aria-label="Approve review 03"><span></span></label></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <button type="button" data-modal-open="#reviewModal" aria-label="Read review 03"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></button>
+                    <button type="button" data-row-delete aria-label="Delete review 03"><img src="../assets/img/dashboard/icon-delete.svg" alt="" class="cs_dash_delete_icon"></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="non approved">
+                <td>04</td>
+                <td><img src="../assets/img/dashboard/orders/gaming-mouse.webp" alt="" class="cs_dash_table_img"></td>
+                <td>Razer Basilisk Ultimate Wireless Gaming...</td>
+                <td>Comfee Store</td>
+                <td>11 Jan 2023</td>
+                <td><span class="cs_dash_stars" role="img" aria-label="4 out of 5 stars"><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt="" class="cs_off"></span></td>
+                <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" data-approval aria-label="Approve review 04"><span></span></label></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <button type="button" data-modal-open="#reviewModal" aria-label="Read review 04"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></button>
+                    <button type="button" data-row-delete aria-label="Delete review 04"><img src="../assets/img/dashboard/icon-delete.svg" alt="" class="cs_dash_delete_icon"></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="approved">
+                <td>05</td>
+                <td><img src="../assets/img/furniture/product-img-1.webp" alt="" class="cs_dash_table_img"></td>
+                <td>Bolbiro Andrey Coffee Tables, 18.9(D) x 31...</td>
+                <td>Furnisht Store</td>
+                <td>11 Jan 2023</td>
+                <td><span class="cs_dash_stars" role="img" aria-label="5 out of 5 stars"><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""></span></td>
+                <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" data-approval checked aria-label="Approve review 05"><span></span></label></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <button type="button" data-modal-open="#reviewModal" aria-label="Read review 05"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></button>
+                    <button type="button" data-row-delete aria-label="Delete review 05"><img src="../assets/img/dashboard/icon-delete.svg" alt="" class="cs_dash_delete_icon"></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="approved">
+                <td>06</td>
+                <td><img src="../assets/img/furniture/product-img-3.webp" alt="" class="cs_dash_table_img"></td>
+                <td>Metal Craft  Custom Glider and Ottoman...</td>
+                <td>Furnisht Store</td>
+                <td>11 Jan 2023</td>
+                <td><span class="cs_dash_stars" role="img" aria-label="5 out of 5 stars"><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""></span></td>
+                <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" data-approval checked aria-label="Approve review 06"><span></span></label></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <button type="button" data-modal-open="#reviewModal" aria-label="Read review 06"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></button>
+                    <button type="button" data-row-delete aria-label="Delete review 06"><img src="../assets/img/dashboard/icon-delete.svg" alt="" class="cs_dash_delete_icon"></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="approved">
+                <td>07</td>
+                <td><img src="../assets/img/furniture/product-img-2.webp" alt="" class="cs_dash_table_img"></td>
+                <td>Living Room 34.25in Table with Storage...</td>
+                <td>Furnisht Store</td>
+                <td>11 Jan 2023</td>
+                <td><span class="cs_dash_stars" role="img" aria-label="4 out of 5 stars"><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt="" class="cs_off"></span></td>
+                <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" data-approval checked aria-label="Approve review 07"><span></span></label></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <button type="button" data-modal-open="#reviewModal" aria-label="Read review 07"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></button>
+                    <button type="button" data-row-delete aria-label="Delete review 07"><img src="../assets/img/dashboard/icon-delete.svg" alt="" class="cs_dash_delete_icon"></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="approved">
+                <td>08</td>
+                <td><img src="../assets/img/fashion/product-img-1.webp" alt="" class="cs_dash_table_img"></td>
+                <td>Flirty Floral Bliss Women Suite, Perfect for...</td>
+                <td>Fashion Store</td>
+                <td>11 Jan 2023</td>
+                <td><span class="cs_dash_stars" role="img" aria-label="5 out of 5 stars"><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""></span></td>
+                <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" data-approval checked aria-label="Approve review 08"><span></span></label></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <button type="button" data-modal-open="#reviewModal" aria-label="Read review 08"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></button>
+                    <button type="button" data-row-delete aria-label="Delete review 08"><img src="../assets/img/dashboard/icon-delete.svg" alt="" class="cs_dash_delete_icon"></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="approved">
+                <td>09</td>
+                <td><img src="../assets/img/grocery1/product-img-12.webp" alt="" class="cs_dash_table_img"></td>
+                <td>California Apples</td>
+                <td>Organic Store</td>
+                <td>11 Jan 2023</td>
+                <td><span class="cs_dash_stars" role="img" aria-label="5 out of 5 stars"><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""></span></td>
+                <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" data-approval checked aria-label="Approve review 09"><span></span></label></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <button type="button" data-modal-open="#reviewModal" aria-label="Read review 09"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></button>
+                    <button type="button" data-row-delete aria-label="Delete review 09"><img src="../assets/img/dashboard/icon-delete.svg" alt="" class="cs_dash_delete_icon"></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="approved">
+                <td>10</td>
+                <td><img src="../assets/img/grocery1/product-img-12.webp" alt="" class="cs_dash_table_img"></td>
+                <td>California Apples</td>
+                <td>Organic Store</td>
+                <td>11 Jan 2023</td>
+                <td><span class="cs_dash_stars" role="img" aria-label="5 out of 5 stars"><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""></span></td>
+                <td><label class="cs_dash_switch cs_dash_switch_sm"><input type="checkbox" data-approval checked aria-label="Approve review 10"><span></span></label></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <button type="button" data-modal-open="#reviewModal" aria-label="Read review 10"><img src="../assets/img/dashboard/icon-eye.svg" alt="" class="cs_dash_icon_dark"></button>
+                    <button type="button" data-row-delete aria-label="Delete review 10"><img src="../assets/img/dashboard/icon-delete.svg" alt="" class="cs_dash_delete_icon"></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="cs_dash_table_footer">
+          <p class="m-0">Showing <strong>1-15</strong> from <strong>200</strong> Data</p>
+          <nav class="cs_dash_pagination" aria-label="Pagination">
+            <a href="#" aria-label="Previous page"><img src="../assets/img/dashboard/icon-caret-left.svg" alt="" class="cs_dash_icon_dark"></a>
+            <ul>
+              <li><a href="#" class="active" aria-current="page">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+            </ul>
+            <a href="#" aria-label="Next page"><img src="../assets/img/dashboard/icon-caret-right.svg" alt="" class="cs_dash_icon_dark"></a>
+          </nav>
+        </div>
+      </section>
+      <!-- End Review List -->
+
+      <!-- Start Review Popup -->
+      <div class="cs_dash_modal cs_dash_review_modal" id="reviewModal" role="dialog" aria-modal="true" aria-labelledby="reviewModalTitle">
+        <div class="cs_dash_modal_box">
+          <button type="button" class="cs_dash_modal_close" data-modal-close aria-label="Close"><img src="../assets/img/dashboard/support/icon-close.svg" alt=""></button>
+          <h2 id="reviewModalTitle">Customer Review</h2>
+          <div class="cs_dash_review_box">
+            <p>I recently purchased the Comfee rice cooker, and it has truly revolutionized my cooking experience. As an avid home chef, I am always on the lookout for appliances that simplify my kitchen tasks, and this rice cooker exceeded my expectations.</p>
+            <span class="cs_dash_stars" role="img" aria-label="5 out of 5 stars"><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""><img src="../assets/img/dashboard/support/star-1.svg" alt=""></span>
+          </div>
+        </div>
+      </div>
+      <!-- End Review Popup -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/dashboard-support.js"></script>
+  </body>
+</html>

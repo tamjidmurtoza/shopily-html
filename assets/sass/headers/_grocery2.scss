@@ -1,0 +1,218 @@
+/*---------------------------------------------------------
+  grocery2 header
+  Figma: GROSERY2 > hero > top (80px green bar above the fixed left sidebar)
+  The same design is used by grocery3 (see _grocery3.scss), hence the mixin.
+-----------------------------------------------------------*/
+@mixin cs-grocery-topbar-header($header) {
+  #{$header} {
+    color: #191919;
+    background-color: #4bdc66;
+
+    .cs_main_header_in {
+      display: flex;
+      align-items: center;
+      min-height: 80px;
+      padding: 15px 20px;
+    }
+
+    .cs_site_branding {
+      gap: 9px;
+      font-size: 25px;
+      line-height: normal;
+      font-weight: 600;
+      color: #191919;
+    }
+
+    .cs_logo_icon {
+      position: relative;
+      width: 57.458px;
+      height: 50px;
+      flex-shrink: 0;
+
+      img {
+        position: absolute;
+      }
+
+      .cs_logo_part_1 {
+        left: 2.762px;
+        top: 0;
+        width: 54.6958px;
+        height: 50px;
+      }
+
+      .cs_logo_part_2 {
+        left: 0;
+        top: 23.69px;
+        width: 18.5256px;
+        height: 19.0265px;
+      }
+
+      .cs_logo_part_3 {
+        left: 9.5px;
+        top: 11.8px;
+        width: 9.74488px;
+        height: 18.3984px;
+      }
+    }
+
+    .cs_header_search {
+      flex: 1 1 1063px;
+      min-width: 0;
+      margin: 0 39px 0 37px;
+      border-radius: 30px;
+      background-color: #fff;
+
+      .cs_header_search_input {
+        padding: 12px 140px 12px 21px;
+        color: #191919;
+      }
+
+      .cs_header_search_btn {
+        top: 5px;
+        right: 5px;
+        width: 117px;
+        height: 40px;
+        gap: 13px;
+        border-radius: 30px;
+        font-size: 16px;
+        line-height: 26px;
+        color: #191919;
+        background-color: #4bdc66;
+
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
+
+    .cs_top_header_list {
+      flex-shrink: 0;
+      flex-wrap: nowrap;
+      font-size: 12px;
+      line-height: 14px;
+      white-space: nowrap;
+
+      >li:not(:last-child) {
+        padding-right: 25px;
+        margin-right: 25px;
+
+        &::after {
+          background-color: #30a346;
+        }
+      }
+
+      .cs_top_header_link {
+        gap: 8px;
+      }
+    }
+
+    .cs_header_dropdown {
+      top: calc(100% + 24px);
+      padding: 8px 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 100%;
+        width: 100%;
+        height: 24px;
+      }
+    }
+
+    .cs_account_dropdown {
+      top: calc(100% + 24px);
+      right: -20px;
+      padding: 20px;
+
+      &::before {
+        height: 24px;
+      }
+    }
+
+    .cs_dark_icon {
+      filter: brightness(0);
+      opacity: 0.9;
+    }
+  }
+
+  /* Full-width bar on top; the fixed sidebar starts below it */
+  @media (min-width: 1280px) {
+    #{$header} {
+      position: sticky;
+      top: 0;
+      margin-left: -280px;
+    }
+
+    body:has(#{$header}) .cs_side_header {
+      top: 80px;
+      height: calc(100% - 80px);
+    }
+  }
+
+  @media (max-width: 1279px) {
+    body:has(#{$header}) .cs_side_header .sidebar_toggler {
+      top: 80px;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    #{$header} .cs_hide_lg {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 991px) {
+    #{$header} {
+      .cs_hide_md {
+        display: none !important;
+      }
+
+      .cs_main_header_in {
+        flex-wrap: wrap;
+        row-gap: 15px;
+      }
+
+      .cs_header_search {
+        order: 3;
+        flex: 0 0 100%;
+        margin: 0;
+      }
+
+      .cs_top_header_list {
+        margin-left: auto;
+      }
+    }
+
+    body:has(#{$header}) .cs_side_header .sidebar_toggler {
+      top: 145px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    #{$header} {
+      .cs_top_header_label {
+        display: none !important;
+      }
+
+      .cs_top_header_list>li:not(:last-child) {
+        padding-right: 16px;
+        margin-right: 16px;
+      }
+
+      .cs_header_search .cs_header_search_input {
+        padding-right: 60px;
+      }
+
+      .cs_header_search_btn {
+        width: 40px;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include cs-grocery-topbar-header(".cs_header_grocery2");

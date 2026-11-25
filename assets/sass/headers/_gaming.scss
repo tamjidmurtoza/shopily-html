@@ -1,0 +1,202 @@
+/*---------------------------------------------------------
+  gaming header
+  Figma: GAMING > top bar (1747:2381) + nav (1747:2345) over the hero,
+  GAMING DARK > top bar (1931:1552) + nav (1931:1508) (same, "Light Mode" toggle),
+  PRODUCT DETAILS (1793:1604) / SHOP GRID (1818:830) > hero banner (205px) with the same bars
+-----------------------------------------------------------*/
+.cs_header_gaming {
+  color: #fff;
+  background: #191919 url(../img/header/gaming/banner.png) no-repeat center 14px / 100% auto;
+
+  .cs_top_header {
+    background-color: #191919;
+    border-bottom: 1px solid rgba(0, 152, 15, 0.5);
+
+    .cs_top_header_in {
+      min-height: 44px;
+    }
+  }
+
+  .cs_main_header {
+    padding: 35px 0;
+  }
+
+  .cs_main_header_in {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(21.5px);
+    backdrop-filter: blur(21.5px);
+  }
+
+  .cs_site_branding {
+    height: 50px;
+    gap: 10px;
+    font-size: 25px;
+    line-height: normal;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .cs_nav {
+    margin-left: 38px;
+
+    .cs_nav_list {
+      >li>a {
+        color: #fff;
+
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+
+      .menu-item-has-children>a::after {
+        background-image: url(../img/header/category-arrow.svg);
+      }
+    }
+  }
+
+  .cs_header_search {
+    flex: 0 1 430px;
+    min-width: 0;
+    margin-left: auto;
+    border: 1px solid #e8e8e8;
+    border-radius: 50px;
+    background-color: transparent;
+
+    .cs_header_search_input {
+      height: 48px;
+      padding: 11px 56px 11px 14px;
+      color: #fff;
+      background-color: transparent;
+    }
+
+    .cs_header_search_btn {
+      width: 52px;
+      border-radius: 0 50px 50px 0;
+    }
+  }
+
+  .cs_header_actions {
+    flex-shrink: 0;
+    margin-left: 25px;
+    gap: 25px;
+  }
+
+  .cs_header_account_btn {
+    height: 20px;
+  }
+
+  .cs_header_cart {
+    padding-top: 0;
+    color: #fff;
+  }
+
+  .cs_menu_toggle {
+    color: #fff;
+  }
+}
+
+/* Home: transparent header over the hero slider */
+@media (min-width: 992px) {
+  .cs_header_gaming.cs_header_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+  }
+}
+
+@media (max-width: 1399px) {
+  .cs_header_gaming {
+    .cs_nav {
+      flex-shrink: 0;
+      margin-left: 30px;
+
+      .cs_nav_list {
+        column-gap: 24px;
+      }
+    }
+
+    .cs_header_search {
+      flex: 1 1 0;
+      margin-left: 30px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_header_gaming {
+    background-size: cover;
+    background-position: center;
+
+    .cs_nav {
+      order: 10;
+      margin-left: 24px;
+
+      .cs_nav_list>li>a {
+        color: var(--primary-color);
+      }
+
+      .cs_nav_list_wrap {
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_header_gaming {
+    .cs_top_header_text {
+      display: none;
+    }
+
+    .cs_top_header .cs_top_header_in {
+      justify-content: center;
+      padding: 8px 0;
+    }
+
+    .cs_main_header {
+      padding: 20px 0;
+    }
+
+    .cs_main_header_in {
+      flex-wrap: wrap;
+      row-gap: 20px;
+      padding: 20px 15px;
+      border-radius: 25px;
+    }
+
+    .cs_header_actions {
+      margin-left: auto;
+    }
+
+    .cs_header_search {
+      order: 20;
+      flex: 0 0 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_header_gaming {
+    .cs_top_header_list>li:not(:last-child) {
+      padding-right: 12px;
+      margin-right: 12px;
+    }
+
+    .cs_top_header_list>li:first-child {
+      display: none;
+    }
+
+    .cs_account_dropdown {
+      right: -50px;
+    }
+  }
+}

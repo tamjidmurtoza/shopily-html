@@ -1,0 +1,664 @@
+/*==============================================================
+  05. cms pages
+  (themes, pages, testimonials, subscribers, blog)
+================================================================*/
+.cs_dashboard_body {
+  --dash-cms-upload-bg: #d9d9d9;
+  --dash-cms-chip-bg: #efefef;
+
+  &.cs_dark {
+    --dash-cms-upload-bg: #2a2a2a;
+    --dash-cms-chip-bg: #333;
+  }
+}
+
+/* ---------- Card that fills the viewport (list + form pages) ---------- */
+.cs_dash_cms_card {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 205px);
+
+  > .cs_dash_table_footer {
+    margin-top: auto;
+  }
+}
+
+/* ---------- List toolbar (Bulk action / Apply / filters / search / create) ---------- */
+.cs_dash_cms_toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+
+  .cs_dash_select {
+    width: 261px;
+    max-width: 100%;
+    height: 45px;
+    padding: 9px 40px 9px 10px;
+    color: var(--dash-text);
+    background-position: right 16px center;
+
+    &.cs_sm {
+      width: 160px;
+    }
+  }
+
+  .cs_dash_btn {
+    font-size: 16px;
+  }
+
+  // style.css gives every <label> margin-bottom: 8px
+  .cs_dash_search {
+    margin: 0;
+  }
+
+  .cs_dash_search input {
+    font-size: 16px;
+  }
+}
+
+.cs_dash_cms_toolbar_right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: auto;
+}
+
+/* ---------- Checkbox ---------- */
+.cs_dash_cms_check {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid var(--dash-text);
+  border-radius: 3px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  &:checked {
+    border-color: var(--dash-green);
+    background-color: var(--dash-green);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8' viewBox='0 0 11 8' fill='none'%3E%3Cpath d='M1 4L4 7L10 1' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--dash-blue);
+    outline-offset: 2px;
+  }
+}
+
+/* ---------- Table tweaks ---------- */
+.cs_dash_cms_table {
+  .cs_dash_cms_check_cell {
+    width: 67px;
+    padding-right: 0;
+  }
+
+  td {
+    white-space: nowrap;
+  }
+
+  .cs_dash_table_actions {
+    vertical-align: middle;
+  }
+
+  .cs_dash_cms_check {
+    display: block;
+  }
+
+  .cs_dash_cms_thumb {
+    display: block;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  td.cs_dash_cms_dim {
+    color: var(--dash-heading);
+    letter-spacing: 1px;
+  }
+
+  .cs_dash_switch {
+    display: block;
+    width: 40px;
+    height: 20px;
+    margin: 0;
+
+    span::before {
+      top: 4px;
+      left: 4px;
+      width: 12px;
+      height: 12px;
+    }
+
+    input:checked + span::before {
+      transform: translateX(20px);
+    }
+  }
+
+  &.cs_compact {
+    min-width: 700px;
+  }
+}
+
+/* ---------- Themes ---------- */
+.cs_dash_themes {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 50px 30px;
+}
+
+.cs_dash_theme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cs_dash_theme_thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 267 / 368;
+  overflow: hidden;
+  border-radius: var(--dash-radius);
+  background-color: var(--dash-soft-bg);
+  box-shadow: 0 0 10px rgba(140, 140, 140, 0.25);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.03);
+  }
+}
+
+.cs_dash_theme_title {
+  margin: 22px 0 11px;
+  font-size: 14px;
+  line-height: 16.6px;
+  font-weight: 500;
+  color: var(--dash-heading);
+}
+
+.cs_dash_theme_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: var(--dash-radius);
+  background-color: var(--dash-green);
+  font-size: 14px;
+  line-height: 16.6px;
+  font-weight: 500;
+  color: #fff;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    color: #fff;
+    opacity: 0.85;
+  }
+
+  &.cs_blue {
+    background-color: var(--dash-blue);
+  }
+}
+
+/* ---------- Forms ---------- */
+.cs_dash_cms_form {
+  width: 600px;
+  max-width: 100%;
+
+  &.cs_sm {
+    width: 485px;
+  }
+}
+
+.cs_dash_cms_group {
+  margin-bottom: 27px;
+}
+
+.cs_dash_cms_label {
+  display: block;
+  margin: 0 0 15px;
+  font-size: 14px;
+  line-height: 16.6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--dash-text);
+
+  &.cs_heading {
+    color: var(--dash-heading);
+  }
+}
+
+.cs_dash_cms_label_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px 15px;
+  margin-bottom: 15px;
+
+  .cs_dash_cms_label {
+    margin-bottom: 0;
+  }
+}
+
+.cs_dash_cms_label_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 16.6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--dash-heading);
+
+  &:hover {
+    color: var(--dash-blue);
+  }
+}
+
+.cs_dash_cms_hint {
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--dash-text);
+}
+
+.cs_dash_cms_form,
+.cs_dash_blog_form {
+  .cs_dash_input,
+  .cs_dash_select {
+    height: 45px;
+    padding: 9px 20px;
+    color: var(--dash-heading);
+  }
+
+  .cs_dash_select {
+    padding-right: 45px;
+  }
+
+  .cs_dash_textarea {
+    min-height: 105px;
+    padding: 11px 20px;
+  }
+
+  textarea.cs_dash_textarea.cs_tall {
+    min-height: 131px;
+  }
+}
+
+.cs_dash_cms_rating {
+  background-image: url("../img/dashboard/cms/icon-up-down.svg");
+  background-size: 11px 19px;
+}
+
+.cs_dash_cms_submit {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 3px;
+
+  .cs_dash_btn {
+    min-width: 189px;
+  }
+
+  &.cs_start {
+    justify-content: flex-start;
+
+    .cs_dash_btn {
+      min-width: 150px;
+    }
+  }
+}
+
+/* ---------- Image upload ---------- */
+.cs_dash_cms_upload_row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px 50px;
+}
+
+.cs_dash_cms_upload {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 145px;
+  height: 145px;
+  overflow: hidden;
+  border-radius: var(--dash-radius);
+  background-color: var(--dash-cms-upload-bg);
+  flex: none;
+
+  &.cs_wide {
+    width: 100%;
+    height: 212px;
+  }
+
+  input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:focus-within {
+    outline: 2px solid var(--dash-blue);
+    outline-offset: 2px;
+  }
+}
+
+.cs_dash_cms_upload_add {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  cursor: pointer;
+
+  img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.cs_dash_cms_upload_preview {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs_dash_cms_upload_remove {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #efefef;
+  transform: translate(-50%, -50%);
+
+  img {
+    width: 14px;
+    height: 16px;
+  }
+}
+
+.cs_dash_cms_upload.cs_has_image {
+  .cs_dash_cms_upload_add {
+    display: none;
+  }
+
+  .cs_dash_cms_upload_remove {
+    display: inline-flex;
+  }
+}
+
+/* ---------- Blog post form ---------- */
+.cs_dash_blog_form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 485px;
+  gap: 30px;
+  align-items: start;
+
+  .cs_dash_cms_group {
+    margin-bottom: 30px;
+  }
+}
+
+.cs_dash_cms_inline {
+  display: flex;
+  gap: 15px;
+
+  > * {
+    flex: 1;
+    min-width: 0;
+  }
+
+  > .cs_dash_cms_tag_btn {
+    flex: none;
+  }
+}
+
+.cs_dash_cms_tag_btn {
+  height: 45px;
+  min-width: 85px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: var(--dash-radius);
+  background-color: var(--dash-border);
+  font-size: 14px;
+  line-height: 16.6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--dash-heading);
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.cs_dash_cms_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+
+  &:empty {
+    display: none;
+  }
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 6px 2px 10px;
+    border-radius: var(--dash-radius);
+    background-color: var(--dash-cms-chip-bg);
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--dash-heading);
+  }
+
+  button {
+    padding: 0 4px;
+    border: 0;
+    background: transparent;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--dash-text);
+
+    &:hover {
+      color: var(--dash-red);
+    }
+  }
+}
+
+.cs_dash_cms_editor {
+  overflow: hidden;
+  border: 1px solid var(--dash-border);
+  border-radius: var(--dash-radius);
+  background-color: var(--dash-input-bg);
+}
+
+.cs_dash_cms_editor_toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px;
+  background-color: var(--dash-soft-bg);
+  border-bottom: 1px solid var(--dash-border);
+}
+
+.cs_dash_cms_editor_group {
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid var(--dash-border);
+  border-radius: 3px;
+  background-color: var(--dash-card-bg);
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--dash-heading);
+
+    + button {
+      border-left: 1px solid var(--dash-border);
+    }
+
+    &:hover,
+    &.active {
+      background-color: var(--dash-soft-bg);
+      color: var(--dash-blue);
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.cs_dash_cms_editor_body {
+  min-height: 448px;
+  padding: 15px 20px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--dash-heading);
+  outline: 0;
+
+  &:empty::before {
+    content: attr(data-placeholder);
+    color: var(--dash-text);
+  }
+
+  ul,
+  ol {
+    padding-left: 20px;
+  }
+}
+
+.cs_dash_cms_actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  .cs_dash_btn {
+    min-width: 150px;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1599px) {
+  .cs_dash_themes {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1399px) {
+  .cs_dash_blog_form {
+    grid-template-columns: minmax(0, 1fr) 380px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_dash_themes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cs_dash_blog_form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cs_dash_cms_toolbar_right {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_dash_cms_card {
+    min-height: 0;
+  }
+
+  .cs_dash_themes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 15px;
+  }
+
+  .cs_dash_cms_toolbar {
+    .cs_dash_select,
+    .cs_dash_select.cs_sm {
+      flex: 1 1 140px;
+      width: auto;
+    }
+  }
+
+  .cs_dash_cms_toolbar_right {
+    width: 100%;
+
+    .cs_dash_search {
+      flex: 1 1 200px;
+      width: auto;
+    }
+  }
+
+  .cs_dash_cms_editor_body {
+    min-height: 260px;
+  }
+
+  .cs_dash_cms_inline.cs_stack_sm {
+    flex-direction: column;
+  }
+
+  .cs_dash_cms_upload_row {
+    gap: 15px 25px;
+  }
+
+  .cs_dash_cms_submit .cs_dash_btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .cs_dash_themes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

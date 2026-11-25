@@ -14,17 +14,30 @@
   | 01. Preloader
   | 02. Mobile Menu
   | 03. Sticky Header
-  | 04. Dynamic Background
-  | 05. Slick Slider
-  | 06. Modal Video
-  | 07. Scroll Up
-  | 08. Accordian
-  | 09. Review
-  | 10. Counter Animation
-  | 11. Smooth Page Scroll
-  | 12. Steps Animation
-  | 13. Dynamic contact form
-  | 14. AOS Animation
+  | 04. Header Dropdowns (language, account, all categories)
+  | 05. Light / Dark Mode Toggle
+  | 06. Sidebar Menu
+  | 07. Dynamic Background
+  | 08. Swiper Slider
+  | 09. Modal Video
+  | 10. Scroll Up
+  | 11. Accordion
+  | 12. Review
+  | 13. Counter Animation
+  | 14. Offer Countdown Timer
+  | 15. Tabs
+  | 16. List And Grid View
+  | 17. Increment Decrement
+  | 18. Cart Drawer Open / Close
+  | 19. Floating Filter Open / Close
+  | 20. Review Option Open / Close
+  | 21. Address Modal Open / Close
+  | 22. Add Card Modal Open / Close
+  | 23. Image Zoom
+  | 24. Progress Bar
+  | 25. Coupon Code Copy
+  | 26. Liquor Age Confirm Modal
+  | 27. AOS Animation
   |
   */
 
@@ -35,16 +48,16 @@
     return $(selector).length > 0;
   };
 
-  $(window).on("load", function () {});
   $(window).on("scroll", function () {
     stickyHeader();
     showScrollUp();
   });
-  $(window).on("resize", function () {});
 
   $(function () {
     mainNav();
     stickyHeader();
+    headerDropdown();
+    themeModeToggle();
     sidebarMenu();
     dynamicBackground();
     swiperInit();
@@ -52,7 +65,7 @@
     scrollUp();
     offerCountdownTimer();
     tabs();
-    //accordian();
+    //accordion();
     review();
     //counterInit();
     listAndGridView();
@@ -65,6 +78,7 @@
     cardModalToggle();
     progressBar();
     copyCouponCode();
+    ageConfirmModal();
     //aosInit();
     $(".tom_select").each(function () {
       new TomSelect(this, {
@@ -122,7 +136,51 @@
     }
   }
   /*=============================================================
-    04. Sidebar Menu
+    04. Header Dropdowns (language, account, all categories)
+  ===============================================================*/
+  function headerDropdown() {
+    $(".cs_header_dropdown_btn").on("click", function (e) {
+      const $wrap = $(this).closest(".cs_header_dropdown_wrap");
+      e.preventDefault();
+      e.stopPropagation();
+      $(".cs_header_dropdown_wrap.active").not($wrap).removeClass("active");
+      $wrap.toggleClass("active");
+      $(this).attr("aria-expanded", $wrap.hasClass("active"));
+    });
+    $(document).on("click", function (e) {
+      if (!$(e.target).closest(".cs_header_dropdown_wrap").length) {
+        $(".cs_header_dropdown_wrap.active")
+          .removeClass("active")
+          .find(".cs_header_dropdown_btn")
+          .attr("aria-expanded", false);
+      }
+    });
+  }
+  /*=============================================================
+    05. Light / Dark Mode Toggle
+  ===============================================================*/
+  function themeModeToggle() {
+    const storageKey = "shopily-theme";
+    let savedTheme = null;
+    try {
+      savedTheme = localStorage.getItem(storageKey);
+    } catch (e) {}
+    if (savedTheme === "dark") {
+      $("body").addClass("cs_dark");
+    } else if (savedTheme === "light") {
+      $("body").removeClass("cs_dark");
+    }
+    $(".cs_mode_toggle").attr("aria-pressed", $("body").hasClass("cs_dark"));
+    $(".cs_mode_toggle").on("click", function () {
+      const isDark = $("body").toggleClass("cs_dark").hasClass("cs_dark");
+      $(".cs_mode_toggle").attr("aria-pressed", isDark);
+      try {
+        localStorage.setItem(storageKey, isDark ? "dark" : "light");
+      } catch (e) {}
+    });
+  }
+  /*=============================================================
+    06. Sidebar Menu
   ===============================================================*/
   function sidebarMenu() {
     $(".sidebar_toggler").on("click", function () {
@@ -137,7 +195,7 @@
         .toggleClass("active");
     });
 
-    $(".menu-item-has-children a").on("click", function (e) {
+    $(".cs_side_header .menu-item-has-children > a").on("click", function (e) {
       e.preventDefault();
       $(this).siblings("ul").slideToggle().parent().toggleClass("active");
       $(this)
@@ -149,7 +207,7 @@
     });
   }
   /*=============================================================
-    04. Dynamic Background
+    07. Dynamic Background
   ===============================================================*/
   function dynamicBackground() {
     $("[data-src]").each(function () {
@@ -160,7 +218,7 @@
     });
   }
   /*=============================================================
-   05. Swiper Slider
+    08. Swiper Slider
   ===============================================================*/
   function swiperInit() {
     if (typeof Swiper === "undefined") {
@@ -343,7 +401,7 @@
     }
   }
   /*=============================================================
-    06. Modal Video
+    09. Modal Video
   ===============================================================*/
   function modalVideo() {
     if ($.exists(".cs_video_open")) {
@@ -383,7 +441,7 @@
     }
   }
   /*=============================================================
-    07. Scroll Up
+    10. Scroll Up
   ===============================================================*/
   function scrollUp() {
     $(".cs_scrollup").on("click", function (e) {
@@ -406,7 +464,7 @@
     }
   }
   /*=============================================================
-    08. Accordian
+    11. Accordion
   ===============================================================*/
   // function accordian() {
   //   $(".cs_accordian").children(".cs_accordian_body").hide();
@@ -427,7 +485,7 @@
   // }
 
   /*=============================================================
-    09. Review
+    12. Review
   ===============================================================*/
   function review() {
     $(".cs_rating").each(function () {
@@ -443,7 +501,7 @@
   }
 
   /*===========================================================
-    10. Counter Animation
+    13. Counter Animation
   =============================================================*/
   // function counterInit() {
   //   if ($.exists(".odometer")) {
@@ -466,7 +524,7 @@
   // }
 
   /*===========================================================
-    12. Offer Countdown Timer Animation
+    14. Offer Countdown Timer
   =============================================================*/
   function offerCountdownTimer() {
     const $countdownEl = $(".cs_countdown");
@@ -502,7 +560,7 @@
     updateCountdown();
   }
   /*===========================================================
-    12. Tabs
+    15. Tabs
   =============================================================*/
   function tabs() {
     $(".cs_tab_links a").on("click", function (e) {
@@ -517,7 +575,7 @@
     });
   }
   /*===========================================================
-     11. List And Grid View
+    16. List And Grid View
    ===========================================================*/
   function listAndGridView() {
     $(".cs_list_view").on("click", function () {
@@ -535,7 +593,7 @@
     });
   }
   /*===========================================================
-    14. Increment Decrement
+    17. Increment Decrement
   ============================================================*/
   function incrementDecrement() {
     $(".cs_increament").on("click", function () {
@@ -555,12 +613,25 @@
     });
   }
   /*===========================================================
-    14. Cart Drawer Open Close Functionality
+    18. Cart Drawer Open / Close
   ============================================================*/
   function cartDrawerToggle() {
-    $(".cs_add_to_cart_btn, .addToCartButton").on("click", function () {
-      $(".cs_fullscreen_cart").addClass("active");
-      $("body").addClass("hidden");
+    // Add to cart: only update the header cart count, keep the drawer closed
+    $(".cs_add_to_cart_btn, .addToCartButton").on("click", function (e) {
+      e.preventDefault();
+      $(".cs_header_cart_count").each(function () {
+        const count = parseInt($(this).text(), 10) || 0;
+        $(this).text(count + 1);
+      });
+    });
+
+    // Header cart icon: open the drawer (falls back to cart page if no drawer)
+    $(".cs_header_cart").on("click", function (e) {
+      if ($(".cs_fullscreen_cart").length) {
+        e.preventDefault();
+        $(".cs_fullscreen_cart").addClass("active");
+        $("body").addClass("hidden");
+      }
     });
 
     $("#cartCloseButton, .cs_cart_overlay").on("click", function () {
@@ -569,7 +640,7 @@
     });
   }
   /*===========================================================
-    14. Floating Filter Open Close Functionality
+    19. Floating Filter Open / Close
   ============================================================*/
   function filterOptionToggle() {
     $("#openFilterBtn").on("click", function () {
@@ -583,7 +654,7 @@
     });
   }
   /*===========================================================
-    14. Floating Filter Open Close Functionality
+    20. Review Option Open / Close
   ============================================================*/
   function reviewOptionToggle() {
     $("#openReviewBtn, .openReviewBtn").on("click", function () {
@@ -597,7 +668,7 @@
     });
   }
   /*===========================================================
-    14. Address Modal Open Close Functionality
+    21. Address Modal Open / Close
   ============================================================*/
   function addressModalToggle() {
     $("#addressModalBtn").on("click", function () {
@@ -611,7 +682,7 @@
     });
   }
   /*===========================================================
-    14. Add Card Modal Open Close Functionality
+    22. Add Card Modal Open / Close
   ============================================================*/
   function cardModalToggle() {
     $("#addCardModalBtn").on("click", function () {
@@ -626,7 +697,7 @@
     });
   }
   /*===========================================================
-    14. Image Zoom Functionality
+    23. Image Zoom
   ============================================================*/
   function imageZoom() {
     $(".cs_zoom_plus").zoom({
@@ -635,7 +706,7 @@
   }
 
   /*===========================================================
-    9. Progress Bar
+    24. Progress Bar
   ===========================================================*/
   function progressBar() {
     $(".cs_progress").each(function () {
@@ -644,7 +715,7 @@
     });
   }
   /*===========================================================
-    9. Coupon Code Copy
+    25. Coupon Code Copy
   ===========================================================*/
   function copyCouponCode() {
     $(".cs_coupon_btn").on("click", function () {
@@ -679,7 +750,53 @@
   }
 
   /*=============================================================
-    14. AOS Animation
+    26. Liquor Age Confirm Modal
+  ===============================================================*/
+  function ageConfirmModal() {
+    if ($("#ageConfirmModal").length) {
+      const storageKey = "liquorAgeVerified";
+      const $modal = $("#ageConfirmModal");
+      const $buttons = $modal.find(".cs_age_modal_btn");
+      let verified = false;
+      try {
+        verified = localStorage.getItem(storageKey) === "true";
+      } catch (e) {}
+      if (verified) return;
+
+      $modal.addClass("active").attr("aria-hidden", "false");
+      $("html, body").addClass("cs_age_modal_open");
+      $buttons.first().trigger("focus");
+
+      // Keep keyboard focus inside the dialog while it is open
+      $modal.on("keydown", function (e) {
+        if (e.key !== "Tab") return;
+        const first = $buttons.first()[0];
+        const last = $buttons.last()[0];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      });
+
+      $("#ageConfirmYes").on("click", function () {
+        try {
+          localStorage.setItem(storageKey, "true");
+        } catch (e) {}
+        $modal.removeClass("active").attr("aria-hidden", "true");
+        $("html, body").removeClass("cs_age_modal_open");
+      });
+
+      $("#ageConfirmNo").on("click", function () {
+        window.location.href = "../index.html";
+      });
+    }
+  }
+
+  /*=============================================================
+    27. AOS Animation
   ===============================================================*/
   // function aosInit() {
   //   AOS.init({

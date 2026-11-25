@@ -1,0 +1,243 @@
+/*---------------------------------------------------------
+  footware header
+  Figma: FOOTWARE > header (2455:5386) = top bar (2455:5387) + menu (2455:5409)
+-----------------------------------------------------------*/
+.cs_header_footware {
+  .cs_top_header .cs_top_header_in {
+    min-height: 42px;
+    padding-top: 2px;
+  }
+
+  .cs_main_header {
+    color: #fff;
+    background-color: #191919;
+  }
+
+  .cs_main_header_in {
+    position: relative;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+  }
+
+  .cs_site_branding {
+    font-size: 33px;
+    line-height: 45px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .cs_nav {
+    margin-left: 60px;
+
+    .cs_nav_list>li>a {
+      color: #fff;
+      padding: 32px 0;
+
+      &:hover {
+        color: var(--red-color);
+      }
+    }
+
+    .cs_nav_list .menu-item-has-children>a::after {
+      background-image: url(../img/header/category-arrow.svg);
+    }
+  }
+
+  .cs_header_search {
+    flex: 0 1 430px;
+    min-width: 0;
+    margin-left: auto;
+    border-radius: 50px;
+    background-color: #fff;
+
+    .cs_header_search_input {
+      padding: 12px 56px 12px 15px;
+      color: #191919;
+    }
+
+    .cs_header_search_btn {
+      width: 56px;
+      border-radius: 0 50px 50px 0;
+    }
+  }
+
+  .cs_header_actions {
+    flex-shrink: 0;
+    gap: 25px;
+    margin-left: 30px;
+  }
+
+  .cs_header_account_btn {
+    height: 20px;
+  }
+
+  .cs_header_cart {
+    padding-top: 0;
+
+    .cs_header_cart_count {
+      background-color: var(--red-color);
+    }
+  }
+
+  .cs_account_dropdown {
+    top: calc(100% + 35px);
+    right: -40px;
+
+    &::before {
+      height: 35px;
+    }
+  }
+}
+
+/* Dark mode: the menu bar is already dark; lift it slightly off the #191919 page */
+.cs_dark .cs_header_footware {
+  .cs_main_header {
+    background-color: #222;
+  }
+
+  .cs_nav .cs_nav_list .menu-item-has-children>a::after {
+    filter: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cs_header_footware {
+    .cs_nav {
+      flex-shrink: 0;
+
+      .cs_nav_list {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+}
+
+@media (max-width: 1399px) {
+  .cs_header_footware {
+    .cs_nav {
+      margin-left: 40px;
+      margin-right: 30px;
+
+      .cs_nav_list {
+        column-gap: 26px;
+      }
+    }
+
+    .cs_header_search {
+      flex-basis: 320px;
+    }
+
+    .cs_header_actions {
+      margin-left: 24px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_header_footware {
+    .cs_main_header_in {
+      min-height: 80px;
+    }
+
+    .cs_site_branding {
+      margin-right: 24px;
+    }
+
+    .cs_nav {
+      order: 5;
+      margin-left: 25px;
+      margin-right: 0;
+
+      .cs_menu_toggle {
+        color: #fff;
+      }
+
+      .cs_nav_list_wrap {
+        background-color: #191919;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+      }
+
+      .cs_nav_list {
+        >li {
+          border-color: rgba(255, 255, 255, 0.1);
+
+          >a {
+            padding: 10px 0;
+          }
+        }
+
+        ul a {
+          color: #fff;
+        }
+      }
+
+      .cs_menu_dropdown_toggle {
+        color: #fff;
+      }
+    }
+
+    .cs_header_search {
+      flex-basis: 430px;
+    }
+  }
+
+  .cs_dark .cs_header_footware .cs_nav .cs_nav_list_wrap {
+    background-color: #222;
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_header_footware {
+    .cs_top_header_text {
+      display: none;
+    }
+
+    .cs_top_header .cs_top_header_in {
+      justify-content: center;
+      padding: 8px 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_header_footware {
+    .cs_main_header_in {
+      flex-wrap: wrap;
+      padding: 16px 0;
+      row-gap: 16px;
+    }
+
+    .cs_site_branding {
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    .cs_header_actions {
+      margin-left: auto;
+    }
+
+    .cs_header_search {
+      order: 6;
+      flex: 0 0 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_header_footware {
+    .cs_top_header_list>li:not(:last-child) {
+      padding-right: 12px;
+      margin-right: 12px;
+    }
+
+    .cs_top_header_list>li:first-child {
+      display: none;
+    }
+
+    .cs_account_dropdown {
+      right: -50px;
+    }
+  }
+}

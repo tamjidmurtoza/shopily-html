@@ -1,0 +1,300 @@
+/*==============================================================
+  04. Dashboard home
+================================================================*/
+
+/* ---------- Stat cards ---------- */
+.cs_dash_stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--dash-gap);
+  margin-bottom: var(--dash-gap);
+}
+
+.cs_dash_stat_card {
+  position: relative;
+  min-height: 160px;
+  padding: 24px 30px 24px 31px;
+  border-radius: var(--dash-radius);
+  color: #fff;
+  overflow: hidden;
+
+  &.cs_style_1 {
+    background-image: linear-gradient(241deg, #06c0d9 0%, #9d54f9 100%);
+  }
+
+  &.cs_style_2 {
+    background-image: linear-gradient(241deg, #38cb89 0%, #ef4b4b 100%);
+  }
+
+  &.cs_style_3 {
+    background-image: linear-gradient(241deg, #38cb89 0%, #ffab00 100%);
+  }
+
+  &.cs_style_4 {
+    background-image: linear-gradient(241deg, #ff96d2 0%, #fa26a0 100%);
+  }
+}
+
+.cs_dash_stat_title {
+  display: block;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.cs_dash_stat_value {
+  display: block;
+  margin-top: 8px;
+  font-size: 33px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.cs_dash_stat_meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 15px;
+
+  img {
+    width: 7px;
+    height: 7px;
+
+    &.cs_down {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.cs_dash_stat_graph {
+  position: absolute;
+  top: 29px;
+  right: 30px;
+  width: 88px;
+  height: 63px;
+  object-fit: contain;
+}
+
+/* ---------- Grid rows ---------- */
+.cs_dash_row {
+  display: grid;
+  gap: var(--dash-gap);
+  margin-bottom: var(--dash-gap);
+
+  &.cs_chart_row {
+    grid-template-columns: minmax(0, 1fr) 356px;
+  }
+
+  &.cs_bottom_row {
+    grid-template-columns: 339px minmax(0, 1fr);
+    margin-bottom: 0;
+  }
+}
+
+/* ---------- Chart cards ---------- */
+.cs_dash_chart_card {
+  min-height: 509px;
+  padding: 24px 30px 30px;
+
+  .cs_dash_card_header {
+    margin-bottom: 30px;
+  }
+}
+
+.cs_dash_chart_box {
+  position: relative;
+  height: 340px;
+}
+
+.cs_dash_pie_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 509px;
+  padding: 25px 30px 30px;
+
+  .cs_dash_card_title {
+    text-align: center;
+    margin-bottom: 63px;
+  }
+}
+
+.cs_dash_pie_box {
+  position: relative;
+  width: 266px;
+  max-width: 100%;
+  height: 266px;
+
+  canvas {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.cs_dash_pie_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 66px;
+  height: 66px;
+  transform: translate(-50%, -50%);
+}
+
+.cs_dash_legend {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 16px 40px;
+  margin: auto 0 0;
+  padding: 40px 0 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--dash-text);
+  }
+
+  span {
+    width: 19px;
+    height: 19px;
+    border-radius: 3px;
+    flex: none;
+  }
+
+  // Swatch colours match the chart series in dashboard.js
+  .cs_legend_blue { background-color: #3f85fe; }
+  .cs_legend_green { background-color: #30a346; }
+  .cs_legend_mint { background-color: #38cb89; }
+  .cs_legend_red { background-color: #ef4b4b; }
+}
+
+/* ---------- Top products ---------- */
+.cs_dash_top_products {
+  padding: 22px 30px 30px;
+
+  .cs_dash_card_title {
+    margin-bottom: 27px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--dash-radius);
+    object-fit: cover;
+    flex: none;
+  }
+
+  h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: var(--dash-heading);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--dash-heading);
+
+    span {
+      padding-left: 8px;
+      border-left: 1px solid var(--dash-text);
+      color: var(--dash-text);
+    }
+  }
+
+  .cs_dash_top_info {
+    min-width: 0;
+  }
+}
+
+.cs_dash_recent_orders {
+  padding: 22px 30px 30px;
+
+  .cs_dash_card_header {
+    margin-bottom: 40px;
+  }
+
+  .cs_dash_table th {
+    padding-bottom: 25px;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1599px) {
+  .cs_dash_stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_dash_row.cs_chart_row,
+  .cs_dash_row.cs_bottom_row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cs_dash_pie_card {
+    min-height: 0;
+
+    .cs_dash_card_title {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_dash_stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cs_dash_chart_card {
+    min-height: 0;
+    padding: 20px 15px;
+  }
+
+  .cs_dash_chart_box {
+    height: 260px;
+  }
+
+  .cs_dash_pill_tabs button {
+    min-width: 0;
+    padding: 0 10px;
+
+    &.active {
+      min-width: 0;
+    }
+  }
+
+  .cs_dash_legend {
+    gap: 12px 24px;
+  }
+}

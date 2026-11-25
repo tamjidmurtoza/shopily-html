@@ -1438,7 +1438,8 @@
   @media (max-width: 1399px) {
     grid-template-columns: repeat(3, 1fr);
 
-    &.cs_type_1 {
+    &.cs_type_1,
+    &.cs_type_9 {
       grid-template-columns: repeat(4, 1fr);
     }
 
@@ -1450,7 +1451,8 @@
   @media (max-width: 1199px) {
     grid-template-columns: repeat(2, 1fr);
 
-    &.cs_type_1 {
+    &.cs_type_1,
+    &.cs_type_9 {
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -1463,7 +1465,8 @@
   @media (max-width: 991px) {
     row-gap: 24px !important;
 
-    &.cs_type_1 {
+    &.cs_type_1,
+    &.cs_type_9 {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1495,7 +1498,8 @@
 
     &.cs_type_1,
     &.cs_type_2,
-    &.cs_type_7 {
+    &.cs_type_7,
+    &.cs_type_9 {
       margin: 0 auto;
       grid-template-columns: repeat(1, 1fr);
     }

@@ -1,0 +1,177 @@
+/*---------------------------------------------------------
+  jewelry header
+  Figma: JEWELRY > header (1873:2406), PRODUCT DETAILS (1899:1811) / SHOP GRID (1911:3718) > header
+-----------------------------------------------------------*/
+.cs_header_jewelry {
+  .cs_top_header {
+    border-bottom: 1px solid var(--gray-color2);
+
+    .cs_top_header_in {
+      min-height: 43px;
+    }
+  }
+
+  .cs_main_header {
+    padding: 20px 0;
+  }
+
+  &.cs_header_bordered .cs_main_header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray-color2);
+  }
+
+  .cs_main_header_in {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+  }
+
+  .cs_site_branding {
+    height: 50px;
+    gap: 14px;
+    font-size: 25px;
+    line-height: normal;
+    font-weight: 600;
+  }
+
+  .cs_logo_icon {
+    width: auto;
+    height: 44px;
+  }
+
+  .cs_nav {
+    margin-left: 40px;
+  }
+
+  .cs_header_search {
+    flex: 0 1 430px;
+    min-width: 0;
+    margin-left: auto;
+    border-radius: 50px;
+    background-color: var(--gray-color5);
+
+    .cs_header_search_input {
+      padding: 12px 56px 12px 15px;
+    }
+
+    .cs_header_search_btn {
+      width: 52px;
+      border-radius: 0 50px 50px 0;
+    }
+  }
+
+  .cs_header_actions {
+    flex-shrink: 0;
+    margin-left: 30px;
+    gap: 25px;
+  }
+
+  .cs_header_account_btn {
+    height: 20px;
+  }
+
+  .cs_header_cart {
+    padding-top: 0;
+
+    .cs_header_cart_count {
+      background-color: var(--red-color);
+    }
+  }
+}
+
+.cs_dark .cs_header_jewelry {
+  .cs_header_search {
+    background-color: #222;
+  }
+
+  .cs_header_search_btn img {
+    filter: invert(1);
+    mix-blend-mode: lighten;
+  }
+}
+
+@media (max-width: 1399px) {
+  .cs_header_jewelry {
+    .cs_nav {
+      flex-shrink: 0;
+      margin-left: 30px;
+
+      .cs_nav_list {
+        column-gap: 24px;
+      }
+    }
+
+    .cs_header_search {
+      flex: 1 1 0;
+      margin-left: 30px;
+    }
+
+    .cs_header_actions {
+      margin-left: 30px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_header_jewelry {
+    .cs_nav {
+      order: 10;
+      margin-left: 24px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_header_jewelry {
+    .cs_top_header_text {
+      display: none;
+    }
+
+    .cs_top_header .cs_top_header_in {
+      justify-content: center;
+      padding: 8px 0;
+    }
+
+    .cs_main_header_in {
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
+
+    .cs_header_actions {
+      margin-left: auto;
+    }
+
+    .cs_header_search {
+      order: 20;
+      flex: 0 0 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_header_jewelry {
+    .cs_top_header_list>li:not(:last-child) {
+      padding-right: 12px;
+      margin-right: 12px;
+    }
+
+    .cs_top_header_list>li:first-child {
+      display: none;
+    }
+
+    .cs_site_branding {
+      height: 40px;
+      font-size: 22px;
+    }
+
+    .cs_logo_icon {
+      height: 36px;
+    }
+
+    .cs_account_dropdown {
+      right: -50px;
+    }
+  }
+}

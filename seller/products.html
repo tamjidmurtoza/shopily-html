@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shopily - Multivendor eCommerce Website HTML Template">
+    <meta name="author" content="Laralink">
+    <!-- Site Title -->
+    <title>Shopily - Seller - All Product</title>
+    <link rel="icon" href="../assets/img/favicon.webp">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+
+  <body class="cs_dashboard_body">
+    <!-- Start Sidebar -->
+    <aside class="cs_dash_sidebar" id="dashSidebar">
+      <div class="cs_dash_sidebar_header">
+        <a href="index.html" class="cs_dash_logo" aria-label="Shopily seller dashboard">
+          <span class="cs_dash_logo_icon">
+            <img src="../assets/img/dashboard/logo-circle.svg" alt="" class="cs_dash_logo_circle">
+            <img src="../assets/img/dashboard/logo-bag.png" alt="" class="cs_dash_logo_bag">
+          </span>
+          <span>Shopily</span>
+        </a>
+        <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="cs_dash_nav" aria-label="Seller navigation">
+        <ul>
+          <li>
+            <a href="index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-home.svg" alt="" class="cs_dash_nav_icon">
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-box-open.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="add-product.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New Product</a></li>
+              <li><a href="products.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Product</a></li>
+              <li><a href="categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Category</a></li>
+              <li><a href="attributes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Attribute</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pos.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-pos.svg" alt="" class="cs_dash_nav_icon">
+              <span>POS Manager</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-cart.svg" alt="" class="cs_dash_nav_icon">
+              <span>Orders</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="orders.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="commission-history.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-shop.svg" alt="" class="cs_dash_nav_icon">
+              <span>Commission</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-headset.svg" alt="" class="cs_dash_nav_icon">
+              <span>Support</span>
+            </a>
+          </li>
+          <li>
+            <a href="chat.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-messages.svg" alt="" class="cs_dash_nav_icon">
+              <span>Message</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-refund.svg" alt="" class="cs_dash_nav_icon">
+              <span>Refund</span>
+            </a>
+          </li>
+          <li>
+            <a href="wallet.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Wallet</span>
+            </a>
+          </li>
+          <li>
+            <a href="coupons.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-badge-percent.svg" alt="" class="cs_dash_nav_icon">
+              <span>Coupon</span>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-settings.svg" alt="" class="cs_dash_nav_icon">
+              <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="../index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-sign-out.svg" alt="" class="cs_dash_nav_icon">
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="cs_dash_overlay"></div>
+    <!-- End Sidebar -->
+
+    <main class="cs_dash_main">
+      <!-- Start Top Bar -->
+      <header class="cs_dash_topbar">
+        <div class="cs_dash_topbar_left">
+          <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <h1 class="cs_dash_page_title">All Product</h1>
+        </div>
+        <div class="cs_dash_topbar_right">
+          <div class="cs_dash_topbar_icons">
+            <button type="button" class="cs_dash_lang" aria-label="Change language">
+              <img src="../assets/img/dashboard/icon-lang.svg" alt="">
+            </button>
+            <button type="button" class="cs_dash_mode_toggle" aria-label="Toggle dark mode">
+              <img src="../assets/img/dashboard/icon-dark.svg" alt="">
+            </button>
+            <a href="chat.html" class="cs_dash_notification" aria-label="Notifications, 11 unread">
+              <img src="../assets/img/dashboard/icon-bell.svg" alt="">
+              <span class="cs_dash_notification_count">11</span>
+            </a>
+          </div>
+          <div class="cs_dash_profile">
+            <button type="button" class="cs_dash_profile_btn" aria-expanded="false" aria-haspopup="true">
+              <img src="../assets/img/dashboard/avatar.png" alt="Andrew Karla">
+              <span class="cs_dash_profile_info">
+                <span>
+                  <span class="cs_dash_profile_name">Andrew Karla</span>
+                  <span class="cs_dash_profile_role">Seller</span>
+                </span>
+                <img src="../assets/img/dashboard/icon-caret-down.svg" alt="">
+              </span>
+            </button>
+            <ul class="cs_dash_profile_dropdown">
+              <li><a href="profile.html">Edit Profile</a></li>
+              <li><a href="../index.html">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- End Top Bar -->
+
+      <!-- Start Product List -->
+      <section class="cs_dash_card cs_dash_prd_card" aria-labelledby="productListTitle">
+        <div class="cs_dash_card_header">
+          <h2 class="cs_dash_card_title cs_normal" id="productListTitle">Product List</h2>
+          <div class="cs_dash_card_actions">
+            <label class="cs_dash_search">
+              <img src="../assets/img/dashboard/icon-search.svg" alt="">
+              <input type="search" placeholder="Search Product..." aria-label="Search products">
+            </label>
+            <a href="add-product.html" class="cs_dash_btn cs_blue"><img src="../assets/img/dashboard/icon-plus-circle.svg" alt="">Add New Product</a>
+          </div>
+        </div>
+        <div class="cs_dash_table_wrap">
+          <table class="cs_dash_table cs_dash_product_table">
+            <thead>
+              <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Base Price</th>
+                <th scope="col">Discount Price</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Store Name</th>
+                <th scope="col">Status</th>
+                <th scope="col" class="text-end">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="../assets/img/dashboard/products/coffee-maker.png" alt="Coffee Maker with Black and Stainless Steel" class="cs_dash_table_img"></td>
+                <td class="cs_dash_product_name"><span>Coffee Maker with Black and Stainless Steel</span></td>
+                <td>$205.99</td>
+                <td>$266.00</td>
+                <td>10</td>
+                <td>Comfee Store</td>
+                <td><span class="cs_dash_prd_status">Active</span></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="add-product.html" aria-label="Edit Coffee Maker with Black and Stainless Steel"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete Coffee Maker with Black and Stainless Steel"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="../assets/img/dashboard/products/rice-cooker.webp" alt="Brand new comfee Rice Cooker 10 cup Large Capacity" class="cs_dash_table_img"></td>
+                <td class="cs_dash_product_name"><span>Brand new comfee Rice Cooker 10 cup Large Capacity</span></td>
+                <td>$50.40</td>
+                <td>$60.00</td>
+                <td>05</td>
+                <td>Comfee Store</td>
+                <td><span class="cs_dash_prd_status">Active</span></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="add-product.html" aria-label="Edit Brand new comfee Rice Cooker 10 cup Large Capacity"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete Brand new comfee Rice Cooker 10 cup Large Capacity"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="../assets/img/dashboard/products/ipad.webp" alt="Apple iPad Air (5th Generation) with M1 chip, 10.9-inch" class="cs_dash_table_img"></td>
+                <td class="cs_dash_product_name"><span>Apple iPad Air (5th Generation) with M1 chip, 10.9-inch</span></td>
+                <td>$400.00</td>
+                <td>$480.00</td>
+                <td>10</td>
+                <td>Giga Tech</td>
+                <td><span class="cs_dash_prd_status">Active</span></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="add-product.html" aria-label="Edit Apple iPad Air (5th Generation) with M1 chip, 10.9-inch"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete Apple iPad Air (5th Generation) with M1 chip, 10.9-inch"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="../assets/img/dashboard/products/security-camera.webp" alt="TP-Link Tapo Pan Tilt Security Camera for Baby Monitor" class="cs_dash_table_img"></td>
+                <td class="cs_dash_product_name"><span>TP-Link Tapo Pan Tilt Security Camera for Baby Monitor</span></td>
+                <td>$205.99</td>
+                <td>$266.00</td>
+                <td>07</td>
+                <td>Comfee Store</td>
+                <td><span class="cs_dash_prd_status">Active</span></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="add-product.html" aria-label="Edit TP-Link Tapo Pan Tilt Security Camera for Baby Monitor"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete TP-Link Tapo Pan Tilt Security Camera for Baby Monitor"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="../assets/img/dashboard/products/camera.webp" alt="Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens" class="cs_dash_table_img"></td>
+                <td class="cs_dash_product_name"><span>Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens</span></td>
+                <td>$380.99</td>
+                <td>$450.00</td>
+                <td>10</td>
+                <td>Photopy Shop</td>
+                <td><span class="cs_dash_prd_status">Active</span></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="add-product.html" aria-label="Edit Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="../assets/img/dashboard/products/smart-watch.webp" alt="Bikobo Fitness Tracker Smart Watch for Android/iOS Phones" class="cs_dash_table_img"></td>
+                <td class="cs_dash_product_name"><span>Bikobo Fitness Tracker Smart Watch for Android/iOS Phones</span></td>
+                <td>$50.40</td>
+                <td>$60.00</td>
+                <td>05</td>
+                <td>Comfee Store</td>
+                <td><span class="cs_dash_prd_status">Active</span></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="add-product.html" aria-label="Edit Bikobo Fitness Tracker Smart Watch for Android/iOS Phones"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete Bikobo Fitness Tracker Smart Watch for Android/iOS Phones"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="../assets/img/dashboard/products/router.webp" alt="ASUS RT-AX86U Pro Dual Band WiFi 6 Gaming Router" class="cs_dash_table_img"></td>
+                <td class="cs_dash_product_name"><span>ASUS RT-AX86U Pro Dual Band WiFi 6 Gaming Router</span></td>
+                <td>$400.00</td>
+                <td>$480.00</td>
+                <td>10</td>
+                <td>Electrogram</td>
+                <td><span class="cs_dash_prd_status">Active</span></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="add-product.html" aria-label="Edit ASUS RT-AX86U Pro Dual Band WiFi 6 Gaming Router"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete ASUS RT-AX86U Pro Dual Band WiFi 6 Gaming Router"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="../assets/img/dashboard/products/jbl-speaker.webp" alt="JBL 100W Party Box Encore Bluetooth Speaker" class="cs_dash_table_img"></td>
+                <td class="cs_dash_product_name"><span>JBL 100W Party Box Encore Bluetooth Speaker</span></td>
+                <td>$205.99</td>
+                <td>$266.00</td>
+                <td>15</td>
+                <td>Comfee Store</td>
+                <td><span class="cs_dash_prd_status">Active</span></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="add-product.html" aria-label="Edit JBL 100W Party Box Encore Bluetooth Speaker"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete JBL 100W Party Box Encore Bluetooth Speaker"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="../assets/img/dashboard/products/earbuds.webp" alt="Brand New Samsung Galaxy Buds Pro 2" class="cs_dash_table_img"></td>
+                <td class="cs_dash_product_name"><span>Brand New Samsung Galaxy Buds Pro 2</span></td>
+                <td>$90.99</td>
+                <td>$110.00</td>
+                <td>07</td>
+                <td>Holino Apps</td>
+                <td><span class="cs_dash_prd_status">Active</span></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="add-product.html" aria-label="Edit Brand New Samsung Galaxy Buds Pro 2"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete Brand New Samsung Galaxy Buds Pro 2"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="../assets/img/dashboard/products/macbook-air.webp" alt="Apple 2023 MacBook Air with M3 chip, 8 core CPU" class="cs_dash_table_img"></td>
+                <td class="cs_dash_product_name"><span>Apple 2023 MacBook Air with M3 chip, 8 core CPU</span></td>
+                <td>$1500.00</td>
+                <td>$1550.00</td>
+                <td>25</td>
+                <td>Gadgets Pop</td>
+                <td><span class="cs_dash_prd_status">Active</span></td>
+                <td class="text-end">
+                  <div class="cs_dash_table_actions">
+                    <a href="add-product.html" aria-label="Edit Apple 2023 MacBook Air with M3 chip, 8 core CPU"><img src="../assets/img/dashboard/icon-edit.svg" alt="" class="cs_dash_icon_dark"></a>
+                    <button type="button" aria-label="Delete Apple 2023 MacBook Air with M3 chip, 8 core CPU"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="cs_dash_table_footer">
+          <p class="mb-0">Showing <strong>1-10</strong> from <strong>200</strong> products</p>
+          <nav class="cs_dash_pagination" aria-label="Pagination">
+            <a href="#" aria-label="Previous page"><img src="../assets/img/dashboard/icon-caret-left.svg" alt=""></a>
+            <ul>
+              <li><a href="#" class="active" aria-current="page">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+            </ul>
+            <a href="#" aria-label="Next page"><img src="../assets/img/dashboard/icon-caret-right.svg" alt=""></a>
+          </nav>
+        </div>
+      </section>
+      <!-- End Product List -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/dashboard-products.js"></script>
+  </body>
+</html>

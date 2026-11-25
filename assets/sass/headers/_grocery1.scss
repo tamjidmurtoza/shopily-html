@@ -1,0 +1,344 @@
+/*---------------------------------------------------------
+  grocery1 header
+  Figma: GROSERY1 > hero > horizontal scroll text / search bar area / nav
+  (home: "all categories active" = panel always open; inner pages: closed)
+-----------------------------------------------------------*/
+.cs_header_grocery1 {
+  /* Scrolling top bar */
+  .cs_top_header {
+    height: 50px;
+    overflow: hidden;
+    color: #fff;
+    background-color: #e95a3e;
+  }
+
+  .cs_marquee {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .cs_marquee_in {
+    display: flex;
+    width: max-content;
+    height: 100%;
+
+    &:hover .cs_marquee_group {
+      animation-play-state: paused;
+    }
+  }
+
+  .cs_marquee_group {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 28px;
+    padding-left: 20px;
+    padding-right: 8px;
+    animation: scrollingAnimation 40s linear infinite;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 25px;
+      white-space: nowrap;
+    }
+  }
+
+  /* Logo, search, contact, actions */
+  .cs_main_header {
+    border-bottom: 1px solid rgba(25, 25, 25, 0.1);
+  }
+
+  .cs_main_header_in {
+    display: flex;
+    align-items: center;
+    min-height: 109px;
+  }
+
+  .cs_site_branding {
+    gap: 9px;
+    font-size: 25px;
+    line-height: normal;
+    font-weight: 600;
+  }
+
+  .cs_logo_icon {
+    position: relative;
+    width: 57.458px;
+    height: 50px;
+    flex-shrink: 0;
+
+    img {
+      position: absolute;
+    }
+
+    .cs_logo_part_1 {
+      left: 2.762px;
+      top: 0;
+      width: 54.6958px;
+      height: 50px;
+    }
+
+    .cs_logo_part_2 {
+      left: 0;
+      top: 23.69px;
+      width: 18.5256px;
+      height: 19.0265px;
+    }
+
+    .cs_logo_part_3 {
+      left: 9.5px;
+      top: 11.8px;
+      width: 9.74488px;
+      height: 18.3984px;
+    }
+  }
+
+  .cs_header_search {
+    flex: 0 1 816px;
+    min-width: 0;
+    margin-left: 81px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+
+    .cs_header_search_input {
+      height: 48px;
+      padding-left: 15px;
+    }
+  }
+
+  .cs_header_contact {
+    flex-shrink: 0;
+    margin-left: 37px;
+    line-height: normal;
+
+    .cs_header_contact_title {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    .cs_header_contact_number {
+      display: block;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  .cs_header_actions {
+    margin-left: auto;
+    padding-left: 30px;
+    gap: 0;
+  }
+
+  .cs_mode_toggle {
+    margin-right: 33px;
+  }
+
+  .cs_header_account_btn {
+    margin-right: 30px;
+  }
+
+  .cs_account_dropdown {
+    right: -120px;
+  }
+
+  /* Category button + nav row */
+  .cs_header_nav {
+    border-bottom: 1px solid var(--gray-color2);
+  }
+
+  .cs_header_nav_in {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 0;
+  }
+
+  .cs_nav {
+    position: relative;
+    top: -3px;
+  }
+
+  .cs_category_dropdown {
+    width: calc((100% + 24px) / 4 - 24px);
+
+    .cs_category_btn {
+      color: #fff;
+      border-radius: 5px 5px 0 0;
+      background-color: #30a346;
+    }
+
+    .cs_header_dropdown {
+      top: 100%;
+      border-radius: 0;
+      box-shadow: 0px 0px 10px 0px rgba(140, 140, 140, 0.25);
+    }
+  }
+
+  .cs_category_list {
+    li {
+      position: static;
+    }
+
+    a {
+      gap: 13px;
+      padding-left: 17px;
+    }
+
+    .cs_category_icon img {
+      max-width: none;
+    }
+  }
+
+  /* Category fly-out (Figma: "all categories hover" > submenu) */
+  .cs_category_submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 21px 30px !important;
+    background-color: var(--white-color);
+    border: 1px solid rgba(25, 25, 25, 0.1);
+    border-left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    li a {
+      display: block;
+      padding: 0 !important;
+      margin: 0 !important;
+      border: 0 !important;
+      font-size: 13px;
+      line-height: 34px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .cs_header_grocery1 .cs_category_list>li:hover>.cs_category_submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_header_grocery1 .cs_category_submenu {
+    display: none;
+  }
+}
+
+/* Home: the category panel is always open and sits beside the hero slider */
+@media (min-width: 992px) {
+  .cs_header_grocery1.cs_category_open {
+    .cs_header_nav {
+      border-bottom: 0;
+    }
+
+    .cs_header_nav_in {
+      padding-bottom: 0;
+    }
+
+    .cs_category_btn {
+      box-shadow: 0px 0px 10px 0px rgba(140, 140, 140, 0.25);
+    }
+
+    .cs_category_dropdown {
+      .cs_header_dropdown {
+        height: 560px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+
+      .cs_category_btn_arrow {
+        transform: none;
+      }
+    }
+  }
+}
+
+.cs_dark .cs_header_grocery1 {
+  .cs_main_header {
+    border-bottom-color: var(--gray-color2);
+  }
+
+  .cs_category_submenu {
+    border-color: var(--gray-color2);
+  }
+}
+
+@media (max-width: 1399px) {
+  .cs_header_grocery1 {
+    .cs_header_search {
+      flex: 1 1 auto;
+      margin-left: 40px;
+    }
+
+    .cs_header_contact {
+      margin-left: 30px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_header_grocery1 {
+    .cs_header_contact {
+      display: none;
+    }
+
+    .cs_header_nav_in {
+      justify-content: space-between;
+    }
+
+    .cs_nav {
+      position: static;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_header_grocery1 {
+    .cs_main_header_in {
+      flex-wrap: wrap;
+      min-height: 0;
+      padding: 20px 0;
+      row-gap: 20px;
+    }
+
+    .cs_header_search {
+      order: 3;
+      flex: 0 0 100%;
+      margin-left: 0;
+    }
+
+    .cs_category_dropdown {
+      width: 280px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_header_grocery1 {
+    .cs_category_dropdown {
+      width: 220px;
+    }
+
+    .cs_mode_toggle {
+      margin-right: 24px;
+    }
+
+    .cs_header_account_btn {
+      margin-right: 24px;
+    }
+
+    .cs_account_dropdown {
+      right: -60px;
+    }
+  }
+}

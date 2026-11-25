@@ -1,0 +1,188 @@
+/*---------------------------------------------------------
+  Main header (root pages & default demo)
+  Figma: HOME > hero > top bar / search bar / nav
+-----------------------------------------------------------*/
+.cs_header_main {
+  .cs_top_header {
+    color: #fff;
+    background-color: #222;
+  }
+
+  .cs_main_header_in {
+    display: flex;
+    align-items: center;
+    padding: 30px 0 31px;
+  }
+
+  .cs_site_branding {
+    width: 240px;
+    height: 50px;
+    gap: 6px;
+    font-size: 25px;
+    line-height: normal;
+    font-weight: 600;
+  }
+
+  .cs_header_search {
+    flex: 0 1 696px;
+    min-width: 0;
+    border-radius: 5px;
+    background-color: var(--gray-color5);
+  }
+
+  .cs_header_contact {
+    flex-shrink: 0;
+    margin-left: 37px;
+    line-height: normal;
+
+    .cs_header_contact_title {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    .cs_header_contact_number {
+      display: block;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  .cs_header_actions {
+    margin-left: auto;
+    padding-left: 30px;
+  }
+
+  .cs_header_nav {
+    border-top: 1px solid var(--gray-color2);
+    border-bottom: 1px solid var(--gray-color2);
+  }
+
+  .cs_header_nav_in {
+    position: relative;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .cs_category_dropdown {
+    width: 336px;
+
+    .cs_category_btn {
+      color: #fff;
+      border-radius: 5px 5px 0 0;
+      background-color: #191919;
+    }
+
+    .cs_header_dropdown {
+      top: 100%;
+    }
+  }
+}
+
+.cs_dark .cs_header_main {
+  .cs_header_search {
+    background-color: #222;
+  }
+
+  .cs_category_dropdown .cs_category_btn {
+    background-color: #222;
+  }
+}
+
+@media (max-width: 1399px) {
+  .cs_header_main {
+    .cs_site_branding {
+      width: auto;
+      margin-right: 40px;
+    }
+
+    .cs_header_contact {
+      display: none;
+    }
+
+    .cs_header_search {
+      flex: 1 1 auto;
+    }
+
+    .cs_header_nav_in {
+      gap: 24px;
+    }
+
+    .cs_category_dropdown {
+      width: 260px;
+    }
+
+    .cs_nav .cs_nav_list {
+      column-gap: 24px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_header_main {
+    .cs_header_nav_in {
+      justify-content: space-between;
+      min-height: 70px;
+    }
+
+    .cs_category_dropdown {
+      width: 280px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_header_main {
+    .cs_top_header_text {
+      display: none;
+    }
+
+    .cs_top_header .cs_top_header_in {
+      justify-content: center;
+      padding: 8px 0;
+    }
+
+    .cs_main_header_in {
+      flex-wrap: wrap;
+      padding: 20px 0;
+      row-gap: 20px;
+    }
+
+    .cs_site_branding {
+      margin-right: 0;
+    }
+
+    .cs_header_search {
+      order: 3;
+      flex: 0 0 100%;
+    }
+
+    .cs_header_account_text,
+    .cs_header_cart_text {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_header_main {
+    .cs_top_header_list>li:not(:last-child) {
+      padding-right: 12px;
+      margin-right: 12px;
+    }
+
+    .cs_top_header_list>li:first-child {
+      display: none;
+    }
+
+    .cs_category_dropdown {
+      width: 220px;
+    }
+
+    .cs_account_dropdown {
+      right: -50px;
+    }
+  }
+}

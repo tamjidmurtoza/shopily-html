@@ -1,0 +1,33 @@
+/*==============================================================
+  01. Dashboard variables
+================================================================*/
+.cs_dashboard_body {
+  --dash-body-bg: #f6f6f6;
+  --dash-card-bg: #fff;
+  --dash-heading: #191919;
+  --dash-text: #6e6e6e;
+  --dash-border: #e8e8e8;
+  --dash-soft-bg: rgba(232, 232, 232, 0.3);
+  --dash-input-bg: #fff;
+  --dash-green: #30a346;
+  --dash-red: #ef4b4b;
+  --dash-blue: #3f85fe;
+  --dash-teal: #38cb89;
+  --dash-orange: #ffab00;
+  --dash-pink: #fa26a0;
+  --dash-shadow: 18px 4px 35px 0 rgba(0, 0, 0, 0.02);
+  --dash-sidebar-width: 345px;
+  --dash-gap: 30px;
+  --dash-radius: 5px;
+
+  &.cs_dark {
+    --dash-body-bg: #111;
+    --dash-card-bg: #191919;
+    --dash-heading: #fff;
+    --dash-text: #9d9d9d;
+    --dash-border: #2a2a2a;
+    --dash-soft-bg: #222;
+    --dash-input-bg: #222;
+    --dash-shadow: none;
+  }
+}

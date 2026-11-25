@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shopily - Multivendor eCommerce Website HTML Template">
+    <meta name="author" content="Laralink">
+    <!-- Site Title -->
+    <title>Shopily - Seller POS Manager</title>
+    <link rel="icon" href="../assets/img/favicon.webp">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+
+  <body class="cs_dashboard_body cs_dash_pos_page cs_sidebar_collapsed">
+    <!-- Start Sidebar -->
+    <aside class="cs_dash_sidebar" id="dashSidebar">
+      <div class="cs_dash_sidebar_header">
+        <a href="index.html" class="cs_dash_logo" aria-label="Shopily seller dashboard">
+          <span class="cs_dash_logo_icon">
+            <img src="../assets/img/dashboard/logo-circle.svg" alt="" class="cs_dash_logo_circle">
+            <img src="../assets/img/dashboard/logo-bag.png" alt="" class="cs_dash_logo_bag">
+          </span>
+          <span>Shopily</span>
+        </a>
+        <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="cs_dash_nav" aria-label="Seller navigation">
+        <ul>
+          <li>
+            <a href="index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-home.svg" alt="" class="cs_dash_nav_icon">
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-box-open.svg" alt="" class="cs_dash_nav_icon">
+              <span>Product</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="add-product.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Add New Product</a></li>
+              <li><a href="products.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Product</a></li>
+              <li><a href="categories.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Category</a></li>
+              <li><a href="attributes.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">Attribute</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pos.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-pos.svg" alt="" class="cs_dash_nav_icon">
+              <span>POS Manager</span>
+            </a>
+          </li>
+          <li class="cs_dash_has_sub">
+            <button type="button" class="cs_dash_nav_link" aria-expanded="false">
+              <img src="../assets/img/dashboard/icon-cart.svg" alt="" class="cs_dash_nav_icon">
+              <span>Orders</span>
+              <img src="../assets/img/dashboard/icon-caret.svg" alt="" class="cs_dash_nav_caret">
+            </button>
+            <ul class="cs_dash_submenu">
+              <li><a href="orders.html"><img src="../assets/img/dashboard/submenu-dot.svg" alt="">All Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="commission-history.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-shop.svg" alt="" class="cs_dash_nav_icon">
+              <span>Commission</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-headset.svg" alt="" class="cs_dash_nav_icon">
+              <span>Support</span>
+            </a>
+          </li>
+          <li>
+            <a href="chat.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-messages.svg" alt="" class="cs_dash_nav_icon">
+              <span>Message</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-refund.svg" alt="" class="cs_dash_nav_icon">
+              <span>Refund</span>
+            </a>
+          </li>
+          <li>
+            <a href="wallet.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-card.svg" alt="" class="cs_dash_nav_icon">
+              <span>Wallet</span>
+            </a>
+          </li>
+          <li>
+            <a href="coupons.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-badge-percent.svg" alt="" class="cs_dash_nav_icon">
+              <span>Coupon</span>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-settings.svg" alt="" class="cs_dash_nav_icon">
+              <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="../index.html" class="cs_dash_nav_link">
+              <img src="../assets/img/dashboard/icon-sign-out.svg" alt="" class="cs_dash_nav_icon">
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="cs_dash_overlay"></div>
+    <!-- End Sidebar -->
+
+    <main class="cs_dash_main">
+      <!-- Start Top Bar -->
+      <header class="cs_dash_topbar">
+        <div class="cs_dash_topbar_left">
+          <button type="button" class="cs_dash_hamburger cs_dash_sidebar_toggle" aria-label="Toggle sidebar" aria-controls="dashSidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <h1 class="cs_dash_page_title">Point Of Sale</h1>
+        </div>
+        <div class="cs_dash_topbar_right">
+          <div class="cs_dash_topbar_icons">
+            <button type="button" class="cs_dash_lang" aria-label="Change language">
+              <img src="../assets/img/dashboard/icon-lang.svg" alt="">
+            </button>
+            <button type="button" class="cs_dash_mode_toggle" aria-label="Toggle dark mode">
+              <img src="../assets/img/dashboard/icon-dark.svg" alt="">
+            </button>
+            <a href="chat.html" class="cs_dash_notification" aria-label="Notifications, 11 unread">
+              <img src="../assets/img/dashboard/icon-bell.svg" alt="">
+              <span class="cs_dash_notification_count">11</span>
+            </a>
+          </div>
+          <div class="cs_dash_profile">
+            <button type="button" class="cs_dash_profile_btn" aria-expanded="false" aria-haspopup="true">
+              <img src="../assets/img/dashboard/avatar.png" alt="Andrew Karla">
+              <span class="cs_dash_profile_info">
+                <span>
+                  <span class="cs_dash_profile_name">Andrew Karla</span>
+                  <span class="cs_dash_profile_role">Seller</span>
+                </span>
+                <img src="../assets/img/dashboard/icon-caret-down.svg" alt="">
+              </span>
+            </button>
+            <ul class="cs_dash_profile_dropdown">
+              <li><a href="profile.html">Edit Profile</a></li>
+              <li><a href="../index.html">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- End Top Bar -->
+
+      <!-- Start Point Of Sale -->
+      <div class="cs_dash_pos">
+        <section class="cs_dash_card cs_dash_pos_products_card" aria-label="Products">
+          <form class="cs_dash_pos_toolbar" role="search" aria-label="Find products">
+            <div class="cs_dash_pos_select">
+              <img src="../assets/img/dashboard/pos/icon-grid.svg" alt="" class="cs_dash_icon_dark">
+              <label class="visually-hidden" for="posCategory">Category</label>
+              <select class="cs_dash_select" id="posCategory" name="category">
+                <option value="">All category</option>
+                <option value="camera">Camera</option>
+                <option value="watch">Smart Watch</option>
+                <option value="speaker">Speaker</option>
+                <option value="audio">Audio</option>
+                <option value="appliance">Appliance</option>
+                <option value="laptop">Laptop</option>
+                <option value="accessories">Accessories</option>
+              </select>
+            </div>
+            <label class="cs_dash_search">
+              <span class="visually-hidden">Search by product name or barcode scan</span>
+              <input type="search" id="posSearch" name="q" placeholder="Search by product name or barcode scan">
+              <img src="../assets/img/dashboard/icon-search.svg" alt="" class="cs_dash_icon_dark">
+            </label>
+          </form>
+          <div class="cs_dash_pos_products">
+            <ul class="cs_dash_pos_grid">
+              <li data-category="camera">
+                <button type="button" class="cs_dash_pos_product" data-id="1" data-name="Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens" data-price="380.99" aria-label="Add Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens to cart">
+                  <span class="cs_dash_pos_product_img">
+                    <img src="../assets/img/dashboard/products/camera.webp" alt="">
+                    <img src="../assets/img/dashboard/pos/icon-plus.svg" alt="" class="cs_dash_pos_plus">
+                  </span>
+                  <span class="cs_dash_pos_product_name">Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens</span>
+                  <span class="cs_dash_pos_product_price">$380.99 <del>$450.00</del></span>
+                  <span class="cs_dash_pos_product_stock">Stock: 10</span>
+                </button>
+              </li>
+              <li data-category="watch">
+                <button type="button" class="cs_dash_pos_product" data-id="2" data-name="Bikobo Fitness Tracker Smart Watch for Men Women" data-price="380.99" aria-label="Add Bikobo Fitness Tracker Smart Watch for Men Women to cart">
+                  <span class="cs_dash_pos_product_img">
+                    <img src="../assets/img/dashboard/products/smart-watch.webp" alt="">
+                    <img src="../assets/img/dashboard/pos/icon-plus.svg" alt="" class="cs_dash_pos_plus">
+                  </span>
+                  <span class="cs_dash_pos_product_name">Bikobo Fitness Tracker Smart Watch for Men Women</span>
+                  <span class="cs_dash_pos_product_price">$380.99 <del>$450.00</del></span>
+                  <span class="cs_dash_pos_product_stock">Stock: 10</span>
+                </button>
+              </li>
+              <li data-category="speaker">
+                <button type="button" class="cs_dash_pos_product" data-id="3" data-name="JBL 100W Party Box Encore Bluetooth Speaker" data-price="380.99" disabled aria-label="Add JBL 100W Party Box Encore Bluetooth Speaker to cart">
+                  <span class="cs_dash_pos_product_img">
+                    <img src="../assets/img/dashboard/products/jbl-speaker.webp" alt="">
+                    <img src="../assets/img/dashboard/pos/icon-plus.svg" alt="" class="cs_dash_pos_plus">
+                  </span>
+                  <span class="cs_dash_pos_product_name">JBL 100W Party Box Encore Bluetooth Speaker</span>
+                  <span class="cs_dash_pos_product_price">$380.99 <del>$450.00</del></span>
+                  <span class="cs_dash_pos_product_stock">Stock: Out</span>
+                </button>
+              </li>
+              <li data-category="audio">
+                <button type="button" class="cs_dash_pos_product" data-id="4" data-name="Samsung Galaxy Buds2 Pro True Wireless Earbuds" data-price="380.99" aria-label="Add Samsung Galaxy Buds2 Pro True Wireless Earbuds to cart">
+                  <span class="cs_dash_pos_product_img">
+                    <img src="../assets/img/dashboard/products/earbuds.webp" alt="">
+                    <img src="../assets/img/dashboard/pos/icon-plus.svg" alt="" class="cs_dash_pos_plus">
+                  </span>
+                  <span class="cs_dash_pos_product_name">Samsung Galaxy Buds2 Pro True Wireless Earbuds</span>
+                  <span class="cs_dash_pos_product_price">$380.99 <del>$450.00</del></span>
+                  <span class="cs_dash_pos_product_stock">Stock: 10</span>
+                </button>
+              </li>
+              <li data-category="appliance">
+                <button type="button" class="cs_dash_pos_product" data-id="5" data-name="Domenic CFX 45 Liter Portable Refrigerator" data-price="380.99" aria-label="Add Domenic CFX 45 Liter Portable Refrigerator to cart">
+                  <span class="cs_dash_pos_product_img">
+                    <img src="../assets/img/dashboard/pos/fridge.png" alt="">
+                    <img src="../assets/img/dashboard/pos/icon-plus.svg" alt="" class="cs_dash_pos_plus">
+                  </span>
+                  <span class="cs_dash_pos_product_name">Domenic CFX 45 Liter Portable Refrigerator</span>
+                  <span class="cs_dash_pos_product_price">$380.99 <del>$450.00</del></span>
+                  <span class="cs_dash_pos_product_stock">Stock: 10</span>
+                </button>
+              </li>
+              <li data-category="laptop">
+                <button type="button" class="cs_dash_pos_product" data-id="6" data-name="Apple 2023 MacBook Air with M3 chip" data-price="380.99" aria-label="Add Apple 2023 MacBook Air with M3 chip to cart">
+                  <span class="cs_dash_pos_product_img">
+                    <img src="../assets/img/dashboard/products/macbook-air.webp" alt="">
+                    <img src="../assets/img/dashboard/pos/icon-plus.svg" alt="" class="cs_dash_pos_plus">
+                  </span>
+                  <span class="cs_dash_pos_product_name">Apple 2023 MacBook Air with M3 chip</span>
+                  <span class="cs_dash_pos_product_price">$380.99 <del>$450.00</del></span>
+                  <span class="cs_dash_pos_product_stock">Stock: 10</span>
+                </button>
+              </li>
+              <li data-category="accessories">
+                <button type="button" class="cs_dash_pos_product" data-id="7" data-name="Razer Basilisk Ultimate Wireless Gaming Mouse" data-price="380.99" aria-label="Add Razer Basilisk Ultimate Wireless Gaming Mouse to cart">
+                  <span class="cs_dash_pos_product_img">
+                    <img src="../assets/img/dashboard/orders/gaming-mouse.webp" alt="">
+                    <img src="../assets/img/dashboard/pos/icon-plus.svg" alt="" class="cs_dash_pos_plus">
+                  </span>
+                  <span class="cs_dash_pos_product_name">Razer Basilisk Ultimate Wireless Gaming Mouse</span>
+                  <span class="cs_dash_pos_product_price">$380.99 <del>$450.00</del></span>
+                  <span class="cs_dash_pos_product_stock">Stock: 10</span>
+                </button>
+              </li>
+              <li data-category="camera">
+                <button type="button" class="cs_dash_pos_product" data-id="8" data-name="TP-Link Tapo Pan Tilt Security Camera" data-price="380.99" aria-label="Add TP-Link Tapo Pan Tilt Security Camera to cart">
+                  <span class="cs_dash_pos_product_img">
+                    <img src="../assets/img/dashboard/products/security-camera.webp" alt="">
+                    <img src="../assets/img/dashboard/pos/icon-plus.svg" alt="" class="cs_dash_pos_plus">
+                  </span>
+                  <span class="cs_dash_pos_product_name">TP-Link Tapo Pan Tilt Security Camera</span>
+                  <span class="cs_dash_pos_product_price">$380.99 <del>$450.00</del></span>
+                  <span class="cs_dash_pos_product_stock">Stock: 10</span>
+                </button>
+              </li>
+              <li data-category="camera">
+                <button type="button" class="cs_dash_pos_product" data-id="9" data-name="Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens" data-price="380.99" aria-label="Add Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens to cart">
+                  <span class="cs_dash_pos_product_img">
+                    <img src="../assets/img/dashboard/products/camera.webp" alt="">
+                    <img src="../assets/img/dashboard/pos/icon-plus.svg" alt="" class="cs_dash_pos_plus">
+                  </span>
+                  <span class="cs_dash_pos_product_name">Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens</span>
+                  <span class="cs_dash_pos_product_price">$380.99 <del>$450.00</del></span>
+                  <span class="cs_dash_pos_product_stock">Stock: 10</span>
+                </button>
+              </li>
+              <li data-category="watch">
+                <button type="button" class="cs_dash_pos_product" data-id="10" data-name="Bikobo Fitness Tracker Smart Watch for Men Women" data-price="380.99" aria-label="Add Bikobo Fitness Tracker Smart Watch for Men Women to cart">
+                  <span class="cs_dash_pos_product_img">
+                    <img src="../assets/img/dashboard/products/smart-watch.webp" alt="">
+                    <img src="../assets/img/dashboard/pos/icon-plus.svg" alt="" class="cs_dash_pos_plus">
+                  </span>
+                  <span class="cs_dash_pos_product_name">Bikobo Fitness Tracker Smart Watch for Men Women</span>
+                  <span class="cs_dash_pos_product_price">$380.99 <del>$450.00</del></span>
+                  <span class="cs_dash_pos_product_stock">Stock: 10</span>
+                </button>
+              </li>
+              <li data-category="speaker">
+                <button type="button" class="cs_dash_pos_product" data-id="11" data-name="JBL 100W Party Box Encore Bluetooth Speaker" data-price="380.99" disabled aria-label="Add JBL 100W Party Box Encore Bluetooth Speaker to cart">
+                  <span class="cs_dash_pos_product_img">
+                    <img src="../assets/img/dashboard/products/jbl-speaker.webp" alt="">
+                    <img src="../assets/img/dashboard/pos/icon-plus.svg" alt="" class="cs_dash_pos_plus">
+                  </span>
+                  <span class="cs_dash_pos_product_name">JBL 100W Party Box Encore Bluetooth Speaker</span>
+                  <span class="cs_dash_pos_product_price">$380.99 <del>$450.00</del></span>
+                  <span class="cs_dash_pos_product_stock">Stock: Out</span>
+                </button>
+              </li>
+              <li data-category="audio">
+                <button type="button" class="cs_dash_pos_product" data-id="12" data-name="Samsung Galaxy Buds2 Pro True Wireless Earbuds" data-price="380.99" aria-label="Add Samsung Galaxy Buds2 Pro True Wireless Earbuds to cart">
+                  <span class="cs_dash_pos_product_img">
+                    <img src="../assets/img/dashboard/products/earbuds.webp" alt="">
+                    <img src="../assets/img/dashboard/pos/icon-plus.svg" alt="" class="cs_dash_pos_plus">
+                  </span>
+                  <span class="cs_dash_pos_product_name">Samsung Galaxy Buds2 Pro True Wireless Earbuds</span>
+                  <span class="cs_dash_pos_product_price">$380.99 <del>$450.00</del></span>
+                  <span class="cs_dash_pos_product_stock">Stock: 10</span>
+                </button>
+              </li>
+            </ul>
+            <p class="cs_dash_pos_empty" hidden>No products found.</p>
+          </div>
+        </section>
+
+        <section class="cs_dash_card cs_dash_pos_cart_card" aria-label="Cart">
+          <div class="cs_dash_pos_select cs_full">
+            <label class="visually-hidden" for="posCustomer">Customer</label>
+            <select class="cs_dash_select" id="posCustomer" name="customer">
+              <option value="walk-in">Walk in customer</option>
+              <option value="honey">Honey Miramontis</option>
+              <option value="andrew">Andrew Karla</option>
+            </select>
+          </div>
+          <div class="cs_dash_table_wrap cs_dash_pos_cart_wrap">
+            <table class="cs_dash_table cs_dash_pos_cart">
+              <thead>
+                <tr>
+                  <th class="cs_no">No</th>
+                  <th class="cs_item">Item</th>
+                  <th class="cs_qty">Quantity</th>
+                  <th class="cs_price">Price</th>
+                  <th class="cs_action">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-id="1" data-price="380.99">
+                  <td class="cs_no">01</td>
+                  <td class="cs_item"><span class="cs_dash_pos_item_name" title="Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens">Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens</span></td>
+                  <td class="cs_qty">
+                    <div class="cs_dash_qty">
+                      <button type="button" class="cs_minus" aria-label="Decrease quantity"></button>
+                      <output aria-live="polite">1</output>
+                      <button type="button" class="cs_plus" aria-label="Increase quantity"></button>
+                    </div>
+                  </td>
+                  <td class="cs_price">$380.99</td>
+                  <td class="cs_action"><div class="cs_dash_table_actions"><button type="button" class="cs_dash_pos_remove" aria-label="Remove item"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr data-id="2" data-price="380.99">
+                  <td class="cs_no">02</td>
+                  <td class="cs_item"><span class="cs_dash_pos_item_name" title="Bikobo Fitness Tracker Smart Watch for Men Women">Bikobo Fitness Tracker Smart Watch for Men Women</span></td>
+                  <td class="cs_qty">
+                    <div class="cs_dash_qty">
+                      <button type="button" class="cs_minus" aria-label="Decrease quantity"></button>
+                      <output aria-live="polite">2</output>
+                      <button type="button" class="cs_plus" aria-label="Increase quantity"></button>
+                    </div>
+                  </td>
+                  <td class="cs_price">$380.99</td>
+                  <td class="cs_action"><div class="cs_dash_table_actions"><button type="button" class="cs_dash_pos_remove" aria-label="Remove item"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr data-id="3" data-price="380.99">
+                  <td class="cs_no">03</td>
+                  <td class="cs_item"><span class="cs_dash_pos_item_name" title="JBL 100W Party Box Encore Bluetooth Speaker">JBL 100W Party Box Encore Bluetooth Speaker</span></td>
+                  <td class="cs_qty">
+                    <div class="cs_dash_qty">
+                      <button type="button" class="cs_minus" aria-label="Decrease quantity"></button>
+                      <output aria-live="polite">1</output>
+                      <button type="button" class="cs_plus" aria-label="Increase quantity"></button>
+                    </div>
+                  </td>
+                  <td class="cs_price">$380.99</td>
+                  <td class="cs_action"><div class="cs_dash_table_actions"><button type="button" class="cs_dash_pos_remove" aria-label="Remove item"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr data-id="5" data-price="380.99">
+                  <td class="cs_no">04</td>
+                  <td class="cs_item"><span class="cs_dash_pos_item_name" title="Domenic CFX 45 Liter Portable Refrigerator">Domenic CFX 45 Liter Portable Refrigerator</span></td>
+                  <td class="cs_qty">
+                    <div class="cs_dash_qty">
+                      <button type="button" class="cs_minus" aria-label="Decrease quantity"></button>
+                      <output aria-live="polite">1</output>
+                      <button type="button" class="cs_plus" aria-label="Increase quantity"></button>
+                    </div>
+                  </td>
+                  <td class="cs_price">$380.99</td>
+                  <td class="cs_action"><div class="cs_dash_table_actions"><button type="button" class="cs_dash_pos_remove" aria-label="Remove item"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+                <tr data-id="6" data-price="380.99">
+                  <td class="cs_no">05</td>
+                  <td class="cs_item"><span class="cs_dash_pos_item_name" title="Apple 2023 MacBook Air with M3 chip">Apple 2023 MacBook Air with M3 chip</span></td>
+                  <td class="cs_qty">
+                    <div class="cs_dash_qty">
+                      <button type="button" class="cs_minus" aria-label="Decrease quantity"></button>
+                      <output aria-live="polite">1</output>
+                      <button type="button" class="cs_plus" aria-label="Increase quantity"></button>
+                    </div>
+                  </td>
+                  <td class="cs_price">$380.99</td>
+                  <td class="cs_action"><div class="cs_dash_table_actions"><button type="button" class="cs_dash_pos_remove" aria-label="Remove item"><img src="../assets/img/dashboard/icon-delete.svg" alt=""></button></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="cs_dash_pos_totals">
+            <p class="cs_label cs_heading">Subtotal</p>
+            <p class="cs_value cs_heading" data-pos="subtotal">$1000.00</p>
+
+            <label class="cs_label" for="posDiscount">Discount</label>
+            <input type="text" class="cs_dash_pos_mini_input" id="posDiscount" inputmode="decimal" placeholder="Amt or %">
+            <p class="cs_value" data-pos="discount">-$5.00</p>
+
+            <label class="cs_label" for="posVat">VAT</label>
+            <input type="text" class="cs_dash_pos_mini_input" id="posVat" inputmode="decimal" placeholder="Amt or %">
+            <p class="cs_value" data-pos="vat">+$0.00</p>
+
+            <div class="cs_dash_pos_payable">
+              <span class="cs_label">Total Payable</span>
+              <span class="cs_value" data-pos="total">$1005.00</span>
+            </div>
+
+            <label class="cs_label" for="posPaid">Customer Paid</label>
+            <input type="text" class="cs_dash_pos_mini_input" id="posPaid" inputmode="decimal" value="$2000.00">
+            <p class="cs_value cs_medium" data-pos="due">Due $995.00</p>
+          </div>
+
+          <div class="cs_dash_pos_footer">
+            <fieldset class="cs_dash_pos_payment">
+              <legend>Payment Method :</legend>
+              <label><input type="radio" name="pos_payment" value="cash" checked> Cash</label>
+              <label><input type="radio" name="pos_payment" value="card"> Card</label>
+            </fieldset>
+            <div class="cs_dash_pos_btns">
+              <button type="button" class="cs_dash_btn cs_red" data-pos-reset>Reset</button>
+              <button type="button" class="cs_dash_btn cs_blue" data-pos-hold>Hold</button>
+              <button type="button" class="cs_dash_btn cs_green cs_place" data-pos-place>Place Order</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- End Point Of Sale -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/dashboard-orders.js"></script>
+  </body>
+</html>

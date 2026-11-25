@@ -1,0 +1,386 @@
+/*---------------------------------------------------------
+  liquor header
+  Figma: LIQUOR > top bar (2388:2916) + menu (2391:3039)
+  Inner pages (shop / product details) add a bottom border (cs_header_bordered)
+-----------------------------------------------------------*/
+.cs_header_liquor {
+  .cs_top_header {
+    border-bottom: 1px solid var(--gray-color2);
+
+    .cs_top_header_in {
+      min-height: 42px;
+      padding-top: 2px;
+    }
+  }
+
+  .cs_main_header_in {
+    position: relative;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+  }
+
+  .cs_site_branding {
+    gap: 8px;
+    font-family: "Berkshire Swash", cursive;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #191919;
+  }
+
+  .cs_site_branding_icon {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 40px;
+    flex-shrink: 0;
+
+    img {
+      position: absolute;
+      max-height: none;
+    }
+
+    .cs_logo_glass_1 {
+      left: 0;
+      top: 0;
+      width: 48.76%;
+      height: 99.99%;
+    }
+
+    .cs_logo_glass_2 {
+      left: 46.27%;
+      top: 21.76%;
+      width: 53.74%;
+      height: 75.19%;
+    }
+  }
+
+  .cs_nav {
+    margin-left: 50px;
+
+    .cs_nav_list>li>a {
+      color: #191919;
+      padding: 32px 0;
+
+      &:hover {
+        color: var(--orange-color);
+      }
+    }
+  }
+
+  .cs_header_search {
+    flex: 0 1 430px;
+    min-width: 0;
+    margin-left: auto;
+    border-radius: 50px;
+    background-color: var(--gray-color5);
+
+    .cs_header_search_input {
+      padding: 12px 56px 12px 15px;
+    }
+
+    .cs_header_search_btn {
+      width: 56px;
+      border-radius: 0 50px 50px 0;
+    }
+  }
+
+  .cs_header_actions {
+    flex-shrink: 0;
+    gap: 25px;
+    margin-left: 30px;
+  }
+
+  .cs_header_account_btn {
+    height: 20px;
+  }
+
+  .cs_header_cart {
+    padding-top: 0;
+
+    .cs_header_cart_count {
+      background-color: var(--orange-color);
+    }
+  }
+
+  .cs_account_dropdown {
+    top: calc(100% + 35px);
+    right: -40px;
+
+    &::before {
+      height: 35px;
+    }
+  }
+
+  &.cs_header_bordered .cs_main_header {
+    border-bottom: 1px solid var(--gray-color2);
+  }
+}
+
+.cs_dark .cs_header_liquor {
+  .cs_site_branding,
+  .cs_nav .cs_nav_list>li>a {
+    color: #fff;
+  }
+
+  .cs_header_search {
+    background-color: #222;
+  }
+
+  /* search.svg carries its own #f5f5f5 backdrop: invert it and drop the backdrop */
+  .cs_header_search_btn img {
+    filter: invert(1);
+    mix-blend-mode: lighten;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cs_header_liquor {
+    .cs_nav {
+      flex-shrink: 0;
+
+      .cs_nav_list {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+}
+
+@media (max-width: 1399px) {
+  .cs_header_liquor {
+    .cs_nav {
+      margin-left: 30px;
+      margin-right: 30px;
+
+      .cs_nav_list {
+        column-gap: 22px;
+      }
+    }
+
+    .cs_header_search {
+      flex-basis: 300px;
+    }
+
+    .cs_header_actions {
+      margin-left: 24px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_header_liquor {
+    .cs_main_header_in {
+      min-height: 80px;
+    }
+
+    .cs_site_branding {
+      margin-right: 24px;
+    }
+
+    .cs_nav {
+      order: 5;
+      margin-left: 25px;
+      margin-right: 0;
+
+      .cs_nav_list>li>a {
+        padding: 10px 0;
+      }
+    }
+
+    .cs_header_search {
+      flex-basis: 430px;
+    }
+  }
+
+  .cs_dark .cs_header_liquor .cs_nav .cs_nav_list_wrap {
+    background-color: #191919;
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_header_liquor {
+    .cs_top_header_text {
+      display: none;
+    }
+
+    .cs_top_header .cs_top_header_in {
+      justify-content: center;
+      padding: 8px 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_header_liquor {
+    .cs_main_header_in {
+      flex-wrap: wrap;
+      padding: 16px 0;
+      row-gap: 16px;
+    }
+
+    .cs_header_actions {
+      margin-left: auto;
+    }
+
+    .cs_header_search {
+      order: 6;
+      flex: 0 0 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_header_liquor {
+    .cs_top_header_list>li:not(:last-child) {
+      padding-right: 12px;
+      margin-right: 12px;
+    }
+
+    .cs_top_header_list>li:first-child {
+      display: none;
+    }
+
+    .cs_account_dropdown {
+      right: -50px;
+    }
+  }
+}
+
+/*---------------------------------------------------------
+  Liquor age confirm popup
+  Figma: LIQUOR AGE CONFIRM POPUP (2450:1825) overlay 2450:3599 + text 2452:3610
+-----------------------------------------------------------*/
+html.cs_age_modal_open,
+body.cs_age_modal_open {
+  overflow: hidden;
+}
+
+.cs_age_modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 16px;
+  overflow-y: auto;
+
+  &.active {
+    display: flex;
+  }
+
+  .cs_age_modal_overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(25, 25, 25, 0.8);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+  }
+
+  .cs_age_modal_dialog {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 640px;
+    text-align: center;
+    outline: none;
+  }
+
+  .cs_age_modal_title {
+    font-family: var(--primary-font);
+    font-size: 59px;
+    line-height: 70px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  .cs_age_modal_text {
+    font-size: 18px;
+    line-height: 26px;
+    color: #e8e8e8;
+    max-width: 295px;
+    margin: 0 auto 37px;
+  }
+
+  .cs_age_modal_btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .cs_age_modal_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 133px;
+    height: 60px;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    line-height: 26px;
+    color: #ffffff;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+
+    &.cs_age_modal_yes {
+      background-color: #30a346;
+
+      &:hover {
+        background-color: #288a3b;
+      }
+    }
+
+    &.cs_age_modal_no {
+      background-color: #d52b1e;
+
+      &:hover {
+        background-color: #b72419;
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 3px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_age_modal_title {
+      font-size: 46px;
+      line-height: 56px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .cs_age_modal_title {
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 14px;
+    }
+
+    .cs_age_modal_text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 28px;
+    }
+
+    .cs_age_modal_btns {
+      gap: 14px;
+    }
+
+    .cs_age_modal_btn {
+      width: 120px;
+      height: 52px;
+    }
+  }
+}
+
+.cs_dark {
+  .cs_age_modal {
+    .cs_age_modal_overlay {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+  }
+}
